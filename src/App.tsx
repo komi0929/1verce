@@ -1148,43 +1148,45 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-[#FFFFFF] flex flex-col">
-      {/* 1. Top Header */}
-      <header className="h-14 border-b border-[#1F1F1F] bg-[#0A0A0A]/95 backdrop-blur-md sticky top-0 z-40">
+      {/* 1. Top Header (Clean Mobile-first & Desktop) */}
+      <header className="h-13 sm:h-14 border-b border-[#1F1F1F] bg-[#0A0A0A]/95 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-3xl mx-auto h-full px-3 sm:px-4 flex items-center justify-between gap-2">
           {/* Left: 1verce Typography Logo */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <button
               onClick={handleResetFilters}
               className="flex items-baseline gap-1.5 text-left cursor-pointer group"
             >
-              <span className="font-display text-2xl font-bold tracking-tighter text-[#FFFFFF] group-hover:opacity-80 transition-opacity">
+              <span className="font-display text-xl sm:text-2xl font-bold tracking-tighter text-[#FFFFFF] group-hover:opacity-80 transition-opacity">
                 1verce
               </span>
-              <span className="hidden sm:inline-block text-[10px] font-mono-tech text-[#8E8E93] tracking-widest uppercase">
+              <span className="text-[10px] font-mono-tech text-[#8E8E93] tracking-widest uppercase">
                 ARCHIVE
               </span>
             </button>
           </div>
 
-          {/* Right: Participatory Controls */}
+          {/* Right: Essential Desktop Actions & Quick Mobile Icons */}
           <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Search Trigger */}
             <button
               onClick={() => setIsSearchOpen((v) => !v)}
               aria-label="キーワード検索を開く"
               title="SEARCH LYRICS / MCS"
-              className={`p-1.5 rounded border transition-colors cursor-pointer ${
+              className={`p-2 sm:p-1.5 rounded border transition-colors cursor-pointer ${
                 isSearchOpen || searchQuery
                   ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
                   : 'bg-[#121212] text-[#8E8E93] border-[#262628] hover:text-[#FFFFFF]'
               }`}
             >
-              <Search className="w-3.5 h-3.5" />
+              <Search className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
             </button>
 
+            {/* Desktop Only Primary Actions (On mobile, accessible via Bottom Nav) */}
             <button
               onClick={() => setIsSubmitOpen(true)}
               aria-label="お気に入りのYouTubeバトルを登録"
-              className="px-2.5 sm:px-3 py-1.5 rounded bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp text-xs font-black tracking-tight flex items-center gap-1 transition-colors cursor-pointer"
+              className="hidden sm:flex px-3 py-1.5 rounded bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp text-xs font-black tracking-tight items-center gap-1 transition-colors cursor-pointer"
             >
               <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
               <span>バトル登録</span>
@@ -1195,19 +1197,20 @@ export const App: React.FC = () => {
                 setViewMode((prev) => (prev === 'ALBUMS' ? 'LATEST' : 'ALBUMS'))
               }
               aria-label="マイアルバムを開く"
-              className={`px-2.5 py-1.5 rounded border font-jp text-xs font-bold tracking-tight flex items-center gap-1 transition-colors cursor-pointer ${
+              className={`hidden sm:flex px-2.5 py-1.5 rounded border font-jp text-xs font-bold tracking-tight items-center gap-1 transition-colors cursor-pointer ${
                 viewMode === 'ALBUMS'
                   ? 'bg-[#E50914] text-[#FFFFFF] border-[#E50914]'
                   : 'bg-[#121212] text-[#FFFFFF] border-[#262628] hover:border-[#FFFFFF]'
               }`}
             >
               <Disc3 className="w-3.5 h-3.5" />
-              <span className="hidden xs:inline">アルバム</span>
+              <span>アルバム</span>
               <span className="text-[10px] font-mono-tech opacity-85">
                 ({albums.length})
               </span>
             </button>
 
+            {/* Cloud DB Connection Status Indicator (Clickable on both) */}
             <button
               onClick={() => setIsDbModalOpen(true)}
               aria-label="データベース・クラウド設定"
@@ -1215,37 +1218,40 @@ export const App: React.FC = () => {
               className="px-2 py-1.5 rounded bg-[#121212] hover:bg-[#1A1A1C] text-[#FFFFFF] border border-[#262628] font-mono-tech text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
             >
               <span
-                className={`w-1.5 h-1.5 rounded-full ${
+                className={`w-2 h-2 rounded-full ${
                   isCloudConnected ? 'bg-emerald-400' : 'bg-amber-400'
                 }`}
               />
-              <Database className="w-3.5 h-3.5" />
+              <Database className="w-3.5 h-3.5 text-[#8E8E93]" />
               <span className="hidden md:inline">DB</span>
             </button>
 
+            {/* Desktop Insights */}
             <button
               onClick={() => setIsInsightsOpen(true)}
               aria-label="アナリティクスインサイトを開く"
-              className="px-2 py-1.5 rounded bg-[#121212] hover:bg-[#1A1A1C] text-[#FFFFFF] border border-[#262628] font-mono-tech text-xs font-bold tracking-tight flex items-center gap-1 transition-colors cursor-pointer"
+              className="hidden sm:flex px-2 py-1.5 rounded bg-[#121212] hover:bg-[#1A1A1C] text-[#FFFFFF] border border-[#262628] font-mono-tech text-xs font-bold tracking-tight items-center gap-1 transition-colors cursor-pointer"
             >
               <BarChart3 className="w-3.5 h-3.5" />
               <span className="hidden md:inline">INSIGHTS</span>
             </button>
 
+            {/* Help / Guide */}
             <button
               onClick={() => handleToggleOnboarding(!isOnboardingOpen)}
               aria-label="使い方ガイドを表示"
               title="1VERCEの使い方ガイド"
-              className={`px-2 py-1.5 rounded border font-jp text-xs font-bold tracking-tight flex items-center gap-1 transition-colors cursor-pointer ${
+              className={`p-2 sm:px-2 sm:py-1.5 rounded border font-jp text-xs font-bold tracking-tight flex items-center gap-1 transition-colors cursor-pointer ${
                 isOnboardingOpen
                   ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
                   : 'bg-[#121212] text-[#FFFFFF] border-[#262628] hover:border-[#FFFFFF]'
               }`}
             >
-              <HelpCircle className="w-3.5 h-3.5 text-[#E50914]" />
+              <HelpCircle className="w-4 h-4 sm:w-3.5 sm:h-3.5 text-[#E50914]" />
               <span className="hidden sm:inline">使い方</span>
             </button>
 
+            {/* Saved Bookmarks */}
             <button
               onClick={() => {
                 if (viewMode === 'ALBUMS') setViewMode('LATEST');
@@ -1256,13 +1262,13 @@ export const App: React.FC = () => {
                   ? '保存済みフィルターを解除'
                   : '保存したバトルのみ表示'
               }
-              className={`px-2 py-1.5 rounded border font-mono-tech text-xs font-bold tracking-tight flex items-center gap-1 transition-colors cursor-pointer ${
+              className={`p-2 sm:px-2 sm:py-1.5 rounded border font-mono-tech text-xs font-bold tracking-tight flex items-center gap-1 transition-colors cursor-pointer ${
                 showSavedOnly
                   ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
                   : 'bg-[#121212] text-[#8E8E93] border-[#262628] hover:text-[#FFFFFF]'
               }`}
             >
-              <Bookmark className="w-3.5 h-3.5" />
+              <Bookmark className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
               <span className="text-[10px] opacity-80">({savedIds.length})</span>
             </button>
           </div>
@@ -1308,8 +1314,8 @@ export const App: React.FC = () => {
         onResetAll={handleResetFilters}
       />
 
-      {/* Main Content Container */}
-      <main className="flex-1 max-w-3xl w-full mx-auto px-3 sm:px-4 py-4 space-y-4">
+      {/* Main Content Container (with pb-24 for mobile bottom navigation clearance) */}
+      <main className="flex-1 max-w-3xl w-full mx-auto px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4 pb-24 sm:pb-8">
         {/* Interactive Onboarding Guide for First-Time & Returning Users */}
         <OnboardingBanner
           isOpen={isOnboardingOpen}
@@ -1339,21 +1345,22 @@ export const App: React.FC = () => {
         />
 
         {/* Participatory Quick Hub & Recent Freshness Ticker */}
-        <div className="bg-[#121214] border border-[#242428] rounded-md p-3 space-y-2.5">
+        <div className="bg-[#121214] border border-[#242428] rounded-md p-2.5 sm:p-3 space-y-2">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div className="flex items-center gap-2 text-xs font-jp">
-              <Sparkles className="w-4 h-4 text-[#E50914] shrink-0" />
-              <span className="font-bold text-[#FFFFFF]">
-                参加して育てるアーカイブ:
+            <div className="flex items-center gap-1.5 text-xs font-jp">
+              <Sparkles className="w-3.5 h-3.5 text-[#E50914] shrink-0" />
+              <span className="font-bold text-[#FFFFFF] text-[11px] sm:text-xs">
+                参加型アーカイブ:
               </span>
-              <span className="text-[#8E8E93]">
-                再生中の<strong className="text-[#FFFFFF]">1タップ・パンチライン刻印（重複時は自動で🔥いいね！合算）</strong>・
-                <strong className="text-[#FFFFFF]">マイアルバム連続再生</strong>・
-                <strong className="text-[#FFFFFF]">YouTube登録</strong>が可能
+              <span className="text-[#8E8E93] text-[11px] sm:text-xs">
+                再生中に<strong className="text-[#FFFFFF]">1タップで刻印</strong>・
+                <strong className="text-[#FFFFFF]">アルバム連続再生</strong>・
+                <strong className="text-[#FFFFFF]">YouTube登録</strong>
               </span>
             </div>
 
-            <div className="flex items-center gap-1.5 shrink-0">
+            {/* Desktop shortcut buttons (On mobile, accessible in 1-tap via Bottom Nav) */}
+            <div className="hidden sm:flex items-center gap-1.5 shrink-0">
               {!isOnboardingOpen && (
                 <button
                   type="button"
@@ -1385,11 +1392,11 @@ export const App: React.FC = () => {
 
           {/* Live Freshness Activity Feed (shows latest stamps / registrations) */}
           {activities.length > 0 && (
-            <div className="pt-2 border-t border-[#1E1E22] flex items-center gap-2 overflow-x-auto no-scrollbar">
-              <span className="px-1.5 py-0.5 rounded bg-[#E50914]/20 border border-[#E50914]/40 text-[#FF6B6B] font-mono-tech text-[10px] font-bold shrink-0">
+            <div className="pt-1.5 border-t border-[#1E1E22] flex items-center gap-2 overflow-x-auto no-scrollbar">
+              <span className="px-1.5 py-0.5 rounded bg-[#E50914]/20 border border-[#E50914]/40 text-[#FF6B6B] font-mono-tech text-[9px] sm:text-[10px] font-bold shrink-0">
                 FRESH LOG
               </span>
-              {activities.slice(0, 4).map((act) => (
+              {activities.slice(0, 5).map((act) => (
                 <button
                   key={act.id}
                   type="button"
@@ -1403,7 +1410,7 @@ export const App: React.FC = () => {
                       setViewMode('ALBUMS');
                     }
                   }}
-                  className="px-2 py-0.5 rounded bg-[#18181C] hover:bg-[#242429] border border-[#26262A] text-[11px] font-jp text-[#E5E5EA] truncate max-w-xs shrink-0 cursor-pointer transition-colors"
+                  className="px-2 py-0.5 rounded bg-[#18181C] hover:bg-[#242429] border border-[#26262A] text-[10px] sm:text-[11px] font-jp text-[#E5E5EA] truncate max-w-xs shrink-0 cursor-pointer transition-colors"
                 >
                   {act.summary}
                 </button>
@@ -1430,20 +1437,20 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* 3. View Mode Switcher */}
-        <div className="flex items-center justify-between gap-2 border-b border-[#1F1F21] pb-2.5 flex-wrap">
-          <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap">
+        {/* 3. View Mode Switcher (Smooth horizontal touch-scroll on mobile) */}
+        <div className="flex items-center justify-between gap-2 border-b border-[#1F1F21] pb-2">
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 flex-1 min-w-0">
             {(
               [
-                { id: 'LATEST', label: '全バトル一覧' },
-                { id: 'FRESH', label: '⚡ 新着刻印・更新順' },
+                { id: 'LATEST', label: '全バトル' },
+                { id: 'FRESH', label: '⚡ 新着刻印' },
                 {
                   id: 'ALBUMS',
-                  label: `💿 マイアルバム (${albums.length})`,
+                  label: `💿 アルバム (${albums.length})`,
                 },
                 {
                   id: 'ARCHIVE',
-                  label: `🔥 パンチライン一覧 (${totalStampsCount})`,
+                  label: `🔥 刻印一覧 (${totalStampsCount})`,
                 },
                 { id: 'HALL_OF_FAME', label: '人気再生順' },
               ] as const
@@ -1453,9 +1460,9 @@ export const App: React.FC = () => {
                 <button
                   key={tab.id}
                   onClick={() => setViewMode(tab.id)}
-                  className={`px-2.5 sm:px-3 py-1.5 rounded text-xs font-jp tracking-wide transition-all cursor-pointer ${
+                  className={`px-2.5 sm:px-3 py-1.5 rounded text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap ${
                     active
-                      ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black'
+                      ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
                       : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
                   }`}
                 >
@@ -1466,11 +1473,11 @@ export const App: React.FC = () => {
           </div>
 
           {viewMode !== 'ALBUMS' && (
-            <div className="text-xs font-mono-tech text-[#8E8E93] shrink-0">
+            <div className="text-[11px] sm:text-xs font-mono-tech text-[#8E8E93] shrink-0 pl-1">
               <span className="text-[#FFFFFF] font-bold">
                 {filteredBattles.length}
               </span>{' '}
-              {filteredBattles.length === 1 ? 'MATCH' : 'MATCHES'}
+              <span className="hidden sm:inline">MATCHES</span>
             </div>
           )}
         </div>
@@ -1576,7 +1583,7 @@ export const App: React.FC = () => {
       </main>
 
       {/* Minimal Footer */}
-      <footer className="border-t border-[#1A1A1C] py-6 mt-10 bg-[#0A0A0A]">
+      <footer className="border-t border-[#1A1A1C] py-6 mt-10 mb-16 sm:mb-0 bg-[#0A0A0A]">
         <div className="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] font-mono-tech text-[#48484A]">
           <div className="flex items-center gap-2">
             <span className="text-[#FFFFFF] font-bold">1verce</span> //
@@ -1597,6 +1604,87 @@ export const App: React.FC = () => {
           </div>
         </div>
       </footer>
+
+      {/* Native-App Mobile Bottom Navigation Bar (Visible only on mobile/tablet <640px) */}
+      <nav
+        aria-label="モバイル主要ナビゲーション"
+        className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0E0E10]/95 backdrop-blur-xl border-t border-[#1F1F24] pb-[env(safe-area-inset-bottom)]"
+      >
+        <div className="grid grid-cols-5 h-14 items-center">
+          {/* 1. All Battles */}
+          <button
+            onClick={() => setViewMode('LATEST')}
+            className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors ${
+              viewMode === 'LATEST' || viewMode === 'FRESH' || viewMode === 'HALL_OF_FAME'
+                ? 'text-[#FFFFFF]'
+                : 'text-[#6C6C70] hover:text-[#AEAEB2]'
+            }`}
+          >
+            <Flame className="w-4 h-4" />
+            <span className="text-[10px] font-jp font-bold">バトル</span>
+          </button>
+
+          {/* 2. My Albums */}
+          <button
+            onClick={() => setViewMode('ALBUMS')}
+            className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors relative ${
+              viewMode === 'ALBUMS'
+                ? 'text-[#E50914]'
+                : 'text-[#6C6C70] hover:text-[#AEAEB2]'
+            }`}
+          >
+            <Disc3 className="w-4 h-4" />
+            <span className="text-[10px] font-jp font-bold">アルバム</span>
+            {albums.length > 0 && (
+              <span className="absolute top-1.5 right-4 w-4 h-4 bg-[#E50914] text-white rounded-full text-[9px] font-mono-tech font-bold flex items-center justify-center">
+                {albums.length}
+              </span>
+            )}
+          </button>
+
+          {/* 3. Register Battle (Central Highlight Button) */}
+          <button
+            onClick={() => setIsSubmitOpen(true)}
+            className="flex flex-col items-center justify-center -mt-3 cursor-pointer group"
+          >
+            <div className="w-11 h-11 rounded-full bg-[#FFFFFF] group-hover:bg-[#E5E5EA] text-[#0A0A0A] flex items-center justify-center shadow-lg shadow-white/10 transition-transform active:scale-90">
+              <Plus className="w-5 h-5 stroke-[3]" />
+            </div>
+            <span className="text-[9px] font-jp font-black text-[#FFFFFF] mt-0.5">
+              登録
+            </span>
+          </button>
+
+          {/* 4. Punchline Stamps */}
+          <button
+            onClick={() => setViewMode('ARCHIVE')}
+            className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors ${
+              viewMode === 'ARCHIVE'
+                ? 'text-[#E50914]'
+                : 'text-[#6C6C70] hover:text-[#AEAEB2]'
+            }`}
+          >
+            <Sparkles className="w-4 h-4" />
+            <span className="text-[10px] font-jp font-bold">刻印</span>
+          </button>
+
+          {/* 5. Cloud DB & Insights */}
+          <button
+            onClick={() => setIsDbModalOpen(true)}
+            className="flex flex-col items-center justify-center gap-1 h-full text-[#6C6C70] hover:text-[#FFFFFF] cursor-pointer transition-colors"
+          >
+            <div className="relative">
+              <Database className="w-4 h-4" />
+              <span
+                className={`absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full ${
+                  isCloudConnected ? 'bg-emerald-400' : 'bg-amber-400'
+                }`}
+              />
+            </div>
+            <span className="text-[10px] font-mono-tech font-bold">クラウド</span>
+          </button>
+        </div>
+      </nav>
 
       {/* Modals */}
       {isSubmitOpen && (

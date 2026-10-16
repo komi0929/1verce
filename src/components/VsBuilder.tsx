@@ -309,19 +309,19 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
   return (
     <section
       aria-label="VS BUILDER"
-      className="border-b border-[#1F1F1F] bg-[#0A0A0A]/95 backdrop-blur-md sticky top-14 z-30"
+      className="border-b border-[#1F1F1F] bg-[#0A0A0A]/95 backdrop-blur-md sticky top-13 sm:top-14 z-30"
     >
-      <div className="max-w-3xl mx-auto px-3 sm:px-4 py-3 space-y-2.5">
+      <div className="max-w-3xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5 space-y-2">
         {/* STEP 1: Tournament Filter Bar (Top Hierarchy: Filters MCs & Battles) */}
-        <div className="space-y-1.5">
+        <div className="space-y-1">
           <div className="flex items-center justify-between text-[11px] font-mono-tech tracking-wider text-[#8E8E93]">
             <div className="flex items-center gap-1.5">
               <Trophy className="w-3.5 h-3.5 text-[#FFFFFF]" />
               <span className="font-bold text-[#FFFFFF]">1. TOURNAMENT</span>
-              <span className="text-[10px] font-jp text-[#8E8E93]">
+              <span className="text-[10px] font-jp text-[#8E8E93] hidden xs:inline">
                 {selectedTournament === 'ALL'
-                  ? `全大会 (${tournamentMcs.length}名のMC)`
-                  : `${selectedTournament} 出場MCに絞り込み中 (${tournamentMcs.length}名)`}
+                  ? `全大会 (${tournamentMcs.length}名)`
+                  : `${selectedTournament} (${tournamentMcs.length}名)`}
               </span>
             </div>
 
@@ -331,10 +331,10 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
                   setMcSearchQuery('');
                   onResetAll();
                 }}
-                className="flex items-center gap-1 text-[11px] font-mono-tech text-[#E50914] hover:text-[#FFFFFF] bg-[#E50914]/10 hover:bg-[#E50914]/20 border border-[#E50914]/30 px-2 py-0.5 rounded transition-colors cursor-pointer"
+                className="flex items-center gap-1 text-[10px] sm:text-[11px] font-mono-tech text-[#E50914] hover:text-[#FFFFFF] bg-[#E50914]/10 hover:bg-[#E50914]/20 border border-[#E50914]/30 px-2 py-0.5 rounded transition-colors cursor-pointer"
               >
                 <RotateCcw className="w-3 h-3" />
-                <span>全解除 (CLEAR)</span>
+                <span>リセット</span>
               </button>
             )}
           </div>
@@ -367,7 +367,7 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
                       : 'bg-[#121212] text-[#8E8E93] border-[#222224] hover:text-[#FFFFFF] hover:border-[#48484A] font-medium'
                   }`}
                 >
-                  <span>{tag === 'ALL' ? 'すべて (ALL)' : tag}</span>
+                  <span>{tag === 'ALL' ? 'すべて' : tag}</span>
                   <span
                     className={`text-[10px] font-mono-tech px-1 rounded ${
                       active
@@ -386,13 +386,13 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
         </div>
 
         {/* STEP 2: MC Search & Interactive VS Matchup Header */}
-        <div className="pt-1 border-t border-[#18181A] space-y-2">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div className="pt-1 border-t border-[#18181A] space-y-1.5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
             {/* Left: VS Builder Status & Active Matchup Slots */}
             <div className="flex items-center gap-2 flex-wrap">
-              <div className="flex items-center gap-1.5 text-[11px] font-mono-tech tracking-wider text-[#FFFFFF]">
+              <div className="flex items-center gap-1 text-[11px] font-mono-tech tracking-wider text-[#FFFFFF]">
                 <Crosshair className="w-3.5 h-3.5 text-[#E50914]" />
-                <span className="font-bold">2. MC SELECT</span>
+                <span className="font-bold">2. MC</span>
               </div>
 
               {selectedMcA ? (
@@ -439,7 +439,7 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
                 </div>
               ) : (
                 <span className="text-[11px] font-jp text-[#8E8E93]">
-                  MCをタップして対戦カード・試合を絞り込み
+                  MCをタップして絞り込み
                 </span>
               )}
             </div>
