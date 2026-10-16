@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Disc3, Plus, Check, Clock } from 'lucide-react';
+import { X, Disc3, Plus, Check, Clock, ArrowRight } from 'lucide-react';
 import { Album, Battle } from '../types';
 import {
   formatTimestamp,
@@ -13,6 +13,7 @@ interface AlbumPickerModalProps {
   initialNote?: string;
   albums: Album[];
   onClose: () => void;
+  onNavigateToAlbums?: () => void;
   onAddTrackToAlbum: (
     albumId: string,
     battleId: string,
@@ -36,6 +37,7 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
   initialNote = '',
   albums,
   onClose,
+  onNavigateToAlbums,
   onAddTrackToAlbum,
   onRemoveTrackFromAlbum,
   onCreateAlbumWithTrack,
@@ -60,13 +62,14 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
     if (!newTitle.trim()) return;
     onCreateAlbumWithTrack(
       newTitle.trim(),
-      newDesc.trim() || '自分だけのカスタム・ベストバウト・アルバム',
+      newDesc.trim() || '自分だけのカスタム・ベストバウトLP盤',
       newTheme,
       battle.id,
       parsedSeconds,
       trackNote.trim()
     );
     onClose();
+    onNavigateToAlbums?.();
   };
 
   return (
@@ -75,15 +78,15 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="w-full max-w-md bg-[#121212] border border-[#2C2C2E] rounded-md overflow-hidden shadow-2xl"
+        className="w-full max-w-md bg-[#121216] border border-[#2C2C34] rounded-xl overflow-hidden shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="px-4 py-3 border-b border-[#222224] flex items-center justify-between bg-[#0A0A0A]">
+        <div className="px-4 py-3 border-b border-[#22222A] flex items-center justify-between bg-[#0A0A0D]">
           <div className="flex items-center gap-2">
             <Disc3 className="w-4 h-4 text-[#E50914]" />
             <span className="font-jp text-xs font-black tracking-wider text-[#FFFFFF]">
-              マイアルバムへ収録 // ADD TO MY ALBUM
+              レコードへ収録 // ADD TO VINYL ALBUM
             </span>
           </div>
           <button
@@ -97,7 +100,7 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
 
         <div className="p-4 space-y-4 max-h-[82vh] overflow-y-auto">
           {/* Selected Battle Preview */}
-          <div className="flex items-center gap-3 bg-[#18181B] border border-[#262629] rounded p-2.5">
+          <div className="flex items-center gap-3 bg-[#18181F] border border-[#282832] rounded-lg p-2.5">
             <img
               src={getYouTubeThumbnail(battle.youtubeId, 'hq')}
               alt={battle.title}
@@ -114,30 +117,30 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
           </div>
 
           {/* Track Start Time & Personal Liner Note */}
-          <div className="bg-[#0A0A0A] border border-[#222224] rounded p-3 space-y-2.5">
+          <div className="bg-[#0A0A0E] border border-[#24242C] rounded-lg p-3 space-y-2.5">
             <div className="flex items-center justify-between gap-2">
-              <label className="text-[11px] font-jp text-[#8E8E93] flex items-center gap-1">
-                <Clock className="w-3 h-3" />
-                <span>再生開始位置（00:00で最初から / 秒数指定でバース直行）</span>
+              <label className="text-[11px] font-jp text-[#AEAEB2] flex items-center gap-1">
+                <Clock className="w-3 h-3 text-[#E50914]" />
+                <span>再生開始位置（00:00で最初から / 秒数指定で直行）</span>
               </label>
               <input
                 type="text"
                 value={startTimeStr}
                 onChange={(e) => setStartTimeStr(e.target.value)}
-                className="w-16 bg-[#161618] border border-[#2C2C2E] rounded px-2 py-0.5 text-xs font-mono-tech font-bold text-[#FFFFFF] text-center outline-none focus:border-[#FFFFFF]"
+                className="w-16 bg-[#16161C] border border-[#2C2C34] rounded px-2 py-0.5 text-xs font-mono-tech font-bold text-[#FFFFFF] text-center outline-none focus:border-[#FFFFFF]"
               />
             </div>
 
             <div>
-              <label className="block text-[11px] font-jp text-[#8E8E93] mb-1">
-                トラック一言メモ / ライナーノーツ（任意）
+              <label className="block text-[11px] font-jp text-[#AEAEB2] mb-1">
+                ライナーノーツ・一言メモ（任意）
               </label>
               <input
                 type="text"
                 value={trackNote}
                 onChange={(e) => setTrackNote(e.target.value)}
                 placeholder="例: 2バース目のアンサーが神がかり..."
-                className="w-full bg-[#161618] border border-[#2C2C2E] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none focus:border-[#FFFFFF]"
+                className="w-full bg-[#16161C] border border-[#2C2C34] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none focus:border-[#FFFFFF]"
               />
             </div>
           </div>
@@ -145,16 +148,16 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
           {/* Existing Albums List */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-jp font-bold text-[#8E8E93]">
-                収録先のアルバムを選択（1タップで追加・解除）
+              <span className="text-[11px] font-jp font-bold text-[#AEAEB2]">
+                収録先のレコードを選択（1タップで追加・解除）
               </span>
               <button
                 type="button"
                 onClick={() => setIsCreatingNew((v) => !v)}
-                className="text-[11px] font-jp font-bold text-[#FFFFFF] hover:underline flex items-center gap-1 cursor-pointer"
+                className="text-[11px] font-jp font-bold text-[#E50914] hover:underline flex items-center gap-1 cursor-pointer"
               >
                 <Plus className="w-3 h-3" />
-                <span>新規アルバム作成</span>
+                <span>新規レコード作成</span>
               </button>
             </div>
 
@@ -163,6 +166,7 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
                 const alreadyIn = alb.tracks.some(
                   (t) => t.battleId === battle.id
                 );
+                const cleanTag = (alb.themeTag || 'BEST BOUTS').split('::')[0];
                 return (
                   <button
                     key={alb.id}
@@ -179,10 +183,10 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
                         );
                       }
                     }}
-                    className={`w-full p-2.5 rounded border text-left flex items-center justify-between gap-2 transition-all cursor-pointer ${
+                    className={`w-full p-2.5 rounded-lg border text-left flex items-center justify-between gap-2 transition-all cursor-pointer ${
                       alreadyIn
                         ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
-                        : 'bg-[#161618] text-[#FFFFFF] border-[#262629] hover:border-[#8E8E93]'
+                        : 'bg-[#16161C] text-[#FFFFFF] border-[#262630] hover:border-[#8E8E93]'
                     }`}
                   >
                     <div className="min-w-0 flex-1">
@@ -194,20 +198,20 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
                           alreadyIn ? 'text-[#0A0A0A]/75' : 'text-[#8E8E93]'
                         }`}
                       >
-                        {alb.tracks.length} TRACKS • {alb.themeTag}
+                        {alb.tracks.length} TRACKS • {cleanTag}
                       </div>
                     </div>
 
                     <span
-                      className={`px-2 py-0.5 rounded text-[11px] font-mono-tech font-bold flex items-center gap-1 shrink-0 ${
+                      className={`px-2.5 py-1 rounded text-[11px] font-mono-tech font-bold flex items-center gap-1 shrink-0 ${
                         alreadyIn
                           ? 'bg-[#0A0A0A] text-[#FFFFFF]'
-                          : 'bg-[#242428] text-[#FFFFFF]'
+                          : 'bg-[#24242E] text-[#FFFFFF]'
                       }`}
                     >
                       {alreadyIn ? (
                         <>
-                          <Check className="w-3 h-3" />
+                          <Check className="w-3 h-3 text-emerald-400" />
                           <span>収録済</span>
                         </>
                       ) : (
@@ -227,18 +231,18 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
           {isCreatingNew && (
             <form
               onSubmit={handleCreateAndAdd}
-              className="bg-[#18181C] border border-[#3A3A3E] rounded p-3 space-y-2.5 animate-fadeIn"
+              className="bg-[#181820] border border-[#3A3A46] rounded-lg p-3 space-y-2.5 animate-fadeIn"
             >
               <div className="text-xs font-jp font-black text-[#FFFFFF]">
-                ＋ 新しいマイアルバムを作成してこの試合を収録
+                ＋ 新しいレコードを作成してこの試合を収録
               </div>
 
               <input
                 type="text"
                 value={newTitle}
                 onChange={(e) => setNewTitle(e.target.value)}
-                placeholder="アルバム名（例: 個人的 戦極ベストバウト10選）"
-                className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
+                placeholder="レコード名（例: 個人的 戦極ベストバウト10選）"
+                className="w-full bg-[#0A0A0E] border border-[#2C2C34] focus:border-[#FFFFFF] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
                 required
               />
 
@@ -247,15 +251,15 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
                 value={newDesc}
                 onChange={(e) => setNewDesc(e.target.value)}
                 placeholder="アルバムの説明・ライナーノーツ（任意）"
-                className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
+                className="w-full bg-[#0A0A0E] border border-[#2C2C34] focus:border-[#FFFFFF] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
               />
 
               <div className="flex items-center gap-1 flex-wrap">
                 {[
                   'MY BEST BOUTS',
-                  'PUNCHLINE MIX',
                   'FLOW & GROOVE',
                   'LEGEND ARCHIVE',
+                  'WORKOUT HYPE',
                 ].map((tag) => (
                   <button
                     key={tag}
@@ -264,7 +268,7 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
                     className={`px-2 py-0.5 rounded text-[10px] font-mono-tech cursor-pointer border ${
                       newTheme === tag
                         ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF] font-bold'
-                        : 'bg-[#0A0A0A] text-[#8E8E93] border-[#262628]'
+                        : 'bg-[#0A0A0E] text-[#8E8E93] border-[#262630]'
                     }`}
                   >
                     {tag}
@@ -274,11 +278,36 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
 
               <button
                 type="submit"
-                className="w-full py-2 rounded bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp text-xs font-black cursor-pointer"
+                className="w-full py-2 rounded-lg bg-[#E50914] hover:bg-[#F40612] text-[#FFFFFF] font-jp text-xs font-black cursor-pointer"
               >
-                アルバムを作成して収録する
+                レコードを作成して収録＆再生へ →
               </button>
             </form>
+          )}
+
+          {/* Direct Jump to Vinyl Turntable */}
+          {onNavigateToAlbums && (
+            <div className="pt-1 border-t border-[#22222A] flex items-center justify-between gap-2">
+              <button
+                type="button"
+                onClick={onClose}
+                className="px-3 py-2 rounded-lg bg-[#1C1C22] text-xs font-jp font-bold text-[#8E8E93] hover:text-[#FFFFFF] cursor-pointer"
+              >
+                閉じる
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  onClose();
+                  onNavigateToAlbums();
+                }}
+                className="flex-1 py-2 px-3 rounded-lg bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp text-xs font-black flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <Disc3 className="w-3.5 h-3.5 text-[#E50914]" />
+                <span>レコード棚を開いて連続再生する</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
           )}
         </div>
       </div>

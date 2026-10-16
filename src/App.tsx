@@ -9,8 +9,10 @@ import {
   Disc3,
   Database,
   Flame,
-  Sparkles,
   HelpCircle,
+  SkipBack,
+  SkipForward,
+  Square,
 } from 'lucide-react';
 import {
   ActivityItem,
@@ -26,9 +28,10 @@ import {
 import { INITIAL_ANALYTICS, INITIAL_BATTLES } from './data/initialData';
 import {
   isSameMc,
-  normalizeMcName,
   formatTimestamp,
   matchesMcQuery,
+  getYouTubeThumbnail,
+  normalizeMcName,
 } from './utils/youtube';
 import {
   DB_STORAGE_KEYS,
@@ -36,8 +39,8 @@ import {
   fetchCloudState,
   getSupabaseConfig,
   insertActivityToCloud,
+  mergeAlbumsWithCloud,
   removeAlbumFromCloud,
-  removeStampFromCloud,
   syncAnalyticsToCloud,
   upsertAlbumToCloud,
   upsertBattleToCloud,
@@ -45,7 +48,7 @@ import {
 } from './lib/database';
 import { VsBuilder } from './components/VsBuilder';
 import { BattleCard } from './components/BattleCard';
-import { AlbumView } from './components/AlbumView';
+import { AlbumView, ActiveAlbumPlaybackInfo } from './components/AlbumView';
 import { AlbumPickerModal } from './components/AlbumPickerModal';
 import { ShareModal } from './components/ShareModal';
 import { SubmitModal } from './components/SubmitModal';
@@ -82,14 +85,16 @@ export const App: React.FC = () => {
     return INITIAL_BATTLES;
   });
 
-  // 2. Persistent Albums State
+  // 2. Persistent Albums State (with migration from v1)
   const [albums, setAlbums] = useState<Album[]>(() => {
     try {
-      const raw = localStorage.getItem(DB_STORAGE_KEYS.ALBUMS);
+      const raw =
+        localStorage.getItem(DB_STORAGE_KEYS.ALBUMS) ||
+        localStorage.getItem('1verce_albums_v1');
       if (raw) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          return mergeAlbumsWithCloud(parsed, DEFAULT_ALBUMS);
         }
       }
     } catch {
@@ -131,9 +136,7 @@ export const App: React.FC = () => {
     }
   });
 
-  const [userLikedVerses, setUserLikedVerses] = useState<
-    Record<string, boolean>
-  >(() => {
+  const [userLikedVerses] = useState<Record<string, boolean>>(() => {
     try {
       const raw = localStorage.getItem(DB_STORAGE_KEYS.LIKED_VERSES);
       return raw ? JSON.parse(raw) : {};
@@ -153,11 +156,13 @@ export const App: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [displayLimit, setDisplayLimit] = useState<number>(20);
 
-  // 7. Singleton Player State
+  // 7. Singleton Player State & Background Vinyl Turntable State
   const [activeBattleId, setActiveBattleId] = useState<string | null>(null);
   const [seekSeconds, setSeekSeconds] = useState<number>(0);
   const [seekNonce, setSeekNonce] = useState<number>(0);
-  const [activeVerseId, setActiveVerseId] = useState<string | null>(null);
+  const [, setActiveVerseId] = useState<string | null>(null);
+  const [activeAlbumPlayback, setActiveAlbumPlayback] =
+    useState<ActiveAlbumPlaybackInfo | null>(null);
   const [deepLinkBanner, setDeepLinkBanner] = useState<{
     battleId: string;
     seconds: number;
@@ -182,9 +187,9 @@ export const App: React.FC = () => {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState<boolean>(() => {
     try {
       const raw = localStorage.getItem('1verce_onboarding_open_v1');
-      return raw === null ? true : raw === '1';
+      return raw === '1';
     } catch {
-      return true;
+      return false;
     }
   });
 
@@ -297,7 +302,7 @@ export const App: React.FC = () => {
         setIsCloudConnected(true);
         setBattles(cloud.mergedBattles);
         if (cloud.cloudAlbums && cloud.cloudAlbums.length > 0) {
-          setAlbums(cloud.cloudAlbums);
+          setAlbums((local) => mergeAlbumsWithCloud(local, cloud.cloudAlbums));
         }
         if (cloud.cloudActivities && cloud.cloudActivities.length > 0) {
           setActivities(cloud.cloudActivities);
@@ -752,6 +757,31 @@ export const App: React.FC = () => {
     []
   );
 
+  const handleUpdateTrackInAlbum = useCallback(
+    (
+      albumId: string,
+      trackId: string,
+      startSeconds: number,
+      note: string
+    ) => {
+      setAlbums((prev) =>
+        prev.map((a) => {
+          if (a.id !== albumId) return a;
+          const updated: Album = {
+            ...a,
+            updatedAt: new Date().toISOString(),
+            tracks: a.tracks.map((t) =>
+              t.id === trackId ? { ...t, startSeconds, note } : t
+            ),
+          };
+          upsertAlbumToCloud(updated);
+          return updated;
+        })
+      );
+    },
+    []
+  );
+
   const handleRecordAlbumPlay = useCallback(
     (albumId: string, battleId: string) => {
       setAlbums((prev) =>
@@ -906,7 +936,6 @@ export const App: React.FC = () => {
       }
 
       if (viewMode === 'FRESH') {
-        // Prioritize battles with user stamps or newly submitted by users
         const aHasActivity = a.verses.length > 0 || a.isUserSubmitted ? 1 : 0;
         const bHasActivity = b.verses.length > 0 || b.isUserSubmitted ? 1 : 0;
         if (bHasActivity !== aHasActivity) return bHasActivity - aHasActivity;
@@ -966,9 +995,12 @@ export const App: React.FC = () => {
           <div className="flex items-center gap-1.5 sm:gap-2">
             {/* Search Trigger */}
             <button
-              onClick={() => setIsSearchOpen((v) => !v)}
+              onClick={() => {
+                if (viewMode === 'ALBUMS') setViewMode('LATEST');
+                setIsSearchOpen((v) => !v);
+              }}
               aria-label="キーワード検索を開く"
-              title="SEARCH LYRICS / MCS"
+              title="SEARCH MCS / TOURNAMENTS"
               className={`p-2 sm:p-1.5 rounded border transition-colors cursor-pointer ${
                 isSearchOpen || searchQuery
                   ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
@@ -992,21 +1024,25 @@ export const App: React.FC = () => {
               onClick={() =>
                 setViewMode((prev) => (prev === 'ALBUMS' ? 'LATEST' : 'ALBUMS'))
               }
-              aria-label="マイアルバムを開く"
+              aria-label="マイアルバム（レコード棚）を開く"
               className={`hidden sm:flex px-2.5 py-1.5 rounded border font-jp text-xs font-bold tracking-tight items-center gap-1 transition-colors cursor-pointer ${
                 viewMode === 'ALBUMS'
                   ? 'bg-[#E50914] text-[#FFFFFF] border-[#E50914]'
                   : 'bg-[#121212] text-[#FFFFFF] border-[#262628] hover:border-[#FFFFFF]'
               }`}
             >
-              <Disc3 className="w-3.5 h-3.5" />
-              <span>アルバム</span>
+              <Disc3
+                className={`w-3.5 h-3.5 ${
+                  activeAlbumPlayback ? 'animate-spin-slow text-[#FF6B6B]' : ''
+                }`}
+              />
+              <span>レコード棚</span>
               <span className="text-[10px] font-mono-tech opacity-85">
                 ({albums.length})
               </span>
             </button>
 
-            {/* Cloud DB Connection Status Indicator (Clickable on both) */}
+            {/* Cloud DB Connection Status Indicator */}
             <button
               onClick={() => setIsDbModalOpen(true)}
               aria-label="データベース・クラウド設定"
@@ -1078,8 +1114,11 @@ export const App: React.FC = () => {
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="MC名・大会名・刻印されたパンチラインで自由検索..."
+                onChange={(e) => {
+                  if (viewMode === 'ALBUMS') setViewMode('LATEST');
+                  setSearchQuery(e.target.value);
+                }}
+                placeholder="MC名・大会名でバトルを高速検索..."
                 className="flex-1 bg-transparent text-xs sm:text-sm font-jp text-[#FFFFFF] placeholder:text-[#48484A] outline-none"
                 autoFocus
               />
@@ -1097,26 +1136,36 @@ export const App: React.FC = () => {
         )}
       </header>
 
-      {/* 2. Interactive "VS BUILDER" (Zero-typing Cross Filter Bar) */}
-      <VsBuilder
-        battles={battles}
-        selectedMcA={selectedMcA}
-        selectedMcB={selectedMcB}
-        selectedTournament={selectedTournament}
-        onSelectMcA={handleSelectMcA}
-        onSelectMcB={handleSelectMcB}
-        onSelectTournament={handleSelectTournament}
-        onSelectMatchup={handleSelectMatchup}
-        onResetAll={handleResetFilters}
-      />
+      {/* 2. Interactive "VS BUILDER" — ONLY visible when exploring battles (Hidden on ALBUMS tab so Vinyl Studio has 100% screen focus) */}
+      {viewMode !== 'ALBUMS' && (
+        <VsBuilder
+          battles={battles}
+          selectedMcA={selectedMcA}
+          selectedMcB={selectedMcB}
+          selectedTournament={selectedTournament}
+          onSelectMcA={handleSelectMcA}
+          onSelectMcB={handleSelectMcB}
+          onSelectTournament={handleSelectTournament}
+          onSelectMatchup={handleSelectMatchup}
+          onResetAll={handleResetFilters}
+        />
+      )}
 
-      {/* Main Content Container (with pb-24 for mobile bottom navigation clearance) */}
-      <main className="flex-1 max-w-3xl w-full mx-auto px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4 pb-24 sm:pb-8">
-        {/* Interactive Onboarding Guide for First-Time & Returning Users */}
+      {/* Main Content Container */}
+      <main
+        className={`flex-1 max-w-3xl w-full mx-auto px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4 ${
+          activeAlbumPlayback && viewMode !== 'ALBUMS'
+            ? 'pb-36 sm:pb-24'
+            : 'pb-24 sm:pb-8'
+        }`}
+      >
+        {/* Interactive Onboarding Guide (Only when explicitly toggled by user) */}
         <OnboardingBanner
           isOpen={isOnboardingOpen}
           onClose={() => handleToggleOnboarding(false)}
-          hasStampedOrLiked={Boolean(activeBattleId || selectedMcA || selectedTournament !== 'ALL')}
+          hasStampedOrLiked={Boolean(
+            activeBattleId || selectedMcA || selectedTournament !== 'ALL'
+          )}
           hasUsedAlbum={albums.some(
             (a) => !a.isPreset || a.playCount > 0 || a.tracks.length > 4
           )}
@@ -1137,82 +1186,8 @@ export const App: React.FC = () => {
           onOpenSubmitBattle={() => setIsSubmitOpen(true)}
         />
 
-        {/* Participatory Quick Hub & Recent Freshness Ticker */}
-        <div className="bg-[#121214] border border-[#242428] rounded-md p-2.5 sm:p-3 space-y-2">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div className="flex items-center gap-1.5 text-xs font-jp">
-              <Sparkles className="w-3.5 h-3.5 text-[#E50914] shrink-0" />
-              <span className="font-bold text-[#FFFFFF] text-[11px] sm:text-xs">
-                参加型アーカイブ:
-              </span>
-              <span className="text-[#8E8E93] text-[11px] sm:text-xs">
-                お気に入りの<strong className="text-[#FFFFFF]">YouTubeバトル登録</strong>・
-                自分だけの<strong className="text-[#FFFFFF]">マイアルバム連続再生</strong>
-              </span>
-            </div>
-
-            {/* Desktop shortcut buttons (On mobile, accessible in 1-tap via Bottom Nav) */}
-            <div className="hidden sm:flex items-center gap-1.5 shrink-0">
-              {!isOnboardingOpen && (
-                <button
-                  type="button"
-                  onClick={() => handleToggleOnboarding(true)}
-                  className="px-2 py-1 rounded bg-[#1C1C20] hover:bg-[#26262C] text-[#E5E5EA] border border-[#2C2C2E] text-[11px] font-jp font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                >
-                  <HelpCircle className="w-3 h-3 text-[#E50914]" />
-                  <span>使い方ガイド</span>
-                </button>
-              )}
-              <button
-                type="button"
-                onClick={() => setIsSubmitOpen(true)}
-                className="px-2.5 py-1 rounded bg-[#1C1C20] hover:bg-[#FFFFFF] text-[#FFFFFF] hover:text-[#0A0A0A] border border-[#2C2C2E] text-[11px] font-jp font-bold flex items-center gap-1 transition-colors cursor-pointer"
-              >
-                <Plus className="w-3 h-3" />
-                <span>YouTube登録</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setViewMode('ALBUMS')}
-                className="px-2.5 py-1 rounded bg-[#1C1C20] hover:bg-[#FFFFFF] text-[#FFFFFF] hover:text-[#0A0A0A] border border-[#2C2C2E] text-[11px] font-jp font-bold flex items-center gap-1 transition-colors cursor-pointer"
-              >
-                <Disc3 className="w-3 h-3 text-[#E50914]" />
-                <span>マイアルバムをつくる</span>
-              </button>
-            </div>
-          </div>
-
-          {/* Live Freshness Activity Feed (shows latest stamps / registrations) */}
-          {activities.length > 0 && (
-            <div className="pt-1.5 border-t border-[#1E1E22] flex items-center gap-2 overflow-x-auto no-scrollbar">
-              <span className="px-1.5 py-0.5 rounded bg-[#E50914]/20 border border-[#E50914]/40 text-[#FF6B6B] font-mono-tech text-[9px] sm:text-[10px] font-bold shrink-0">
-                FRESH LOG
-              </span>
-              {activities.slice(0, 5).map((act) => (
-                <button
-                  key={act.id}
-                  type="button"
-                  onClick={() => {
-                    if (act.battleId) {
-                      handleJumpToBattleAndVerse(
-                        act.battleId,
-                        act.seconds || 0
-                      );
-                    } else if (act.albumId) {
-                      setViewMode('ALBUMS');
-                    }
-                  }}
-                  className="px-2 py-0.5 rounded bg-[#18181C] hover:bg-[#242429] border border-[#26262A] text-[10px] sm:text-[11px] font-jp text-[#E5E5EA] truncate max-w-xs shrink-0 cursor-pointer transition-colors"
-                >
-                  {act.summary}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
         {/* Deep Link Active Notification Banner */}
-        {deepLinkBanner && (
+        {deepLinkBanner && viewMode !== 'ALBUMS' && (
           <div className="bg-[#1A1A1A] border border-[#E50914] rounded px-3 py-2 flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 text-xs font-mono-tech">
               <span className="w-2 h-2 rounded-full bg-[#E50914] animate-live-dot" />
@@ -1229,132 +1204,226 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* 3. View Mode Switcher (Smooth horizontal touch-scroll on mobile) */}
-        <div className="flex items-center justify-between gap-2 border-b border-[#1F1F21] pb-2">
-          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 flex-1 min-w-0">
-            {(
-              [
-                { id: 'LATEST', label: '全バトル' },
-                {
-                  id: 'ALBUMS',
-                  label: `💿 アルバム (${albums.length})`,
-                },
-                { id: 'HALL_OF_FAME', label: '人気再生順' },
-              ] as const
-            ).map((tab) => {
-              const active = viewMode === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setViewMode(tab.id as ViewMode)}
-                  className={`px-3 py-1.5 rounded text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap ${
-                    active
-                      ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
-                      : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              );
-            })}
-          </div>
+        {/* 3. Battle Sort Bar — Only shown on Battle View */}
+        {viewMode !== 'ALBUMS' && (
+          <div className="flex items-center justify-between gap-2 border-b border-[#1F1F21] pb-2">
+            <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 flex-1 min-w-0">
+              {(
+                [
+                  { id: 'LATEST', label: '全バトル (新着)' },
+                  { id: 'HALL_OF_FAME', label: '人気再生順' },
+                ] as const
+              ).map((tab) => {
+                const active = viewMode === tab.id && !showSavedOnly;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => {
+                      setShowSavedOnly(false);
+                      setViewMode(tab.id as ViewMode);
+                    }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap ${
+                      active
+                        ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
+                        : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                );
+              })}
 
-          {viewMode !== 'ALBUMS' && (
+              <button
+                onClick={() => setShowSavedOnly((prev) => !prev)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap flex items-center gap-1 ${
+                  showSavedOnly
+                    ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
+                    : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
+                }`}
+              >
+                <Bookmark className="w-3 h-3" />
+                <span>保存済 ({savedIds.length})</span>
+              </button>
+            </div>
+
             <div className="text-[11px] sm:text-xs font-mono-tech text-[#8E8E93] shrink-0 pl-1">
               <span className="text-[#FFFFFF] font-bold">
                 {filteredBattles.length}
               </span>{' '}
               <span className="hidden sm:inline">MATCHES</span>
+              <span className="sm:hidden">件</span>
             </div>
-          )}
-        </div>
-
-        {/* 4. Main View Body */}
-        {viewMode === 'ALBUMS' ? (
-          <AlbumView
-            albums={albums}
-            battles={battles}
-            onCreateAlbum={handleCreateAlbum}
-            onUpdateAlbumMeta={handleUpdateAlbumMeta}
-            onDeleteAlbum={handleDeleteAlbum}
-            onAddTrackToAlbum={handleAddTrackToAlbum}
-            onRemoveTrackFromAlbum={handleRemoveTrackFromAlbumById}
-            onMoveTrack={handleMoveTrack}
-            onRecordAlbumPlay={handleRecordAlbumPlay}
-          />
-        ) : filteredBattles.length === 0 ? (
-          <div className="bg-[#121212] border border-[#222224] rounded-md p-10 text-center space-y-3">
-            <div className="font-jp text-sm font-bold text-[#8E8E93]">
-              条件に一致するバトルが見つかりませんでした
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <button
-                onClick={handleResetFilters}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded bg-[#FFFFFF] text-[#0A0A0A] font-jp text-xs font-black cursor-pointer"
-              >
-                <RotateCcw className="w-3.5 h-3.5" />
-                <span>フィルターをリセット</span>
-              </button>
-              <button
-                onClick={() => setIsSubmitOpen(true)}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded bg-[#1C1C20] text-[#FFFFFF] border border-[#2C2C2E] font-jp text-xs font-bold cursor-pointer"
-              >
-                <Plus className="w-3.5 h-3.5" />
-                <span>このバトルのYouTubeを登録する</span>
-              </button>
-            </div>
-          </div>
-        ) : (
-          <div className="space-y-5">
-            {filteredBattles.slice(0, displayLimit).map((battle) => (
-              <BattleCard
-                key={battle.id}
-                battle={battle}
-                isPlaying={activeBattleId === battle.id}
-                seekSeconds={
-                  activeBattleId === battle.id ? seekSeconds : 0
-                }
-                seekNonce={activeBattleId === battle.id ? seekNonce : 0}
-                isSaved={savedIds.includes(battle.id)}
-                albumCountForBattle={albumCountByBattleId.get(battle.id) || 0}
-                onStartPlay={handleStartPlay}
-                onStopPlay={handleStopPlay}
-                onVideoEnded={handleVideoEnded}
-                onToggleSave={handleToggleSave}
-                onOpenShare={(b) => setShareTarget({ battle: b })}
-                onOpenAlbumPicker={(b, startSeconds, note) =>
-                  setAlbumPickerTarget({ battle: b, startSeconds, note })
-                }
-              />
-            ))}
-
-            {filteredBattles.length > displayLimit && (
-              <div className="py-6 flex flex-col items-center justify-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setDisplayLimit((prev) => prev + 25)}
-                  className="px-6 py-2.5 rounded-full bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp font-black text-xs shadow-lg transition-transform active:scale-95 cursor-pointer flex items-center gap-2"
-                >
-                  <span>さらに次の25件のバトルを読み込む</span>
-                  <span className="font-mono-tech text-[11px] opacity-70">
-                    ({Math.min(displayLimit, filteredBattles.length)} / {filteredBattles.length})
-                  </span>
-                </button>
-                <p className="text-[11px] font-mono-tech text-[#8E8E93]">
-                  残りのバトル: {filteredBattles.length - displayLimit}件
-                </p>
-              </div>
-            )}
           </div>
         )}
+
+        {/* 4. Album Vinyl Studio (Kept mounted while activeAlbumPlayback is active so music continues seamlessly across tabs!) */}
+        {(viewMode === 'ALBUMS' || activeAlbumPlayback !== null) && (
+          <div
+            className={
+              viewMode === 'ALBUMS'
+                ? 'block'
+                : 'sr-only h-0 overflow-hidden pointer-events-none'
+            }
+          >
+            <AlbumView
+              albums={albums}
+              battles={battles}
+              externalBattlePlaying={Boolean(activeBattleId)}
+              onStopExternalBattle={() => setActiveBattleId(null)}
+              onActivePlaybackChange={setActiveAlbumPlayback}
+              onCreateAlbum={handleCreateAlbum}
+              onUpdateAlbumMeta={handleUpdateAlbumMeta}
+              onDeleteAlbum={handleDeleteAlbum}
+              onAddTrackToAlbum={handleAddTrackToAlbum}
+              onRemoveTrackFromAlbum={handleRemoveTrackFromAlbumById}
+              onMoveTrack={handleMoveTrack}
+              onUpdateTrackInAlbum={handleUpdateTrackInAlbum}
+              onRecordAlbumPlay={handleRecordAlbumPlay}
+            />
+          </div>
+        )}
+
+        {/* 5. Battle Cards Feed */}
+        {viewMode !== 'ALBUMS' &&
+          (filteredBattles.length === 0 ? (
+            <div className="bg-[#121212] border border-[#222224] rounded-xl p-10 text-center space-y-3">
+              <div className="font-jp text-sm font-bold text-[#8E8E93]">
+                条件に一致するバトルが見つかりませんでした
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <button
+                  onClick={handleResetFilters}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#FFFFFF] text-[#0A0A0A] font-jp text-xs font-black cursor-pointer"
+                >
+                  <RotateCcw className="w-3.5 h-3.5" />
+                  <span>フィルターをリセット</span>
+                </button>
+                <button
+                  onClick={() => setIsSubmitOpen(true)}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#1C1C20] text-[#FFFFFF] border border-[#2C2C2E] font-jp text-xs font-bold cursor-pointer"
+                >
+                  <Plus className="w-3.5 h-3.5" />
+                  <span>YouTubeを登録する</span>
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="space-y-4 sm:space-y-5">
+              {filteredBattles.slice(0, displayLimit).map((battle) => (
+                <BattleCard
+                  key={battle.id}
+                  battle={battle}
+                  isPlaying={activeBattleId === battle.id}
+                  seekSeconds={
+                    activeBattleId === battle.id ? seekSeconds : 0
+                  }
+                  seekNonce={activeBattleId === battle.id ? seekNonce : 0}
+                  isSaved={savedIds.includes(battle.id)}
+                  albumCountForBattle={albumCountByBattleId.get(battle.id) || 0}
+                  onStartPlay={handleStartPlay}
+                  onStopPlay={handleStopPlay}
+                  onVideoEnded={handleVideoEnded}
+                  onToggleSave={handleToggleSave}
+                  onOpenShare={(b) => setShareTarget({ battle: b })}
+                  onOpenAlbumPicker={(b, startSeconds, note) =>
+                    setAlbumPickerTarget({ battle: b, startSeconds, note })
+                  }
+                />
+              ))}
+
+              {filteredBattles.length > displayLimit && (
+                <div className="py-6 flex flex-col items-center justify-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setDisplayLimit((prev) => prev + 25)}
+                    className="px-6 py-2.5 rounded-full bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp font-black text-xs shadow-lg transition-transform active:scale-95 cursor-pointer flex items-center gap-2"
+                  >
+                    <span>さらに次の25件のバトルを読み込む</span>
+                    <span className="font-mono-tech text-[11px] opacity-70">
+                      ({Math.min(displayLimit, filteredBattles.length)} /{' '}
+                      {filteredBattles.length})
+                    </span>
+                  </button>
+                  <p className="text-[11px] font-mono-tech text-[#8E8E93]">
+                    残りのバトル: {filteredBattles.length - displayLimit}件
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
       </main>
+
+      {/* Floating Mini Vinyl Turntable Bar (Visible on Battle View while an Album is spinning!) */}
+      {viewMode !== 'ALBUMS' && activeAlbumPlayback && (
+        <div className="fixed bottom-15 sm:bottom-4 left-2 right-2 sm:left-auto sm:right-6 sm:w-96 z-40 bg-[#121216]/95 backdrop-blur-xl border border-[#2C2C34] rounded-2xl p-2.5 shadow-2xl flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setViewMode('ALBUMS')}
+            className="relative w-11 h-11 rounded-full bg-[#09090B] border border-[#3A3A44] flex items-center justify-center shrink-0 animate-spin-slow cursor-pointer overflow-hidden"
+            title="ターンテーブルを開く"
+          >
+            <img
+              src={getYouTubeThumbnail(activeAlbumPlayback.battle.youtubeId)}
+              alt=""
+              className="w-full h-full object-cover opacity-80"
+            />
+            <span className="absolute w-3 h-3 rounded-full bg-[#E50914] border-2 border-[#09090B]" />
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewMode('ALBUMS')}
+            className="flex-1 min-w-0 text-left cursor-pointer"
+          >
+            <div className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E50914] animate-live-dot shrink-0" />
+              <span className="text-[9px] font-mono-tech text-[#FF6B6B] font-bold truncate">
+                VINYL SPINNING ({activeAlbumPlayback.trackIndex + 1}/
+                {activeAlbumPlayback.totalTracks}) •{' '}
+                {activeAlbumPlayback.albumTitle}
+              </span>
+            </div>
+            <div className="text-xs font-jp font-black text-white truncate">
+              {activeAlbumPlayback.battle.mcA} vs{' '}
+              {activeAlbumPlayback.battle.mcB}
+            </div>
+          </button>
+
+          <div className="flex items-center gap-1 shrink-0">
+            <button
+              type="button"
+              onClick={activeAlbumPlayback.onPrev}
+              aria-label="前のトラック"
+              className="p-2 rounded-lg bg-[#1C1C22] hover:bg-[#282830] text-white cursor-pointer"
+            >
+              <SkipBack className="w-3.5 h-3.5" />
+            </button>
+            <button
+              type="button"
+              onClick={activeAlbumPlayback.onNext}
+              aria-label="次のトラック"
+              className="p-2 rounded-lg bg-[#1C1C22] hover:bg-[#282830] text-white cursor-pointer"
+            >
+              <SkipForward className="w-3.5 h-3.5" />
+            </button>
+            <button
+              type="button"
+              onClick={activeAlbumPlayback.onStop}
+              aria-label="停止"
+              className="p-2 rounded-lg bg-[#2A1215] hover:bg-[#E50914] text-[#FF8A8A] hover:text-white cursor-pointer"
+            >
+              <Square className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Minimal Footer */}
       <footer className="border-t border-[#1A1A1C] py-6 mt-10 mb-16 sm:mb-0 bg-[#0A0A0A]">
         <div className="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] font-mono-tech text-[#48484A]">
           <div className="flex items-center gap-2">
             <span className="text-[#FFFFFF] font-bold">1verce</span> //
-            PARTICIPATORY MC BATTLE ARCHIVE & MIXTAPE ENGINE
+            PARTICIPATORY MC BATTLE ARCHIVE & VINYL TURNTABLE
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -1380,9 +1449,12 @@ export const App: React.FC = () => {
         <div className="grid grid-cols-4 h-14 items-center">
           {/* 1. All Battles */}
           <button
-            onClick={() => setViewMode('LATEST')}
+            onClick={() => {
+              setViewMode('LATEST');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors ${
-              viewMode === 'LATEST' || viewMode === 'HALL_OF_FAME'
+              viewMode !== 'ALBUMS'
                 ? 'text-[#FFFFFF]'
                 : 'text-[#6C6C70] hover:text-[#AEAEB2]'
             }`}
@@ -1391,16 +1463,23 @@ export const App: React.FC = () => {
             <span className="text-[10px] font-jp font-bold">バトル</span>
           </button>
 
-          {/* 2. My Albums */}
+          {/* 2. My Albums (Vinyl Shelf) */}
           <button
-            onClick={() => setViewMode('ALBUMS')}
+            onClick={() => {
+              setViewMode('ALBUMS');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors relative ${
               viewMode === 'ALBUMS'
                 ? 'text-[#E50914]'
                 : 'text-[#6C6C70] hover:text-[#AEAEB2]'
             }`}
           >
-            <Disc3 className="w-4 h-4" />
+            <Disc3
+              className={`w-4 h-4 ${
+                activeAlbumPlayback ? 'animate-spin-slow text-[#E50914]' : ''
+              }`}
+            />
             <span className="text-[10px] font-jp font-bold">アルバム</span>
             {albums.length > 0 && (
               <span className="absolute top-1.5 right-6 w-4 h-4 bg-[#E50914] text-white rounded-full text-[9px] font-mono-tech font-bold flex items-center justify-center">
@@ -1422,7 +1501,7 @@ export const App: React.FC = () => {
             </span>
           </button>
 
-          {/* 4. Cloud DB & Insights */}
+          {/* 4. Cloud DB & Sync */}
           <button
             onClick={() => setIsDbModalOpen(true)}
             className="flex flex-col items-center justify-center gap-1 h-full text-[#6C6C70] hover:text-[#FFFFFF] cursor-pointer transition-colors"
@@ -1466,6 +1545,10 @@ export const App: React.FC = () => {
           onAddTrackToAlbum={handleAddTrackToAlbum}
           onRemoveTrackFromAlbum={handleRemoveTrackFromAlbumByBattle}
           onCreateAlbumWithTrack={handleCreateAlbumWithTrack}
+          onNavigateToAlbums={() => {
+            setViewMode('ALBUMS');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
         />
       )}
 

@@ -1,74 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-
-declare global {
-  interface Window {
-    YT?: {
-      Player: new (
-        element: HTMLElement | string,
-        options: {
-          videoId: string;
-          playerVars?: Record<string, string | number>;
-          events?: {
-            onReady?: (event: { target: YTPlayerInstance }) => void;
-            onStateChange?: (event: {
-              data: number;
-              target: YTPlayerInstance;
-            }) => void;
-          };
-        }
-      ) => YTPlayerInstance;
-      PlayerState?: {
-        ENDED: number;
-        PLAYING: number;
-        PAUSED: number;
-        BUFFERING: number;
-        CUED: number;
-      };
-    };
-    onYouTubeIframeAPIReady?: () => void;
-  }
-}
-
-export interface YTPlayerInstance {
-  getCurrentTime: () => number;
-  getDuration: () => number;
-  getPlayerState: () => number;
-  seekTo: (seconds: number, allowSeekAhead: boolean) => void;
-  playVideo: () => void;
-  pauseVideo: () => void;
-  loadVideoById: (options: { videoId: string; startSeconds?: number }) => void;
-  destroy: () => void;
-}
-
-let apiLoadPromise: Promise<void> | null = null;
-
-function loadYouTubeApi(): Promise<void> {
-  if (typeof window === 'undefined') return Promise.resolve();
-  if (window.YT && window.YT.Player) {
-    return Promise.resolve();
-  }
-  if (apiLoadPromise) return apiLoadPromise;
-
-  apiLoadPromise = new Promise<void>((resolve) => {
-    const prevCallback = window.onYouTubeIframeAPIReady;
-    window.onYouTubeIframeAPIReady = () => {
-      prevCallback?.();
-      resolve();
-    };
-
-    const existingScript = document.querySelector(
-      'script[src="https://www.youtube.com/iframe_api"]'
-    );
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.src = 'https://www.youtube.com/iframe_api';
-      script.async = true;
-      document.head.appendChild(script);
-    }
-  });
-
-  return apiLoadPromise;
-}
+import React, { useEffect, useRef, useState } from 'react';
+import { Disc3 } from 'lucide-react';
+import { getYouTubeThumbnail } from '../utils/youtube';
 
 interface YouTubePlayerProps {
   youtubeId: string;
@@ -83,6 +15,22 @@ interface YouTubePlayerProps {
   onEnded?: () => void;
 }
 
+function buildEmbedUrl(youtubeId: string, startSeconds: number): string {
+  const start = Math.max(0, Math.floor(startSeconds || 0));
+  const origin =
+    typeof window !== 'undefined' ? window.location.origin : 'https://1verce.vercel.app';
+  const params = new URLSearchParams({
+    autoplay: '1',
+    start: String(start),
+    rel: '0',
+    modestbranding: '1',
+    playsinline: '1',
+    enablejsapi: '1',
+    origin,
+  });
+  return `https://www.youtube.com/embed/${encodeURIComponent(youtubeId)}?${params.toString()}`;
+}
+
 export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   youtubeId,
   startSeconds,
@@ -91,135 +39,208 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   onTimeUpdate,
   onEnded,
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const playerRef = useRef<YTPlayerInstance | null>(null);
-  const isReadyRef = useRef(false);
-  const currentVideoIdRef = useRef(youtubeId);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [iframeSrc, setIframeSrc] = useState<string>(() =>
+    buildEmbedUrl(youtubeId, startSeconds)
+  );
+  const [isIframeLoaded, setIsIframeLoaded] = useState<boolean>(false);
+
+  const isBridgeReadyRef = useRef<boolean>(false);
+  const activeVideoIdRef = useRef<string>(youtubeId);
+  const hasPlayedCurrentRef = useRef<boolean>(false);
+  const endedFiredForCurrentRef = useRef<boolean>(false);
+
   const onTimeUpdateRef = useRef(onTimeUpdate);
   const onEndedRef = useRef(onEnded);
-
   onTimeUpdateRef.current = onTimeUpdate;
   onEndedRef.current = onEnded;
 
-  // Initialize YT.Player
-  useEffect(() => {
-    let mounted = true;
-    let pollTimer: number | null = null;
-
-    loadYouTubeApi().then(() => {
-      if (!mounted || !containerRef.current || !window.YT?.Player) return;
-
-      const playerDiv = document.createElement('div');
-      playerDiv.title = title;
-      playerDiv.className = 'w-full h-full';
-      containerRef.current.innerHTML = '';
-      containerRef.current.appendChild(playerDiv);
-
-      const initialStart = Math.max(0, Math.floor(startSeconds || 0));
-      currentVideoIdRef.current = youtubeId;
-      isReadyRef.current = false;
-
-      const player = new window.YT.Player(playerDiv, {
-        videoId: youtubeId,
-        playerVars: {
-          autoplay: 1,
-          start: initialStart,
-          rel: 0,
-          modestbranding: 1,
-          playsinline: 1,
-          enablejsapi: 1,
-          origin: window.location.origin,
-        },
-        events: {
-          onReady: (e) => {
-            if (!mounted) return;
-            isReadyRef.current = true;
-            if (initialStart > 0) {
-              try {
-                e.target.seekTo(initialStart, true);
-              } catch {
-                // ignore
-              }
-            }
-            try {
-              e.target.playVideo();
-            } catch {
-              // ignore
-            }
-          },
-          onStateChange: (e) => {
-            if (!mounted) return;
-            try {
-              const cur = e.target.getCurrentTime() || 0;
-              const dur = e.target.getDuration() || 0;
-              const paused = e.data === 2;
-              onTimeUpdateRef.current(cur, dur, paused);
-            } catch {
-              // ignore
-            }
-            if (e.data === 0) {
-              onEndedRef.current?.();
-            }
-          },
-        },
-      });
-
-      playerRef.current = player;
-
-      pollTimer = window.setInterval(() => {
-        if (!mounted || !isReadyRef.current || !playerRef.current) return;
-        try {
-          const cur = playerRef.current.getCurrentTime();
-          const dur = playerRef.current.getDuration();
-          const state = playerRef.current.getPlayerState();
-          if (typeof cur === 'number' && !isNaN(cur)) {
-            onTimeUpdateRef.current(cur, dur || 0, state === 2);
-          }
-        } catch {
-          // ignore
-        }
-      }, 250);
-    });
-
-    return () => {
-      mounted = false;
-      if (pollTimer !== null) {
-        window.clearInterval(pollTimer);
-      }
-      if (playerRef.current) {
-        try {
-          playerRef.current.destroy();
-        } catch {
-          // ignore
-        }
-        playerRef.current = null;
-      }
-      isReadyRef.current = false;
-    };
-    // Only recreate if youtubeId changes
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [youtubeId]);
-
-  // Fast instant seek without reloading iframe when seekNonce or startSeconds changes
-  useEffect(() => {
-    if (!isReadyRef.current || !playerRef.current) return;
-    if (currentVideoIdRef.current !== youtubeId) return;
-
-    const targetSec = Math.max(0, Math.floor(startSeconds || 0));
+  const sendCommand = (func: string, args: unknown[] = []) => {
+    const win = iframeRef.current?.contentWindow;
+    if (!win) return;
     try {
-      playerRef.current.seekTo(targetSec, true);
-      playerRef.current.playVideo();
-      const dur = playerRef.current.getDuration() || 0;
-      onTimeUpdateRef.current(targetSec, dur, false);
+      win.postMessage(
+        JSON.stringify({
+          event: 'command',
+          func,
+          args,
+        }),
+        '*'
+      );
     } catch {
       // ignore
     }
-  }, [seekNonce, startSeconds, youtubeId]);
+  };
+
+  const registerListening = () => {
+    const win = iframeRef.current?.contentWindow;
+    if (!win) return;
+    try {
+      win.postMessage(
+        JSON.stringify({
+          event: 'listening',
+          id: 1,
+          channel: 'widget',
+        }),
+        '*'
+      );
+      sendCommand('addEventListener', ['onStateChange']);
+    } catch {
+      // ignore
+    }
+  };
+
+  // Listen to messages from the YouTube Embed IFrame
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (
+        !iframeRef.current ||
+        event.source !== iframeRef.current.contentWindow
+      ) {
+        return;
+      }
+      if (typeof event.data !== 'string') return;
+
+      try {
+        const data = JSON.parse(event.data);
+        if (!data) return;
+
+        isBridgeReadyRef.current = true;
+        setIsIframeLoaded(true);
+
+        if (data.event === 'infoDelivery' && data.info) {
+          const info = data.info;
+          const cur =
+            typeof info.currentTime === 'number' ? info.currentTime : null;
+          const dur =
+            typeof info.duration === 'number' ? info.duration : null;
+          const state =
+            typeof info.playerState === 'number' ? info.playerState : null;
+
+          if (cur !== null && cur > 0.5) {
+            hasPlayedCurrentRef.current = true;
+          }
+
+          if (cur !== null) {
+            onTimeUpdateRef.current(
+              cur,
+              dur || 0,
+              state === 2
+            );
+          }
+
+          if (
+            state === 0 &&
+            hasPlayedCurrentRef.current &&
+            !endedFiredForCurrentRef.current
+          ) {
+            endedFiredForCurrentRef.current = true;
+            onEndedRef.current?.();
+          }
+        } else if (data.event === 'onStateChange') {
+          const state = data.info;
+          if (state === 1) {
+            hasPlayedCurrentRef.current = true;
+          }
+          if (
+            state === 0 &&
+            hasPlayedCurrentRef.current &&
+            !endedFiredForCurrentRef.current
+          ) {
+            endedFiredForCurrentRef.current = true;
+            onEndedRef.current?.();
+          }
+        }
+      } catch {
+        // ignore non-JSON messages
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    const handshakeInterval = window.setInterval(() => {
+      if (!isBridgeReadyRef.current) {
+        registerListening();
+      }
+    }, 350);
+
+    return () => {
+      window.removeEventListener('message', handleMessage);
+      window.clearInterval(handshakeInterval);
+    };
+  }, []);
+
+  // Handle video changes (youtubeId) or seek changes (seekNonce / startSeconds)
+  useEffect(() => {
+    const targetStart = Math.max(0, Math.floor(startSeconds || 0));
+
+    if (activeVideoIdRef.current !== youtubeId) {
+      activeVideoIdRef.current = youtubeId;
+      hasPlayedCurrentRef.current = false;
+      endedFiredForCurrentRef.current = false;
+
+      if (isBridgeReadyRef.current && iframeRef.current?.contentWindow) {
+        // Seamless in-iframe transition (preserves iOS Safari autoplay blessing!)
+        sendCommand('loadVideoById', [youtubeId, targetStart]);
+        sendCommand('playVideo', []);
+
+        // Fallback safety: if iframeSrc hasn't updated and bridge didn't start playing, also sync src if needed
+        const fallbackTimer = window.setTimeout(() => {
+          if (!hasPlayedCurrentRef.current) {
+            setIframeSrc(buildEmbedUrl(youtubeId, targetStart));
+          }
+        }, 700);
+        return () => window.clearTimeout(fallbackTimer);
+      } else {
+        isBridgeReadyRef.current = false;
+        setIsIframeLoaded(false);
+        setIframeSrc(buildEmbedUrl(youtubeId, targetStart));
+      }
+      return;
+    }
+
+    // Same youtubeId, user triggered a seek
+    if (seekNonce > 0) {
+      endedFiredForCurrentRef.current = false;
+      if (isBridgeReadyRef.current && iframeRef.current?.contentWindow) {
+        sendCommand('seekTo', [targetStart, true]);
+        sendCommand('playVideo', []);
+      } else {
+        setIframeSrc(buildEmbedUrl(youtubeId, targetStart));
+      }
+    }
+  }, [youtubeId, startSeconds, seekNonce]);
 
   return (
-    <div
-      ref={containerRef}
-      className="w-full h-full bg-[#0A0A0A] [&>iframe]:w-full [&>iframe]:h-full [&>iframe]:border-0"
-    />
+    <div className="relative w-full h-full bg-[#0A0A0A] overflow-hidden select-none">
+      {/* Thumbnail Backdrop while IFrame initializes (Prevents any dead black screen) */}
+      {!isIframeLoaded && (
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src={getYouTubeThumbnail(youtubeId, 'hq')}
+            alt=""
+            className="w-full h-full object-cover opacity-45 blur-[2px] scale-105"
+          />
+          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center gap-2">
+            <Disc3 className="w-8 h-8 text-[#E50914] animate-spin" />
+            <span className="text-[10px] font-mono-tech font-bold text-[#FFFFFF]/80 tracking-widest uppercase">
+              LOADING VINYL STREAM...
+            </span>
+          </div>
+        </div>
+      )}
+
+      <iframe
+        ref={iframeRef}
+        src={iframeSrc}
+        title={title}
+        onLoad={() => {
+          setIsIframeLoaded(true);
+          registerListening();
+        }}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+        allowFullScreen
+        className="relative z-10 w-full h-full border-0"
+      />
+    </div>
   );
 };
