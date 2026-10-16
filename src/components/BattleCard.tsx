@@ -60,7 +60,7 @@ interface BattleCardProps {
 
 export const DEFAULT_PUNCHLINE_PLACEHOLDER = 'パンチライン（秒数刻印）';
 
-export const BattleCard: React.FC<BattleCardProps> = ({
+const BattleCardComponent: React.FC<BattleCardProps> = ({
   battle,
   isPlaying,
   seekSeconds,
@@ -819,3 +819,5 @@ export const BattleCard: React.FC<BattleCardProps> = ({
     </article>
   );
 };
+
+export const BattleCard = React.memo(BattleCardComponent);

@@ -39,7 +39,7 @@ interface EnrichedMc {
   totalBattleCount: number; // Count across ALL tournaments
 }
 
-export const VsBuilder: React.FC<VsBuilderProps> = ({
+export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
   battles,
   selectedMcA,
   selectedMcB,
@@ -864,3 +864,5 @@ export const VsBuilder: React.FC<VsBuilderProps> = ({
     </section>
   );
 };
+
+export const VsBuilder = React.memo(VsBuilderComponent);

@@ -155,6 +155,7 @@ export const App: React.FC = () => {
   const [showSavedOnly, setShowSavedOnly] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [displayLimit, setDisplayLimit] = useState<number>(20);
 
   // 7. Singleton Player State
   const [activeBattleId, setActiveBattleId] = useState<string | null>(null);
@@ -353,6 +354,7 @@ export const App: React.FC = () => {
     (mc: string | null) => {
       setSelectedMcA(mc);
       setSelectedMcB(null);
+      setDisplayLimit(20);
       if (viewMode === 'ALBUMS') {
         setViewMode('LATEST');
       }
@@ -387,6 +389,7 @@ export const App: React.FC = () => {
 
   const handleSelectMcB = useCallback((mc: string | null) => {
     setSelectedMcB(mc);
+    setDisplayLimit(20);
     if (mc) {
       const norm = normalizeMcName(mc);
       setAnalytics((prev) => {
@@ -406,6 +409,7 @@ export const App: React.FC = () => {
   const handleSelectMatchup = useCallback((mcA: string, mcB: string) => {
     setSelectedMcA(mcA);
     setSelectedMcB(mcB);
+    setDisplayLimit(20);
     const normA = normalizeMcName(mcA);
     const normB = normalizeMcName(mcB);
     setAnalytics((prev) => {
@@ -425,6 +429,7 @@ export const App: React.FC = () => {
   const handleSelectTournament = useCallback(
     (t: TournamentTag) => {
       setSelectedTournament(t);
+      setDisplayLimit(20);
       if (viewMode === 'ALBUMS') {
         setViewMode('LATEST');
       }
@@ -458,6 +463,7 @@ export const App: React.FC = () => {
     setSearchQuery('');
     setShowSavedOnly(false);
     setDeepLinkBanner(null);
+    setDisplayLimit(20);
     if (viewMode === 'ALBUMS') {
       setViewMode('LATEST');
     }
@@ -1517,7 +1523,7 @@ export const App: React.FC = () => {
           />
         ) : (
           <div className="space-y-5">
-            {filteredBattles.map((battle) => (
+            {filteredBattles.slice(0, displayLimit).map((battle) => (
               <BattleCard
                 key={battle.id}
                 battle={battle}
@@ -1547,6 +1553,24 @@ export const App: React.FC = () => {
                 onSelectMcFilter={handleSelectMcA}
               />
             ))}
+
+            {filteredBattles.length > displayLimit && (
+              <div className="py-6 flex flex-col items-center justify-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setDisplayLimit((prev) => prev + 25)}
+                  className="px-6 py-2.5 rounded-full bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp font-black text-xs shadow-lg transition-transform active:scale-95 cursor-pointer flex items-center gap-2"
+                >
+                  <span>さらに次の25件のバトルを読み込む</span>
+                  <span className="font-mono-tech text-[11px] opacity-70">
+                    ({Math.min(displayLimit, filteredBattles.length)} / {filteredBattles.length})
+                  </span>
+                </button>
+                <p className="text-[11px] font-mono-tech text-[#8E8E93]">
+                  残りのバトル: {filteredBattles.length - displayLimit}件
+                </p>
+              </div>
+            )}
           </div>
         )}
       </main>
