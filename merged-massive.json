@@ -1,0 +1,4830 @@
+[
+  {
+    "id": "btl-01",
+    "youtubeId": "pxCrRJSKjTU",
+    "title": "FORK（TEAM エンタダ） vs 呂布カルマ（TEAM 口喧嘩祭）｜MC BATTLE MATSURI -大抗争045-【大将戦】",
+    "mcA": "FORK",
+    "mcB": "呂布カルマ",
+    "tournament": "KOK",
+    "stageOrEvent": "大抗争045 大将戦",
+    "year": "2022",
+    "evaluation": {
+      "word": 3840,
+      "flow": 2620,
+      "vibe": 3490
+    },
+    "outboundPlays": 58210,
+    "shares": 2940,
+    "createdAt": "2026-10-15T10:00:00Z",
+    "verses": [
+      {
+        "id": "btl-01-1",
+        "battleId": "btl-01",
+        "seconds": 44,
+        "text": "韻を踏むってことは言葉を制限することじゃねぇ、言葉を解放することだ",
+        "mc": "FORK",
+        "likes": 1242,
+        "replays": 6120,
+        "createdAt": "2026-10-15T10:00:00Z"
+      },
+      {
+        "id": "btl-01-2",
+        "battleId": "btl-01",
+        "seconds": 78,
+        "text": "お前のライムは綺麗だが予定調和、俺は今この瞬間の空気ごとねじ伏せる",
+        "mc": "呂布カルマ",
+        "likes": 1176,
+        "replays": 5680,
+        "createdAt": "2026-10-15T10:00:00Z"
+      },
+      {
+        "id": "btl-01-3",
+        "battleId": "btl-01",
+        "seconds": 126,
+        "text": "045の看板背負って立つ大将戦、二言目には言い訳する奴に用はねぇ",
+        "mc": "FORK",
+        "likes": 1420,
+        "replays": 7090,
+        "createdAt": "2026-10-15T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-02",
+    "youtubeId": "Xsw-o2-7668",
+    "title": "R-指定 vs 晋平太 Full ver.【ADRENALINE 2019 FINAL】",
+    "mcA": "R-指定",
+    "mcB": "晋平太",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "ADRENALINE 2019 FINAL",
+    "year": "2019",
+    "evaluation": {
+      "word": 4120,
+      "flow": 4450,
+      "vibe": 4890
+    },
+    "outboundPlays": 72400,
+    "shares": 3630,
+    "createdAt": "2026-10-15T09:30:00Z",
+    "verses": [
+      {
+        "id": "btl-02-1",
+        "battleId": "btl-02",
+        "seconds": 62,
+        "text": "UMBの呪縛を解きに来た、あんたが蒔いた種から咲いた毒の華だ",
+        "mc": "R-指定",
+        "likes": 1640,
+        "replays": 8210,
+        "createdAt": "2026-10-15T09:30:00Z"
+      },
+      {
+        "id": "btl-02-2",
+        "battleId": "btl-02",
+        "seconds": 115,
+        "text": "俺がいたからお前がいる、お前がいたから今の日本語ラップがあるんだろ",
+        "mc": "晋平太",
+        "likes": 1490,
+        "replays": 7340,
+        "createdAt": "2026-10-15T09:30:00Z"
+      },
+      {
+        "id": "btl-02-3",
+        "battleId": "btl-02",
+        "seconds": 194,
+        "text": "倍速で刻むスキルと愛憎、過去のレジェンドを今日ここで介錯",
+        "mc": "R-指定",
+        "likes": 1780,
+        "replays": 8890,
+        "createdAt": "2026-10-15T09:30:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-03",
+    "youtubeId": "e7X4l8Fc2Bs",
+    "title": "Authority vs 呂布カルマ 決勝戦 / 戦極MCBATTLE 第21章",
+    "mcA": "Authority",
+    "mcB": "呂布カルマ",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第21章 FINAL",
+    "year": "2020",
+    "evaluation": {
+      "word": 3150,
+      "flow": 3390,
+      "vibe": 3680
+    },
+    "outboundPlays": 49120,
+    "shares": 2420,
+    "createdAt": "2026-10-14T22:00:00Z",
+    "verses": [
+      {
+        "id": "btl-03-1",
+        "battleId": "btl-03",
+        "seconds": 38,
+        "text": "青森から一人で乗り込んで王座奪還、世代交代の鐘を鳴らす第21章",
+        "mc": "Authority",
+        "likes": 980,
+        "replays": 4420,
+        "createdAt": "2026-10-14T22:00:00Z"
+      },
+      {
+        "id": "btl-03-2",
+        "battleId": "btl-03",
+        "seconds": 86,
+        "text": "何人束になってかかってきても変わらん、最後に立ってるのは常に俺一人",
+        "mc": "呂布カルマ",
+        "likes": 960,
+        "replays": 4190,
+        "createdAt": "2026-10-14T22:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-04",
+    "youtubeId": "e384BWkmv_g",
+    "title": "MU-TON vs 呂布カルマ 凱旋MCbattle 東西選抜冬ノ陣2020 決勝戦",
+    "mcA": "MU-TON",
+    "mcB": "呂布カルマ",
+    "tournament": "凱旋",
+    "stageOrEvent": "東西選抜冬ノ陣2020 FINAL",
+    "year": "2020",
+    "evaluation": {
+      "word": 2890,
+      "flow": 3980,
+      "vibe": 4110
+    },
+    "outboundPlays": 54800,
+    "shares": 2760,
+    "createdAt": "2026-10-14T20:15:00Z",
+    "verses": [
+      {
+        "id": "btl-04-1",
+        "battleId": "btl-04",
+        "seconds": 32,
+        "text": "ビートの隙間を縫うスモーキーなフロウ、理屈を超えて脳裏に焼き付ける音",
+        "mc": "MU-TON",
+        "likes": 1220,
+        "replays": 5590,
+        "createdAt": "2026-10-14T20:15:00Z"
+      },
+      {
+        "id": "btl-04-2",
+        "battleId": "btl-04",
+        "seconds": 74,
+        "text": "雰囲気だけで誤魔化せる相手じゃねぇぞ、言葉の重みで真っ向から勝負しろ",
+        "mc": "呂布カルマ",
+        "likes": 1060,
+        "replays": 4720,
+        "createdAt": "2026-10-14T20:15:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-05",
+    "youtubeId": "s-l8y4Lcc2Q",
+    "title": "夢のカード R-指定 vs 鎮座DOPENESS | FSL | FREE STYLE LEAGUE",
+    "mcA": "R-指定",
+    "mcB": "鎮座DOPENESS",
+    "tournament": "FSL",
+    "stageOrEvent": "FREE STYLE LEAGUE SPECIAL",
+    "year": "2023",
+    "evaluation": {
+      "word": 3540,
+      "flow": 4820,
+      "vibe": 4640
+    },
+    "outboundPlays": 63900,
+    "shares": 3310,
+    "createdAt": "2026-10-14T18:00:00Z",
+    "verses": [
+      {
+        "id": "btl-05-1",
+        "battleId": "btl-05",
+        "seconds": 28,
+        "text": "変幻自在のグルーヴとユーモア、小節の概念ごと溶かすフリースタイル",
+        "mc": "鎮座DOPENESS",
+        "likes": 1490,
+        "replays": 6780,
+        "createdAt": "2026-10-14T18:00:00Z"
+      },
+      {
+        "id": "btl-05-2",
+        "battleId": "btl-05",
+        "seconds": 69,
+        "text": "ずっと憧れてた背中と今このリングで交わる、音楽としてのラップの極致",
+        "mc": "R-指定",
+        "likes": 1440,
+        "replays": 6410,
+        "createdAt": "2026-10-14T18:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-06",
+    "youtubeId": "okRrSf4WdDU",
+    "title": "百足 vs 韻マン 凱旋MC battle Special アリーナノ陣2021",
+    "mcA": "百足",
+    "mcB": "韻マン",
+    "tournament": "凱旋",
+    "stageOrEvent": "Special アリーナノ陣2021",
+    "year": "2021",
+    "evaluation": {
+      "word": 3210,
+      "flow": 3760,
+      "vibe": 4320
+    },
+    "outboundPlays": 59300,
+    "shares": 3150,
+    "createdAt": "2026-10-14T15:00:00Z",
+    "verses": [
+      {
+        "id": "btl-06-1",
+        "battleId": "btl-06",
+        "seconds": 41,
+        "text": "00世代の先頭でアリーナを揺らす、あの日見た夢の続きをここで証明する",
+        "mc": "百足",
+        "likes": 1380,
+        "replays": 6120,
+        "createdAt": "2026-10-14T15:00:00Z"
+      },
+      {
+        "id": "btl-06-2",
+        "battleId": "btl-06",
+        "seconds": 83,
+        "text": "踏める全ての母音を弾丸に変えて撃ち抜く、盟友だからこそ一切手は抜かねぇ",
+        "mc": "韻マン",
+        "likes": 1290,
+        "replays": 5780,
+        "createdAt": "2026-10-14T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-07",
+    "youtubeId": "oHx_elvJvXs",
+    "title": "晋平太 vs 呂布カルマ / 戦極MCBATTLE第24章 日本武道館公演 BEST4",
+    "mcA": "晋平太",
+    "mcB": "呂布カルマ",
+    "tournament": "戦極",
+    "stageOrEvent": "第24章 日本武道館 BEST4",
+    "year": "2021",
+    "evaluation": {
+      "word": 3790,
+      "flow": 3040,
+      "vibe": 4250
+    },
+    "outboundPlays": 53100,
+    "shares": 2680,
+    "createdAt": "2026-10-14T12:00:00Z",
+    "verses": [
+      {
+        "id": "btl-07-1",
+        "battleId": "btl-07",
+        "seconds": 51,
+        "text": "武道館のど真ん中で魂を削る、お前とやるために俺はここまで戻ってきた",
+        "mc": "晋平太",
+        "likes": 1180,
+        "replays": 5210,
+        "createdAt": "2026-10-14T12:00:00Z"
+      },
+      {
+        "id": "btl-07-2",
+        "battleId": "btl-07",
+        "seconds": 95,
+        "text": "涙腺に訴えるだけのラップは終わりだ、今のシーンを引っ張ってるのは俺の背中",
+        "mc": "呂布カルマ",
+        "likes": 1140,
+        "replays": 4980,
+        "createdAt": "2026-10-14T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-08",
+    "youtubeId": "jOPWapsV3bc",
+    "title": "\"MC DOTAMA vs R-指定\" FULL HD UMB2014 GRAND CHAMPIONSHIP",
+    "mcA": "DOTAMA",
+    "mcB": "R-指定",
+    "tournament": "UMB",
+    "stageOrEvent": "UMB2014 GRAND CHAMPIONSHIP",
+    "year": "2014",
+    "evaluation": {
+      "word": 3960,
+      "flow": 3880,
+      "vibe": 3910
+    },
+    "outboundPlays": 56700,
+    "shares": 2840,
+    "createdAt": "2026-10-13T21:00:00Z",
+    "verses": [
+      {
+        "id": "btl-08-1",
+        "battleId": "btl-08",
+        "seconds": 47,
+        "text": "スーツとメガネの奥に秘めた猛毒、王者の3連覇をここで完全に阻止する",
+        "mc": "DOTAMA",
+        "likes": 1110,
+        "replays": 4890,
+        "createdAt": "2026-10-13T21:00:00Z"
+      },
+      {
+        "id": "btl-08-2",
+        "battleId": "btl-08",
+        "seconds": 89,
+        "text": "痛いとこ突いてくる毒舌すら倍返しのライムで飲み込む、これが王者の貫禄",
+        "mc": "R-指定",
+        "likes": 1280,
+        "replays": 5620,
+        "createdAt": "2026-10-13T21:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-09",
+    "youtubeId": "gG8WWG3dJj0",
+    "title": "\"呂布カルマ vs 鎮座DOPENESS\" UMB2020 THE CHOICE IS YOURS Vol.4 BEST4",
+    "mcA": "呂布カルマ",
+    "mcB": "鎮座DOPENESS",
+    "tournament": "UMB",
+    "stageOrEvent": "THE CHOICE IS YOURS BEST4",
+    "year": "2020",
+    "evaluation": {
+      "word": 3630,
+      "flow": 4190,
+      "vibe": 4040
+    },
+    "outboundPlays": 51200,
+    "shares": 2590,
+    "createdAt": "2026-10-13T18:00:00Z",
+    "verses": [
+      {
+        "id": "btl-09-1",
+        "battleId": "btl-09",
+        "seconds": 36,
+        "text": "唯一無二の音楽性と対峙する緊張感、言葉の刃と音の波がぶつかり合う瞬間",
+        "mc": "呂布カルマ",
+        "likes": 1040,
+        "replays": 4510,
+        "createdAt": "2026-10-13T18:00:00Z"
+      },
+      {
+        "id": "btl-09-2",
+        "battleId": "btl-09",
+        "seconds": 79,
+        "text": "勝ち負けの枠から一歩外へ踏み出す、ビートの上で踊る自由なフロウ",
+        "mc": "鎮座DOPENESS",
+        "likes": 1170,
+        "replays": 5180,
+        "createdAt": "2026-10-13T18:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-10",
+    "youtubeId": "DqdZvLj7d4s",
+    "title": "Authority vs MU-TON 凱旋MC battle Special アリーナノ陣2021",
+    "mcA": "Authority",
+    "mcB": "MU-TON",
+    "tournament": "凱旋",
+    "stageOrEvent": "Special アリーナノ陣2021",
+    "year": "2021",
+    "evaluation": {
+      "word": 3180,
+      "flow": 3940,
+      "vibe": 3870
+    },
+    "outboundPlays": 46400,
+    "shares": 2380,
+    "createdAt": "2026-10-13T14:00:00Z",
+    "verses": [
+      {
+        "id": "btl-10-1",
+        "battleId": "btl-10",
+        "seconds": 33,
+        "text": "東北の誇りをかけた頂上決戦、緻密なライムでアリーナの空気を支配する",
+        "mc": "Authority",
+        "likes": 960,
+        "replays": 4120,
+        "createdAt": "2026-10-13T14:00:00Z"
+      },
+      {
+        "id": "btl-10-2",
+        "battleId": "btl-10",
+        "seconds": 71,
+        "text": "福島白河から響かせる重低音、1小節目から会場全体をロックする天性の華",
+        "mc": "MU-TON",
+        "likes": 1030,
+        "replays": 4490,
+        "createdAt": "2026-10-13T14:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-11",
+    "youtubeId": "SHTANQcDKoQ",
+    "title": "呂布カルマ vs FORK、モンスター同士の決勝戦 | KING OF KINGS",
+    "mcA": "呂布カルマ",
+    "mcB": "FORK",
+    "tournament": "KOK",
+    "stageOrEvent": "KOK GRAND CHAMPIONSHIP FINAL",
+    "year": "2021",
+    "evaluation": {
+      "word": 4310,
+      "flow": 3420,
+      "vibe": 4180
+    },
+    "outboundPlays": 65800,
+    "shares": 3410,
+    "createdAt": "2026-10-12T20:00:00Z",
+    "verses": [
+      {
+        "id": "btl-11-1",
+        "battleId": "btl-11",
+        "seconds": 18,
+        "text": "日本最高峰の頂上決戦、パンチラインの応酬で決める真のキングオブキングス",
+        "mc": "呂布カルマ",
+        "likes": 1350,
+        "replays": 5920,
+        "createdAt": "2026-10-12T20:00:00Z"
+      },
+      {
+        "id": "btl-11-2",
+        "battleId": "btl-11",
+        "seconds": 42,
+        "text": "全ての文脈を伏線にして回収する、16小節の最後に突き刺す決定打",
+        "mc": "FORK",
+        "likes": 1480,
+        "replays": 6540,
+        "createdAt": "2026-10-12T20:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-12",
+    "youtubeId": "SG8OFUAnB6E",
+    "title": "\"R-指定 vs 晋平太\" UMB2010 GRAND CHAMPIONSHIP",
+    "mcA": "R-指定",
+    "mcB": "晋平太",
+    "tournament": "UMB",
+    "stageOrEvent": "UMB2010 GRAND CHAMPIONSHIP",
+    "year": "2010",
+    "evaluation": {
+      "word": 3690,
+      "flow": 3740,
+      "vibe": 4090
+    },
+    "outboundPlays": 48900,
+    "shares": 2520,
+    "createdAt": "2026-10-12T15:00:00Z",
+    "verses": [
+      {
+        "id": "btl-12-1",
+        "battleId": "btl-12",
+        "seconds": 54,
+        "text": "19歳で全国大会の舞台に立ち、王者相手に一歩も引かず韻を畳み掛ける",
+        "mc": "R-指定",
+        "likes": 1090,
+        "replays": 4740,
+        "createdAt": "2026-10-12T15:00:00Z"
+      },
+      {
+        "id": "btl-12-2",
+        "battleId": "btl-12",
+        "seconds": 102,
+        "text": "新世代の勢いを真正面から受け止め、延長戦まで会場を沸かせた伝説の原点",
+        "mc": "晋平太",
+        "likes": 1050,
+        "replays": 4560,
+        "createdAt": "2026-10-12T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-13",
+    "youtubeId": "2UV5wPG1XC4",
+    "title": "S-kaine vs Authority 凱旋MCbattle 東西選抜冬ノ陣2020",
+    "mcA": "S-kaine",
+    "mcB": "Authority",
+    "tournament": "凱旋",
+    "stageOrEvent": "東西選抜冬ノ陣2020",
+    "year": "2020",
+    "evaluation": {
+      "word": 2920,
+      "flow": 3640,
+      "vibe": 3510
+    },
+    "outboundPlays": 39400,
+    "shares": 2120,
+    "createdAt": "2026-10-12T10:00:00Z",
+    "verses": [
+      {
+        "id": "btl-13-1",
+        "battleId": "btl-13",
+        "seconds": 29,
+        "text": "重く沈み込むビートに絡みつくスモーキーな低音、年齢を超越した説得力",
+        "mc": "S-kaine",
+        "likes": 940,
+        "replays": 3980,
+        "createdAt": "2026-10-12T10:00:00Z"
+      },
+      {
+        "id": "btl-13-2",
+        "battleId": "btl-13",
+        "seconds": 68,
+        "text": "クリアな発声と隙のない韻構成で応戦するハイレベルなスキルマッチ",
+        "mc": "Authority",
+        "likes": 910,
+        "replays": 3840,
+        "createdAt": "2026-10-12T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-14",
+    "youtubeId": "7e4SnY0tD8s",
+    "title": "呂布カルマ vs GIL 決勝戦 / 戦極MCBATTLE 第17章",
+    "mcA": "呂布カルマ",
+    "mcB": "GIL",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第17章 FINAL",
+    "year": "2018",
+    "evaluation": {
+      "word": 3410,
+      "flow": 3120,
+      "vibe": 3690
+    },
+    "outboundPlays": 43200,
+    "shares": 2290,
+    "createdAt": "2026-10-11T19:00:00Z",
+    "verses": [
+      {
+        "id": "btl-14-1",
+        "battleId": "btl-14",
+        "seconds": 45,
+        "text": "東北の重戦車が放つタフな言葉の塊、真っ向勝負のヘビー級ファイト",
+        "mc": "GIL",
+        "likes": 980,
+        "replays": 4150,
+        "createdAt": "2026-10-11T19:00:00Z"
+      },
+      {
+        "id": "btl-14-2",
+        "battleId": "btl-14",
+        "seconds": 91,
+        "text": "どれだけ重いパンチも芯を外してカウンターで沈める、揺るがない王者の牙城",
+        "mc": "呂布カルマ",
+        "likes": 1020,
+        "replays": 4390,
+        "createdAt": "2026-10-11T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-15",
+    "youtubeId": "QJ5kNvQ8vNA",
+    "title": "晋平太 vs ふぁんく / 戦極MCBATTLE第28章 大阪関西公演",
+    "mcA": "晋平太",
+    "mcB": "ふぁんく",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第28章 大阪関西公演",
+    "year": "2022",
+    "evaluation": {
+      "word": 3380,
+      "flow": 3790,
+      "vibe": 3620
+    },
+    "outboundPlays": 41800,
+    "shares": 2240,
+    "createdAt": "2026-10-11T14:00:00Z",
+    "verses": [
+      {
+        "id": "btl-15-1",
+        "battleId": "btl-15",
+        "seconds": 39,
+        "text": "梅田サイファー仕込みの超高速マシンガンフロウと独特のユーモアで翻弄する",
+        "mc": "ふぁんく",
+        "likes": 990,
+        "replays": 4260,
+        "createdAt": "2026-10-11T14:00:00Z"
+      },
+      {
+        "id": "btl-15-2",
+        "battleId": "btl-15",
+        "seconds": 82,
+        "text": "どれだけ手数が多くても一発のアンサーで会場の空気をひっくり返す百戦錬磨の技",
+        "mc": "晋平太",
+        "likes": 950,
+        "replays": 4010,
+        "createdAt": "2026-10-11T14:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-16",
+    "youtubeId": "zed6N5FOg7w",
+    "title": "第15回高校生RAP選手権 百足 vs 韻マン",
+    "mcA": "百足",
+    "mcB": "韻マン",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第15回高校生RAP選手権 準決勝",
+    "year": "2019",
+    "evaluation": {
+      "word": 3450,
+      "flow": 3810,
+      "vibe": 4420
+    },
+    "outboundPlays": 61200,
+    "shares": 3190,
+    "createdAt": "2026-10-10T21:00:00Z",
+    "verses": [
+      {
+        "id": "btl-16-1",
+        "battleId": "btl-16",
+        "seconds": 26,
+        "text": "高校生の枠を完全に超えたスター性、延長戦まで会場全員の手を挙げさせた名勝負",
+        "mc": "百足",
+        "likes": 1320,
+        "replays": 5890,
+        "createdAt": "2026-10-10T21:00:00Z"
+      },
+      {
+        "id": "btl-16-2",
+        "battleId": "btl-16",
+        "seconds": 64,
+        "text": "終わりなき韻の連打でビートを埋め尽くす、新時代の幕開けを告げたベストバウト",
+        "mc": "韻マン",
+        "likes": 1260,
+        "replays": 5610,
+        "createdAt": "2026-10-10T21:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-17",
+    "youtubeId": "zZKs16YhDY8",
+    "title": "輪入道 vs 呂布カルマ【真 ADRENALINE】決勝",
+    "mcA": "輪入道",
+    "mcB": "呂布カルマ",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "真 ADRENALINE 決勝",
+    "year": "2021",
+    "evaluation": {
+      "word": 4220,
+      "flow": 3490,
+      "vibe": 4780
+    },
+    "outboundPlays": 68100,
+    "shares": 3520,
+    "createdAt": "2026-10-10T18:00:00Z",
+    "verses": [
+      {
+        "id": "btl-17-1",
+        "battleId": "btl-17",
+        "seconds": 35,
+        "text": "命を削って吐き出す生身の咆哮、このステージはお前だけのものじゃねぇ",
+        "mc": "輪入道",
+        "likes": 1450,
+        "replays": 6720,
+        "createdAt": "2026-10-10T18:00:00Z"
+      },
+      {
+        "id": "btl-17-2",
+        "battleId": "btl-17",
+        "seconds": 82,
+        "text": "熱量だけで押し切れると思うな、冷徹な一太刀でお前の首を狩る",
+        "mc": "呂布カルマ",
+        "likes": 1390,
+        "replays": 6450,
+        "createdAt": "2026-10-10T18:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-18",
+    "youtubeId": "BUcT-dx33hQ",
+    "title": "CHICO CARLITO vs FORK(ICE BAHN)：KING OF KINGS vs 真 ADRENALINE 決勝戦",
+    "mcA": "CHICO CARLITO",
+    "mcB": "FORK",
+    "tournament": "KOK",
+    "stageOrEvent": "KOK vs 真 ADRENALINE 決勝",
+    "year": "2021",
+    "evaluation": {
+      "word": 3910,
+      "flow": 4320,
+      "vibe": 4250
+    },
+    "outboundPlays": 61400,
+    "shares": 3080,
+    "createdAt": "2026-10-10T15:30:00Z",
+    "verses": [
+      {
+        "id": "btl-18-1",
+        "battleId": "btl-18",
+        "seconds": 40,
+        "text": "南風に乗せて届ける極上のメロディ、ビートを乗りこなす沖縄のグルーヴ",
+        "mc": "CHICO CARLITO",
+        "likes": 1280,
+        "replays": 5890,
+        "createdAt": "2026-10-10T15:30:00Z"
+      },
+      {
+        "id": "btl-18-2",
+        "battleId": "btl-18",
+        "seconds": 88,
+        "text": "どんな巧みなフロウも俺の韻の土台の上、着実に足元から固めていく",
+        "mc": "FORK",
+        "likes": 1350,
+        "replays": 6200,
+        "createdAt": "2026-10-10T15:30:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-19",
+    "youtubeId": "DdxiXFtdcfU",
+    "title": "T-Pablow vs R-指定 FSLスペシャルエキシビジョンマッチ",
+    "mcA": "T-Pablow",
+    "mcB": "R-指定",
+    "tournament": "FSL",
+    "stageOrEvent": "FSL SPECIAL EXHIBITION",
+    "year": "2023",
+    "evaluation": {
+      "word": 4520,
+      "flow": 4890,
+      "vibe": 4980
+    },
+    "outboundPlays": 89400,
+    "shares": 4820,
+    "createdAt": "2026-10-10T12:00:00Z",
+    "verses": [
+      {
+        "id": "btl-19-1",
+        "battleId": "btl-19",
+        "seconds": 38,
+        "text": "川崎の路地裏からドームまで駆け上がった、俺たちの生き様こそがヒップホップだ",
+        "mc": "T-Pablow",
+        "likes": 1890,
+        "replays": 9420,
+        "createdAt": "2026-10-10T12:00:00Z"
+      },
+      {
+        "id": "btl-19-2",
+        "battleId": "btl-19",
+        "seconds": 94,
+        "text": "頂点を極めた者同士のぶつかり合い、言葉とスキルで日本のヒップホップの歴史を紡ぐ",
+        "mc": "R-指定",
+        "likes": 1950,
+        "replays": 9810,
+        "createdAt": "2026-10-10T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-20",
+    "youtubeId": "UhPmjb2pxo8",
+    "title": "MOL53 vs だーひー【決勝戦】：KING OF KINGS 2023 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "MOL53",
+    "mcB": "だーひー",
+    "tournament": "KOK",
+    "stageOrEvent": "KOK 2023 GRAND CHAMPIONSHIP FINAL",
+    "year": "2023",
+    "evaluation": {
+      "word": 3740,
+      "flow": 3620,
+      "vibe": 4120
+    },
+    "outboundPlays": 48900,
+    "shares": 2420,
+    "createdAt": "2026-10-09T20:00:00Z",
+    "verses": [
+      {
+        "id": "btl-20-1",
+        "battleId": "btl-20",
+        "seconds": 45,
+        "text": "鬼気迫る冷徹な眼光と容赦ない言葉の刃、真の王座をこの手で奪い取る",
+        "mc": "MOL53",
+        "likes": 1120,
+        "replays": 5310,
+        "createdAt": "2026-10-09T20:00:00Z"
+      },
+      {
+        "id": "btl-20-2",
+        "battleId": "btl-20",
+        "seconds": 92,
+        "text": "若き挑戦者が全身全霊で挑む決勝戦、魂の叫びで王者に食らいつく",
+        "mc": "だーひー",
+        "likes": 980,
+        "replays": 4620,
+        "createdAt": "2026-10-09T20:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-21",
+    "youtubeId": "xemRYJYzs_c",
+    "title": "CHICO CARLITO vs MOL53：KING OF KINGS 2023 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "CHICO CARLITO",
+    "mcB": "MOL53",
+    "tournament": "KOK",
+    "stageOrEvent": "KOK 2023 GRAND CHAMPIONSHIP",
+    "year": "2023",
+    "evaluation": {
+      "word": 3880,
+      "flow": 4210,
+      "vibe": 4190
+    },
+    "outboundPlays": 52300,
+    "shares": 2650,
+    "createdAt": "2026-10-09T18:00:00Z",
+    "verses": [
+      {
+        "id": "btl-21-1",
+        "battleId": "btl-21",
+        "seconds": 36,
+        "text": "那覇の風をまとい自由にビートを踊る、誰にも真似できない俺だけのスタイル",
+        "mc": "CHICO CARLITO",
+        "likes": 1190,
+        "replays": 5490,
+        "createdAt": "2026-10-09T18:00:00Z"
+      },
+      {
+        "id": "btl-21-2",
+        "battleId": "btl-21",
+        "seconds": 80,
+        "text": "甘いメロディを切り裂く殺傷力の高いライム、容赦なく首を狙うストリートのリアル",
+        "mc": "MOL53",
+        "likes": 1240,
+        "replays": 5780,
+        "createdAt": "2026-10-09T18:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-22",
+    "youtubeId": "80UywV2juVs",
+    "title": "【決勝戦】輪入道 vs がーどまん｜凱旋MC Battle THE GIANT KILLING at 豊洲PIT",
+    "mcA": "輪入道",
+    "mcB": "がーどまん",
+    "tournament": "凱旋",
+    "stageOrEvent": "THE GIANT KILLING 決勝",
+    "year": "2022",
+    "evaluation": {
+      "word": 3620,
+      "flow": 3410,
+      "vibe": 4490
+    },
+    "outboundPlays": 57400,
+    "shares": 2890,
+    "createdAt": "2026-10-09T15:00:00Z",
+    "verses": [
+      {
+        "id": "btl-22-1",
+        "battleId": "btl-22",
+        "seconds": 42,
+        "text": "千葉の路地裏で磨き上げた気迫の16小節、誰が相手だろうと一切引く気はねぇ",
+        "mc": "輪入道",
+        "likes": 1290,
+        "replays": 5980,
+        "createdAt": "2026-10-09T15:00:00Z"
+      },
+      {
+        "id": "btl-22-2",
+        "battleId": "btl-22",
+        "seconds": 89,
+        "text": "ジャイアントキリングを成し遂げるためにマイクを握る、魂の絶叫でステージを揺らす",
+        "mc": "がーどまん",
+        "likes": 1340,
+        "replays": 6210,
+        "createdAt": "2026-10-09T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-23",
+    "youtubeId": "lrff0D28kw0",
+    "title": "裂固 vs 句潤【真 ADRENALINE】1回戦第2試合",
+    "mcA": "裂固",
+    "mcB": "句潤",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "真 ADRENALINE 1回戦",
+    "year": "2021",
+    "evaluation": {
+      "word": 3420,
+      "flow": 4120,
+      "vibe": 3890
+    },
+    "outboundPlays": 44200,
+    "shares": 2190,
+    "createdAt": "2026-10-09T12:00:00Z",
+    "verses": [
+      {
+        "id": "btl-23-1",
+        "battleId": "btl-23",
+        "seconds": 34,
+        "text": "飛騨高山から培った泥臭いスキル、タイトな韻の連射で真正面からねじ伏せる",
+        "mc": "裂固",
+        "likes": 1040,
+        "replays": 4890,
+        "createdAt": "2026-10-09T12:00:00Z"
+      },
+      {
+        "id": "btl-23-2",
+        "battleId": "btl-23",
+        "seconds": 76,
+        "text": "煙たく漂う横浜のグルーヴ、音の波に身を委ねて極上のフロウを響かせる",
+        "mc": "句潤",
+        "likes": 1180,
+        "replays": 5320,
+        "createdAt": "2026-10-09T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-24",
+    "youtubeId": "5RNTlEUEfSg",
+    "title": "\"句潤 vs 早雲\" UMB2020 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "句潤",
+    "mcB": "早雲",
+    "tournament": "UMB",
+    "stageOrEvent": "UMB2020 GRAND CHAMPIONSHIP 決勝",
+    "year": "2020",
+    "evaluation": {
+      "word": 3790,
+      "flow": 4350,
+      "vibe": 4280
+    },
+    "outboundPlays": 51200,
+    "shares": 2620,
+    "createdAt": "2026-10-08T21:00:00Z",
+    "verses": [
+      {
+        "id": "btl-24-1",
+        "battleId": "btl-24",
+        "seconds": 48,
+        "text": "心地よいレゲエビートの上で踊るスモーキーフロウ、言葉を音に変える錬金術",
+        "mc": "句潤",
+        "likes": 1240,
+        "replays": 5740,
+        "createdAt": "2026-10-08T21:00:00Z"
+      },
+      {
+        "id": "btl-24-2",
+        "battleId": "btl-24",
+        "seconds": 96,
+        "text": "京都の土壇場で鍛え上げた言霊の重み、一語一句に魂を込めて決勝の舞台に立つ",
+        "mc": "早雲",
+        "likes": 1190,
+        "replays": 5480,
+        "createdAt": "2026-10-08T21:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-25",
+    "youtubeId": "_WvB_2wD7gk",
+    "title": "\"早雲 vs Authority\" UMB2019 GRAND CHAMPIONSHIP 決勝戦",
+    "mcA": "早雲",
+    "mcB": "Authority",
+    "tournament": "UMB",
+    "stageOrEvent": "UMB2019 GRAND CHAMPIONSHIP 決勝",
+    "year": "2019",
+    "evaluation": {
+      "word": 3820,
+      "flow": 3950,
+      "vibe": 4310
+    },
+    "outboundPlays": 53800,
+    "shares": 2790,
+    "createdAt": "2026-10-08T18:00:00Z",
+    "verses": [
+      {
+        "id": "btl-25-1",
+        "battleId": "btl-25",
+        "seconds": 50,
+        "text": "UMBの歴史を背負って戦う男のプライド、京都の誇りを賭けて放つ最後の言葉",
+        "mc": "早雲",
+        "likes": 1210,
+        "replays": 5620,
+        "createdAt": "2026-10-08T18:00:00Z"
+      },
+      {
+        "id": "btl-25-2",
+        "battleId": "btl-25",
+        "seconds": 98,
+        "text": "青森から乗り込んできた新星が放つ決定打、全国制覇へ王手をかける瞬間",
+        "mc": "Authority",
+        "likes": 1340,
+        "replays": 6180,
+        "createdAt": "2026-10-08T18:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-26",
+    "youtubeId": "tFZjJVFgHpo",
+    "title": "\"Authority vs MU-TON\" UMB2018 GRAND CHAMPIONSHIP",
+    "mcA": "Authority",
+    "mcB": "MU-TON",
+    "tournament": "UMB",
+    "stageOrEvent": "UMB2018 GRAND CHAMPIONSHIP",
+    "year": "2018",
+    "evaluation": {
+      "word": 3640,
+      "flow": 4280,
+      "vibe": 4120
+    },
+    "outboundPlays": 49800,
+    "shares": 2540,
+    "createdAt": "2026-10-08T15:00:00Z",
+    "verses": [
+      {
+        "id": "btl-26-1",
+        "battleId": "btl-26",
+        "seconds": 38,
+        "text": "東北の次代を担う二人が全国の頂点激突、精密なライム構成で会場を唸らせる",
+        "mc": "Authority",
+        "likes": 1120,
+        "replays": 5190,
+        "createdAt": "2026-10-08T15:00:00Z"
+      },
+      {
+        "id": "btl-26-2",
+        "battleId": "btl-26",
+        "seconds": 82,
+        "text": "福島仕込みの圧倒的なビートアプローチ、天性のリズム感でフロアを完全にロック",
+        "mc": "MU-TON",
+        "likes": 1260,
+        "replays": 5820,
+        "createdAt": "2026-10-08T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-27",
+    "youtubeId": "Mwr5xRHRE3k",
+    "title": "\"GOTIT vs R-指定\" UMB2014 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "GOTIT",
+    "mcB": "R-指定",
+    "tournament": "UMB",
+    "stageOrEvent": "UMB2014 GRAND CHAMPIONSHIP 決勝",
+    "year": "2014",
+    "evaluation": {
+      "word": 4150,
+      "flow": 4380,
+      "vibe": 4520
+    },
+    "outboundPlays": 62100,
+    "shares": 3180,
+    "createdAt": "2026-10-08T12:00:00Z",
+    "verses": [
+      {
+        "id": "btl-27-1",
+        "battleId": "btl-27",
+        "seconds": 44,
+        "text": "水戸のアンダーグラウンドを背負って決勝の舞台、王者の3連覇を全力で阻みにいく",
+        "mc": "GOTIT",
+        "likes": 1280,
+        "replays": 5940,
+        "createdAt": "2026-10-08T12:00:00Z"
+      },
+      {
+        "id": "btl-27-2",
+        "battleId": "btl-27",
+        "seconds": 90,
+        "text": "前人未到のUMB3連覇へ向けて畳み掛ける高速ライム、歴史の証人になる観客たち",
+        "mc": "R-指定",
+        "likes": 1540,
+        "replays": 7210,
+        "createdAt": "2026-10-08T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-28",
+    "youtubeId": "TTmTiV69J2w",
+    "title": "\"DOTAMA vs ふぁんく\" FULL HD UMB2017 GRAND CHAMPIONSHIP",
+    "mcA": "DOTAMA",
+    "mcB": "ふぁんく",
+    "tournament": "UMB",
+    "stageOrEvent": "UMB2017 GRAND CHAMPIONSHIP",
+    "year": "2017",
+    "evaluation": {
+      "word": 3720,
+      "flow": 3890,
+      "vibe": 3640
+    },
+    "outboundPlays": 45600,
+    "shares": 2280,
+    "createdAt": "2026-10-07T21:00:00Z",
+    "verses": [
+      {
+        "id": "btl-28-1",
+        "battleId": "btl-28",
+        "seconds": 42,
+        "text": "独特のシニカルな視点から突き刺す痛烈な皮肉、言葉の刃で相手のペースを乱す",
+        "mc": "DOTAMA",
+        "likes": 1080,
+        "replays": 4980,
+        "createdAt": "2026-10-07T21:00:00Z"
+      },
+      {
+        "id": "btl-28-2",
+        "battleId": "btl-28",
+        "seconds": 86,
+        "text": "梅田サイファーのスピードと確信に満ちたアンサー、怒涛の手数で会場を味方につける",
+        "mc": "ふぁんく",
+        "likes": 1140,
+        "replays": 5240,
+        "createdAt": "2026-10-07T21:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-29",
+    "youtubeId": "UcV2wUr-7z8",
+    "title": "晋平太 vs Authority 字幕ver / 戦極MCBATTLE第24章 日本武道館公演",
+    "mcA": "晋平太",
+    "mcB": "Authority",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第24章 日本武道館",
+    "year": "2021",
+    "evaluation": {
+      "word": 4120,
+      "flow": 3950,
+      "vibe": 4620
+    },
+    "outboundPlays": 64200,
+    "shares": 3340,
+    "createdAt": "2026-10-07T18:00:00Z",
+    "verses": [
+      {
+        "id": "btl-29-1",
+        "battleId": "btl-29",
+        "seconds": 45,
+        "text": "武道館のセンターマイクで吼える、俺たちの生き様こそがヒップホップだ",
+        "mc": "晋平太",
+        "likes": 1420,
+        "replays": 6620,
+        "createdAt": "2026-10-07T18:00:00Z"
+      },
+      {
+        "id": "btl-29-2",
+        "battleId": "btl-29",
+        "seconds": 92,
+        "text": "新時代の風を日本武道館に吹き込む、リスペクトを込めて全力で倒しにいく",
+        "mc": "Authority",
+        "likes": 1390,
+        "replays": 6410,
+        "createdAt": "2026-10-07T18:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-30",
+    "youtubeId": "l7SFJMuwZO4",
+    "title": "韻マン vs 呂布カルマ / 戦極MCBATTLE 第22章",
+    "mcA": "韻マン",
+    "mcB": "呂布カルマ",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第22章",
+    "year": "2020",
+    "evaluation": {
+      "word": 3890,
+      "flow": 3620,
+      "vibe": 4250
+    },
+    "outboundPlays": 58900,
+    "shares": 2980,
+    "createdAt": "2026-10-07T15:00:00Z",
+    "verses": [
+      {
+        "id": "btl-30-1",
+        "battleId": "btl-30",
+        "seconds": 32,
+        "text": "予測不可能な母音の乱射、どんな言葉もライムに変えてビートの上を疾走する",
+        "mc": "韻マン",
+        "likes": 1290,
+        "replays": 5940,
+        "createdAt": "2026-10-07T15:00:00Z"
+      },
+      {
+        "id": "btl-30-2",
+        "battleId": "btl-30",
+        "seconds": 78,
+        "text": "形だけの韻を踏み散らかしても響かねぇ、言葉に血を通わせろ",
+        "mc": "呂布カルマ",
+        "likes": 1380,
+        "replays": 6310,
+        "createdAt": "2026-10-07T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-31",
+    "youtubeId": "e67-dC8_d3k",
+    "title": "CHICO CARLITO vs Novel Core / 戦極MCBATTLE第24章 日本武道館公演 BEST16",
+    "mcA": "CHICO CARLITO",
+    "mcB": "Novel Core",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第24章 日本武道館 BEST16",
+    "year": "2021",
+    "evaluation": {
+      "word": 3740,
+      "flow": 4420,
+      "vibe": 4390
+    },
+    "outboundPlays": 56100,
+    "shares": 2840,
+    "createdAt": "2026-10-07T12:00:00Z",
+    "verses": [
+      {
+        "id": "btl-31-1",
+        "battleId": "btl-31",
+        "seconds": 36,
+        "text": "武道館に響き渡る沖縄のメロディアスな歌声、音楽とバトルの境界線を無くす",
+        "mc": "CHICO CARLITO",
+        "likes": 1240,
+        "replays": 5680,
+        "createdAt": "2026-10-07T12:00:00Z"
+      },
+      {
+        "id": "btl-31-2",
+        "battleId": "btl-31",
+        "seconds": 80,
+        "text": "次代のポップスターが放つ洗練されたフロウ、大きなステージが似合う堂々たる佇まい",
+        "mc": "Novel Core",
+        "likes": 1280,
+        "replays": 5910,
+        "createdAt": "2026-10-07T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-32",
+    "youtubeId": "jkQ4dp4qUXc",
+    "title": "SAM vs 早雲 戦極MCBATTLE 第37章",
+    "mcA": "SAM",
+    "mcB": "早雲",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第37章",
+    "year": "2024",
+    "evaluation": {
+      "word": 3950,
+      "flow": 3820,
+      "vibe": 4080
+    },
+    "outboundPlays": 47800,
+    "shares": 2410,
+    "createdAt": "2026-10-06T20:00:00Z",
+    "verses": [
+      {
+        "id": "btl-32-1",
+        "battleId": "btl-32",
+        "seconds": 38,
+        "text": "栃木仕込みの精密機械のような高速多段ライム、1秒の隙もなくビートを埋め尽くす",
+        "mc": "SAM",
+        "likes": 1190,
+        "replays": 5410,
+        "createdAt": "2026-10-06T20:00:00Z"
+      },
+      {
+        "id": "btl-32-2",
+        "battleId": "btl-32",
+        "seconds": 84,
+        "text": "京都の土着から湧き上がる武士道精神、手数の多さを一刀両断する重い言葉",
+        "mc": "早雲",
+        "likes": 1120,
+        "replays": 5120,
+        "createdAt": "2026-10-06T20:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-33",
+    "youtubeId": "QUViTnjq5_w",
+    "title": "SKRYU vs ミメイ / 戦極MCBATTLE第28章 大阪関西公演",
+    "mcA": "SKRYU",
+    "mcB": "ミメイ",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第28章 大阪関西公演",
+    "year": "2022",
+    "evaluation": {
+      "word": 3680,
+      "flow": 4520,
+      "vibe": 4410
+    },
+    "outboundPlays": 59800,
+    "shares": 3120,
+    "createdAt": "2026-10-06T17:00:00Z",
+    "verses": [
+      {
+        "id": "btl-33-1",
+        "battleId": "btl-33",
+        "seconds": 35,
+        "text": "魔法のような軽やかなステップと唯一無二のグルーヴ、会場中を笑顔にする天才的なフロウ",
+        "mc": "SKRYU",
+        "likes": 1390,
+        "replays": 6380,
+        "createdAt": "2026-10-06T17:00:00Z"
+      },
+      {
+        "id": "btl-33-2",
+        "battleId": "btl-33",
+        "seconds": 78,
+        "text": "鋭いライミングで対抗する関西の若き実力者、会場の熱気を最高潮へ高める",
+        "mc": "ミメイ",
+        "likes": 1180,
+        "replays": 5390,
+        "createdAt": "2026-10-06T17:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-34",
+    "youtubeId": "zL_kI4MJoYU",
+    "title": "ID vs 句潤 / 戦極MCBATTLE第19章 公式BESTBOUT",
+    "mcA": "ID",
+    "mcB": "句潤",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第19章",
+    "year": "2019",
+    "evaluation": {
+      "word": 3590,
+      "flow": 4680,
+      "vibe": 4490
+    },
+    "outboundPlays": 54200,
+    "shares": 2780,
+    "createdAt": "2026-10-06T14:00:00Z",
+    "verses": [
+      {
+        "id": "btl-34-1",
+        "battleId": "btl-34",
+        "seconds": 40,
+        "text": "全身を揺らしながらビートに溶け込むダンサブルなフロウ、規格外の身体能力",
+        "mc": "ID",
+        "likes": 1290,
+        "replays": 5890,
+        "createdAt": "2026-10-06T14:00:00Z"
+      },
+      {
+        "id": "btl-34-2",
+        "battleId": "btl-34",
+        "seconds": 86,
+        "text": "煙たく漂う横浜のアンダーグラウンドの匂い、大人の色気でビートを完璧に掌握する",
+        "mc": "句潤",
+        "likes": 1270,
+        "replays": 5740,
+        "createdAt": "2026-10-06T14:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-35",
+    "youtubeId": "7iRQHeU-5fg",
+    "title": "輪入道 vs 崇勲：KING OF KINGS 2016 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "輪入道",
+    "mcB": "崇勲",
+    "tournament": "KOK",
+    "stageOrEvent": "KOK 2016 GRAND CHAMPIONSHIP 決勝",
+    "year": "2016",
+    "evaluation": {
+      "word": 4190,
+      "flow": 3620,
+      "vibe": 4620
+    },
+    "outboundPlays": 63400,
+    "shares": 3240,
+    "createdAt": "2026-10-06T11:00:00Z",
+    "verses": [
+      {
+        "id": "btl-35-1",
+        "battleId": "btl-35",
+        "seconds": 48,
+        "text": "剥き出しの闘争心で相手に迫る千葉の狂犬、泥臭いまでの情熱で王座に挑む",
+        "mc": "輪入道",
+        "likes": 1390,
+        "replays": 6380,
+        "createdAt": "2026-10-06T11:00:00Z"
+      },
+      {
+        "id": "btl-35-2",
+        "battleId": "btl-35",
+        "seconds": 94,
+        "text": "力まない自然体から繰り出される破壊力抜群のパンチライン、春日部の王者が受けて立つ",
+        "mc": "崇勲",
+        "likes": 1420,
+        "replays": 6510,
+        "createdAt": "2026-10-06T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-36",
+    "youtubeId": "damPNh2Vl2Y",
+    "title": "第4回高校生RAP選手権 決勝バトル T-PABLOW vs DK",
+    "mcA": "T-Pablow",
+    "mcB": "DK",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第4回高校生RAP選手権 決勝",
+    "year": "2013",
+    "evaluation": {
+      "word": 4280,
+      "flow": 4410,
+      "vibe": 4850
+    },
+    "outboundPlays": 74200,
+    "shares": 3950,
+    "createdAt": "2026-10-05T20:00:00Z",
+    "verses": [
+      {
+        "id": "btl-36-1",
+        "battleId": "btl-36",
+        "seconds": 35,
+        "text": "川崎のリアルなストリートを背負った少年の叫び、大会史上に残る伝説の2連覇へ",
+        "mc": "T-Pablow",
+        "likes": 1680,
+        "replays": 7920,
+        "createdAt": "2026-10-05T20:00:00Z"
+      },
+      {
+        "id": "btl-36-2",
+        "battleId": "btl-36",
+        "seconds": 78,
+        "text": "互角に渡り合う堂々たるステージング、高校生バトルの熱狂の原点",
+        "mc": "DK",
+        "likes": 1240,
+        "replays": 5820,
+        "createdAt": "2026-10-05T20:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-37",
+    "youtubeId": "V_j-7BB2wJo",
+    "title": "RAWAXXX vs Fuma no KTR【真 ADRENALINE】1回戦第1試合",
+    "mcA": "MOL53",
+    "mcB": "Fuma no KTR",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "真 ADRENALINE 1回戦",
+    "year": "2021",
+    "evaluation": {
+      "word": 3780,
+      "flow": 4120,
+      "vibe": 4050
+    },
+    "outboundPlays": 46800,
+    "shares": 2360,
+    "createdAt": "2026-10-05T17:00:00Z",
+    "verses": [
+      {
+        "id": "btl-37-1",
+        "battleId": "btl-37",
+        "seconds": 36,
+        "text": "冷酷なまでの攻撃性と研ぎ澄まされたライム、相手の甘さを一切許さない殺傷力",
+        "mc": "MOL53",
+        "likes": 1140,
+        "replays": 5240,
+        "createdAt": "2026-10-05T17:00:00Z"
+      },
+      {
+        "id": "btl-37-2",
+        "battleId": "btl-37",
+        "seconds": 82,
+        "text": "高速で次々と展開する次世代のライミング、新星が恐れず王者に牙を剥く",
+        "mc": "Fuma no KTR",
+        "likes": 1160,
+        "replays": 5310,
+        "createdAt": "2026-10-05T17:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-38",
+    "youtubeId": "JY5QeboSzY4",
+    "title": "Authority vs MCニガリ：KING OF KINGS 2023 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "Authority",
+    "mcB": "MCニガリ",
+    "tournament": "KOK",
+    "stageOrEvent": "KOK 2023 GRAND CHAMPIONSHIP",
+    "year": "2023",
+    "evaluation": {
+      "word": 3840,
+      "flow": 3920,
+      "vibe": 4210
+    },
+    "outboundPlays": 51900,
+    "shares": 2580,
+    "createdAt": "2026-10-05T14:00:00Z",
+    "verses": [
+      {
+        "id": "btl-38-1",
+        "battleId": "btl-38",
+        "seconds": 40,
+        "text": "隙のない緻密な韻の構築美、常に冷静に戦況を見極めて放つカウンター",
+        "mc": "Authority",
+        "likes": 1220,
+        "replays": 5610,
+        "createdAt": "2026-10-05T14:00:00Z"
+      },
+      {
+        "id": "btl-38-2",
+        "battleId": "btl-38",
+        "seconds": 86,
+        "text": "長野伊那谷の大自然から生まれた野性味溢れる声量、会場全体を巻き込む熱量",
+        "mc": "MCニガリ",
+        "likes": 1250,
+        "replays": 5740,
+        "createdAt": "2026-10-05T14:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-39",
+    "youtubeId": "wOLzcSqsw9U",
+    "title": "Sitissy luvit vs SIMON JAP(決勝戦）/ 戦極MCBATTLE第36章東北公演2025",
+    "mcA": "Sitissy luvit",
+    "mcB": "SIMON JAP",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第36章 東北公演 決勝",
+    "year": "2025",
+    "evaluation": {
+      "word": 3690,
+      "flow": 3950,
+      "vibe": 4320
+    },
+    "outboundPlays": 49400,
+    "shares": 2490,
+    "createdAt": "2026-10-05T11:00:00Z",
+    "verses": [
+      {
+        "id": "btl-39-1",
+        "battleId": "btl-39",
+        "seconds": 38,
+        "text": "若き新星が放つ柔軟で鋭い現代的なライム、世代の壁を突き破るエネルギー",
+        "mc": "Sitissy luvit",
+        "likes": 1180,
+        "replays": 5390,
+        "createdAt": "2026-10-05T11:00:00Z"
+      },
+      {
+        "id": "btl-39-2",
+        "battleId": "btl-39",
+        "seconds": 84,
+        "text": "東京のストリートで長年磨き上げた圧倒的なパンチ力、ベテランの意地が爆発する",
+        "mc": "SIMON JAP",
+        "likes": 1240,
+        "replays": 5680,
+        "createdAt": "2026-10-05T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-40",
+    "youtubeId": "VMEeqRDRUts",
+    "title": "JUMBO MAATCH vs S-kaine 凱旋MCbattle Special アリーナノ陣",
+    "mcA": "S-kaine",
+    "mcB": "JUMBO MAATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "Special アリーナノ陣",
+    "year": "2021",
+    "evaluation": {
+      "word": 3580,
+      "flow": 4210,
+      "vibe": 4490
+    },
+    "outboundPlays": 53200,
+    "shares": 2710,
+    "createdAt": "2026-10-04T22:00:00Z",
+    "verses": [
+      {
+        "id": "btl-40-1",
+        "battleId": "btl-40",
+        "seconds": 42,
+        "text": "年齢差をものともせず低音で会場を掌握するS-kaineの落ち着きと説得力",
+        "mc": "S-kaine",
+        "likes": 1260,
+        "replays": 5780,
+        "createdAt": "2026-10-04T22:00:00Z"
+      },
+      {
+        "id": "btl-40-2",
+        "battleId": "btl-40",
+        "seconds": 88,
+        "text": "レゲエDeejayの重鎮がアリーナの轟音で吼える、ジャンルを超えた激突",
+        "mc": "JUMBO MAATCH",
+        "likes": 1290,
+        "replays": 5920,
+        "createdAt": "2026-10-04T22:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-41",
+    "youtubeId": "P3X_Ww7Kil0",
+    "title": "#KTCHAN vs DOTAMA【BEST4】/ 戦極MCBATTLE 第42章",
+    "mcA": "DOTAMA",
+    "mcB": "KT-CHAN",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第42章 BEST4",
+    "year": "2026",
+    "evaluation": {
+      "word": 3740,
+      "flow": 4120,
+      "vibe": 4380
+    },
+    "outboundPlays": 58700,
+    "shares": 3120,
+    "createdAt": "2026-10-04T19:00:00Z",
+    "verses": [
+      {
+        "id": "btl-41-1",
+        "battleId": "btl-41",
+        "seconds": 36,
+        "text": "百戦錬磨のベテランが繰り出す痛烈なアイロニー、容赦ない言葉の猛攻",
+        "mc": "DOTAMA",
+        "likes": 1310,
+        "replays": 5980,
+        "createdAt": "2026-10-04T19:00:00Z"
+      },
+      {
+        "id": "btl-41-2",
+        "battleId": "btl-41",
+        "seconds": 82,
+        "text": "ポップな空気感の中に芯のあるライムを忍ばせるKTちゃんの独自のステージング",
+        "mc": "KT-CHAN",
+        "likes": 1380,
+        "replays": 6290,
+        "createdAt": "2026-10-04T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-42",
+    "youtubeId": "T0oF5qaRICM",
+    "title": "S-kaine vs 呂布カルマ / 口喧嘩祭 vs 戦極MC BATTLE",
+    "mcA": "S-kaine",
+    "mcB": "呂布カルマ",
+    "tournament": "戦極",
+    "stageOrEvent": "口喧嘩祭 vs 戦極",
+    "year": "2021",
+    "evaluation": {
+      "word": 3980,
+      "flow": 3820,
+      "vibe": 4180
+    },
+    "outboundPlays": 54100,
+    "shares": 2790,
+    "createdAt": "2026-10-04T16:00:00Z",
+    "verses": [
+      {
+        "id": "btl-42-1",
+        "battleId": "btl-42",
+        "seconds": 35,
+        "text": "落ち着いた低音のトーンで王者の懐に潜り込む、恐れを知らない若武者の眼差し",
+        "mc": "S-kaine",
+        "likes": 1240,
+        "replays": 5690,
+        "createdAt": "2026-10-04T16:00:00Z"
+      },
+      {
+        "id": "btl-42-2",
+        "battleId": "btl-42",
+        "seconds": 80,
+        "text": "若手の挑戦を真正面から迎え撃ち的確にいなす、経験が物を言う百戦錬磨の技",
+        "mc": "呂布カルマ",
+        "likes": 1290,
+        "replays": 5920,
+        "createdAt": "2026-10-04T16:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-43",
+    "youtubeId": "ywPOXaEClR4",
+    "title": "\"R-指定 vs GIL\" UMB2014 GRAND CHAMPIONSHIP 準決勝",
+    "mcA": "R-指定",
+    "mcB": "GIL",
+    "tournament": "UMB",
+    "stageOrEvent": "UMB2014 準決勝",
+    "year": "2014",
+    "evaluation": {
+      "word": 4180,
+      "flow": 4290,
+      "vibe": 4380
+    },
+    "outboundPlays": 59400,
+    "shares": 2980,
+    "createdAt": "2026-10-04T13:00:00Z",
+    "verses": [
+      {
+        "id": "btl-43-1",
+        "battleId": "btl-43",
+        "seconds": 42,
+        "text": "完璧なアンサーと怒涛の倍速ライミング、王者の意地を見せつける圧巻のバース",
+        "mc": "R-指定",
+        "likes": 1410,
+        "replays": 6510,
+        "createdAt": "2026-10-04T13:00:00Z"
+      },
+      {
+        "id": "btl-43-2",
+        "battleId": "btl-43",
+        "seconds": 88,
+        "text": "一歩も引かず魂の叫びをぶつける東北の誇り、延長戦へともつれ込む大熱戦",
+        "mc": "GIL",
+        "likes": 1320,
+        "replays": 6120,
+        "createdAt": "2026-10-04T13:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-44",
+    "youtubeId": "jAKe_3pfPN4",
+    "title": "晋平太 vs MU-TON / 戦極MCBATTLE第27章 仙台東北公演",
+    "mcA": "晋平太",
+    "mcB": "MU-TON",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極第27章 仙台東北公演",
+    "year": "2022",
+    "evaluation": {
+      "word": 3890,
+      "flow": 4320,
+      "vibe": 4280
+    },
+    "outboundPlays": 56900,
+    "shares": 2840,
+    "createdAt": "2026-10-04T10:00:00Z",
+    "verses": [
+      {
+        "id": "btl-44-1",
+        "battleId": "btl-44",
+        "seconds": 40,
+        "text": "仙台の地に響く熱い魂のバイブス、全力で挑む晋平太のアンサー力",
+        "mc": "晋平太",
+        "likes": 1260,
+        "replays": 5780,
+        "createdAt": "2026-10-04T10:00:00Z"
+      },
+      {
+        "id": "btl-44-2",
+        "battleId": "btl-44",
+        "seconds": 86,
+        "text": "地元東北の大歓声を味方につけたMU-TONの天衣無縫なビートコントロール",
+        "mc": "MU-TON",
+        "likes": 1320,
+        "replays": 6090,
+        "createdAt": "2026-10-04T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-45",
+    "youtubeId": "ogCe01U2cyk",
+    "title": "Sitissy luvit vs L.B.R.L：KING OF KINGS 2025 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "Sitissy luvit",
+    "mcB": "L.B.R.L",
+    "tournament": "KOK",
+    "stageOrEvent": "KOK 2025 GRAND CHAMPIONSHIP FINAL",
+    "year": "2025",
+    "evaluation": {
+      "word": 3720,
+      "flow": 4080,
+      "vibe": 4220
+    },
+    "outboundPlays": 48900,
+    "shares": 2410,
+    "createdAt": "2026-10-03T20:00:00Z",
+    "verses": [
+      {
+        "id": "btl-45-1",
+        "battleId": "btl-45",
+        "seconds": 36,
+        "text": "新世代のトップランナーがKOK決勝の舞台で魅せる、淀みないライムと堂々たる風格",
+        "mc": "Sitissy luvit",
+        "likes": 1190,
+        "replays": 5410,
+        "createdAt": "2026-10-03T20:00:00Z"
+      },
+      {
+        "id": "btl-45-2",
+        "battleId": "btl-45",
+        "seconds": 82,
+        "text": "独自の切り口と鋭いパンチラインで王座に迫る、次代のシーンを担う熱きファイト",
+        "mc": "L.B.R.L",
+        "likes": 1140,
+        "replays": 5190,
+        "createdAt": "2026-10-03T20:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "btl-46",
+    "youtubeId": "W7VGFAFYdv8",
+    "title": "韻マン vs MOL53 | 凱旋MCbattle 怨念JAP引退ノ陣 at WOMB",
+    "mcA": "韻マン",
+    "mcB": "MOL53",
+    "tournament": "凱旋",
+    "stageOrEvent": "怨念JAP引退ノ陣",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-46-1",
+        "battleId": "btl-46",
+        "seconds": 58,
+        "text": "踏みまくって超次元の領域、音と言葉がリンクする奇跡",
+        "mc": "韻マン",
+        "likes": 1280,
+        "replays": 1770,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3200,
+      "flow": 2950,
+      "vibe": 3410
+    },
+    "outboundPlays": 114720,
+    "shares": 2644,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-47",
+    "youtubeId": "nH2NkS5XqJE",
+    "title": "Authority vs SAM(決勝戦）/戦極MCBATTLE 第31章 大北海道(2023.12.30)",
+    "mcA": "Authority",
+    "mcB": "SAM",
+    "tournament": "戦極",
+    "stageOrEvent": "第31章 大北海道 決勝戦",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-47-1",
+        "battleId": "btl-47",
+        "seconds": 64,
+        "text": "北の大地で研ぎ澄ました刃、誰が相手でも引かねぇスタンス",
+        "mc": "Authority",
+        "likes": 1444,
+        "replays": 2052,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3610,
+      "flow": 3420,
+      "vibe": 3550
+    },
+    "outboundPlays": 126960,
+    "shares": 2864,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-48",
+    "youtubeId": "uoRHxLeJwnU",
+    "title": "DOTAMA vs S-kaine【決勝戦】 |凱旋MCbattle KING OF KINGS 2026への陣 at 渋谷WOMB",
+    "mcA": "DOTAMA",
+    "mcB": "S-kaine",
+    "tournament": "凱旋",
+    "stageOrEvent": "KOKへの陣 決勝戦",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-48-1",
+        "battleId": "btl-48",
+        "seconds": 52,
+        "text": "言葉の毒とユーモアの交差点、眼鏡の奥から突き刺すリアル",
+        "mc": "DOTAMA",
+        "likes": 1380,
+        "replays": 1734,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3450,
+      "flow": 2890,
+      "vibe": 3120
+    },
+    "outboundPlays": 113520,
+    "shares": 2628,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-49",
+    "youtubeId": "7SVG8aNUHP4",
+    "title": "ピラフ星人 vs Authority / 凱旋MC battle 九州 冬ノ陣2024 at Zepp Fukuoka",
+    "mcA": "ピラフ星人",
+    "mcB": "Authority",
+    "tournament": "凱旋",
+    "stageOrEvent": "九州 冬ノ陣2024",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-49-1",
+        "battleId": "btl-49",
+        "seconds": 46,
+        "text": "圧倒的な熱量とフロウの波、ステージ全部を飲み込むバイブス",
+        "mc": "Authority",
+        "likes": 1192,
+        "replays": 2004,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 2980,
+      "flow": 3340,
+      "vibe": 3280
+    },
+    "outboundPlays": 115200,
+    "shares": 2504,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-50",
+    "youtubeId": "eFzWsx_BJww",
+    "title": "がーどまん vs ミメイ / 凱旋MC battle 九州 冬ノ陣2024 at Zepp Fukuoka",
+    "mcA": "がーどまん",
+    "mcB": "ミメイ",
+    "tournament": "凱旋",
+    "stageOrEvent": "九州 冬ノ陣2024",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-50-1",
+        "battleId": "btl-50",
+        "seconds": 38,
+        "text": "叫び続ける魂の声、YouTubeだろうがステージだろうが魂は売らねぇ",
+        "mc": "がーどまん",
+        "likes": 1116,
+        "replays": 1590,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 2790,
+      "flow": 2650,
+      "vibe": 3620
+    },
+    "outboundPlays": 108720,
+    "shares": 2564,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-51",
+    "youtubeId": "kcytm-yfPS8",
+    "title": "龍鬼 vs MOL53 凱旋MC battle Special 2023 at 東京ガーデンシアター",
+    "mcA": "龍鬼",
+    "mcB": "MOL53",
+    "tournament": "凱旋",
+    "stageOrEvent": "Special 2023",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-51-1",
+        "battleId": "btl-51",
+        "seconds": 72,
+        "text": "濁りのないアンダーグラウンドの冷徹、現場でしか鳴らない本物",
+        "mc": "MOL53",
+        "likes": 1260,
+        "replays": 1920,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3150,
+      "flow": 3200,
+      "vibe": 3490
+    },
+    "outboundPlays": 118080,
+    "shares": 2656,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-52",
+    "youtubeId": "bYOsFzHZUrM",
+    "title": "MOL53 vs 裂固：KING OF KINGS 2022 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "MOL53",
+    "mcB": "裂固",
+    "tournament": "KOK",
+    "stageOrEvent": "2022 FINAL 決勝戦",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-52-1",
+        "battleId": "btl-52",
+        "seconds": 68,
+        "text": "現場の叩き上げが生む一撃、歴代王者の誇りが激突する",
+        "mc": "MOL53",
+        "likes": 1528,
+        "replays": 2106,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3820,
+      "flow": 3510,
+      "vibe": 3740
+    },
+    "outboundPlays": 132840,
+    "shares": 3024,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-53",
+    "youtubeId": "j7TydDDRgXQ",
+    "title": "呂布カルマ vs FORK(ICE BAHN)：KING OF KINGS 2021 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "呂布カルマ",
+    "mcB": "FORK",
+    "tournament": "KOK",
+    "stageOrEvent": "2021 FINAL 決勝戦",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-53-1",
+        "battleId": "btl-53",
+        "seconds": 54,
+        "text": "正反対の哲学が真正面から噛み合う、これぞ言葉の頂上決戦",
+        "mc": "FORK",
+        "likes": 1648,
+        "replays": 2208,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4120,
+      "flow": 3680,
+      "vibe": 3950
+    },
+    "outboundPlays": 141000,
+    "shares": 3228,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-54",
+    "youtubeId": "QBBvfWWkD1Q",
+    "title": "GOCCI vs BES UMB2007 GRAND CHAMPIONSHIP",
+    "mcA": "GOCCI",
+    "mcB": "BES",
+    "tournament": "UMB",
+    "stageOrEvent": "2007 GRAND CHAMPIONSHIP",
+    "year": "2007",
+    "verses": [
+      {
+        "id": "btl-54-1",
+        "battleId": "btl-54",
+        "seconds": 42,
+        "text": "路地裏の詩情が音の上で揺れる、伝説となった初期の最高峰フロウ",
+        "mc": "BES",
+        "likes": 1316,
+        "replays": 2334,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3290,
+      "flow": 3890,
+      "vibe": 3680
+    },
+    "outboundPlays": 130320,
+    "shares": 2788,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-55",
+    "youtubeId": "mdHVDd5mKBA",
+    "title": "鎮座DOPENESS vs NONKEY UMB 2009 GRAND CHAMPIONSHIP",
+    "mcA": "鎮座DOPENESS",
+    "mcB": "NONKEY",
+    "tournament": "UMB",
+    "stageOrEvent": "2009 GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2009",
+    "verses": [
+      {
+        "id": "btl-55-1",
+        "battleId": "btl-55",
+        "seconds": 60,
+        "text": "言葉とメロディが溶け合うグルーヴ、唯一無二の宇宙的フロウ",
+        "mc": "鎮座DOPENESS",
+        "likes": 1364,
+        "replays": 2526,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3410,
+      "flow": 4210,
+      "vibe": 4050
+    },
+    "outboundPlays": 140040,
+    "shares": 2984,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-56",
+    "youtubeId": "j4rclHAJITQ",
+    "title": "MOL53 vs CIMA UMB2017 THE CHOICE IS YOURS Vol.1 FINAL",
+    "mcA": "MOL53",
+    "mcB": "CIMA",
+    "tournament": "UMB",
+    "stageOrEvent": "THE CHOICE IS YOURS Vol.1 決勝戦",
+    "year": "2017",
+    "verses": [
+      {
+        "id": "btl-56-1",
+        "battleId": "btl-56",
+        "seconds": 55,
+        "text": "現場の意地とライムの打ち合い、魂を削り合う男たちの対話",
+        "mc": "MOL53",
+        "likes": 1436,
+        "replays": 2088,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3590,
+      "flow": 3480,
+      "vibe": 3620
+    },
+    "outboundPlays": 128280,
+    "shares": 2884,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-57",
+    "youtubeId": "HNW5Xm_07gk",
+    "title": "句潤 vs 晋平太 UMB2018 THE CHOICE IS YOURS Vol.2 決勝戦",
+    "mcA": "句潤",
+    "mcB": "晋平太",
+    "tournament": "UMB",
+    "stageOrEvent": "THE CHOICE IS YOURS Vol.2 決勝戦",
+    "year": "2018",
+    "verses": [
+      {
+        "id": "btl-57-1",
+        "battleId": "btl-57",
+        "seconds": 62,
+        "text": "煙をまとったフロウと熱狂のアンサー、王座を懸けた魂の応酬",
+        "mc": "句潤",
+        "likes": 1496,
+        "replays": 2292,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3740,
+      "flow": 3820,
+      "vibe": 3690
+    },
+    "outboundPlays": 135000,
+    "shares": 2972,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-58",
+    "youtubeId": "9L5WHY8PAo0",
+    "title": "R-指定 vs DOTAMA UMB2011 GRAND CHAMPIONSHIP 1回戦",
+    "mcA": "R-指定",
+    "mcB": "DOTAMA",
+    "tournament": "UMB",
+    "stageOrEvent": "2011 GRAND CHAMPIONSHIP",
+    "year": "2011",
+    "verses": [
+      {
+        "id": "btl-58-1",
+        "battleId": "btl-58",
+        "seconds": 48,
+        "text": "宿敵同士の因縁の始まり、互いのスタイルを徹底的に解体し合う",
+        "mc": "R-指定",
+        "likes": 1580,
+        "replays": 2232,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3950,
+      "flow": 3720,
+      "vibe": 3810
+    },
+    "outboundPlays": 137760,
+    "shares": 3104,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-59",
+    "youtubeId": "Y31_LPHk1Ag",
+    "title": "輪入道 vs Authority UMB2018 GRAND CHAMPIONSHIP",
+    "mcA": "輪入道",
+    "mcB": "Authority",
+    "tournament": "UMB",
+    "stageOrEvent": "2018 GRAND CHAMPIONSHIP",
+    "year": "2018",
+    "verses": [
+      {
+        "id": "btl-59-1",
+        "battleId": "btl-59",
+        "seconds": 58,
+        "text": "百戦錬磨の咆哮と新世代の鋭いライム、世代を跨ぐ大激闘",
+        "mc": "輪入道",
+        "likes": 1468,
+        "replays": 2046,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3670,
+      "flow": 3410,
+      "vibe": 3890
+    },
+    "outboundPlays": 131640,
+    "shares": 3024,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-60",
+    "youtubeId": "uMUpm1rLdkY",
+    "title": "梵頭 vs Authority UMB2019 GRAND CHAMPIONSHIP BEST8",
+    "mcA": "梵頭",
+    "mcB": "Authority",
+    "tournament": "UMB",
+    "stageOrEvent": "2019 GRAND CHAMPIONSHIP BEST8",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-60-1",
+        "battleId": "btl-60",
+        "seconds": 50,
+        "text": "ストリートの毒気と圧倒的な押韻テクニック、両者譲らぬ名勝負",
+        "mc": "Authority",
+        "likes": 1352,
+        "replays": 1974,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3380,
+      "flow": 3290,
+      "vibe": 3450
+    },
+    "outboundPlays": 121440,
+    "shares": 2732,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-61",
+    "youtubeId": "9oT0IZQR-CA",
+    "title": "T-TANGG vs 輪入道 《決勝戦》/ 真ADRENALINE -ROAD TO KOK- 2024.01.05",
+    "mcA": "T-TANGG",
+    "mcB": "輪入道",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "ROAD TO KOK 決勝戦",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-61-1",
+        "battleId": "btl-61",
+        "seconds": 66,
+        "text": "生の言葉が鼓膜を揺らす、最後の一瞬まで途切れない気迫",
+        "mc": "輪入道",
+        "likes": 1408,
+        "replays": 2028,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3520,
+      "flow": 3380,
+      "vibe": 3790
+    },
+    "outboundPlays": 128280,
+    "shares": 2924,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-62",
+    "youtubeId": "vgZHaRdQoJk",
+    "title": "CHEHON vs DOTAMA 【決勝戦】 / 渋谷レゲエ祭 vs 真ADRENALINE 2025.12.28",
+    "mcA": "CHEHON",
+    "mcB": "DOTAMA",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "渋谷レゲエ祭 vs 真ADRENALINE 決勝戦",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-62-1",
+        "battleId": "btl-62",
+        "seconds": 60,
+        "text": "レゲエのディージェイとヒップホップMC、ジャンルを越えた音のぶつかり合い",
+        "mc": "DOTAMA",
+        "likes": 1476,
+        "replays": 2148,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3690,
+      "flow": 3580,
+      "vibe": 3940
+    },
+    "outboundPlays": 134520,
+    "shares": 3052,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-63",
+    "youtubeId": "79qYOtSftvs",
+    "title": "SIMON JAP vs 呂布カルマ【真 ADRENALINE 杯真の陣】決勝戦",
+    "mcA": "SIMON JAP",
+    "mcB": "呂布カルマ",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "杯真の陣 決勝戦",
+    "year": "2021",
+    "verses": [
+      {
+        "id": "btl-63-1",
+        "battleId": "btl-63",
+        "seconds": 56,
+        "text": "東京の下町と名古屋の異端、男としての生き様を音に刻み込む",
+        "mc": "SIMON JAP",
+        "likes": 1512,
+        "replays": 1950,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3780,
+      "flow": 3250,
+      "vibe": 3820
+    },
+    "outboundPlays": 130200,
+    "shares": 3040,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-64",
+    "youtubeId": "DrYwmp4Z-CU",
+    "title": "Authority vs MOL53 / KING OF KINGS vs ADRENALINE 2026.07.11",
+    "mcA": "Authority",
+    "mcB": "MOL53",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "KOK vs ADRENALINE",
+    "year": "2021",
+    "verses": [
+      {
+        "id": "btl-64-1",
+        "battleId": "btl-64",
+        "seconds": 64,
+        "text": "研ぎ澄まされたライムと冷徹なバース、最高峰の対決",
+        "mc": "Authority",
+        "likes": 1564,
+        "replays": 2172,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3910,
+      "flow": 3620,
+      "vibe": 3880
+    },
+    "outboundPlays": 136920,
+    "shares": 3116,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-65",
+    "youtubeId": "MvYTfyFQmls",
+    "title": "【決勝戦】晋平太 vs CHICO CARLITO / KING OF KINGS vs 真ADRENALINE 2023.07.14",
+    "mcA": "晋平太",
+    "mcB": "CHICO CARLITO",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "KOK vs 真ADRENALINE 決勝戦",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-65-1",
+        "battleId": "btl-65",
+        "seconds": 58,
+        "text": "熱狂のバイブスと沖縄の美しきフロウ、互いを認め合うリスペクトの嵐",
+        "mc": "CHICO CARLITO",
+        "likes": 1536,
+        "replays": 2346,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3840,
+      "flow": 3910,
+      "vibe": 4020
+    },
+    "outboundPlays": 141240,
+    "shares": 3144,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-66",
+    "youtubeId": "tv956FRA-W8",
+    "title": "R-指定 vs GOLBY【ADRENALINE 2014】",
+    "mcA": "R-指定",
+    "mcB": "GOLBY",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "ADRENALINE 2014",
+    "year": "2014",
+    "verses": [
+      {
+        "id": "btl-66-1",
+        "battleId": "btl-66",
+        "seconds": 45,
+        "text": "即興で繰り出される無限のボキャブラリー、ビートに乗る神がかりの韻",
+        "mc": "R-指定",
+        "likes": 1580,
+        "replays": 2304,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3950,
+      "flow": 3840,
+      "vibe": 3790
+    },
+    "outboundPlays": 138960,
+    "shares": 3096,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-67",
+    "youtubeId": "zCmS-Pq-Vnw",
+    "title": "【決勝戦】ID vs 晋平太 / KING OF KINGS vs 真 ADRENALINE #4",
+    "mcA": "ID",
+    "mcB": "晋平太",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "KOK vs 真ADRENALINE #4 決勝戦",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-67-1",
+        "battleId": "btl-67",
+        "seconds": 62,
+        "text": "踊るようなフリースタイルと正面からの熱唱、ステージ全体を揺らすセッション",
+        "mc": "ID",
+        "likes": 1432,
+        "replays": 2472,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3580,
+      "flow": 4120,
+      "vibe": 3960
+    },
+    "outboundPlays": 139920,
+    "shares": 3016,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-68",
+    "youtubeId": "QxtYsh8ANow",
+    "title": "Authority vs FORK FSL VOL.1",
+    "mcA": "Authority",
+    "mcB": "FORK",
+    "tournament": "FSL",
+    "stageOrEvent": "FSL VOL.1",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-68-1",
+        "battleId": "btl-68",
+        "seconds": 50,
+        "text": "一歩も引かない固い韻の応酬、FSLの歴史の幕開けを飾る名勝負",
+        "mc": "FORK",
+        "likes": 1592,
+        "replays": 2202,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3980,
+      "flow": 3670,
+      "vibe": 3890
+    },
+    "outboundPlays": 138480,
+    "shares": 3148,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-69",
+    "youtubeId": "iSjmfzOU9xg",
+    "title": "晋平太サンプリングに込める想い NAIKA MC vs 晋平太 FSL VOL.3",
+    "mcA": "NAIKA MC",
+    "mcB": "晋平太",
+    "tournament": "FSL",
+    "stageOrEvent": "FSL VOL.3",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-69-1",
+        "battleId": "btl-69",
+        "seconds": 54,
+        "text": "長年の戦友だからこそ刺さる言葉、過去のリリックを引用した魂のぶつけ合い",
+        "mc": "晋平太",
+        "likes": 1488,
+        "replays": 1914,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3720,
+      "flow": 3190,
+      "vibe": 4150
+    },
+    "outboundPlays": 132720,
+    "shares": 3148,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-70",
+    "youtubeId": "eCyr8fjnOTs",
+    "title": "ID VS. L.B.R.L FSL VOL.2 presented by ASAP",
+    "mcA": "ID",
+    "mcB": "L.B.R.L",
+    "tournament": "FSL",
+    "stageOrEvent": "FSL VOL.2",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-70-1",
+        "battleId": "btl-70",
+        "seconds": 48,
+        "text": "音を乗りこなすダンスのようなバース、ハイブリッドな音楽性が光る",
+        "mc": "ID",
+        "likes": 1312,
+        "replays": 2430,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3280,
+      "flow": 4050,
+      "vibe": 3720
+    },
+    "outboundPlays": 132600,
+    "shares": 2800,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-71",
+    "youtubeId": "gSdZzf-nwNc",
+    "title": "GOMESS vs ID 2nd Round【FSL VOL.4 Year End Special 2023】",
+    "mcA": "GOMESS",
+    "mcB": "ID",
+    "tournament": "FSL",
+    "stageOrEvent": "FSL VOL.4 Year End Special",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-71-1",
+        "battleId": "btl-71",
+        "seconds": 55,
+        "text": "心の内側をさらけ出すポエトリーと躍動するリズム、異色のケミストリー",
+        "mc": "ID",
+        "likes": 1456,
+        "replays": 2328,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3640,
+      "flow": 3880,
+      "vibe": 3910
+    },
+    "outboundPlays": 137160,
+    "shares": 3020,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-72",
+    "youtubeId": "f_cFSDkDzDQ",
+    "title": "呂布カルマ VS. 安保瑠輝也 FSL VOL.2 presented by ASAP",
+    "mcA": "呂布カルマ",
+    "mcB": "安保瑠輝也",
+    "tournament": "FSL",
+    "stageOrEvent": "FSL VOL.2",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-72-1",
+        "battleId": "btl-72",
+        "seconds": 52,
+        "text": "格闘家と孤高のラッパーの異種格闘技、ステージを制圧する話術と存在感",
+        "mc": "呂布カルマ",
+        "likes": 1648,
+        "replays": 1806,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4120,
+      "flow": 3010,
+      "vibe": 4200
+    },
+    "outboundPlays": 135960,
+    "shares": 3328,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-73",
+    "youtubeId": "RX7kWSQmosI",
+    "title": "Novel Core VS 八咫烏 【第16回高校生ラップ選手権】",
+    "mcA": "Novel Core",
+    "mcB": "八咫烏",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第16回 2nd ROUND",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-73-1",
+        "battleId": "btl-73",
+        "seconds": 44,
+        "text": "スター性を放つ堂々たるステージング、次代を背負う確固たる覚悟",
+        "mc": "Novel Core",
+        "likes": 1368,
+        "replays": 2334,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3420,
+      "flow": 3890,
+      "vibe": 3760
+    },
+    "outboundPlays": 132840,
+    "shares": 2872,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-74",
+    "youtubeId": "zaiMdwN1E9E",
+    "title": "第9回高校生RAP選手権 決勝バトル 裂固 vs Lick-G",
+    "mcA": "裂固",
+    "mcB": "Lick-G",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第9回 決勝戦",
+    "year": "2016",
+    "verses": [
+      {
+        "id": "btl-74-1",
+        "battleId": "btl-74",
+        "seconds": 50,
+        "text": "泥臭く磨き上げたライムの連射、飛騨高山から全国へ刻んだ優勝旗",
+        "mc": "裂固",
+        "likes": 1684,
+        "replays": 2370,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4210,
+      "flow": 3950,
+      "vibe": 4180
+    },
+    "outboundPlays": 148080,
+    "shares": 3356,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-75",
+    "youtubeId": "9kk1wZjxNEI",
+    "title": "第6回高校生RAP選手権 決勝バトル MC☆ニガリ vs Rude-α",
+    "mcA": "MCニガリ",
+    "mcB": "Rude-α",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第6回 決勝戦",
+    "year": "2014",
+    "verses": [
+      {
+        "id": "btl-75-1",
+        "battleId": "btl-75",
+        "seconds": 46,
+        "text": "伊那谷の赤い稲妻が吼える、飾らない言葉が会場を総立ちにさせる",
+        "mc": "MCニガリ",
+        "likes": 1556,
+        "replays": 2070,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3890,
+      "flow": 3450,
+      "vibe": 4230
+    },
+    "outboundPlays": 138840,
+    "shares": 3248,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-76",
+    "youtubeId": "sZ8VzVWw8zw",
+    "title": "伝説の高校生ラップ選手権(第4回)かしわ vs T-Pablow",
+    "mcA": "かしわ",
+    "mcB": "T-Pablow",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第4回 準決勝",
+    "year": "2013",
+    "verses": [
+      {
+        "id": "btl-76-1",
+        "battleId": "btl-76",
+        "seconds": 42,
+        "text": "川崎の不良少年がシーンの頂点へと駆け上がる瞬間、圧倒的な風格",
+        "mc": "T-Pablow",
+        "likes": 1580,
+        "replays": 2268,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3950,
+      "flow": 3780,
+      "vibe": 4190
+    },
+    "outboundPlays": 143040,
+    "shares": 3256,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-77",
+    "youtubeId": "mivAx33JXiw",
+    "title": "第16回高校生ラップ選手権 S-kaine vs 9for",
+    "mcA": "S-kaine",
+    "mcB": "9for",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第16回 準決勝",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-77-1",
+        "battleId": "btl-77",
+        "seconds": 48,
+        "text": "低音の響きと太いブーンバップのグルーヴ、若手とは思えぬ老獪な間合い",
+        "mc": "S-kaine",
+        "likes": 1340,
+        "replays": 2208,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3350,
+      "flow": 3680,
+      "vibe": 3590
+    },
+    "outboundPlays": 127440,
+    "shares": 2776,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-78",
+    "youtubeId": "3VkmCP7K2ds",
+    "title": "Red Eye vs TERU｜第12回高校生ラップ選手権2nd ROUND",
+    "mcA": "Red Eye",
+    "mcB": "TERU",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第12回 2nd ROUND",
+    "year": "2017",
+    "verses": [
+      {
+        "id": "btl-78-1",
+        "battleId": "btl-78",
+        "seconds": 52,
+        "text": "不良少年のリアルな吐露とメロディックなフロウ、選手権史に残る激戦",
+        "mc": "Red Eye",
+        "likes": 1364,
+        "replays": 2250,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3410,
+      "flow": 3750,
+      "vibe": 3820
+    },
+    "outboundPlays": 131760,
+    "shares": 2892,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-79",
+    "youtubeId": "WIknZcB1Vp0",
+    "title": "鎮座DOPENESS vs KBD 決勝戦/戦極MCBATTLE 第6章",
+    "mcA": "鎮座DOPENESS",
+    "mcB": "KBD",
+    "tournament": "戦極",
+    "stageOrEvent": "第6章 黄金期 決勝戦",
+    "year": "2013",
+    "verses": [
+      {
+        "id": "btl-79-1",
+        "battleId": "btl-79",
+        "seconds": 58,
+        "text": "音と戯れるような超絶フリースタイル、戦極史上に残る決勝の名勝負",
+        "mc": "鎮座DOPENESS",
+        "likes": 1448,
+        "replays": 2574,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3620,
+      "flow": 4290,
+      "vibe": 4110
+    },
+    "outboundPlays": 144240,
+    "shares": 3092,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-80",
+    "youtubeId": "k4dYlpPLRxw",
+    "title": "SAM vs 呂布カルマ（決勝戦）/戦極MCBATTLE 第20章",
+    "mcA": "SAM",
+    "mcB": "呂布カルマ",
+    "tournament": "戦極",
+    "stageOrEvent": "第20章 決勝戦",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-80-1",
+        "battleId": "btl-80",
+        "seconds": 62,
+        "text": "栃木から全国を奪いに来たライムの鬼と、迎え撃つ名古屋の怪物の激闘",
+        "mc": "SAM",
+        "likes": 1620,
+        "replays": 2208,
+        "createdAt": "2026-10-15T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4050,
+      "flow": 3680,
+      "vibe": 3980
+    },
+    "outboundPlays": 140520,
+    "shares": 3212,
+    "createdAt": "2026-10-15T12:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-81",
+    "youtubeId": "HNFUVULoBPo",
+    "title": "SAM vs Fuma no KTR / 戦極MCBATTLE 第29章 両国国技館(2023.3.12)",
+    "mcA": "SAM",
+    "mcB": "Fuma no KTR",
+    "tournament": "戦極",
+    "stageOrEvent": "第29章 両国国技館",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-81-1",
+        "battleId": "btl-81",
+        "seconds": 54,
+        "text": "国技館に響く高速ライムの連射、次代のエースと真正面から激突",
+        "mc": "SAM",
+        "likes": 1580,
+        "replays": 2472,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3950,
+      "flow": 4120,
+      "vibe": 4210
+    },
+    "outboundPlays": 147360,
+    "shares": 3264,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-82",
+    "youtubeId": "cqrUAu3UZCU",
+    "title": "SAM vs ID / 戦極MCBATTLE第18章 (2018.8.11)",
+    "mcA": "SAM",
+    "mcB": "ID",
+    "tournament": "戦極",
+    "stageOrEvent": "第18章",
+    "year": "2018",
+    "verses": [
+      {
+        "id": "btl-82-1",
+        "battleId": "btl-82",
+        "seconds": 62,
+        "text": "変幻自在のダンサブルなフロウと隙のない精密ライム、スタイルの極致",
+        "mc": "ID",
+        "likes": 1528,
+        "replays": 2610,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3820,
+      "flow": 4350,
+      "vibe": 4190
+    },
+    "outboundPlays": 148320,
+    "shares": 3204,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-83",
+    "youtubeId": "8UCwFahofag",
+    "title": "Sitissy luvit vs ミステリオ / 戦極MCBATTLE 第40章 Still Fresh MCs",
+    "mcA": "Sitissy luvit",
+    "mcB": "ミステリオ",
+    "tournament": "戦極",
+    "stageOrEvent": "第40章 Still Fresh MCs",
+    "year": "2025",
+    "verses": [
+      {
+        "id": "btl-83-1",
+        "battleId": "btl-83",
+        "seconds": 48,
+        "text": "ユーモアとスキルが交錯するステージ、新世代のスマートな返し技",
+        "mc": "Sitissy luvit",
+        "likes": 1380,
+        "replays": 2172,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3450,
+      "flow": 3620,
+      "vibe": 3890
+    },
+    "outboundPlays": 131520,
+    "shares": 2936,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-84",
+    "youtubeId": "gt7HTM74xgo",
+    "title": "KOPERU vs ID / 戦極MCBATTLE第28章 大阪関西公演",
+    "mcA": "KOPERU",
+    "mcB": "ID",
+    "tournament": "戦極",
+    "stageOrEvent": "第28章 大阪関西公演",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-84-1",
+        "battleId": "btl-84",
+        "seconds": 50,
+        "text": "音とリズムで遊ぶフリースタイルモンスター同士の最高峰グルーヴセッション",
+        "mc": "ID",
+        "likes": 1472,
+        "replays": 2652,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3680,
+      "flow": 4420,
+      "vibe": 4380
+    },
+    "outboundPlays": 149760,
+    "shares": 3224,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-85",
+    "youtubeId": "GJaKXCw15nI",
+    "title": "ミメイ vs 呂布カルマ（決勝戦）/ 戦極MCBATTLE第28章 大阪関西公演",
+    "mcA": "ミメイ",
+    "mcB": "呂布カルマ",
+    "tournament": "戦極",
+    "stageOrEvent": "第28章 大阪関西公演 決勝戦",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-85-1",
+        "battleId": "btl-85",
+        "seconds": 66,
+        "text": "関西若手の急先鋒が王者に挑む、一瞬の隙も許されない決勝の緊迫感",
+        "mc": "呂布カルマ",
+        "likes": 1648,
+        "replays": 2292,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4120,
+      "flow": 3820,
+      "vibe": 4350
+    },
+    "outboundPlays": 147480,
+    "shares": 3388,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-86",
+    "youtubeId": "A1dHrq_c450",
+    "title": "漢 a.k.a. GAMI vs 呂布カルマ (決勝戦) / 戦極MCBATTLE 第18章",
+    "mcA": "漢 a.k.a. GAMI",
+    "mcB": "呂布カルマ",
+    "tournament": "戦極",
+    "stageOrEvent": "第18章 決勝戦",
+    "year": "2018",
+    "verses": [
+      {
+        "id": "btl-86-1",
+        "battleId": "btl-86",
+        "seconds": 58,
+        "text": "新宿アンダーグラウンドのドンと孤高の怪物が激突、歴史に刻まれた大将戦",
+        "mc": "漢 a.k.a. GAMI",
+        "likes": 1780,
+        "replays": 2334,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4450,
+      "flow": 3890,
+      "vibe": 4890
+    },
+    "outboundPlays": 158760,
+    "shares": 3736,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-87",
+    "youtubeId": "cqkroqOL0Ew",
+    "title": "NAIKA MC vs S-kaine【決勝戦】| 戦極MCBATTLE 第37章 OSAKA",
+    "mcA": "NAIKA MC",
+    "mcB": "S-kaine",
+    "tournament": "戦極",
+    "stageOrEvent": "第37章 OSAKA 決勝戦",
+    "year": "2025",
+    "verses": [
+      {
+        "id": "btl-87-1",
+        "battleId": "btl-87",
+        "seconds": 64,
+        "text": "泥臭いパッションの咆哮とクールな重低音、対照的な美学の決勝バトル",
+        "mc": "S-kaine",
+        "likes": 1516,
+        "replays": 2370,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3790,
+      "flow": 3950,
+      "vibe": 4210
+    },
+    "outboundPlays": 143400,
+    "shares": 3200,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-88",
+    "youtubeId": "a6r-KiYpbrk",
+    "title": "SKRYU vs 梵頭 決勝戦 / 大阪戦極トライアスロンレース",
+    "mcA": "SKRYU",
+    "mcB": "梵頭",
+    "tournament": "戦極",
+    "stageOrEvent": "大阪戦極トライアスロン 決勝戦",
+    "year": "2021",
+    "verses": [
+      {
+        "id": "btl-88-1",
+        "battleId": "btl-88",
+        "seconds": 52,
+        "text": "極上のポップネスとストリートの毒気、笑顔と殺気が交差する決勝",
+        "mc": "SKRYU",
+        "likes": 1448,
+        "replays": 2628,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3620,
+      "flow": 4380,
+      "vibe": 4190
+    },
+    "outboundPlays": 146280,
+    "shares": 3124,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-89",
+    "youtubeId": "4dt1p49Xqyk",
+    "title": "RAWAXXX vs 呂布カルマ [決勝リーグFINAL] 戦極MCBATTLE第21.5章",
+    "mcA": "MOL53",
+    "mcB": "呂布カルマ",
+    "tournament": "戦極",
+    "stageOrEvent": "第21.5章 Battle League SP 決勝",
+    "year": "2020",
+    "verses": [
+      {
+        "id": "btl-89-1",
+        "battleId": "btl-89",
+        "seconds": 60,
+        "text": "言葉の殺傷力だけで勝負する二人の怪物、張り詰めた空気の中での一撃",
+        "mc": "MOL53",
+        "likes": 1740,
+        "replays": 2268,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4350,
+      "flow": 3780,
+      "vibe": 4520
+    },
+    "outboundPlays": 151800,
+    "shares": 3548,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-90",
+    "youtubeId": "Bnee2A2kVc0",
+    "title": "SILENT KILLA JOINT vs MU-TON 決勝戦 / 戦極MCBATTLE 第22章",
+    "mcA": "SILENT KILLA JOINT",
+    "mcB": "MU-TON",
+    "tournament": "戦極",
+    "stageOrEvent": "第22章 決勝戦",
+    "year": "2020",
+    "verses": [
+      {
+        "id": "btl-90-1",
+        "battleId": "btl-90",
+        "seconds": 56,
+        "text": "スモーキーなブーンバップのグルーヴ対決、耳に残る美しきフロウの応酬",
+        "mc": "MU-TON",
+        "likes": 1456,
+        "replays": 2652,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3640,
+      "flow": 4420,
+      "vibe": 4310
+    },
+    "outboundPlays": 148440,
+    "shares": 3180,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-91",
+    "youtubeId": "3xGQ0hWdt10",
+    "title": "呂布カルマ vs MU-TON（決勝戦) / 戦極MCBATTLE第27章 仙台東北公演",
+    "mcA": "呂布カルマ",
+    "mcB": "MU-TON",
+    "tournament": "戦極",
+    "stageOrEvent": "第27章 仙台東北公演 決勝戦",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-91-1",
+        "battleId": "btl-91",
+        "seconds": 62,
+        "text": "仙台の熱狂を背負うMU-TONと、アウェーをものともしない呂布カルマの哲学",
+        "mc": "MU-TON",
+        "likes": 1620,
+        "replays": 2628,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4050,
+      "flow": 4380,
+      "vibe": 4490
+    },
+    "outboundPlays": 155040,
+    "shares": 3416,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-92",
+    "youtubeId": "hoWSs8eDQyA",
+    "title": "がーどまん vs whimsyboy / 凱旋MC battle 九州 冬ノ陣2024",
+    "mcA": "がーどまん",
+    "mcB": "whimsyboy",
+    "tournament": "凱旋",
+    "stageOrEvent": "九州 冬ノ陣2024 準決勝",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-92-1",
+        "battleId": "btl-92",
+        "seconds": 46,
+        "text": "圧倒的な気迫で会場全体を巻き込む、魂の絶叫が観客の心を打つ",
+        "mc": "がーどまん",
+        "likes": 1352,
+        "replays": 1872,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3380,
+      "flow": 3120,
+      "vibe": 4120
+    },
+    "outboundPlays": 127440,
+    "shares": 3000,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-93",
+    "youtubeId": "Ogmqdp10FBs",
+    "title": "SKRYU vs 鎮座DOPENESS / KING OF KINGS 2020",
+    "mcA": "SKRYU",
+    "mcB": "鎮座DOPENESS",
+    "tournament": "KOK",
+    "stageOrEvent": "2020 GRAND CHAMPIONSHIP",
+    "year": "2021",
+    "verses": [
+      {
+        "id": "btl-93-1",
+        "battleId": "btl-93",
+        "seconds": 68,
+        "text": "グルーヴの天才二人がKOKの舞台で邂逅、音楽としてのラップの最高到達点",
+        "mc": "鎮座DOPENESS",
+        "likes": 1568,
+        "replays": 2910,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3920,
+      "flow": 4850,
+      "vibe": 4790
+    },
+    "outboundPlays": 162720,
+    "shares": 3484,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-94",
+    "youtubeId": "R3Vca9MrbjI",
+    "title": "CHICO CARLITO vs Bonbero / 凱旋MC battle さいたまスーパーアリーナ",
+    "mcA": "CHICO CARLITO",
+    "mcB": "Bonbero",
+    "tournament": "凱旋",
+    "stageOrEvent": "さいたまスーパーアリーナノ陣",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-94-1",
+        "battleId": "btl-94",
+        "seconds": 54,
+        "text": "アリーナを揺るがす圧倒的リズムと高速フロウ、新旧世代の超絶技巧マッチ",
+        "mc": "CHICO CARLITO",
+        "likes": 1556,
+        "replays": 2772,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3890,
+      "flow": 4620,
+      "vibe": 4550
+    },
+    "outboundPlays": 156720,
+    "shares": 3376,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-95",
+    "youtubeId": "6zoeeEM6D_Q",
+    "title": "Authority vs MCニガリ 凱旋MC battle 東西選抜春ノ陣2019",
+    "mcA": "Authority",
+    "mcB": "MCニガリ",
+    "tournament": "凱旋",
+    "stageOrEvent": "東西選抜春ノ陣2019 準決勝",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-95-1",
+        "battleId": "btl-95",
+        "seconds": 52,
+        "text": "緻密に計算されたライムと全身全霊のバイブス、春ノ陣を沸かせた名勝負",
+        "mc": "Authority",
+        "likes": 1536,
+        "replays": 2370,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3840,
+      "flow": 3950,
+      "vibe": 4210
+    },
+    "outboundPlays": 144000,
+    "shares": 3220,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-96",
+    "youtubeId": "ms9PtYqycoY",
+    "title": "MOL53 vs CHEHON / 凱旋MC Battle THE GIANT KILLING",
+    "mcA": "MOL53",
+    "mcB": "CHEHON",
+    "tournament": "凱旋",
+    "stageOrEvent": "THE GIANT KILLING at 豊洲PIT",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-96-1",
+        "battleId": "btl-96",
+        "seconds": 60,
+        "text": "レゲエ界の雄とアンダーグラウンドの猛者、ジャンルの垣根を超えた一騎打ち",
+        "mc": "MOL53",
+        "likes": 1592,
+        "replays": 2472,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3980,
+      "flow": 4120,
+      "vibe": 4480
+    },
+    "outboundPlays": 150960,
+    "shares": 3384,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-97",
+    "youtubeId": "7sLN4BAtQrw",
+    "title": "韻マン vs 晋平太 凱旋MC battle 東西選抜春ノ陣2019",
+    "mcA": "韻マン",
+    "mcB": "晋平太",
+    "tournament": "凱旋",
+    "stageOrEvent": "東西選抜春ノ陣2019 1回戦",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-97-1",
+        "battleId": "btl-97",
+        "seconds": 48,
+        "text": "新星の超速マルチライムをベテラン王者が真正面からアンサーでねじ伏せる",
+        "mc": "晋平太",
+        "likes": 1620,
+        "replays": 2292,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4050,
+      "flow": 3820,
+      "vibe": 4390
+    },
+    "outboundPlays": 147120,
+    "shares": 3376,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-98",
+    "youtubeId": "DzQ-rAO7eY4",
+    "title": "SKRYU vs Rude-α / 凱旋MC Battle Special アリーナノ陣",
+    "mcA": "SKRYU",
+    "mcB": "Rude-α",
+    "tournament": "凱旋",
+    "stageOrEvent": "アリーナノ陣 at ぴあアリーナMM",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-98-1",
+        "battleId": "btl-98",
+        "seconds": 55,
+        "text": "歌心とラップが完璧に調和したアリーナクラスの音楽的エンターテインメント",
+        "mc": "SKRYU",
+        "likes": 1488,
+        "replays": 2754,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3720,
+      "flow": 4590,
+      "vibe": 4510
+    },
+    "outboundPlays": 153840,
+    "shares": 3292,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-99",
+    "youtubeId": "-aSuwAwNB6Q",
+    "title": "POWER WAVE vs SAM / 凱旋MC battle PIT TOUR 東京",
+    "mcA": "POWER WAVE",
+    "mcB": "SAM",
+    "tournament": "凱旋",
+    "stageOrEvent": "PIT TOUR 東京",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-99-1",
+        "battleId": "btl-99",
+        "seconds": 50,
+        "text": "レゲエの熱量とストイックな早口ライム、観客を巻き込む白熱の攻防",
+        "mc": "SAM",
+        "likes": 1564,
+        "replays": 2430,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3910,
+      "flow": 4050,
+      "vibe": 4220
+    },
+    "outboundPlays": 146160,
+    "shares": 3252,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-100",
+    "youtubeId": "dRDvDUIRgIQ",
+    "title": "MU-TON vs ¥ellow Bucks 凱旋MC battle さいたまスーパーアリーナ",
+    "mcA": "MU-TON",
+    "mcB": "¥ellow Bucks",
+    "tournament": "凱旋",
+    "stageOrEvent": "さいたまスーパーアリーナノ陣",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-100-1",
+        "battleId": "btl-100",
+        "seconds": 58,
+        "text": "シーンを代表する現役スター同士の激突、圧巻のビートアプローチとオーラ",
+        "mc": "MU-TON",
+        "likes": 1660,
+        "replays": 2832,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4150,
+      "flow": 4720,
+      "vibe": 4890
+    },
+    "outboundPlays": 165120,
+    "shares": 3616,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-101",
+    "youtubeId": "41JgVf6uqgY",
+    "title": "RAY vs 韻マン 凱旋MC battle in さいたまスーパーアリーナ",
+    "mcA": "RAY",
+    "mcB": "韻マン",
+    "tournament": "凱旋",
+    "stageOrEvent": "さいたまスーパーアリーナノ陣",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-101-1",
+        "battleId": "btl-101",
+        "seconds": 52,
+        "text": "レゲエDeejayのメロディアスな熱唱と怒涛の連続押韻、アリーナを沸かせた名バトル",
+        "mc": "韻マン",
+        "likes": 1528,
+        "replays": 2526,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3820,
+      "flow": 4210,
+      "vibe": 4450
+    },
+    "outboundPlays": 149760,
+    "shares": 3308,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-102",
+    "youtubeId": "t8Q2vk87ozU",
+    "title": "Spada vs Bonbero 凱旋MC battle in さいたまスーパーアリーナ",
+    "mcA": "Spada",
+    "mcB": "Bonbero",
+    "tournament": "凱旋",
+    "stageOrEvent": "さいたまスーパーアリーナノ陣",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-102-1",
+        "battleId": "btl-102",
+        "seconds": 46,
+        "text": "次世代トラップシーンを牽引する若き才能の高速フロウ激突",
+        "mc": "Bonbero",
+        "likes": 1448,
+        "replays": 2748,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3620,
+      "flow": 4580,
+      "vibe": 4320
+    },
+    "outboundPlays": 150240,
+    "shares": 3176,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-103",
+    "youtubeId": "FuyYm8aRRKM",
+    "title": "R-指定 vs MOL53 UMB2012 GRAND CHAMPIONSHIP",
+    "mcA": "R-指定",
+    "mcB": "MOL53",
+    "tournament": "UMB",
+    "stageOrEvent": "2012 GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2012",
+    "verses": [
+      {
+        "id": "btl-103-1",
+        "battleId": "btl-103",
+        "seconds": 64,
+        "text": "伝説の初優勝を飾った若きR-指定と冷徹なMOL53、ヒップホップ史の金字塔",
+        "mc": "R-指定",
+        "likes": 1832,
+        "replays": 2772,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4580,
+      "flow": 4620,
+      "vibe": 4920
+    },
+    "outboundPlays": 169440,
+    "shares": 3800,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-104",
+    "youtubeId": "DvtxgIIOh9g",
+    "title": "DOTAMA vs R-指定 UMB2013 GRAND CHAMPIONSHIP 決勝戦",
+    "mcA": "DOTAMA",
+    "mcB": "R-指定",
+    "tournament": "UMB",
+    "stageOrEvent": "2013 GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2013",
+    "verses": [
+      {
+        "id": "btl-104-1",
+        "battleId": "btl-104",
+        "seconds": 68,
+        "text": "前代未聞の2連覇へ挑むR-指定と、宿敵DOTAMAの痛烈なディスが交差した決勝戦",
+        "mc": "R-指定",
+        "likes": 1848,
+        "replays": 2706,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4620,
+      "flow": 4510,
+      "vibe": 4890
+    },
+    "outboundPlays": 168240,
+    "shares": 3804,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-105",
+    "youtubeId": "z3NYuM2djas",
+    "title": "晋平太 vs 呂布カルマ / 凱旋MC battle 東西選抜秋ノ陣2019 決勝戦",
+    "mcA": "晋平太",
+    "mcB": "呂布カルマ",
+    "tournament": "凱旋",
+    "stageOrEvent": "東西選抜秋ノ陣2019 決勝戦",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-105-1",
+        "battleId": "btl-105",
+        "seconds": 62,
+        "text": "秋ノ陣の頂点で覚醒した晋平太のアンサー力と呂布カルマの重厚なパンチライン",
+        "mc": "晋平太",
+        "likes": 1752,
+        "replays": 2370,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4380,
+      "flow": 3950,
+      "vibe": 4780
+    },
+    "outboundPlays": 157320,
+    "shares": 3664,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-106",
+    "youtubeId": "fY7jOR4NTi8",
+    "title": "Authority vs MOL53 BATTLE SUMMIT 決勝戦",
+    "mcA": "Authority",
+    "mcB": "MOL53",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "BATTLE SUMMIT 決勝戦",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-106-1",
+        "battleId": "btl-106",
+        "seconds": 70,
+        "text": "武道館の歓声禁止をも切り裂く圧倒的な熱量、歴史的一夜を締めくくった決勝",
+        "mc": "Authority",
+        "likes": 1808,
+        "replays": 2628,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4520,
+      "flow": 4380,
+      "vibe": 4950
+    },
+    "outboundPlays": 166200,
+    "shares": 3788,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-107",
+    "youtubeId": "7W2HmD8__Z0",
+    "title": "BONBERO VS BENJAZZY FSL VOL.2 presented by ASAP",
+    "mcA": "Bonbero",
+    "mcB": "Benjazzy",
+    "tournament": "FSL",
+    "stageOrEvent": "FSL VOL.2",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-107-1",
+        "battleId": "btl-107",
+        "seconds": 54,
+        "text": "国内最速・最強クラスのテクニシャン同士、小節の隙間を埋め尽くす超高速ライム",
+        "mc": "Benjazzy",
+        "likes": 1648,
+        "replays": 2934,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 4120,
+      "flow": 4890,
+      "vibe": 4720
+    },
+    "outboundPlays": 164760,
+    "shares": 3536,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-108",
+    "youtubeId": "GkBfNpSB578",
+    "title": "DOTAMA vs 龍鬼 FSL Vol.3",
+    "mcA": "DOTAMA",
+    "mcB": "龍鬼",
+    "tournament": "FSL",
+    "stageOrEvent": "FSL VOL.3",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-108-1",
+        "battleId": "btl-108",
+        "seconds": 48,
+        "text": "FSLの円形ステージで炸裂する毒舌と若手の実力派が挑む緊張感",
+        "mc": "DOTAMA",
+        "likes": 1516,
+        "replays": 2172,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3790,
+      "flow": 3620,
+      "vibe": 3980
+    },
+    "outboundPlays": 136680,
+    "shares": 3108,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-109",
+    "youtubeId": "YPwRUx_bSh0",
+    "title": "G-HOPE vs Red Eye 第16回高校生RAP選手権",
+    "mcA": "G-HOPE",
+    "mcB": "Red Eye",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第16回 1回戦",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-109-1",
+        "battleId": "btl-109",
+        "seconds": 45,
+        "text": "選手権を沸かせた実力派同士の熱戦、ストリートの叫びが共鳴する",
+        "mc": "Red Eye",
+        "likes": 1448,
+        "replays": 2334,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3620,
+      "flow": 3890,
+      "vibe": 4120
+    },
+    "outboundPlays": 139560,
+    "shares": 3096,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-110",
+    "youtubeId": "VZCi6-gt_SU",
+    "title": "長瀬 vs KT 第17回高校生RAP選手権 1回戦",
+    "mcA": "長瀬",
+    "mcB": "KT-CHAN",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "第17回 1回戦",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-110-1",
+        "battleId": "btl-110",
+        "seconds": 42,
+        "text": "KT独自のポップで鋭いライミングスタイルが全国で注目を集めた記念すべき1回戦",
+        "mc": "KT-CHAN",
+        "likes": 1380,
+        "replays": 2292,
+        "createdAt": "2026-10-15T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 3450,
+      "flow": 3820,
+      "vibe": 4250
+    },
+    "outboundPlays": 138240,
+    "shares": 3080,
+    "createdAt": "2026-10-15T13:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-111",
+    "youtubeId": "aKE6zS9-l7w",
+    "title": "SIMON JAP vs 漢 a.k.a. GAMI：KING OF KINGS 2020 GRAND CHAMPIONSHIP FINAL",
+    "mcA": "SIMON JAP",
+    "mcB": "漢 a.k.a. GAMI",
+    "tournament": "KOK",
+    "stageOrEvent": "2020 GRAND CHAMPIONSHIP",
+    "year": "2021",
+    "verses": [
+      {
+        "id": "btl-111-1",
+        "battleId": "btl-111",
+        "seconds": 64,
+        "text": "東京の下町と新宿のストリート、生き様そのものをぶつけ合うKOK史上の死闘",
+        "mc": "漢 a.k.a. GAMI",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-112",
+    "youtubeId": "SYKQ1tNg50c",
+    "title": "漢 a.k.a. GAMI vs MUｰTON (延長込みノーカット) / 戦極MCBATTLE 第18章",
+    "mcA": "漢 a.k.a. GAMI",
+    "mcB": "MU-TON",
+    "tournament": "戦極",
+    "stageOrEvent": "第18章",
+    "year": "2018",
+    "verses": [
+      {
+        "id": "btl-112-1",
+        "battleId": "btl-112",
+        "seconds": 58,
+        "text": "アンダーグラウンドの帝王と新世代のスモーキーフロウ、戦極史上に残る激戦",
+        "mc": "漢 a.k.a. GAMI",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-113",
+    "youtubeId": "fM06JrDUSfc",
+    "title": "漢 a.k.a. GAMI vs 晋平太 UMB伝説の対決",
+    "mcA": "漢 a.k.a. GAMI",
+    "mcB": "晋平太",
+    "tournament": "UMB",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
+    "year": "2011",
+    "verses": [
+      {
+        "id": "btl-113-1",
+        "battleId": "btl-113",
+        "seconds": 52,
+        "text": "UMBの原点にして最高峰、男の意地とライムが真っ向から火花を散らす",
+        "mc": "漢 a.k.a. GAMI",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-114",
+    "youtubeId": "2xGI-zSQI_U",
+    "title": "AUTHORITY vs 漢 a.k.a. GAMI / 夏の魔物 feat. 戦極MCBATTLE",
+    "mcA": "Authority",
+    "mcB": "漢 a.k.a. GAMI",
+    "tournament": "戦極",
+    "stageOrEvent": "夏の魔物 SP",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-114-1",
+        "battleId": "btl-114",
+        "seconds": 60,
+        "text": "世代交代を狙う青森の新星と、迎え撃つ新宿の伝説のプライド",
+        "mc": "Authority",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-115",
+    "youtubeId": "5irR0_3Bo8w",
+    "title": "漢 a.k.a. GAMI vs だーひー / 戦極MCBATTLE 第20章",
+    "mcA": "漢 a.k.a. GAMI",
+    "mcB": "だーひー",
+    "tournament": "戦極",
+    "stageOrEvent": "第20章 BESTBOUT",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-115-1",
+        "battleId": "btl-115",
+        "seconds": 48,
+        "text": "若武者の勢いを一刀両断する重いパンチライン、経験に裏打ちされた説得力",
+        "mc": "漢 a.k.a. GAMI",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-116",
+    "youtubeId": "kZYlssLw38s",
+    "title": "漢 a.k.a. GAMI vs RYKEYDADDYDIRTY / 凱旋MC battle Special 2023 at 東京ガーデンシアター",
+    "mcA": "漢 a.k.a. GAMI",
+    "mcB": "RYKEY",
+    "tournament": "凱旋",
+    "stageOrEvent": "Special 2023 at 東京ガーデンシアター",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-116-1",
+        "battleId": "btl-116",
+        "seconds": 66,
+        "text": "ガーデンシアターを圧倒する存在感、リアルを生きる者同士の言葉の重み",
+        "mc": "漢 a.k.a. GAMI",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-117",
+    "youtubeId": "LzrUHwrpG7E",
+    "title": "漢 a.k.a. GAMI vs KEN THE 390 / 戦極MC BATTLE 第13章",
+    "mcA": "漢 a.k.a. GAMI",
+    "mcB": "KEN THE 390",
+    "tournament": "戦極",
+    "stageOrEvent": "第13章 全国ツアー",
+    "year": "2015",
+    "verses": [
+      {
+        "id": "btl-117-1",
+        "battleId": "btl-117",
+        "seconds": 54,
+        "text": "オーバーグラウンドとアンダーグラウンドの思想が激突した記念碑的バトル",
+        "mc": "漢 a.k.a. GAMI",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-118",
+    "youtubeId": "4MtuPFrqH4I",
+    "title": "Novel Core vs 漢 a.k.a. GAMI / 戦極MCBATTLE 第20章",
+    "mcA": "Novel Core",
+    "mcB": "漢 a.k.a. GAMI",
+    "tournament": "戦極",
+    "stageOrEvent": "第20章 BESTBOUT",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-118-1",
+        "battleId": "btl-118",
+        "seconds": 50,
+        "text": "新世代の旗手Novel Coreがレジェンド漢に挑んだ歴史的一戦",
+        "mc": "Novel Core",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-119",
+    "youtubeId": "yUVx0UFhEjk",
+    "title": "裂固 vs 漢 a.k.a. GAMI / 戦極MCBATTLE 第29章 両国国技館",
+    "mcA": "裂固",
+    "mcB": "漢 a.k.a. GAMI",
+    "tournament": "戦極",
+    "stageOrEvent": "第29章 両国国技館",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-119-1",
+        "battleId": "btl-119",
+        "seconds": 62,
+        "text": "両国国技館のセンターステージで交わる二人のチャンピオン、重厚なライム対決",
+        "mc": "裂固",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-120",
+    "youtubeId": "9qyWU-MufEQ",
+    "title": "漢 a.k.a. GAMI vs 早雲 / 戦極MCBATTLE 第22章",
+    "mcA": "漢 a.k.a. GAMI",
+    "mcB": "早雲",
+    "tournament": "戦極",
+    "stageOrEvent": "第22章",
+    "year": "2020",
+    "verses": [
+      {
+        "id": "btl-120-1",
+        "battleId": "btl-120",
+        "seconds": 56,
+        "text": "京都の武士道と新宿ストリート、渋すぎるビート上で繰り広げられた大人の対話",
+        "mc": "早雲",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-121",
+    "youtubeId": "AFWldR1KmTc",
+    "title": "KTちゃん vs 漢 a.k.a. GAMI / 戦極MCBATTLE 第29章 両国国技館",
+    "mcA": "KT-CHAN",
+    "mcB": "漢 a.k.a. GAMI",
+    "tournament": "戦極",
+    "stageOrEvent": "第29章 両国国技館",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-121-1",
+        "battleId": "btl-121",
+        "seconds": 46,
+        "text": "両国を沸かせた奇跡の異次元マッチ、世代も性別も超越したヒップホップの楽しさ",
+        "mc": "KT-CHAN",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-122",
+    "youtubeId": "HVXhcreHmN4",
+    "title": "般若 vs 漢 a.k.a. GAMI / BATTLE SUMMIT 2 (2024.8.14)",
+    "mcA": "般若",
+    "mcB": "漢 a.k.a. GAMI",
+    "tournament": "戦極",
+    "stageOrEvent": "BATTLE SUMMIT 2 代々木第一体育館",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-122-1",
+        "battleId": "btl-122",
+        "seconds": 68,
+        "text": "1978年生まれの盟友同士、日本のヒップホップシーンを創り上げた二人の伝説",
+        "mc": "般若",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-123",
+    "youtubeId": "fIhWLMt5XtQ",
+    "title": "般若 vs SKRYU / BATTLE SUMMIT 2 (2024.8.14)",
+    "mcA": "般若",
+    "mcB": "SKRYU",
+    "tournament": "戦極",
+    "stageOrEvent": "BATTLE SUMMIT 2 代々木第一体育館",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-123-1",
+        "battleId": "btl-123",
+        "seconds": 60,
+        "text": "代々木第一体育館を熱狂の渦に巻き込んだ前代未聞の肉体派エンターテインメント",
+        "mc": "般若",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-124",
+    "youtubeId": "JOP7-eLf2QY",
+    "title": "HIDADDY vs 般若 UMB2008 GRAND CHAMPIONSHIP",
+    "mcA": "HIDADDY",
+    "mcB": "般若",
+    "tournament": "UMB",
+    "stageOrEvent": "2008 GRAND CHAMPIONSHIP",
+    "year": "2008",
+    "verses": [
+      {
+        "id": "btl-124-1",
+        "battleId": "btl-124",
+        "seconds": 54,
+        "text": "UMB初期の黄金期を象徴する伝説の一戦、東西の看板を背負った男たちの気迫",
+        "mc": "般若",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-125",
+    "youtubeId": "qGCm5rNFmXY",
+    "title": "DOTAMA vs 般若 UMB2008 TOKYO 予選",
+    "mcA": "DOTAMA",
+    "mcB": "般若",
+    "tournament": "UMB",
+    "stageOrEvent": "2008 TOKYO 予選",
+    "year": "2008",
+    "verses": [
+      {
+        "id": "btl-125-1",
+        "battleId": "btl-125",
+        "seconds": 50,
+        "text": "若きDOTAMAがラスボス般若に挑んだ歴史的な名勝負、容赦なき言葉の連射",
+        "mc": "般若",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-126",
+    "youtubeId": "ua7PP0sL0Zg",
+    "title": "CIMA vs じょう【決勝戦】/ 戦極RhymersHIGH IV",
+    "mcA": "CIMA",
+    "mcB": "じょう",
+    "tournament": "戦極",
+    "stageOrEvent": "RhymersHIGH IV 決勝戦",
+    "year": "2026",
+    "verses": [
+      {
+        "id": "btl-126-1",
+        "battleId": "btl-126",
+        "seconds": 56,
+        "text": "関西を代表する二大実力者が激突、一歩も引かない熱きライミングマッチ",
+        "mc": "CIMA",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-127",
+    "youtubeId": "mALnBFVTdZs",
+    "title": "無欲 vs CIMA【BEST4】/ 戦極RhymersHIGH IV",
+    "mcA": "無欲",
+    "mcB": "CIMA",
+    "tournament": "戦極",
+    "stageOrEvent": "RhymersHIGH IV 準決勝",
+    "year": "2026",
+    "verses": [
+      {
+        "id": "btl-127-1",
+        "battleId": "btl-127",
+        "seconds": 48,
+        "text": "BOIL RHYME仕込みの硬い押韻とストリートの誇り、フロアを唸らせるライム",
+        "mc": "CIMA",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-128",
+    "youtubeId": "FbrBso6zr18",
+    "title": "Zeebra vs 漢 a.k.a. GAMI / BATTLE SUMMIT",
+    "mcA": "Zeebra",
+    "mcB": "漢 a.k.a. GAMI",
+    "tournament": "戦極",
+    "stageOrEvent": "BATTLE SUMMIT 日本武道館",
+    "year": "2022",
+    "verses": [
+      {
+        "id": "btl-128-1",
+        "battleId": "btl-128",
+        "seconds": 64,
+        "text": "日本武道館の歴史的一戦、キングギドラZeebraと新宿の雄漢が交わした言霊",
+        "mc": "漢 a.k.a. GAMI",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-129",
+    "youtubeId": "M3ZdqeYXo_U",
+    "title": "9for vs MOL53 準決勝【DOPAMINE MC BATTLE】",
+    "mcA": "9for",
+    "mcB": "MOL53",
+    "tournament": "戦極",
+    "stageOrEvent": "DOPAMINE MC BATTLE 準決勝",
+    "year": "2026",
+    "verses": [
+      {
+        "id": "btl-129-1",
+        "battleId": "btl-129",
+        "seconds": 52,
+        "text": "若き王者9forの鋭いフロウと、ベテランMOL53の殺傷力あるバースの激突",
+        "mc": "9for",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-130",
+    "youtubeId": "62IjeFTfyLg",
+    "title": "ミメイ vs T-TANGG 凱旋MC battle 東西選抜春ノ陣2019",
+    "mcA": "ミメイ",
+    "mcB": "T-TANGG",
+    "tournament": "凱旋",
+    "stageOrEvent": "東西選抜春ノ陣2019 1回戦",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-130-1",
+        "battleId": "btl-130",
+        "seconds": 46,
+        "text": "高速フロウの技巧派同士、新世代の幕開けを告げた春ノ陣の名バトル",
+        "mc": "ミメイ",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-131",
+    "youtubeId": "I28GlvFmwDA",
+    "title": "がーどまん vs バチスタ 凱旋MC battle 東西選抜春ノ陣2019",
+    "mcA": "がーどまん",
+    "mcB": "バチスタ",
+    "tournament": "凱旋",
+    "stageOrEvent": "東西選抜春ノ陣2019 1回戦",
+    "year": "2019",
+    "verses": [
+      {
+        "id": "btl-131-1",
+        "battleId": "btl-131",
+        "seconds": 44,
+        "text": "大声と情熱で会場を一つにするがーどまんの魂のシャウト",
+        "mc": "がーどまん",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-132",
+    "youtubeId": "_tbZLFF4ZfA",
+    "title": "EIEN vs CHEHON 凱旋MC Battle THE GIANT KILLING at 豊洲PIT",
+    "mcA": "EIEN",
+    "mcB": "CHEHON",
+    "tournament": "凱旋",
+    "stageOrEvent": "THE GIANT KILLING at 豊洲PIT",
+    "year": "2023",
+    "verses": [
+      {
+        "id": "btl-132-1",
+        "battleId": "btl-132",
+        "seconds": 50,
+        "text": "レゲエDeejayのトップCHEHONが豊洲PITで魅せる圧倒的な歌唱力とライム",
+        "mc": "CHEHON",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-133",
+    "youtubeId": "uKDZOdxSziM",
+    "title": "KTちゃん vs ピラフ星人 戦極MCBATTLE 第34章 in 横浜",
+    "mcA": "KT-CHAN",
+    "mcB": "ピラフ星人",
+    "tournament": "戦極",
+    "stageOrEvent": "第34章 in 横浜",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-133-1",
+        "battleId": "btl-133",
+        "seconds": 46,
+        "text": "横浜を笑顔に変えるポップで芯のあるラップ、観客を惹きつける独自の世界観",
+        "mc": "KT-CHAN",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-134",
+    "youtubeId": "N8tfsTXuUPM",
+    "title": "KTちゃん vs テトリス 戦極MCBATTLE 第42章 KING ONES ONLY",
+    "mcA": "KT-CHAN",
+    "mcB": "テトリス",
+    "tournament": "戦極",
+    "stageOrEvent": "第42章 KING ONES ONLY",
+    "year": "2026",
+    "verses": [
+      {
+        "id": "btl-134-1",
+        "battleId": "btl-134",
+        "seconds": 42,
+        "text": "音を楽しむスタンスを貫くKTちゃんの軽快なライミング",
+        "mc": "KT-CHAN",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-135",
+    "youtubeId": "mig9lRkb9aY",
+    "title": "ミメイ vs Z-TON 戦極令和六年杯",
+    "mcA": "ミメイ",
+    "mcB": "Z-TON",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極令和六年杯 BEST4",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-135-1",
+        "battleId": "btl-135",
+        "seconds": 50,
+        "text": "正確無比なフロウとタイトなライムで圧倒するミメイのベストバウト",
+        "mc": "ミメイ",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-136",
+    "youtubeId": "CGOmSTmEmXU",
+    "title": "DOTAMA vs mogura 戦極令和六年杯",
+    "mcA": "DOTAMA",
+    "mcB": "mogura",
+    "tournament": "戦極",
+    "stageOrEvent": "戦極令和六年杯 BEST4",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-136-1",
+        "battleId": "btl-136",
+        "seconds": 54,
+        "text": "シニカルなユーモアと的確な言葉の刃で会場をロックするDOTAMAの真骨頂",
+        "mc": "DOTAMA",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-137",
+    "youtubeId": "_gVPtScyn4U",
+    "title": "DOTAMA vs K-rush 戦極MCBATTLE 橋本七夕祭り",
+    "mcA": "DOTAMA",
+    "mcB": "K-rush",
+    "tournament": "戦極",
+    "stageOrEvent": "橋本七夕祭り 決勝戦",
+    "year": "2026",
+    "verses": [
+      {
+        "id": "btl-137-1",
+        "battleId": "btl-137",
+        "seconds": 52,
+        "text": "野外の特設リングで激突、ベテランの貫禄と若きファイターの熱きバトル",
+        "mc": "DOTAMA",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-138",
+    "youtubeId": "8HL0Cuz-rN0",
+    "title": "ミメイ vs D-Nut's. 戦極MCBATTLE 富士急ハイランド 決勝戦",
+    "mcA": "ミメイ",
+    "mcB": "D-Nut's",
+    "tournament": "戦極",
+    "stageOrEvent": "富士急ハイランド 決勝戦",
+    "year": "2026",
+    "verses": [
+      {
+        "id": "btl-138-1",
+        "battleId": "btl-138",
+        "seconds": 58,
+        "text": "富士の麓で繰り広げられた新世代の頂上決戦、スピード感溢れるライムの連射",
+        "mc": "ミメイ",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  },
+  {
+    "id": "btl-139",
+    "youtubeId": "LwjqnSHpIXI",
+    "title": "OZworld vs Leon Fanourakis BATTLE SUMMIT 2",
+    "mcA": "OZworld",
+    "mcB": "Leon Fanourakis",
+    "tournament": "戦極",
+    "stageOrEvent": "BATTLE SUMMIT 2 代々木第一体育館",
+    "year": "2024",
+    "verses": [
+      {
+        "id": "btl-139-1",
+        "battleId": "btl-139",
+        "seconds": 56,
+        "text": "トラップシーンの最高峰ラッパー同士、音を自在に操る神がかりのフロウ対決",
+        "mc": "OZworld",
+        "likes": 0,
+        "replays": 0,
+        "createdAt": "2026-10-15T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "word": 0,
+      "flow": 0,
+      "vibe": 0
+    },
+    "outboundPlays": 0,
+    "shares": 0,
+    "createdAt": "2026-10-15T14:00:00Z",
+    "mcAFocal": "22% 35%",
+    "mcBFocal": "78% 35%"
+  }
+]

@@ -1,0 +1,107 @@
+{
+  "lbrl": {
+    "page": "https://music.apple.com/jp/artist/l-b-r-l/1734833197",
+    "og_image": "https://is1-ssl.mzstatic.com/image/thumb/Features221/v4/72/8e/dc/728edcb1-dea4-2b66-0a85-5f1f931cf265/mzl.lviirccx.jpg/1200x630cw.png"
+  },
+  "pirahu": {
+    "page": "https://www.tunecore.co.jp/artists/pilafalien",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u382271/a840543/itc310333.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003851Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8c92d8d3ead79b46f72771a64e054deed257f062eb14d2536f453f69109906d3"
+  },
+  "ryuki": {
+    "page": "https://www.tunecore.co.jp/artists/RYU-KI",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u136809/a424254/itc100060.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003852Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=084f6065a49d62e4d9c53432a788103c093dc6b010be0af89623716485c5b168"
+  },
+  "ttangg": {
+    "page": "https://music.apple.com/jp/artist/t-tangg/1441727350",
+    "og_image": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c4/4b/6e/c44b6e40-5d9d-a70b-cc94-5cbe63023baf/859756627463_cover.jpg/1200x630cw.png"
+  },
+  "rude_a": {
+    "page": "https://www.tunecore.co.jp/artists/rude-alpha",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u25455/a134609/itc56229.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003853Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4286b935ed353a14864d10589dd70c3512f922e4d345212fb1d456ae321abc0a"
+  },
+  "gotit": {
+    "page": "https://www.tunecore.co.jp/artists/Ohkami",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u221507/a643987/itc194643.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003853Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b2af67c4e2007c6cb5742b9fb0d375ac1f72f54ba1470976c6ba16245fd05107"
+  },
+  "dk": null,
+  "lick_g": {
+    "page": "https://www.tunecore.co.jp/artists/lickg",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u47495/a209341/itc232624.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003854Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=35f83c4ccfd4b013c85e3830cf459ad2e39c6f506a925b1f44f93fddd5716514"
+  },
+  "koperu": {
+    "page": "https://www.tunecore.co.jp/artists?id=118893",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u26552/a118893/itc266617.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003855Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f1376e03a934dec798d72c7c9cd82f2b9af0f4a7ed2360dc2fd528a0fae2c50b"
+  },
+  "ghope": {
+    "page": "https://www.tunecore.co.jp/artists/G-HOPE",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u172250/a567025/itc394779.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003856Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b4ab3a9bf23e0b1ee643f1c127f2de8821a15f7c47106c455924cf0ed40621f8"
+  },
+  "golby": {
+    "page": "https://www.tunecore.co.jp/artists/cookiecrunch",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u224203/a581822/itc154425.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003856Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=69d2bb2202e24168d08cf2d3c3cd7bab7acb8888f43796677843c911aeb166b1"
+  },
+  "kbd": {
+    "page": "https://www.tunecore.co.jp/artists/kbd",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u112178/a373509/itc85275.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003857Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ef4e140aa22a27ab50877b4a301aaae1145b7871cdf032182e751035151b9539"
+  },
+  "hidaddy": {
+    "page": "https://www.tunecore.co.jp/artists/infumiaikumiai",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u57741/a256174/itc55651.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003857Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=06f81e584529159639b415ae31eec91236d7d5fc12b9e86eb01f2994f4a25759"
+  },
+  "kenthe390": {
+    "page": "https://www.tunecore.co.jp/artists?id=199838",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u26552/a199838/itc303623.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003858Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=76f552f8b72d333f28966660aace4f0ffedff4faa7efa8ddf095abaae2568f12"
+  },
+  "bes": {
+    "page": "https://www.tunecore.co.jp/artists/BES-816",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u53439/a355716/itc79652.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003858Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=114d8d1952ad4c6503a24edd38a455607f9896fcc0ff9547612618e7feffb83d"
+  },
+  "rykey": {
+    "page": "https://music.apple.com/jp/artist/rykeydaddydirty/1596613082",
+    "og_image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/de/48/e5/de48e5f2-d841-0386-c6f5-e049277e02ca/859757968183_cover.jpg/1200x630cw.png"
+  },
+  "ozworld": {
+    "page": "https://music.apple.com/jp/artist/ozworld/1349591595",
+    "og_image": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/92/c1/31/92c1315d-f1e2-0ff4-ed13-b45e5cb6ce41/ami-identity-e8cfcb5fffcc9181daa290e86a4b3bef-2026-08-03T01-28-34.457Z_cropped.png/1200x630cw.png"
+  },
+  "leon_f": {
+    "page": "https://music.apple.com/jp/artist/leon-fanourakis/1445846394",
+    "og_image": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/2f/63/66/2f636621-2007-f04b-a0a1-fe5f0eb813f1/3d3de493-9132-4314-899a-9978b5d43081_ami-identity-2acd3749079a3e48b72470b3efae55ae-2024-08-30T05-46-16.886Z_cropped.png/1200x630cw.png"
+  },
+  "kashiwa": {
+    "page": "https://www.tunecore.co.jp/artists?id=167583",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u38510/a167583/itc219913.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003901Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=14bd97ac46d2dca8ba7e86cb2a429c2c054868425720b2c841139eb2c089593b"
+  },
+  "silent_kj": {
+    "page": "https://www.tunecore.co.jp/artists/LIBROkaikoo",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u118256/a662940/itc188263.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003902Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ad13fa4be2924423281763705bab043c62166e08b03c9f46e0cd56635f210d00"
+  },
+  "mysterio": {
+    "page": "https://www.tunecore.co.jp/artists/MYSTERIO",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u26660/a293513/itc81416.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003902Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2fe755eb3de349b29132f739ea5569c904951369bf47402cb04f7a76a8aece7c"
+  },
+  "jumbo_m": {
+    "page": "https://www.tunecore.co.jp/artists/JUMBO-MAATCH-538",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u121657/a438650/itc120223.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003903Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=42f28264012cf95d5f245181c036212928f0e0f4d6e5622b59dc8b103fac5c15"
+  },
+  "power_wave": {
+    "page": "https://www.tunecore.co.jp/artists/POWER-WAVE",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u42266/a268977/itc57272.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003904Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2a331047f64686c584932676215536c58a30eedbc8243103b21e666968d77cee"
+  },
+  "ray": {
+    "page": "https://www.tunecore.co.jp/artists/RAY-724",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u308211/a717562/itc209035.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003904Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8017710b165bf7904434959005ffd235270cfcc1726b91015bd2349ccf808442"
+  },
+  "zeebra": {
+    "page": "https://music.apple.com/jp/artist/zeebra/74489487",
+    "og_image": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/d8/17/1e/d8171e19-58e0-7e28-6a76-99529b776fee/mzl.unrsxffz.jpg/1200x630cw.png"
+  },
+  "yellow_bucks": {
+    "page": "https://www.tunecore.co.jp/artists/Yellow-Bucks",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u67455/a306580/itc220640.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003906Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=989c0f98fa51ea6b085b5d9a1dfbe724bd9ac25bb4df16fb9f36999fdc4b9e39"
+  },
+  "dahi": {
+    "page": "https://www.tunecore.co.jp/artists/KaonashiTracks",
+    "og_image": "https://tcj-image-production.s3-ap-northeast-1.amazonaws.com/u42040/a189449/itc47895.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJV4VIS2VN3X4CBGA%2F20261016%2Fap-northeast-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261016T003906Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=37fe2025c20637895208a2bf4dc7f6692b76af5365a42932f62e89762a9bc5ac"
+  }
+}

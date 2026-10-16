@@ -1,0 +1,41 @@
+Total MCs in database: 111
+Total Registered MC_PROFILES: 76
+Under 5 battles count: 37
+
+4stump: 1 battles, in_profiles=False
+Chance: 1 battles, in_profiles=False
+D-Nut's: 1 battles, in_profiles=False
+EIEN: 1 battles, in_profiles=False
+GADORO: 1 battles, in_profiles=False
+GOCCI: 1 battles, in_profiles=False
+K-rush: 1 battles, in_profiles=False
+MC☆ニガリ a.k.a リアルブッダ: 1 battles, in_profiles=False
+NONKEY: 1 battles, in_profiles=False
+REDWING: 1 battles, in_profiles=False
+Rin: 1 battles, in_profiles=False
+Ry-lax: 1 battles, in_profiles=False
+SANTAWORLDVIEW: 1 battles, in_profiles=False
+SNOZZLE: 1 battles, in_profiles=False
+Spada: 1 battles, in_profiles=False
+TKda黒ぶち: 1 battles, in_profiles=False
+Terry: 1 battles, in_profiles=False
+Z-TON: 1 battles, in_profiles=False
+load: 1 battles, in_profiles=False
+mogura: 1 battles, in_profiles=False
+whimsyboy: 1 battles, in_profiles=False
+ちゃんみな: 1 battles, in_profiles=False
+カルデラビスタ: 1 battles, in_profiles=False
+テトリス: 1 battles, in_profiles=False
+バチスタ: 1 battles, in_profiles=False
+久保田空: 1 battles, in_profiles=False
+妖艶: 1 battles, in_profiles=False
+安保瑠輝也: 1 battles, in_profiles=False
+無欲: 1 battles, in_profiles=False
+磯友: 1 battles, in_profiles=False
+藤KooS: 1 battles, in_profiles=False
+長瀬: 1 battles, in_profiles=False
+G-k.i.d: 2 battles, in_profiles=False
+八咫烏: 2 battles, in_profiles=False
+写楽: 2 battles, in_profiles=False
+ベル: 4 battles, in_profiles=False
+言xTHEANSWER: 4 battles, in_profiles=False

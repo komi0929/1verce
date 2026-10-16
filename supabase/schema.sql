@@ -1,0 +1,149 @@
+-- ============================================================================
+-- 1verce Cloud Database Schema (Supabase / PostgreSQL)
+-- Run this script in your Supabase SQL Editor to initialize all tables & RLS
+-- ============================================================================
+
+-- 1. Battles Table (バトル動画マスター + ユーザー登録バトル)
+CREATE TABLE IF NOT EXISTS public.battles (
+  id TEXT PRIMARY KEY,
+  youtube_id TEXT NOT NULL UNIQUE,
+  title TEXT NOT NULL,
+  mc_a TEXT NOT NULL,
+  mc_b TEXT NOT NULL,
+  tournament TEXT NOT NULL,
+  stage_or_event TEXT NOT NULL DEFAULT '',
+  year TEXT NOT NULL DEFAULT '2024',
+  outbound_plays INTEGER NOT NULL DEFAULT 0,
+  shares INTEGER NOT NULL DEFAULT 0,
+  is_user_submitted BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  last_active_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_battles_youtube_id ON public.battles (youtube_id);
+CREATE INDEX IF NOT EXISTS idx_battles_tournament ON public.battles (tournament);
+CREATE INDEX IF NOT EXISTS idx_battles_mc_a ON public.battles (mc_a);
+CREATE INDEX IF NOT EXISTS idx_battles_mc_b ON public.battles (mc_b);
+CREATE INDEX IF NOT EXISTS idx_battles_last_active_at ON public.battles (last_active_at DESC);
+
+-- 2. Stamps / Moments Table (1-TAP刻印・パンチライン・ハイライト秒数)
+CREATE TABLE IF NOT EXISTS public.stamps (
+  id TEXT PRIMARY KEY,
+  battle_id TEXT NOT NULL REFERENCES public.battles(id) ON DELETE CASCADE,
+  seconds INTEGER NOT NULL DEFAULT 0,
+  tag TEXT NOT NULL DEFAULT 'BEST_VERSE',
+  text TEXT NOT NULL,
+  mc TEXT NOT NULL,
+  likes INTEGER NOT NULL DEFAULT 1,
+  replays INTEGER NOT NULL DEFAULT 1,
+  is_user_created BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_stamps_battle_id ON public.stamps (battle_id);
+CREATE INDEX IF NOT EXISTS idx_stamps_likes ON public.stamps (likes DESC);
+
+-- 3. Albums Table (ユーザー作成マイアルバム / ベストバウト集)
+CREATE TABLE IF NOT EXISTS public.albums (
+  id TEXT PRIMARY KEY,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL DEFAULT '',
+  theme_tag TEXT NOT NULL DEFAULT 'BEST BOUTS',
+  tracks JSONB NOT NULL DEFAULT '[]'::jsonb,
+  likes INTEGER NOT NULL DEFAULT 0,
+  play_count INTEGER NOT NULL DEFAULT 0,
+  is_preset BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_albums_updated_at ON public.albums (updated_at DESC);
+
+-- 4. Activity Logs Table (リアルタイム参加ログ・鮮度フィード)
+CREATE TABLE IF NOT EXISTS public.activity_logs (
+  id TEXT PRIMARY KEY,
+  type TEXT NOT NULL,
+  battle_id TEXT,
+  album_id TEXT,
+  summary TEXT NOT NULL,
+  detail TEXT,
+  seconds INTEGER,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_activity_logs_created_at ON public.activity_logs (created_at DESC);
+
+-- 5. Site Analytics Table (実測インサイト集計)
+CREATE TABLE IF NOT EXISTS public.site_analytics (
+  id TEXT PRIMARY KEY DEFAULT 'global',
+  total_pv BIGINT NOT NULL DEFAULT 0,
+  unique_visitors BIGINT NOT NULL DEFAULT 0,
+  total_plays BIGINT NOT NULL DEFAULT 0,
+  total_verses_logged BIGINT NOT NULL DEFAULT 0,
+  viral_shares BIGINT NOT NULL DEFAULT 0,
+  tournament_traffic JSONB NOT NULL DEFAULT '{}'::jsonb,
+  mc_search_counts JSONB NOT NULL DEFAULT '{}'::jsonb,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+-- ============================================================================
+-- Row Level Security (RLS) Policies (パブリック読み取り・参加型書き込み許可)
+-- ============================================================================
+ALTER TABLE public.battles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.stamps ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.albums ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.activity_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.site_analytics ENABLE ROW LEVEL SECURITY;
+
+-- Battles Policies
+DROP POLICY IF EXISTS "Allow public read battles" ON public.battles;
+CREATE POLICY "Allow public read battles" ON public.battles FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Allow public insert battles" ON public.battles;
+CREATE POLICY "Allow public insert battles" ON public.battles FOR INSERT WITH CHECK (true);
+
+DROP POLICY IF EXISTS "Allow public update battles" ON public.battles;
+CREATE POLICY "Allow public update battles" ON public.battles FOR UPDATE USING (true);
+
+-- Stamps Policies
+DROP POLICY IF EXISTS "Allow public read stamps" ON public.stamps;
+CREATE POLICY "Allow public read stamps" ON public.stamps FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Allow public insert stamps" ON public.stamps;
+CREATE POLICY "Allow public insert stamps" ON public.stamps FOR INSERT WITH CHECK (true);
+
+DROP POLICY IF EXISTS "Allow public update stamps" ON public.stamps;
+CREATE POLICY "Allow public update stamps" ON public.stamps FOR UPDATE USING (true);
+
+DROP POLICY IF EXISTS "Allow public delete stamps" ON public.stamps;
+CREATE POLICY "Allow public delete stamps" ON public.stamps FOR DELETE USING (true);
+
+-- Albums Policies
+DROP POLICY IF EXISTS "Allow public read albums" ON public.albums;
+CREATE POLICY "Allow public read albums" ON public.albums FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Allow public upsert albums" ON public.albums;
+CREATE POLICY "Allow public upsert albums" ON public.albums FOR INSERT WITH CHECK (true);
+
+DROP POLICY IF EXISTS "Allow public update albums" ON public.albums;
+CREATE POLICY "Allow public update albums" ON public.albums FOR UPDATE USING (true);
+
+DROP POLICY IF EXISTS "Allow public delete albums" ON public.albums;
+CREATE POLICY "Allow public delete albums" ON public.albums FOR DELETE USING (true);
+
+-- Activity Logs Policies
+DROP POLICY IF EXISTS "Allow public read activity_logs" ON public.activity_logs;
+CREATE POLICY "Allow public read activity_logs" ON public.activity_logs FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Allow public insert activity_logs" ON public.activity_logs;
+CREATE POLICY "Allow public insert activity_logs" ON public.activity_logs FOR INSERT WITH CHECK (true);
+
+-- Site Analytics Policies
+DROP POLICY IF EXISTS "Allow public read site_analytics" ON public.site_analytics;
+CREATE POLICY "Allow public read site_analytics" ON public.site_analytics FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Allow public upsert site_analytics" ON public.site_analytics;
+CREATE POLICY "Allow public upsert site_analytics" ON public.site_analytics FOR INSERT WITH CHECK (true);
+
+DROP POLICY IF EXISTS "Allow public update site_analytics" ON public.site_analytics;
+CREATE POLICY "Allow public update site_analytics" ON public.site_analytics FOR UPDATE USING (true);

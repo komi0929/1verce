@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#0A0A0A"/>
+  <rect x="2" y="2" width="96" height="96" rx="18" fill="none" stroke="#2C2C2E" stroke-width="4"/>
+  <text x="36" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="52" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="68" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="52" fill="#E50914" text-anchor="middle">V</text>
+</svg>
