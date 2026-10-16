@@ -76,7 +76,7 @@ export const DatabaseModal: React.FC<DatabaseModalProps> = ({
 
     saveSupabaseConfig({ url: targetUrl, anonKey: targetKey });
     setIsTesting(true);
-    const res = await testSupabaseConnection();
+    const res = await testSupabaseConnection({ url: targetUrl, anonKey: targetKey });
     setIsTesting(false);
     setIsConnected(res.ok);
     setTablesReady(res.tablesReady);

@@ -183,13 +183,17 @@ export function getSupabaseClient(): SupabaseClient | null {
   }
 }
 
-export async function testSupabaseConnection(): Promise<{
+export async function testSupabaseConnection(overrideConfig?: SupabaseConfig): Promise<{
   ok: boolean;
   message: string;
   tablesReady: boolean;
 }> {
-  const client = getSupabaseClient();
-  if (!client) {
+  if (overrideConfig) {
+    cachedClient = null;
+    cachedConfigKey = '';
+  }
+  const cfg = overrideConfig || getSupabaseConfig();
+  if (!cfg || !cfg.url || !cfg.anonKey) {
     return {
       ok: false,
       message: 'SupabaseのURLまたはAnon Keyが未設定です。',
@@ -198,7 +202,19 @@ export async function testSupabaseConnection(): Promise<{
   }
 
   try {
-    const { error } = await client.from('battles').select('id').limit(1);
+    const client = overrideConfig
+      ? createClient(cfg.url, cfg.anonKey, { auth: { persistSession: false } })
+      : getSupabaseClient();
+
+    if (!client) {
+      return {
+        ok: false,
+        message: 'Supabaseクライアントの初期化に失敗しました。URLの形式を確認してください。',
+        tablesReady: false,
+      };
+    }
+
+    const { data, error } = await client.from('battles').select('id').limit(1);
     if (error) {
       if (
         error.code === '42P01' ||
@@ -225,9 +241,17 @@ export async function testSupabaseConnection(): Promise<{
       tablesReady: true,
     };
   } catch (err) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    if (errMsg.includes('Failed to fetch') || errMsg.includes('fetch')) {
+      return {
+        ok: false,
+        message: 'ネットワークエラー: ブラウザの広告ブロック/トラッキング防止拡張機能、またはCORS制限によってSupabaseへの通信が遮断されている可能性があります。',
+        tablesReady: false,
+      };
+    }
     return {
       ok: false,
-      message: `通信エラー: ${err instanceof Error ? err.message : String(err)}`,
+      message: `通信エラー: ${errMsg}`,
       tablesReady: false,
     };
   }
