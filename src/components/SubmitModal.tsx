@@ -18,9 +18,7 @@ import {
   getYouTubeThumbnail,
   normalizeMcName,
   parseBattleTitle,
-  parseTimestampInput,
 } from '../utils/youtube';
-import { DEFAULT_PUNCHLINE_PLACEHOLDER } from './BattleCard';
 
 interface SubmitModalProps {
   battles: Battle[];
@@ -51,12 +49,6 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
     useState<Exclude<TournamentTag, 'ALL'>>('戦極');
   const [stageOrEvent, setStageOrEvent] = useState('');
   const [year, setYear] = useState('2024');
-
-  // Optional initial punchline stamp
-  const [enableInitialStamp, setEnableInitialStamp] = useState(false);
-  const [verseTimeInput, setVerseTimeInput] = useState('01:00');
-  const [verseText, setVerseText] = useState('');
-  const [verseMcSide, setVerseMcSide] = useState<'A' | 'B'>('A');
 
   // Simultaneous Album selection
   const [selectedAlbumIds, setSelectedAlbumIds] = useState<string[]>([]);
@@ -132,23 +124,6 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
     const battleId = `btl-user-${Date.now()}`;
     const nowIso = new Date().toISOString();
 
-    const initialVerses = enableInitialStamp
-      ? [
-          {
-            id: `v-${Date.now()}`,
-            battleId,
-            seconds: parseTimestampInput(verseTimeInput),
-            tag: 'PUNCHLINE',
-            text: verseText.trim() || DEFAULT_PUNCHLINE_PLACEHOLDER,
-            mc: verseMcSide === 'A' ? cleanMcA : cleanMcB,
-            likes: 1,
-            replays: 1,
-            createdAt: nowIso,
-            isUserCreated: true,
-          },
-        ]
-      : [];
-
     const newBattle: Battle = {
       id: battleId,
       youtubeId,
@@ -158,7 +133,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
       tournament,
       stageOrEvent: stageOrEvent.trim() || `${tournament} OFFICIAL`,
       year: year.trim() || '2024',
-      verses: initialVerses,
+      verses: [],
       evaluation: { word: 0, flow: 0, vibe: 0 },
       outboundPlays: 1,
       shares: 0,
@@ -420,67 +395,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                 </div>
               )}
 
-              {/* 4. Optional Initial Punchline Stamp */}
-              <div className="bg-[#16161A] border border-[#26262A] rounded p-3 space-y-2.5">
-                <label className="flex items-center gap-2 text-xs font-jp font-bold text-[#FFFFFF] cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={enableInitialStamp}
-                    onChange={(e) => setEnableInitialStamp(e.target.checked)}
-                    className="rounded accent-[#E50914]"
-                  />
-                  <Flame className="w-3.5 h-3.5 text-[#E50914]" />
-                  <span>
-                    最初のパンチライン秒数も一緒に刻印する（登録後に動画を見ながら1タップでも刻印できます）
-                  </span>
-                </label>
 
-                {enableInitialStamp && (
-                  <div className="space-y-2 pt-1">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <input
-                        type="text"
-                        value={verseTimeInput}
-                        onChange={(e) => setVerseTimeInput(e.target.value)}
-                        placeholder="01:10"
-                        className="w-20 bg-[#0A0A0A] border border-[#2C2C2E] rounded px-2 py-1 text-xs font-mono-tech text-[#FFFFFF] text-center"
-                      />
-                      <div className="flex items-center gap-1">
-                        <button
-                          type="button"
-                          onClick={() => setVerseMcSide('A')}
-                          className={`px-2.5 py-1 rounded text-xs font-jp cursor-pointer ${
-                            verseMcSide === 'A'
-                              ? 'bg-[#FFFFFF] text-[#0A0A0A] font-bold'
-                              : 'bg-[#0A0A0A] text-[#8E8E93]'
-                          }`}
-                        >
-                          {mcA || 'MC A'}
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setVerseMcSide('B')}
-                          className={`px-2.5 py-1 rounded text-xs font-jp cursor-pointer ${
-                            verseMcSide === 'B'
-                              ? 'bg-[#FFFFFF] text-[#0A0A0A] font-bold'
-                              : 'bg-[#0A0A0A] text-[#8E8E93]'
-                          }`}
-                        >
-                          {mcB || 'MC B'}
-                        </button>
-                      </div>
-                    </div>
-
-                    <input
-                      type="text"
-                      value={verseText}
-                      onChange={(e) => setVerseText(e.target.value)}
-                      placeholder="パンチラインのリリック（空欄でも秒数だけで刻印OK）..."
-                      className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF]"
-                    />
-                  </div>
-                )}
-              </div>
 
               <button
                 type="submit"

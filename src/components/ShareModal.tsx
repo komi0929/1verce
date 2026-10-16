@@ -5,39 +5,25 @@ import { formatTimestamp, getYouTubeThumbnail } from '../utils/youtube';
 
 interface ShareModalProps {
   battle: Battle;
-  initialVerse?: Verse;
   onClose: () => void;
   onRecordShare: (battleId: string) => void;
 }
 
 export const ShareModal: React.FC<ShareModalProps> = ({
   battle,
-  initialVerse,
   onClose,
   onRecordShare,
 }) => {
-  const [selectedVerse, setSelectedVerse] = useState<Verse | undefined>(
-    initialVerse || battle.verses[0]
-  );
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedText, setCopiedText] = useState(false);
-
-  const seconds = selectedVerse ? selectedVerse.seconds : 0;
-  const formattedTime = formatTimestamp(seconds);
-  const lyricText = selectedVerse
-    ? selectedVerse.text
-    : `${battle.mcA} vs ${battle.mcB}`;
-  const speakerMc = selectedVerse ? selectedVerse.mc : battle.mcA;
 
   const baseUrl =
     typeof window !== 'undefined'
       ? `${window.location.origin}${window.location.pathname}`
       : 'https://1verce.app/';
-  const deepLinkUrl = `${baseUrl}?battle=${encodeURIComponent(
-    battle.id
-  )}&t=${seconds}`;
+  const deepLinkUrl = `${baseUrl}?battle=${encodeURIComponent(battle.id)}`;
 
-  const sharePostText = `[${formattedTime}] "${lyricText}" — ${speakerMc}\n${battle.mcA} vs ${battle.mcB} (${battle.tournament})\n#1verce #MCバトル`;
+  const sharePostText = `${battle.mcA} vs ${battle.mcB} (${battle.tournament})\n#1verce #MCバトル`;
 
   const handleCopyDeepLink = async () => {
     try {
@@ -106,86 +92,43 @@ export const ShareModal: React.FC<ShareModalProps> = ({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/65 to-[#0A0A0A]/80" />
 
-            {/* Top Row: Tournament & Timestamp Badge */}
+            {/* Top Row: Tournament Badge */}
             <div className="relative z-10 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="px-2 py-0.5 bg-[#FFFFFF] text-[#0A0A0A] font-mono-tech text-xs font-extrabold">
-                  [{formattedTime}]
-                </span>
-                <span className="px-2 py-0.5 bg-[#1A1A1A]/90 border border-[#3A3A3C] text-[#FFFFFF] font-jp text-[11px] font-bold">
-                  {battle.tournament}
-                </span>
-              </div>
+              <span className="px-2 py-0.5 bg-[#1A1A1A]/90 border border-[#3A3A3C] text-[#FFFFFF] font-jp text-[11px] font-bold">
+                {battle.tournament}
+              </span>
               <span className="font-display text-sm font-bold tracking-tighter text-[#FFFFFF]">
                 1verce
               </span>
             </div>
 
-            {/* Center Row: Punchline Lyric */}
+            {/* Center Row: Matchup */}
             <div className="relative z-10 my-auto py-2">
-              <p className="font-jp font-black text-lg sm:text-xl text-[#FFFFFF] leading-snug tracking-tight drop-shadow">
-                "{lyricText}"
+              <p className="font-jp font-black text-2xl sm:text-3xl text-[#FFFFFF] leading-snug tracking-tight drop-shadow">
+                {battle.mcA} <span className="text-[#E50914] font-display">VS</span> {battle.mcB}
               </p>
               <p className="mt-1.5 font-jp font-bold text-xs text-[#8E8E93]">
-                — {speakerMc}
+                {battle.title}
               </p>
             </div>
 
-            {/* Bottom Row: [MM:SS] MC A vs MC B / Tournament & 1verce Brand */}
+            {/* Bottom Row: Tournament & 1verce Brand */}
             <div className="relative z-10 pt-2 border-t border-[#FFFFFF]/15 flex items-end justify-between gap-2">
               <div className="text-xs font-mono-tech text-[#FFFFFF]">
-                <span className="text-[#E50914] font-bold">
-                  [{formattedTime}]
-                </span>{' '}
-                <span className="font-jp font-black">
-                  {battle.mcA} vs {battle.mcB}
-                </span>{' '}
                 <span className="text-[#8E8E93] font-jp">
-                  / {battle.tournament}
+                  {battle.stageOrEvent || battle.tournament}
                 </span>
               </div>
               <span className="text-[10px] font-mono-tech text-[#8E8E93] uppercase tracking-widest">
-                DIRECT SEEK LINK
+                1VERCE ARCHIVE
               </span>
             </div>
           </div>
 
-          {/* Punchline Selector (Switch which punchline is featured on the card) */}
-          {battle.verses.length > 1 && (
-            <div className="space-y-1.5">
-              <div className="text-[10px] font-mono-tech uppercase tracking-wider text-[#8E8E93]">
-                SELECT PUNCHLINE TO EMBED IN DEEP LINK
-              </div>
-              <div className="flex flex-col gap-1 max-h-28 overflow-y-auto pr-1">
-                {battle.verses.map((v) => {
-                  const active = selectedVerse?.id === v.id;
-                  return (
-                    <button
-                      key={v.id}
-                      type="button"
-                      onClick={() => setSelectedVerse(v)}
-                      className={`text-left px-2.5 py-1.5 rounded text-xs font-jp flex items-center gap-2 border transition-colors cursor-pointer ${
-                        active
-                          ? 'bg-[#1F1F22] border-[#FFFFFF] text-[#FFFFFF] font-bold'
-                          : 'bg-[#0A0A0A] border-[#222224] text-[#8E8E93] hover:text-[#FFFFFF]'
-                      }`}
-                    >
-                      <span className="font-mono-tech text-[11px] font-bold text-[#FFFFFF] shrink-0">
-                        [{formatTimestamp(v.seconds)}]
-                      </span>
-                      <span className="truncate flex-1">"{v.text}"</span>
-                      <span className="text-[10px] shrink-0">— {v.mc}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
           {/* Deep Link URL Display */}
           <div className="space-y-1">
             <div className="text-[10px] font-mono-tech uppercase tracking-wider text-[#8E8E93]">
-              TIMESTAMP DEEP LINK URL (?battle={battle.id}&t={seconds})
+              BATTLE LINK URL
             </div>
             <div className="flex items-center gap-2 bg-[#0A0A0A] border border-[#262628] rounded px-3 py-2">
               <input

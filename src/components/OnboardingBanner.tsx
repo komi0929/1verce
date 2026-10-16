@@ -41,10 +41,10 @@ export const OnboardingBanner: React.FC<OnboardingBannerProps> = ({
               FIRST TIME GUIDE — 3ステップで1VERCEを使いこなす
             </div>
             <h2 className="text-lg sm:text-xl font-black text-white tracking-tight">
-              観るだけじゃない。あなたの「神バース」と「名盤」を刻もう。
+              観るだけじゃない。あなただけの「名盤アルバム」をつくろう。
             </h2>
             <p className="text-xs sm:text-sm text-gray-400 mt-1">
-              文字入力なしで瞬間保存できる<strong className="text-white">「1タップ・パンチライン刻印」</strong>と、お気に入りバトルを連続再生できる<strong className="text-[#FFB703]">「MY ALBUMS」</strong>を搭載しています。
+              歴代の名バトルを自由にアーカイブし、お気に入りバトルをノンストップ連続再生できる<strong className="text-[#FFB703]">「MY ALBUMS」</strong>や<strong className="text-white">「YouTubeバトル登録」</strong>を搭載しています。
             </p>
           </div>
 
@@ -68,7 +68,7 @@ export const OnboardingBanner: React.FC<OnboardingBannerProps> = ({
 
         {/* 3 Step Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Step 1: 1-Tap Punchline & Like */}
+          {/* Step 1: Discover Battles */}
           <div
             className={`p-4 rounded-xl border transition-all flex flex-col justify-between ${
               hasStampedOrLiked
@@ -80,35 +80,24 @@ export const OnboardingBanner: React.FC<OnboardingBannerProps> = ({
               <div className="flex items-center justify-between gap-2 mb-2.5">
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider text-[#E63946]">
                   <Flame className="w-4 h-4" />
-                  STEP 01 • 1-TAP PUNCHLINE
+                  STEP 01 • BATTLE DISCOVERY
                 </span>
-                {hasStampedOrLiked ? (
-                  <span className="inline-flex items-center gap-1 text-[10px] font-black text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded-full">
-                    <CheckCircle2 className="w-3 h-3" /> 体験済み
-                  </span>
-                ) : (
-                  <span className="text-[10px] font-bold text-gray-500 bg-white/5 px-2 py-0.5 rounded-full">
-                    文字入力ゼロ
-                  </span>
-                )}
+                <span className="text-[10px] font-bold text-gray-500 bg-white/5 px-2 py-0.5 rounded-full">
+                  大会・MC検索
+                </span>
               </div>
               <h3 className="text-sm font-black text-white mb-1.5">
-                動画再生中に「🔥パンチライン！」を1タップ
+                大会とMCをワンタップでクロス絞り込み
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed mb-3">
-                「今のラインがヤバい！」と思った瞬間にボタンを押すだけ。反応ラグを考慮して<strong className="text-gray-200">自動で3秒前の瞬間</strong>を刻印します。
-                <br />
-                <span className="inline-flex items-center gap-1 text-[#FFB703] font-bold mt-1">
-                  <ThumbsUp className="w-3 h-3" />
-                  すでに前後6秒以内に登録がある場合は重複せず自動で「🔥いいね！+1」に合算されます！
-                </span>
+                上部の「TOURNAMENT」と「MC SELECT」をタップするだけで、見たい対戦カードや名勝負を瞬時に発見。YouTube公式プレイヤーで即座に観戦できます。
               </p>
             </div>
             <button
               onClick={onNavigateToBattle}
-              className="w-full py-2 px-3 rounded-lg bg-[#E63946]/15 hover:bg-[#E63946] text-[#E63946] hover:text-white border border-[#E63946]/30 text-xs font-black transition-all flex items-center justify-center gap-1.5"
+              className="w-full py-2 px-3 rounded-lg bg-[#E63946]/15 hover:bg-[#E63946] text-[#E63946] hover:text-white border border-[#E63946]/30 text-xs font-black transition-all flex items-center justify-center gap-1.5 cursor-pointer"
             >
-              <span>バトルを再生して試す</span>
+              <span>バトル一覧を見る</span>
               <ChevronRight className="w-3.5 h-3.5" />
             </button>
           </div>

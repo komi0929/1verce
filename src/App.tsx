@@ -44,11 +44,7 @@ import {
   upsertStampToCloud,
 } from './lib/database';
 import { VsBuilder } from './components/VsBuilder';
-import {
-  BattleCard,
-  DEFAULT_PUNCHLINE_PLACEHOLDER,
-} from './components/BattleCard';
-import { ArchiveView } from './components/ArchiveView';
+import { BattleCard } from './components/BattleCard';
 import { AlbumView } from './components/AlbumView';
 import { AlbumPickerModal } from './components/AlbumPickerModal';
 import { ShareModal } from './components/ShareModal';
@@ -333,7 +329,6 @@ export const App: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Count how many albums each battle belongs to
   const albumCountByBattleId = useMemo(() => {
     const map = new Map<string, number>();
     for (const alb of albums) {
@@ -343,11 +338,6 @@ export const App: React.FC = () => {
     }
     return map;
   }, [albums]);
-
-  const totalStampsCount = useMemo(
-    () => battles.reduce((sum, b) => sum + b.verses.length, 0),
-    [battles]
-  );
 
   // Handlers
   const handleSelectMcA = useCallback(
@@ -533,204 +523,10 @@ export const App: React.FC = () => {
     setActiveVerseId(null);
   }, []);
 
-  // 1-Tap Unified Punchline Stamp with Smart +-6s Deduplication & Auto-Like
-  const handleStampPunchline = useCallback(
-    (
-      battleId: string,
-      seconds: number,
-      mc: string,
-      optionalText?: string
-    ): { verseId: string; mergedExisting: boolean; finalSeconds: number } => {
-      const targetBattle = battles.find((b) => b.id === battleId);
-      const existingNearby = targetBattle?.verses.find(
-        (v) => Math.abs(v.seconds - seconds) <= 6
-      );
-
-      const nowIso = new Date().toISOString();
-
-      // Smart Deduplication: if a punchline already exists within +-6 seconds, merge into it (+1 Like!)
-      if (existingNearby && targetBattle) {
-        const cleanText = optionalText?.trim();
-        const shouldUpgradeText =
-          cleanText &&
-          (!existingNearby.text ||
-            existingNearby.text === DEFAULT_PUNCHLINE_PLACEHOLDER);
-
-        const updatedVerse: Verse = {
-          ...existingNearby,
-          likes: existingNearby.likes + 1,
-          replays: existingNearby.replays + 1,
-          text: shouldUpgradeText ? cleanText : existingNearby.text,
-        };
-
-        setUserLikedVerses((prev) => ({
-          ...prev,
-          [existingNearby.id]: true,
-        }));
-
-        setBattles((prev) =>
-          prev.map((b) => {
-            if (b.id !== battleId) return b;
-            const nextBattle: Battle = {
-              ...b,
-              lastActiveAt: nowIso,
-              verses: b.verses.map((v) =>
-                v.id === existingNearby.id ? updatedVerse : v
-              ),
-            };
-            upsertStampToCloud(nextBattle, updatedVerse);
-            return nextBattle;
-          })
-        );
-
-        pushActivity({
-          type: 'LIKE',
-          battleId,
-          seconds: existingNearby.seconds,
-          summary: `[${formatTimestamp(existingNearby.seconds)}] ${existingNearby.mc} のパンチラインに共感合算（🔥いいね！ ${updatedVerse.likes}）`,
-          detail: updatedVerse.text,
-        });
-
-        return {
-          verseId: existingNearby.id,
-          mergedExisting: true,
-          finalSeconds: existingNearby.seconds,
-        };
-      }
-
-      // Otherwise, create a new Punchline stamp
-      const newVerseId = `v-${Date.now()}-${Math.random()
-        .toString(36)
-        .slice(2, 6)}`;
-      const finalText = optionalText?.trim() || DEFAULT_PUNCHLINE_PLACEHOLDER;
-
-      setUserLikedVerses((prev) => ({
-        ...prev,
-        [newVerseId]: true,
-      }));
-
-      setBattles((prev) =>
-        prev.map((b) => {
-          if (b.id !== battleId) return b;
-          const newVerse: Verse = {
-            id: newVerseId,
-            battleId,
-            seconds,
-            tag: 'PUNCHLINE',
-            text: finalText,
-            mc,
-            likes: 1,
-            replays: 1,
-            createdAt: nowIso,
-            isUserCreated: true,
-          };
-          const updatedBattle: Battle = {
-            ...b,
-            lastActiveAt: nowIso,
-            verses: [...b.verses, newVerse],
-          };
-          upsertStampToCloud(updatedBattle, newVerse);
-          pushActivity({
-            type: 'STAMP',
-            battleId: b.id,
-            seconds,
-            summary: `[${formatTimestamp(seconds)}] ${mc} (${b.mcA} vs ${b.mcB}) のパンチラインを刻印`,
-            detail: finalText,
-          });
-          return updatedBattle;
-        })
-      );
-
-      setAnalytics((prev) => {
-        const next = {
-          ...prev,
-          totalVersesLogged: prev.totalVersesLogged + 1,
-        };
-        syncAnalyticsToCloud(next);
-        return next;
-      });
-
-      return {
-        verseId: newVerseId,
-        mergedExisting: false,
-        finalSeconds: seconds,
-      };
-    },
-    [battles, pushActivity]
-  );
-
-  const handleUpdateVerse = useCallback(
-    (
-      battleId: string,
-      verseId: string,
-      updates: { seconds?: number; text?: string; mc?: string }
-    ) => {
-      setBattles((prev) =>
-        prev.map((b) => {
-          if (b.id !== battleId) return b;
-          let updatedVerse: Verse | null = null;
-          const nextVerses = b.verses.map((v) => {
-            if (v.id !== verseId) return v;
-            updatedVerse = { ...v, ...updates };
-            return updatedVerse;
-          });
-          const nextBattle = {
-            ...b,
-            lastActiveAt: new Date().toISOString(),
-            verses: nextVerses,
-          };
-          if (updatedVerse) {
-            upsertStampToCloud(nextBattle, updatedVerse);
-          }
-          return nextBattle;
-        })
-      );
-    },
-    []
-  );
-
-  const handleDeleteVerse = useCallback((battleId: string, verseId: string) => {
-    setBattles((prev) =>
-      prev.map((b) => {
-        if (b.id !== battleId) return b;
-        return {
-          ...b,
-          verses: b.verses.filter((v) => v.id !== verseId),
-        };
-      })
-    );
-    removeStampFromCloud(verseId);
+  const handleVideoEnded = useCallback((battleId: string) => {
+    setActiveBattleId((prev) => (prev === battleId ? null : prev));
+    setActiveVerseId(null);
   }, []);
-
-  const handleLikeVerse = useCallback(
-    (battleId: string, verseId: string) => {
-      const alreadyLiked = Boolean(userLikedVerses[verseId]);
-      const delta = alreadyLiked ? -1 : 1;
-
-      setUserLikedVerses((prev) => ({
-        ...prev,
-        [verseId]: !alreadyLiked,
-      }));
-
-      setBattles((prev) =>
-        prev.map((b) => {
-          if (b.id !== battleId) return b;
-          let targetV: Verse | null = null;
-          const nextVerses = b.verses.map((v) => {
-            if (v.id !== verseId) return v;
-            targetV = { ...v, likes: Math.max(0, v.likes + delta) };
-            return targetV;
-          });
-          const nextBattle = { ...b, verses: nextVerses };
-          if (targetV) {
-            upsertStampToCloud(nextBattle, targetV);
-          }
-          return nextBattle;
-        })
-      );
-    },
-    [userLikedVerses]
-  );
 
   const handleToggleSave = useCallback((battleId: string) => {
     setSavedIds((prev) =>
@@ -1320,10 +1116,7 @@ export const App: React.FC = () => {
         <OnboardingBanner
           isOpen={isOnboardingOpen}
           onClose={() => handleToggleOnboarding(false)}
-          hasStampedOrLiked={
-            totalStampsCount > 0 ||
-            Object.values(userLikedVerses).some(Boolean)
-          }
+          hasStampedOrLiked={Boolean(activeBattleId || selectedMcA || selectedTournament !== 'ALL')}
           hasUsedAlbum={albums.some(
             (a) => !a.isPreset || a.playCount > 0 || a.tracks.length > 4
           )}
@@ -1353,9 +1146,8 @@ export const App: React.FC = () => {
                 参加型アーカイブ:
               </span>
               <span className="text-[#8E8E93] text-[11px] sm:text-xs">
-                再生中に<strong className="text-[#FFFFFF]">1タップで刻印</strong>・
-                <strong className="text-[#FFFFFF]">アルバム連続再生</strong>・
-                <strong className="text-[#FFFFFF]">YouTube登録</strong>
+                お気に入りの<strong className="text-[#FFFFFF]">YouTubeバトル登録</strong>・
+                自分だけの<strong className="text-[#FFFFFF]">マイアルバム連続再生</strong>
               </span>
             </div>
 
@@ -1443,14 +1235,9 @@ export const App: React.FC = () => {
             {(
               [
                 { id: 'LATEST', label: '全バトル' },
-                { id: 'FRESH', label: '⚡ 新着刻印' },
                 {
                   id: 'ALBUMS',
                   label: `💿 アルバム (${albums.length})`,
-                },
-                {
-                  id: 'ARCHIVE',
-                  label: `🔥 刻印一覧 (${totalStampsCount})`,
                 },
                 { id: 'HALL_OF_FAME', label: '人気再生順' },
               ] as const
@@ -1459,8 +1246,8 @@ export const App: React.FC = () => {
               return (
                 <button
                   key={tab.id}
-                  onClick={() => setViewMode(tab.id)}
-                  className={`px-2.5 sm:px-3 py-1.5 rounded text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap ${
+                  onClick={() => setViewMode(tab.id as ViewMode)}
+                  className={`px-3 py-1.5 rounded text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap ${
                     active
                       ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
                       : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
@@ -1517,17 +1304,6 @@ export const App: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : viewMode === 'ARCHIVE' ? (
-          <ArchiveView
-            battles={filteredBattles}
-            userLikedVerses={userLikedVerses}
-            onJumpToBattleVerse={handleJumpToBattleAndVerse}
-            onLikeVerse={handleLikeVerse}
-            onOpenShare={(battle, verse) => setShareTarget({ battle, verse })}
-            onOpenAlbumPicker={(battle, startSeconds, note) =>
-              setAlbumPickerTarget({ battle, startSeconds, note })
-            }
-          />
         ) : (
           <div className="space-y-5">
             {filteredBattles.slice(0, displayLimit).map((battle) => (
@@ -1539,25 +1315,16 @@ export const App: React.FC = () => {
                   activeBattleId === battle.id ? seekSeconds : 0
                 }
                 seekNonce={activeBattleId === battle.id ? seekNonce : 0}
-                activeVerseId={
-                  activeBattleId === battle.id ? activeVerseId : null
-                }
                 isSaved={savedIds.includes(battle.id)}
                 albumCountForBattle={albumCountByBattleId.get(battle.id) || 0}
-                userLikedVerses={userLikedVerses}
-                highlightedMc={selectedMcA}
                 onStartPlay={handleStartPlay}
                 onStopPlay={handleStopPlay}
-                onStampPunchline={handleStampPunchline}
-                onUpdateVerse={handleUpdateVerse}
-                onDeleteVerse={handleDeleteVerse}
-                onLikeVerse={handleLikeVerse}
+                onVideoEnded={handleVideoEnded}
                 onToggleSave={handleToggleSave}
-                onOpenShare={(b, v) => setShareTarget({ battle: b, verse: v })}
+                onOpenShare={(b) => setShareTarget({ battle: b })}
                 onOpenAlbumPicker={(b, startSeconds, note) =>
                   setAlbumPickerTarget({ battle: b, startSeconds, note })
                 }
-                onSelectMcFilter={handleSelectMcA}
               />
             ))}
 
@@ -1610,12 +1377,12 @@ export const App: React.FC = () => {
         aria-label="モバイル主要ナビゲーション"
         className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0E0E10]/95 backdrop-blur-xl border-t border-[#1F1F24] pb-[env(safe-area-inset-bottom)]"
       >
-        <div className="grid grid-cols-5 h-14 items-center">
+        <div className="grid grid-cols-4 h-14 items-center">
           {/* 1. All Battles */}
           <button
             onClick={() => setViewMode('LATEST')}
             className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors ${
-              viewMode === 'LATEST' || viewMode === 'FRESH' || viewMode === 'HALL_OF_FAME'
+              viewMode === 'LATEST' || viewMode === 'HALL_OF_FAME'
                 ? 'text-[#FFFFFF]'
                 : 'text-[#6C6C70] hover:text-[#AEAEB2]'
             }`}
@@ -1636,7 +1403,7 @@ export const App: React.FC = () => {
             <Disc3 className="w-4 h-4" />
             <span className="text-[10px] font-jp font-bold">アルバム</span>
             {albums.length > 0 && (
-              <span className="absolute top-1.5 right-4 w-4 h-4 bg-[#E50914] text-white rounded-full text-[9px] font-mono-tech font-bold flex items-center justify-center">
+              <span className="absolute top-1.5 right-6 w-4 h-4 bg-[#E50914] text-white rounded-full text-[9px] font-mono-tech font-bold flex items-center justify-center">
                 {albums.length}
               </span>
             )}
@@ -1645,30 +1412,17 @@ export const App: React.FC = () => {
           {/* 3. Register Battle (Central Highlight Button) */}
           <button
             onClick={() => setIsSubmitOpen(true)}
-            className="flex flex-col items-center justify-center -mt-3 cursor-pointer group"
+            className="flex flex-col items-center justify-center -mt-2 cursor-pointer group"
           >
             <div className="w-11 h-11 rounded-full bg-[#FFFFFF] group-hover:bg-[#E5E5EA] text-[#0A0A0A] flex items-center justify-center shadow-lg shadow-white/10 transition-transform active:scale-90">
               <Plus className="w-5 h-5 stroke-[3]" />
             </div>
             <span className="text-[9px] font-jp font-black text-[#FFFFFF] mt-0.5">
-              登録
+              YouTube登録
             </span>
           </button>
 
-          {/* 4. Punchline Stamps */}
-          <button
-            onClick={() => setViewMode('ARCHIVE')}
-            className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors ${
-              viewMode === 'ARCHIVE'
-                ? 'text-[#E50914]'
-                : 'text-[#6C6C70] hover:text-[#AEAEB2]'
-            }`}
-          >
-            <Sparkles className="w-4 h-4" />
-            <span className="text-[10px] font-jp font-bold">刻印</span>
-          </button>
-
-          {/* 5. Cloud DB & Insights */}
+          {/* 4. Cloud DB & Insights */}
           <button
             onClick={() => setIsDbModalOpen(true)}
             className="flex flex-col items-center justify-center gap-1 h-full text-[#6C6C70] hover:text-[#FFFFFF] cursor-pointer transition-colors"
@@ -1718,7 +1472,6 @@ export const App: React.FC = () => {
       {shareTarget && (
         <ShareModal
           battle={shareTarget.battle}
-          initialVerse={shareTarget.verse}
           onClose={() => setShareTarget(null)}
           onRecordShare={handleRecordShare}
         />
