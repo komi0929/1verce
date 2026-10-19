@@ -279,6 +279,9 @@ export async function fetchCloudState(baseBattles: Battle[]): Promise<{
 
     if (battlesRes.data) {
       for (const row of battlesRes.data) {
+        if (!row.youtube_id || !/^[a-zA-Z0-9_-]{11}$/.test(String(row.youtube_id))) {
+          continue;
+        }
         const existing = battleMap.get(row.id);
         if (existing) {
           battleMap.set(row.id, {
