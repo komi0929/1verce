@@ -11,6 +11,8 @@ import {
   SkipBack,
   SkipForward,
   Square,
+  Play,
+  Pause,
 } from 'lucide-react';
 import {
   Album,
@@ -31,6 +33,7 @@ import {
   DB_STORAGE_KEYS,
   DEFAULT_ALBUMS,
   fetchCloudState,
+  getOrCreateDeviceId,
   getSupabaseConfig,
   mergeAlbumsWithCloud,
   removeAlbumFromCloud,
@@ -62,7 +65,7 @@ export const App: React.FC = () => {
     return INITIAL_BATTLES;
   });
 
-  // 2. Persistent Albums State (with migration from v1)
+  // 2. Persistent Personal Albums State (with migration from v1)
   const [albums, setAlbums] = useState<Album[]>(() => {
     try {
       const raw =
@@ -79,6 +82,10 @@ export const App: React.FC = () => {
     }
     return DEFAULT_ALBUMS;
   });
+
+  // Community Crates (Public albums created by other users)
+  const [communityAlbums, setCommunityAlbums] = useState<Album[]>([]);
+  const [sharedAlbumId, setSharedAlbumId] = useState<string | null>(null);
 
   // 3. Saved Battles
   const [savedIds, setSavedIds] = useState<string[]>(() => {
@@ -116,6 +123,7 @@ export const App: React.FC = () => {
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
   const [shareTarget, setShareTarget] = useState<{
     battle: Battle;
+    seconds?: number;
   } | null>(null);
   const [albumPickerTarget, setAlbumPickerTarget] = useState<{
     battle: Battle;
@@ -157,13 +165,17 @@ export const App: React.FC = () => {
     } catch {}
   }, [savedIds]);
 
-  // Mount: Deep Link + Automatic Background Cloud Sync
+  // Mount: Deep Link (?battle= & ?album=) + Automatic Background Cloud Sync
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const battleParam = params.get('battle');
     const timeParam = params.get('t');
+    const albumParam = params.get('album');
 
-    if (battleParam) {
+    if (albumParam) {
+      setSharedAlbumId(albumParam);
+      setViewMode('ALBUMS');
+    } else if (battleParam) {
       const targetSec = timeParam ? Math.max(0, parseInt(timeParam, 10) || 0) : 0;
       const found = battles.find((b) => b.id === battleParam);
       if (found) {
@@ -179,7 +191,12 @@ export const App: React.FC = () => {
         if (!cloud) return;
         setBattles(cloud.mergedBattles);
         if (cloud.cloudAlbums && cloud.cloudAlbums.length > 0) {
-          setAlbums((local) => mergeAlbumsWithCloud(local, cloud.cloudAlbums));
+          setAlbums((local) =>
+            mergeAlbumsWithCloud(local, cloud.cloudAlbums, albumParam)
+          );
+        }
+        if (cloud.communityAlbums) {
+          setCommunityAlbums(cloud.communityAlbums);
         }
       });
     }
@@ -330,6 +347,7 @@ export const App: React.FC = () => {
         themeTag,
         jacketStyle,
         jacketTheme,
+        ownerDeviceId: getOrCreateDeviceId(),
         tracks: [],
         likes: 1,
         playCount: 0,
@@ -342,6 +360,13 @@ export const App: React.FC = () => {
     },
     []
   );
+
+  const handleImportCommunityAlbum = useCallback((communityAlbum: Album) => {
+    setAlbums((prev) => {
+      if (prev.some((a) => a.id === communityAlbum.id)) return prev;
+      return [communityAlbum, ...prev];
+    });
+  }, []);
 
   const handleCreateAlbumWithTrack = useCallback(
     (
@@ -361,6 +386,7 @@ export const App: React.FC = () => {
         themeTag,
         jacketStyle: 'MOSAIC_4',
         jacketTheme: 'CRIMSON',
+        ownerDeviceId: getOrCreateDeviceId(),
         tracks: [
           {
             id: `trk-${Date.now()}`,
@@ -376,6 +402,7 @@ export const App: React.FC = () => {
         updatedAt: nowIso,
       };
       setAlbums((prev) => [newAlbum, ...prev]);
+      setSharedAlbumId(newId);
       upsertAlbumToCloud(newAlbum);
     },
     []
@@ -411,8 +438,11 @@ export const App: React.FC = () => {
   );
 
   const handleDeleteAlbum = useCallback((albumId: string) => {
-    setAlbums((prev) => prev.filter((a) => a.id !== albumId));
-    removeAlbumFromCloud(albumId);
+    setAlbums((prev) => {
+      const target = prev.find((a) => a.id === albumId);
+      removeAlbumFromCloud(albumId, target?.ownerDeviceId);
+      return prev.filter((a) => a.id !== albumId);
+    });
   }, []);
 
   const handleAddTrackToAlbum = useCallback(
@@ -975,11 +1005,14 @@ export const App: React.FC = () => {
           >
             <AlbumView
               albums={albums}
+              communityAlbums={communityAlbums}
               battles={battles}
+              initialSelectedAlbumId={sharedAlbumId}
               externalBattlePlaying={Boolean(activeBattleId)}
               onStopExternalBattle={() => setActiveBattleId(null)}
               onActivePlaybackChange={setActiveAlbumPlayback}
               onCreateAlbum={handleCreateAlbum}
+              onImportCommunityAlbum={handleImportCommunityAlbum}
               onUpdateAlbumMeta={handleUpdateAlbumMeta}
               onDeleteAlbum={handleDeleteAlbum}
               onAddTrackToAlbum={handleAddTrackToAlbum}
@@ -1036,7 +1069,9 @@ export const App: React.FC = () => {
                   onStopPlay={handleStopPlay}
                   onVideoEnded={handleVideoEnded}
                   onToggleSave={handleToggleSave}
-                  onOpenShare={(b) => setShareTarget({ battle: b })}
+                  onOpenShare={(b, curSec) =>
+                    setShareTarget({ battle: b, seconds: curSec })
+                  }
                   onOpenAlbumPicker={(b, startSeconds, note) =>
                     setAlbumPickerTarget({ battle: b, startSeconds, note })
                   }
@@ -1067,11 +1102,13 @@ export const App: React.FC = () => {
 
       {/* Floating Mini Vinyl Turntable Bar (Visible on Battle View while an Album is spinning!) */}
       {viewMode !== 'ALBUMS' && activeAlbumPlayback && (
-        <div className="fixed bottom-[calc(3.75rem+env(safe-area-inset-bottom))] sm:bottom-4 left-2 right-2 sm:left-auto sm:right-6 sm:w-96 z-40 bg-[#121216]/95 backdrop-blur-xl border border-[#2C2C34] rounded-2xl p-2.5 shadow-2xl flex items-center gap-3">
+        <div className="fixed bottom-[calc(3.75rem+env(safe-area-inset-bottom))] sm:bottom-4 left-2 right-2 sm:left-auto sm:right-6 sm:w-96 z-40 bg-[#121216]/95 backdrop-blur-xl border border-[#2C2C34] rounded-2xl p-2.5 shadow-2xl flex items-center gap-2.5">
           <button
             type="button"
             onClick={() => setViewMode('ALBUMS')}
-            className="relative w-11 h-11 rounded-full bg-[#09090B] border border-[#3A3A44] flex items-center justify-center shrink-0 animate-spin-slow cursor-pointer overflow-hidden"
+            className={`relative w-11 h-11 rounded-full bg-[#09090B] border border-[#3A3A44] flex items-center justify-center shrink-0 cursor-pointer overflow-hidden ${
+              activeAlbumPlayback.isPaused ? '' : 'animate-spin-slow'
+            }`}
             title="ターンテーブルを開く"
           >
             <img
@@ -1088,9 +1125,16 @@ export const App: React.FC = () => {
             className="flex-1 min-w-0 text-left cursor-pointer"
           >
             <div className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E50914] animate-live-dot shrink-0" />
+              <span
+                className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                  activeAlbumPlayback.isPaused
+                    ? 'bg-amber-400'
+                    : 'bg-[#E50914] animate-live-dot'
+                }`}
+              />
               <span className="text-[9px] font-mono-tech text-[#FF6B6B] font-bold truncate">
-                VINYL SPINNING ({activeAlbumPlayback.trackIndex + 1}/
+                {activeAlbumPlayback.isPaused ? 'PAUSED' : 'SPINNING'} (
+                {activeAlbumPlayback.trackIndex + 1}/
                 {activeAlbumPlayback.totalTracks}) •{' '}
                 {activeAlbumPlayback.albumTitle}
               </span>
@@ -1109,6 +1153,18 @@ export const App: React.FC = () => {
               className="p-2 rounded-lg bg-[#1C1C22] hover:bg-[#282830] text-white cursor-pointer"
             >
               <SkipBack className="w-3.5 h-3.5" />
+            </button>
+            <button
+              type="button"
+              onClick={activeAlbumPlayback.onTogglePause}
+              aria-label={activeAlbumPlayback.isPaused ? '再生再開' : '一時停止'}
+              className="p-2 rounded-lg bg-[#E50914] hover:bg-[#F40612] text-white cursor-pointer"
+            >
+              {activeAlbumPlayback.isPaused ? (
+                <Play className="w-3.5 h-3.5 fill-current" />
+              ) : (
+                <Pause className="w-3.5 h-3.5 fill-current" />
+              )}
             </button>
             <button
               type="button"
@@ -1216,7 +1272,9 @@ export const App: React.FC = () => {
           >
             <Disc3
               className={`w-4 h-4 ${
-                activeAlbumPlayback ? 'animate-spin-slow text-[#E50914]' : ''
+                activeAlbumPlayback && !activeAlbumPlayback.isPaused
+                  ? 'animate-spin-slow text-[#E50914]'
+                  : ''
               }`}
             />
             <span className="text-[10px] font-jp font-bold">レコード棚</span>
@@ -1292,6 +1350,7 @@ export const App: React.FC = () => {
           albums={albums}
           onClose={() => setAlbumPickerTarget(null)}
           onAddTrackToAlbum={handleAddTrackToAlbum}
+          onUpdateTrackInAlbum={handleUpdateTrackInAlbum}
           onRemoveTrackFromAlbum={handleRemoveTrackFromAlbumByBattle}
           onCreateAlbumWithTrack={handleCreateAlbumWithTrack}
           onNavigateToAlbums={() => {
@@ -1304,6 +1363,7 @@ export const App: React.FC = () => {
       {shareTarget && (
         <ShareModal
           battle={shareTarget.battle}
+          initialSeconds={shareTarget.seconds}
           onClose={() => setShareTarget(null)}
           onRecordShare={handleRecordShare}
         />

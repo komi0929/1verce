@@ -387,6 +387,230 @@ export const MC_PROFILES: MCProfile[] = [
     "repYoutubeId": "e7X4l8Fc2Bs",
     "focalPosition": "50% 30%",
     "styleTag": "MIYAZAKI / PUNCHLINE"
+  },
+  {
+    "name": "Zeebra",
+    "enName": "ZEEBRA",
+    "avatarUrl": "/artists/zeebra.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "LEGEND / KING OF STAGE"
+  },
+  {
+    "name": "HIDADDY",
+    "enName": "HIDADDY (韻踏合組合)",
+    "avatarUrl": "/artists/hidaddy.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "OSAKA / IFK LEGEND"
+  },
+  {
+    "name": "KEN THE 390",
+    "enName": "KEN THE 390",
+    "avatarUrl": "/artists/kenthe390.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "TOKYO / SMART SKILL"
+  },
+  {
+    "name": "¥ellow Bucks",
+    "enName": "YELLOW BUCKS",
+    "avatarUrl": "/artists/yellow_bucks.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "TTTG / TOKAI KING"
+  },
+  {
+    "name": "OZworld",
+    "enName": "OZWORLD (R'kuma)",
+    "avatarUrl": "/artists/ozworld.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "OKINAWA / FANTASY FLOW"
+  },
+  {
+    "name": "Red Eye",
+    "enName": "RED EYE",
+    "avatarUrl": "/artists/redeye.png",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "OSAKA / REGGAE & TRAP"
+  },
+  {
+    "name": "RYKEY",
+    "enName": "RYKEY DADDY DIRTY",
+    "avatarUrl": "/artists/rykey.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "RAW STREET / REAL"
+  },
+  {
+    "name": "Rude-α",
+    "enName": "RUDE-ALPHA",
+    "avatarUrl": "/artists/rude_a.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "OKINAWA / MELODIC PEACE"
+  },
+  {
+    "name": "Lick-G",
+    "enName": "LICK-G",
+    "avatarUrl": "/artists/lick_g.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "ZUSHI / TECHNICAL FLOW"
+  },
+  {
+    "name": "KOPERU",
+    "enName": "KOPERU (梅田サイファー)",
+    "avatarUrl": "/artists/koperu.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "UMEDA CYPHER / SKILL"
+  },
+  {
+    "name": "G-HOPE",
+    "enName": "G-HOPE",
+    "avatarUrl": "/artists/ghope.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "NAGANO / STAR VIBE"
+  },
+  {
+    "name": "GOTIT",
+    "enName": "GOTIT",
+    "avatarUrl": "/artists/gotit.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "IBARAKI / GROOVE"
+  },
+  {
+    "name": "ミステリオ",
+    "enName": "MYSTERIO",
+    "avatarUrl": "/artists/mysterio.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "OSAKA / ENTERTAINMENT"
+  },
+  {
+    "name": "かしわ",
+    "enName": "KASHIWA",
+    "avatarUrl": "/artists/kashiwa.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "OSAKA / MELODIC STORY"
+  },
+  {
+    "name": "DK",
+    "enName": "DK",
+    "avatarUrl": "/artists/dk.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "HIGH SCHOOL RAP / VIBE"
+  },
+  {
+    "name": "龍鬼",
+    "enName": "RYUKI",
+    "avatarUrl": "/artists/ryuki.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "NEW WAVE / AGGRESSIVE"
+  },
+  {
+    "name": "KBD",
+    "enName": "KBD (梅田サイファー)",
+    "avatarUrl": "/artists/kbd.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "UMEDA CYPHER / PUNCHLINE"
+  },
+  {
+    "name": "GOLBY",
+    "enName": "GOLBY",
+    "avatarUrl": "/artists/golby.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "TRIPLE CROWN / RHYME"
+  },
+  {
+    "name": "BES",
+    "enName": "BES (SWANKY SWIPE)",
+    "avatarUrl": "/artists/bes.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "LEGENDARY FLOW"
+  },
+  {
+    "name": "T-TANGG",
+    "enName": "T-TANGG",
+    "avatarUrl": "/artists/ttangg.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "BOOMBAP / COOL FLOW"
+  },
+  {
+    "name": "L.B.R.L",
+    "enName": "L.B.R.L",
+    "avatarUrl": "/artists/lbrl.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "NEW GEN / FAST SKILL"
+  },
+  {
+    "name": "SILENT KILLA JOINT",
+    "enName": "SILENT KILLA JOINT",
+    "avatarUrl": "/artists/silent_kj.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "SMOKE & GROOVE"
+  },
+  {
+    "name": "JUMBO MAATCH",
+    "enName": "JUMBO MAATCH",
+    "avatarUrl": "/artists/jumbo_m.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "MIGHTY JAM ROCK / DEEJAY"
+  },
+  {
+    "name": "POWER WAVE",
+    "enName": "POWER WAVE",
+    "avatarUrl": "/artists/power_wave.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "REGGAE / RAP HYBRID"
+  },
+  {
+    "name": "RAY",
+    "enName": "RAY",
+    "avatarUrl": "/artists/ray.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "SINGER / DEEJAY"
+  },
+  {
+    "name": "Leon Fanourakis",
+    "enName": "LEON FANOURAKIS",
+    "avatarUrl": "/artists/leon_f.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "YOKOHAMA / HARD TRAP"
+  },
+  {
+    "name": "ピラフ星人",
+    "enName": "PIRAFU SEIJIN",
+    "avatarUrl": "/artists/pirahu.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "NEW WAVE / POP STAR"
+  },
+  {
+    "name": "ベル",
+    "enName": "BELLE",
+    "avatarUrl": "/artists/belle.jpg",
+    "repYoutubeId": "pxCrRJSKjTU",
+    "focalPosition": "50% 30%",
+    "styleTag": "SHINJUKU / AGGRESSIVE"
   }
 ];
 

@@ -73,6 +73,7 @@ export interface Album {
   createdAt: string;
   updatedAt: string;
   isPreset?: boolean;
+  ownerDeviceId?: string;
 }
 
 export interface ActivityItem {

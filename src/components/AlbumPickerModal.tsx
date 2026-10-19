@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Disc3, Plus, Check, Clock, ArrowRight } from 'lucide-react';
+import { X, Disc3, Plus, Check, Clock, ArrowRight, Trash2 } from 'lucide-react';
 import { Album, Battle } from '../types';
 import {
   formatTimestamp,
@@ -17,6 +17,12 @@ interface AlbumPickerModalProps {
   onAddTrackToAlbum: (
     albumId: string,
     battleId: string,
+    startSeconds: number,
+    note: string
+  ) => void;
+  onUpdateTrackInAlbum?: (
+    albumId: string,
+    trackId: string,
     startSeconds: number,
     note: string
   ) => void;
@@ -39,6 +45,7 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
   onClose,
   onNavigateToAlbums,
   onAddTrackToAlbum,
+  onUpdateTrackInAlbum,
   onRemoveTrackFromAlbum,
   onCreateAlbumWithTrack,
 }) => {
@@ -48,6 +55,7 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
   const [trackNote, setTrackNote] = useState(
     initialNote || `${battle.mcA} vs ${battle.mcB} (${battle.tournament})`
   );
+  const [savedFeedbackId, setSavedFeedbackId] = useState<string | null>(null);
 
   // New album quick creation
   const [isCreatingNew, setIsCreatingNew] = useState(albums.length === 0);
@@ -90,6 +98,7 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
             </span>
           </div>
           <button
+            type="button"
             onClick={onClose}
             aria-label="閉じる"
             className="p-1 text-[#8E8E93] hover:text-[#FFFFFF] cursor-pointer"
@@ -149,7 +158,7 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-jp font-bold text-[#AEAEB2]">
-                収録先のレコードを選択（1タップで追加・解除）
+                収録先のレコードを選択
               </span>
               <button
                 type="button"
@@ -161,31 +170,20 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
               </button>
             </div>
 
-            <div className="space-y-1.5 max-h-48 overflow-y-auto pr-1">
+            <div className="space-y-1.5 max-h-52 overflow-y-auto pr-1">
               {albums.map((alb) => {
-                const alreadyIn = alb.tracks.some(
+                const existingTrack = alb.tracks.find(
                   (t) => t.battleId === battle.id
                 );
                 const cleanTag = (alb.themeTag || 'BEST BOUTS').split('::')[0];
+                const isUpdated = savedFeedbackId === alb.id;
+
                 return (
-                  <button
+                  <div
                     key={alb.id}
-                    type="button"
-                    onClick={() => {
-                      if (alreadyIn) {
-                        onRemoveTrackFromAlbum(alb.id, battle.id);
-                      } else {
-                        onAddTrackToAlbum(
-                          alb.id,
-                          battle.id,
-                          parsedSeconds,
-                          trackNote.trim()
-                        );
-                      }
-                    }}
-                    className={`w-full p-2.5 rounded-lg border text-left flex items-center justify-between gap-2 transition-all cursor-pointer ${
-                      alreadyIn
-                        ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
+                    className={`w-full p-2.5 rounded-lg border text-left flex items-center justify-between gap-2 transition-all ${
+                      existingTrack
+                        ? 'bg-[#1C1C24] text-[#FFFFFF] border-[#FFFFFF]/50'
                         : 'bg-[#16161C] text-[#FFFFFF] border-[#262630] hover:border-[#8E8E93]'
                     }`}
                   >
@@ -193,35 +191,66 @@ export const AlbumPickerModal: React.FC<AlbumPickerModalProps> = ({
                       <div className="font-jp font-black text-xs truncate">
                         {alb.title}
                       </div>
-                      <div
-                        className={`text-[10px] font-mono-tech ${
-                          alreadyIn ? 'text-[#0A0A0A]/75' : 'text-[#8E8E93]'
-                        }`}
-                      >
+                      <div className="text-[10px] font-mono-tech text-[#8E8E93]">
                         {alb.tracks.length} TRACKS • {cleanTag}
+                        {existingTrack && existingTrack.startSeconds > 0
+                          ? ` • [${formatTimestamp(
+                              existingTrack.startSeconds
+                            )}〜]`
+                          : ''}
                       </div>
                     </div>
 
-                    <span
-                      className={`px-2.5 py-1 rounded text-[11px] font-mono-tech font-bold flex items-center gap-1 shrink-0 ${
-                        alreadyIn
-                          ? 'bg-[#0A0A0A] text-[#FFFFFF]'
-                          : 'bg-[#24242E] text-[#FFFFFF]'
-                      }`}
-                    >
-                      {alreadyIn ? (
-                        <>
-                          <Check className="w-3 h-3 text-emerald-400" />
-                          <span>収録済</span>
-                        </>
-                      ) : (
-                        <>
-                          <Plus className="w-3 h-3" />
-                          <span>追加</span>
-                        </>
-                      )}
-                    </span>
-                  </button>
+                    {existingTrack ? (
+                      <div className="flex items-center gap-1 shrink-0">
+                        {onUpdateTrackInAlbum && (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              onUpdateTrackInAlbum(
+                                alb.id,
+                                existingTrack.id,
+                                parsedSeconds,
+                                trackNote.trim()
+                              );
+                              setSavedFeedbackId(alb.id);
+                              setTimeout(() => setSavedFeedbackId(null), 1500);
+                            }}
+                            className="px-2 py-1 rounded bg-[#FFFFFF] text-[#0A0A0A] text-[10px] font-jp font-black cursor-pointer flex items-center gap-1"
+                          >
+                            <Check className="w-3 h-3 text-emerald-600" />
+                            <span>{isUpdated ? '更新済' : '位置・メモ更新'}</span>
+                          </button>
+                        )}
+                        <button
+                          type="button"
+                          onClick={() => onRemoveTrackFromAlbum(alb.id, battle.id)}
+                          title="収録を解除"
+                          className="p-1.5 rounded bg-[#262630] text-[#8E8E93] hover:text-[#FF4D4D] cursor-pointer"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          onAddTrackToAlbum(
+                            alb.id,
+                            battle.id,
+                            parsedSeconds,
+                            trackNote.trim()
+                          );
+                          setSavedFeedbackId(alb.id);
+                          setTimeout(() => setSavedFeedbackId(null), 1500);
+                        }}
+                        className="px-3 py-1 rounded bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] text-[11px] font-jp font-black flex items-center gap-1 shrink-0 cursor-pointer"
+                      >
+                        <Plus className="w-3 h-3" />
+                        <span>追加</span>
+                      </button>
+                    )}
+                  </div>
                 );
               })}
             </div>

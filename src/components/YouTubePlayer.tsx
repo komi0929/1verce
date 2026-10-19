@@ -6,6 +6,8 @@ interface YouTubePlayerProps {
   youtubeId: string;
   startSeconds: number;
   seekNonce: number;
+  togglePlayNonce?: number;
+  desiredPaused?: boolean;
   title: string;
   onTimeUpdate: (
     currentSeconds: number,
@@ -39,6 +41,8 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   youtubeId,
   startSeconds,
   seekNonce,
+  togglePlayNonce = 0,
+  desiredPaused = false,
   title,
   onTimeUpdate,
   onEnded,
@@ -54,6 +58,8 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   const hasPlayedCurrentRef = useRef<boolean>(false);
   const endedFiredForCurrentRef = useRef<boolean>(false);
   const lastLoadTimeRef = useRef<number>(Date.now());
+  const lastCurrentTimeRef = useRef<number>(startSeconds || 0);
+  const lastDurationRef = useRef<number>(0);
 
   const onTimeUpdateRef = useRef(onTimeUpdate);
   const onEndedRef = useRef(onEnded);
@@ -122,12 +128,19 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
           const state =
             typeof info.playerState === 'number' ? info.playerState : null;
 
+          if (cur !== null) lastCurrentTimeRef.current = cur;
+          if (dur !== null && dur > 0) lastDurationRef.current = dur;
+
           if (state === 1 || state === 3 || (cur !== null && cur > 0.5)) {
             hasPlayedCurrentRef.current = true;
           }
 
-          if (cur !== null) {
-            onTimeUpdateRef.current(cur, dur || 0, state === 2);
+          if (cur !== null || state !== null) {
+            onTimeUpdateRef.current(
+              lastCurrentTimeRef.current,
+              lastDurationRef.current,
+              state === 2
+            );
           }
 
           if (
@@ -143,6 +156,13 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
           const state = data.info;
           if (state === 1 || state === 3) {
             hasPlayedCurrentRef.current = true;
+          }
+          if (state === 1 || state === 2) {
+            onTimeUpdateRef.current(
+              lastCurrentTimeRef.current,
+              lastDurationRef.current,
+              state === 2
+            );
           }
           if (
             state === 0 &&
@@ -172,15 +192,25 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
     };
   }, []);
 
+  // Handle programmatic Play / Pause toggle from hardware transport controls
+  useEffect(() => {
+    if (togglePlayNonce <= 0) return;
+    if (isBridgeReadyRef.current && iframeRef.current?.contentWindow) {
+      sendCommand(desiredPaused ? 'pauseVideo' : 'playVideo', []);
+    }
+  }, [togglePlayNonce, desiredPaused]);
+
   // Handle video changes (youtubeId) or seek changes (seekNonce / startSeconds)
   useEffect(() => {
     const targetStart = Math.max(0, Math.floor(startSeconds || 0));
     lastLoadTimeRef.current = Date.now();
+    lastCurrentTimeRef.current = targetStart;
 
     if (activeVideoIdRef.current !== youtubeId) {
       activeVideoIdRef.current = youtubeId;
       hasPlayedCurrentRef.current = false;
       endedFiredForCurrentRef.current = false;
+      lastDurationRef.current = 0;
 
       if (isBridgeReadyRef.current && iframeRef.current?.contentWindow) {
         // Seamless in-iframe transition (preserves iOS Safari autoplay blessing!)

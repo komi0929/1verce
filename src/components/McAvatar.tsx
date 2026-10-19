@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MC_PROFILES } from '../data/initialData';
 import { getYouTubeThumbnail, isSameMc } from '../utils/youtube';
 
@@ -19,7 +19,13 @@ export const McAvatar: React.FC<McAvatarProps> = ({
   selected = false,
   isOpponent = false,
 }) => {
-  const [imgError, setImgError] = useState(false);
+  const [avatarError, setAvatarError] = useState(false);
+  const [thumbError, setThumbError] = useState(false);
+
+  useEffect(() => {
+    setAvatarError(false);
+    setThumbError(false);
+  }, [mcName, fallbackYoutubeId]);
 
   const profile = MC_PROFILES.find((p) => isSameMc(p.name, mcName));
   const avatarUrl = profile?.avatarUrl;
@@ -44,24 +50,24 @@ export const McAvatar: React.FC<McAvatarProps> = ({
     <div
       className={`relative rounded-full overflow-hidden bg-[#121212] flex items-center justify-center shrink-0 transition-all duration-200 ${sizeClasses} ${ringClass}`}
     >
-      {avatarUrl && !imgError ? (
+      {avatarUrl && !avatarError ? (
         <>
           <img
             src={avatarUrl}
             alt={mcName}
-            onError={() => setImgError(true)}
+            onError={() => setAvatarError(true)}
             className="w-full h-full object-cover contrast-110"
             style={{ objectPosition: 'center 20%' }}
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10 pointer-events-none" />
         </>
-      ) : youtubeId && !imgError ? (
+      ) : youtubeId && !thumbError ? (
         <>
           <img
             src={getYouTubeThumbnail(youtubeId, 'hq')}
             alt={mcName}
-            onError={() => setImgError(true)}
+            onError={() => setThumbError(true)}
             className="w-full h-full object-cover scale-[2.2] contrast-125 saturate-95 transition-transform duration-300 group-hover:scale-[2.35]"
             style={{
               objectPosition: focalPosition,

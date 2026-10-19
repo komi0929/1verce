@@ -12,6 +12,7 @@ export const DB_STORAGE_KEYS = {
   SAVED: '1verce_saved_v5',
   ALBUMS: '1verce_albums_v2',
   DELETED_ALBUMS: '1verce_deleted_albums_v1',
+  DEVICE_ID: '1verce_device_id_v1',
 };
 
 export interface SupabaseConfig {
@@ -22,6 +23,20 @@ export interface SupabaseConfig {
 const DEFAULT_SUPABASE_URL = 'https://bousfwdffigyvumnzlhy.supabase.co';
 const DEFAULT_SUPABASE_ANON_KEY =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJvdXNmd2RmZmlneXZ1bW56bGh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIxMjMzMTIsImV4cCI6MjEwNzY5OTMxMn0.wchRAj5uFkUot6iRKIjJ6giFjOruXf4bdNgdYWfWBTk';
+
+export function getOrCreateDeviceId(): string {
+  try {
+    const existing = localStorage.getItem(DB_STORAGE_KEYS.DEVICE_ID);
+    if (existing && existing.length >= 6) return existing;
+    const generated = `dev-${Date.now().toString(36)}-${Math.random()
+      .toString(36)
+      .slice(2, 8)}`;
+    localStorage.setItem(DB_STORAGE_KEYS.DEVICE_ID, generated);
+    return generated;
+  } catch {
+    return 'dev-local';
+  }
+}
 
 export const DEFAULT_ALBUMS: Album[] = [
   {
@@ -202,13 +217,39 @@ export function getSupabaseClient(): SupabaseClient | null {
   }
 }
 
+function parseCloudAlbumRow(row: Record<string, unknown>): Album {
+  const rawTag = String(row.theme_tag || 'BEST BOUTS');
+  const parts = rawTag.split('::');
+  const themeTag = parts[0] || 'BEST BOUTS';
+  const jacketStyle = (parts[1] as AlbumJacketStyle) || 'VINYL_LP';
+  const jacketTheme = (parts[2] as AlbumJacketTheme) || 'CRIMSON';
+  const ownerDeviceId = parts[3] || undefined;
+
+  return {
+    id: String(row.id),
+    title: String(row.title || 'UNTITLED'),
+    description: String(row.description || ''),
+    themeTag,
+    jacketStyle,
+    jacketTheme,
+    ownerDeviceId,
+    tracks: Array.isArray(row.tracks) ? (row.tracks as Album['tracks']) : [],
+    likes: Number(row.likes) || 0,
+    playCount: Number(row.play_count) || 0,
+    isPreset: Boolean(row.is_preset),
+    createdAt: String(row.created_at || new Date().toISOString()),
+    updatedAt: String(row.updated_at || new Date().toISOString()),
+  };
+}
+
 // ============================================================================
-// Cloud Sync Operations (Automatic, non-blocking, graceful fallback to LocalStorage)
+// Cloud Sync Operations (Automatic, non-blocking, safe per-device isolation)
 // ============================================================================
 
 export async function fetchCloudState(baseBattles: Battle[]): Promise<{
   mergedBattles: Battle[];
   cloudAlbums: Album[] | null;
+  communityAlbums: Album[];
 } | null> {
   const client = getSupabaseClient();
   if (!client) return null;
@@ -272,34 +313,31 @@ export async function fetchCloudState(baseBattles: Battle[]): Promise<{
       }
     }
 
+    const myDeviceId = getOrCreateDeviceId();
     let cloudAlbums: Album[] | null = null;
+    const communityAlbums: Album[] = [];
+
     if (albumsRes.data && albumsRes.data.length > 0) {
-      cloudAlbums = albumsRes.data.map((row) => {
-        const rawTag = String(row.theme_tag || 'BEST BOUTS');
-        const parts = rawTag.split('::');
-        const themeTag = parts[0] || 'BEST BOUTS';
-        const jacketStyle = (parts[1] as AlbumJacketStyle) || 'VINYL_LP';
-        const jacketTheme = (parts[2] as AlbumJacketTheme) || 'CRIMSON';
-        return {
-          id: row.id,
-          title: row.title,
-          description: row.description || '',
-          themeTag,
-          jacketStyle,
-          jacketTheme,
-          tracks: Array.isArray(row.tracks) ? row.tracks : [],
-          likes: Number(row.likes) || 0,
-          playCount: Number(row.play_count) || 0,
-          isPreset: Boolean(row.is_preset),
-          createdAt: row.created_at || new Date().toISOString(),
-          updatedAt: row.updated_at || new Date().toISOString(),
-        };
-      });
+      const parsedAll = albumsRes.data.map((r) =>
+        parseCloudAlbumRow(r as Record<string, unknown>)
+      );
+      cloudAlbums = parsedAll;
+      for (const alb of parsedAll) {
+        if (
+          !alb.isPreset &&
+          !DEFAULT_ALBUMS.some((d) => d.id === alb.id) &&
+          alb.ownerDeviceId !== myDeviceId &&
+          alb.tracks.length > 0
+        ) {
+          communityAlbums.push(alb);
+        }
+      }
     }
 
     return {
       mergedBattles: Array.from(battleMap.values()),
       cloudAlbums,
+      communityAlbums,
     };
   } catch {
     return null;
@@ -308,10 +346,12 @@ export async function fetchCloudState(baseBattles: Battle[]): Promise<{
 
 export function mergeAlbumsWithCloud(
   localAlbums: Album[],
-  cloudAlbums: Album[] | null
+  cloudAlbums: Album[] | null,
+  sharedTargetAlbumId?: string | null
 ): Album[] {
   if (!cloudAlbums || cloudAlbums.length === 0) return localAlbums;
 
+  const myDeviceId = getOrCreateDeviceId();
   let deletedSet = new Set<string>();
   try {
     const rawDel = localStorage.getItem(DB_STORAGE_KEYS.DELETED_ALBUMS);
@@ -321,36 +361,33 @@ export function mergeAlbumsWithCloud(
     }
   } catch {}
 
+  const localIds = new Set(localAlbums.map((a) => a.id));
   const mergedMap = new Map<string, Album>();
 
-  for (const cAlb of cloudAlbums) {
-    if (!deletedSet.has(cAlb.id)) {
-      mergedMap.set(cAlb.id, cAlb);
+  // 1. Start with local albums (preserving user's personal shelf order and customizations)
+  for (const lAlb of localAlbums) {
+    if (!deletedSet.has(lAlb.id)) {
+      mergedMap.set(lAlb.id, lAlb);
     }
   }
 
-  for (const lAlb of localAlbums) {
-    if (deletedSet.has(lAlb.id)) continue;
-    const existing = mergedMap.get(lAlb.id);
-    if (!existing) {
-      mergedMap.set(lAlb.id, lAlb);
-      upsertAlbumToCloud(lAlb);
-    } else {
-      const localTime = new Date(lAlb.updatedAt || lAlb.createdAt).getTime();
-      const cloudTime = new Date(
-        existing.updatedAt || existing.createdAt
-      ).getTime();
-      if (
-        localTime >= cloudTime ||
-        lAlb.tracks.length > existing.tracks.length
-      ) {
-        mergedMap.set(lAlb.id, {
-          ...existing,
-          ...lAlb,
-          playCount: Math.max(lAlb.playCount || 0, existing.playCount || 0),
-          likes: Math.max(lAlb.likes || 0, existing.likes || 0),
-        });
-      }
+  // 2. Sync playCount/likes or restore albums owned by this device (or explicitly requested via ?album= deep link)
+  for (const cAlb of cloudAlbums) {
+    if (deletedSet.has(cAlb.id) && cAlb.id !== sharedTargetAlbumId) continue;
+
+    const existing = mergedMap.get(cAlb.id);
+    if (existing) {
+      mergedMap.set(cAlb.id, {
+        ...existing,
+        playCount: Math.max(existing.playCount || 0, cAlb.playCount || 0),
+        likes: Math.max(existing.likes || 0, cAlb.likes || 0),
+      });
+    } else if (
+      cAlb.ownerDeviceId === myDeviceId ||
+      cAlb.id === sharedTargetAlbumId ||
+      localIds.has(cAlb.id)
+    ) {
+      mergedMap.set(cAlb.id, cAlb);
     }
   }
 
@@ -389,11 +426,29 @@ export async function upsertBattleToCloud(battle: Battle): Promise<void> {
 export async function upsertAlbumToCloud(album: Album): Promise<void> {
   const client = getSupabaseClient();
   if (!client) return;
+
+  // Never overwrite the global default preset tracks in the cloud when a user customizes their local preset copy;
+  // only sync user-created albums or play_count updates.
+  const isDefaultPreset = DEFAULT_ALBUMS.some((d) => d.id === album.id);
+  const myDeviceId = album.ownerDeviceId || getOrCreateDeviceId();
+
   try {
+    if (isDefaultPreset) {
+      await client
+        .from('albums')
+        .update({
+          play_count: album.playCount,
+          likes: album.likes,
+        })
+        .eq('id', album.id);
+      return;
+    }
+
     const cleanTag = (album.themeTag || 'BEST BOUTS').split('::')[0];
     const encodedTag = `${cleanTag}::${album.jacketStyle || 'VINYL_LP'}::${
       album.jacketTheme || 'CRIMSON'
-    }`;
+    }::${myDeviceId}`;
+
     await client.from('albums').upsert(
       {
         id: album.id,
@@ -403,7 +458,7 @@ export async function upsertAlbumToCloud(album: Album): Promise<void> {
         tracks: album.tracks,
         likes: album.likes,
         play_count: album.playCount,
-        is_preset: Boolean(album.isPreset),
+        is_preset: false,
         created_at: album.createdAt,
         updated_at: album.updatedAt,
       },
@@ -414,7 +469,10 @@ export async function upsertAlbumToCloud(album: Album): Promise<void> {
   }
 }
 
-export async function removeAlbumFromCloud(albumId: string): Promise<void> {
+export async function removeAlbumFromCloud(
+  albumId: string,
+  ownerDeviceId?: string
+): Promise<void> {
   try {
     const rawDel = localStorage.getItem(DB_STORAGE_KEYS.DELETED_ALBUMS);
     const delArr: string[] = rawDel ? JSON.parse(rawDel) : [];
@@ -426,6 +484,12 @@ export async function removeAlbumFromCloud(albumId: string): Promise<void> {
       );
     }
   } catch {}
+
+  // Never delete preset albums or another user's album from the shared Supabase table
+  if (DEFAULT_ALBUMS.some((d) => d.id === albumId)) return;
+  const myDeviceId = getOrCreateDeviceId();
+  if (ownerDeviceId && ownerDeviceId !== myDeviceId) return;
+
   const client = getSupabaseClient();
   if (!client) return;
   try {

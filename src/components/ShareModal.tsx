@@ -1,29 +1,49 @@
 import React, { useState } from 'react';
-import { X, Copy, Check, Share2, ExternalLink } from 'lucide-react';
+import { X, Copy, Check, Share2, ExternalLink, Clock } from 'lucide-react';
 import { Battle } from '../types';
-import { getYouTubeThumbnail } from '../utils/youtube';
+import {
+  formatTimestamp,
+  getYouTubeThumbnail,
+  parseTimestampInput,
+} from '../utils/youtube';
 
 interface ShareModalProps {
   battle: Battle;
+  initialSeconds?: number;
   onClose: () => void;
   onRecordShare: (battleId: string) => void;
 }
 
 export const ShareModal: React.FC<ShareModalProps> = ({
   battle,
+  initialSeconds = 0,
   onClose,
   onRecordShare,
 }) => {
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedText, setCopiedText] = useState(false);
+  const [includeTime, setIncludeTime] = useState<boolean>(initialSeconds > 0);
+  const [timeInputStr, setTimeInputStr] = useState<string>(
+    formatTimestamp(initialSeconds)
+  );
 
+  const parsedSec = parseTimestampInput(timeInputStr);
   const baseUrl =
     typeof window !== 'undefined'
       ? `${window.location.origin}${window.location.pathname}`
       : 'https://1verce.vercel.app/';
-  const deepLinkUrl = `${baseUrl}?battle=${encodeURIComponent(battle.id)}`;
 
-  const sharePostText = `${battle.mcA} vs ${battle.mcB} (${battle.tournament})\n#1verce #MCバトル`;
+  const deepLinkUrl =
+    includeTime && parsedSec > 0
+      ? `${baseUrl}?battle=${encodeURIComponent(battle.id)}&t=${parsedSec}`
+      : `${baseUrl}?battle=${encodeURIComponent(battle.id)}`;
+
+  const sharePostText =
+    includeTime && parsedSec > 0
+      ? `${battle.mcA} vs ${battle.mcB} (${
+          battle.tournament
+        }) [${formatTimestamp(parsedSec)}〜]\n#1verce #MCバトル`
+      : `${battle.mcA} vs ${battle.mcB} (${battle.tournament})\n#1verce #MCバトル`;
 
   const canNativeShare =
     typeof navigator !== 'undefined' && typeof navigator.share === 'function';
@@ -90,6 +110,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
             </span>
           </div>
           <button
+            type="button"
             onClick={onClose}
             aria-label="シェアモーダルを閉じる"
             className="p-1 text-[#8E8E93] hover:text-[#FFFFFF] cursor-pointer"
@@ -110,9 +131,16 @@ export const ShareModal: React.FC<ShareModalProps> = ({
 
             {/* Top Row: Tournament Badge */}
             <div className="relative z-10 flex items-center justify-between">
-              <span className="px-2 py-0.5 rounded bg-[#1A1A1A]/90 border border-[#3A3A3C] text-[#FFFFFF] font-jp text-[11px] font-bold">
-                {battle.tournament}
-              </span>
+              <div className="flex items-center gap-1.5">
+                <span className="px-2 py-0.5 rounded bg-[#1A1A1A]/90 border border-[#3A3A3C] text-[#FFFFFF] font-jp text-[11px] font-bold">
+                  {battle.tournament}
+                </span>
+                {includeTime && parsedSec > 0 && (
+                  <span className="px-2 py-0.5 rounded bg-[#E50914] text-[#FFFFFF] font-mono-tech text-[10px] font-bold">
+                    {formatTimestamp(parsedSec)}〜
+                  </span>
+                )}
+              </div>
               <span className="font-display text-sm font-bold tracking-tighter text-[#FFFFFF]">
                 1verce
               </span>
@@ -141,6 +169,30 @@ export const ShareModal: React.FC<ShareModalProps> = ({
                 1VERCE ARCHIVE
               </span>
             </div>
+          </div>
+
+          {/* Optional Timestamp Direct Jump Setting */}
+          <div className="flex items-center justify-between gap-2 bg-[#0A0A0E] border border-[#262630] rounded-lg px-3 py-2">
+            <label className="flex items-center gap-2 text-xs font-jp text-[#FFFFFF] cursor-pointer">
+              <input
+                type="checkbox"
+                checked={includeTime}
+                onChange={(e) => setIncludeTime(e.target.checked)}
+                className="accent-[#E50914] w-3.5 h-3.5 cursor-pointer"
+              />
+              <Clock className="w-3.5 h-3.5 text-[#E50914]" />
+              <span>指定の秒数から再生するリンクを共有</span>
+            </label>
+            <input
+              type="text"
+              value={timeInputStr}
+              onChange={(e) => {
+                setTimeInputStr(e.target.value);
+                setIncludeTime(true);
+              }}
+              placeholder="00:00"
+              className="w-16 bg-[#16161C] border border-[#2C2C34] rounded px-2 py-0.5 text-xs font-mono-tech font-bold text-[#FFFFFF] text-center outline-none focus:border-[#FFFFFF]"
+            />
           </div>
 
           {/* Deep Link URL Display */}

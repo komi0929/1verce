@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import {
   Disc3,
   Play,
+  Pause,
   Plus,
   Trash2,
   ChevronUp,
@@ -46,6 +47,8 @@ export interface ActiveAlbumPlaybackInfo {
   battle: Battle;
   trackIndex: number;
   totalTracks: number;
+  isPaused: boolean;
+  onTogglePause: () => void;
   onPrev: () => void;
   onNext: () => void;
   onStop: () => void;
@@ -53,7 +56,9 @@ export interface ActiveAlbumPlaybackInfo {
 
 interface AlbumViewProps {
   albums: Album[];
+  communityAlbums?: Album[];
   battles: Battle[];
+  initialSelectedAlbumId?: string | null;
   externalBattlePlaying?: boolean;
   onStopExternalBattle?: () => void;
   onActivePlaybackChange?: (info: ActiveAlbumPlaybackInfo | null) => void;
@@ -64,6 +69,7 @@ interface AlbumViewProps {
     jacketStyle?: AlbumJacketStyle,
     jacketTheme?: AlbumJacketTheme
   ) => string;
+  onImportCommunityAlbum?: (album: Album) => void;
   onUpdateAlbumMeta: (
     albumId: string,
     title: string,
@@ -220,11 +226,14 @@ function formatVinylTrackNumber(index: number): string {
 
 export const AlbumView: React.FC<AlbumViewProps> = ({
   albums,
+  communityAlbums = [],
   battles,
+  initialSelectedAlbumId,
   externalBattlePlaying,
   onStopExternalBattle,
   onActivePlaybackChange,
   onCreateAlbum,
+  onImportCommunityAlbum,
   onUpdateAlbumMeta,
   onDeleteAlbum,
   onAddTrackToAlbum,
@@ -234,7 +243,7 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
   onRecordAlbumPlay,
 }) => {
   const [selectedAlbumId, setSelectedAlbumId] = useState<string>(
-    albums[0]?.id || ''
+    initialSelectedAlbumId || albums[0]?.id || ''
   );
 
   // Playback State
@@ -242,12 +251,27 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
     null
   );
   const [seekNonce, setSeekNonce] = useState<number>(0);
+  const [seekOverrideSeconds, setSeekOverrideSeconds] = useState<number | null>(
+    null
+  );
+  const [togglePlayNonce, setTogglePlayNonce] = useState<number>(0);
+  const [desiredPaused, setDesiredPaused] = useState<boolean>(false);
   const [stageMode, setStageMode] = useState<'VIDEO' | 'VINYL'>('VIDEO');
   const [isLoopAlbum, setIsLoopAlbum] = useState<boolean>(true);
   const [needleSoundEnabled, setNeedleSoundEnabled] = useState<boolean>(true);
   const [currentSeconds, setCurrentSeconds] = useState<number>(0);
   const [videoDuration, setVideoDuration] = useState<number>(0);
   const [isPlayerPaused, setIsPlayerPaused] = useState<boolean>(false);
+
+  // Sync when initialSelectedAlbumId arrives via URL deep link (?album=...)
+  useEffect(() => {
+    if (
+      initialSelectedAlbumId &&
+      albums.some((a) => a.id === initialSelectedAlbumId)
+    ) {
+      setSelectedAlbumId(initialSelectedAlbumId);
+    }
+  }, [initialSelectedAlbumId, albums]);
 
   // Create Album Form State
   const [isCreateOpen, setIsCreateOpen] = useState(false);
@@ -335,10 +359,13 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
       if (needleSoundEnabled) {
         playVinylNeedleDropSound();
       }
+      const startSec = resolvedTracks[index].track.startSeconds || 0;
       setPlayingTrackIndex(index);
-      setCurrentSeconds(resolvedTracks[index].track.startSeconds || 0);
+      setSeekOverrideSeconds(null);
+      setCurrentSeconds(startSec);
       setVideoDuration(0);
       setIsPlayerPaused(false);
+      setDesiredPaused(false);
       setSeekNonce(Date.now());
       onRecordAlbumPlay(activeAlbum.id, resolvedTracks[index].battle.id);
     },
@@ -350,6 +377,22 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
       onRecordAlbumPlay,
     ]
   );
+
+  const handleTogglePause = useCallback(() => {
+    const nextPaused = !isPlayerPaused;
+    setDesiredPaused(nextPaused);
+    setIsPlayerPaused(nextPaused);
+    setTogglePlayNonce(Date.now());
+  }, [isPlayerPaused]);
+
+  const handleSeekTrack = useCallback((seconds: number) => {
+    const clamped = Math.max(0, Math.floor(seconds));
+    setCurrentSeconds(clamped);
+    setSeekOverrideSeconds(clamped);
+    setIsPlayerPaused(false);
+    setDesiredPaused(false);
+    setSeekNonce(Date.now());
+  }, []);
 
   const handleNextTrack = useCallback(() => {
     if (playingTrackIndex === null || resolvedTracks.length === 0) return;
@@ -379,7 +422,56 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
 
   const handleStopTurntable = useCallback(() => {
     setPlayingTrackIndex(null);
+    setSeekOverrideSeconds(null);
   }, []);
+
+  // Native Mobile Lock-Screen / Control Center Integration (MediaSession API)
+  useEffect(() => {
+    if (typeof navigator === 'undefined' || !('mediaSession' in navigator)) {
+      return;
+    }
+    if (!activeAlbum || !activePlayingItem) {
+      navigator.mediaSession.metadata = null;
+      return;
+    }
+
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: `${activePlayingItem.battle.mcA} vs ${activePlayingItem.battle.mcB}`,
+        artist: `${activePlayingItem.battle.tournament} (${activePlayingItem.battle.year})`,
+        album: activeAlbum.title,
+        artwork: [
+          {
+            src: getYouTubeThumbnail(activePlayingItem.battle.youtubeId, 'hq'),
+            sizes: '480x360',
+            type: 'image/jpeg',
+          },
+        ],
+      });
+
+      navigator.mediaSession.setActionHandler('play', () => {
+        setDesiredPaused(false);
+        setIsPlayerPaused(false);
+        setTogglePlayNonce(Date.now());
+      });
+      navigator.mediaSession.setActionHandler('pause', () => {
+        setDesiredPaused(true);
+        setIsPlayerPaused(true);
+        setTogglePlayNonce(Date.now());
+      });
+      navigator.mediaSession.setActionHandler('previoustrack', handlePrevTrack);
+      navigator.mediaSession.setActionHandler('nexttrack', handleNextTrack);
+      navigator.mediaSession.setActionHandler('stop', handleStopTurntable);
+    } catch {
+      // Ignore unsupported mediaSession actions
+    }
+  }, [
+    activeAlbum,
+    activePlayingItem,
+    handlePrevTrack,
+    handleNextTrack,
+    handleStopTurntable,
+  ]);
 
   // Report active playback state to App.tsx for Floating Mini Vinyl Bar
   useEffect(() => {
@@ -391,6 +483,8 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
         battle: activePlayingItem.battle,
         trackIndex: playingTrackIndex,
         totalTracks: resolvedTracks.length,
+        isPaused: isPlayerPaused,
+        onTogglePause: handleTogglePause,
         onPrev: handlePrevTrack,
         onNext: handleNextTrack,
         onStop: handleStopTurntable,
@@ -403,6 +497,8 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
     activePlayingItem,
     playingTrackIndex,
     resolvedTracks.length,
+    isPlayerPaused,
+    handleTogglePause,
     handlePrevTrack,
     handleNextTrack,
     handleStopTurntable,
@@ -480,6 +576,12 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
 
   const handleCopyShareAlbum = async () => {
     if (!activeAlbum) return;
+    const baseUrl =
+      typeof window !== 'undefined'
+        ? `${window.location.origin}${window.location.pathname}`
+        : 'https://1verce.vercel.app/';
+    const shareUrl = `${baseUrl}?album=${encodeURIComponent(activeAlbum.id)}`;
+
     const trackLines = resolvedTracks
       .slice(0, 10)
       .map(
@@ -494,7 +596,7 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
       )
       .join('\n');
 
-    const text = `💿 MY 1VERCE VINYL: 「${activeAlbum.title}」\n${activeAlbum.description}\n\n${trackLines}\n\nhttps://1verce.vercel.app\n#1verce #MCバトル #マイベストバウト`;
+    const text = `💿 MY 1VERCE VINYL: 「${activeAlbum.title}」\n${activeAlbum.description}\n\n${trackLines}\n\n${shareUrl}\n#1verce #MCバトル #マイベストバウト`;
     try {
       await navigator.clipboard.writeText(text);
       setCopiedAlbumShare(true);
@@ -510,7 +612,7 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
         await navigator.share({
           title: `${activeAlbum.title} | 1verce Vinyl`,
           text,
-          url: 'https://1verce.vercel.app/',
+          url: shareUrl,
         });
       } catch {
         // User dismissed share sheet
@@ -1193,8 +1295,24 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
 
                       {/* Turntable Platter & Spinning 12-inch Vinyl Disc + Tonearm */}
                       <div className="relative z-10 flex items-center justify-center">
-                        {/* Platter Base Ring */}
-                        <div className="relative w-52 h-52 sm:w-68 sm:h-68 rounded-full bg-[#121217] border-4 border-[#262630] shadow-[0_20px_60px_rgba(0,0,0,0.9)] flex items-center justify-center">
+                        {/* Platter Base Ring (Tap to Play / Pause) */}
+                        <div
+                          onClick={handleTogglePause}
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              handleTogglePause();
+                            }
+                          }}
+                          title={
+                            isPlayerPaused
+                              ? 'タップして針を落とす（再生再開）'
+                              : 'タップして一時停止'
+                          }
+                          className="relative w-52 h-52 sm:w-68 sm:h-68 rounded-full bg-[#121217] border-4 border-[#262630] shadow-[0_20px_60px_rgba(0,0,0,0.9)] flex items-center justify-center cursor-pointer"
+                        >
                           {/* Spinning 12" Vinyl LP */}
                           <div
                             className={`w-[94%] h-[94%] rounded-full border border-white/10 flex items-center justify-center ${
@@ -1294,8 +1412,13 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                   >
                     <YouTubePlayer
                       youtubeId={activePlayingItem.battle.youtubeId}
-                      startSeconds={activePlayingItem.track.startSeconds}
+                      startSeconds={
+                        seekOverrideSeconds ??
+                        activePlayingItem.track.startSeconds
+                      }
                       seekNonce={seekNonce}
+                      togglePlayNonce={togglePlayNonce}
+                      desiredPaused={desiredPaused}
                       title={activePlayingItem.battle.title}
                       onTimeUpdate={(cur, dur, paused) => {
                         setCurrentSeconds(Math.floor(cur));
@@ -1308,110 +1431,157 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                 </div>
 
                 {/* Tactile Hardware Transport Bar below Player */}
-                <div className="px-3.5 py-3 bg-[#16161C] border border-[#282832] rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  {/* Left: Spinning Mini Record + Track Title & Time */}
-                  <div className="flex items-center gap-3 min-w-0">
-                    <div
-                      className={`w-10 h-10 rounded-full overflow-hidden border border-[#E50914]/60 shrink-0 relative ${
-                        isPlayerPaused ? '' : 'animate-spin'
-                      }`}
-                      style={{ animationDuration: '5s' }}
-                    >
-                      <img
-                        src={getYouTubeThumbnail(
-                          activePlayingItem.battle.youtubeId,
-                          'hq'
+                <div className="px-3.5 py-3 bg-[#16161C] border border-[#282832] rounded-xl space-y-2.5">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    {/* Left: Spinning Mini Record + Track Title & Time */}
+                    <div className="flex items-center gap-3 min-w-0">
+                      <button
+                        type="button"
+                        onClick={handleTogglePause}
+                        title={isPlayerPaused ? '再生再開' : '一時停止'}
+                        className={`w-10 h-10 rounded-full overflow-hidden border border-[#E50914]/60 shrink-0 relative cursor-pointer ${
+                          isPlayerPaused ? '' : 'animate-spin'
+                        }`}
+                        style={{ animationDuration: '5s' }}
+                      >
+                        <img
+                          src={getYouTubeThumbnail(
+                            activePlayingItem.battle.youtubeId,
+                            'hq'
+                          )}
+                          alt=""
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-2 h-2 rounded-full bg-[#0A0A0A] border border-white/60" />
+                        </div>
+                      </button>
+
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="px-2 py-0.5 rounded bg-[#E50914] text-[#FFFFFF] font-mono-tech text-[10px] font-extrabold">
+                            {formatVinylTrackNumber(playingTrackIndex || 0)} (
+                            {String((playingTrackIndex || 0) + 1).padStart(
+                              2,
+                              '0'
+                            )}{' '}
+                            / {String(resolvedTracks.length).padStart(2, '0')})
+                          </span>
+                          <span className="font-jp font-black text-xs sm:text-sm text-[#FFFFFF] truncate">
+                            {activePlayingItem.battle.mcA} vs{' '}
+                            {activePlayingItem.battle.mcB}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 mt-0.5 text-[11px] font-mono-tech text-[#8E8E93]">
+                          <span>
+                            {formatTimestamp(currentSeconds)}
+                            {videoDuration > 0
+                              ? ` / ${formatTimestamp(videoDuration)}`
+                              : ''}
+                          </span>
+                          <span>•</span>
+                          <span className="font-jp truncate">
+                            {activePlayingItem.track.note ||
+                              activePlayingItem.battle.stageOrEvent}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right: Transport Controls (PREV / PLAY-PAUSE / NEXT / LOOP / ADD / STOP) */}
+                    <div className="flex items-center justify-between sm:justify-end gap-1.5 shrink-0">
+                      <button
+                        type="button"
+                        onClick={handlePrevTrack}
+                        className="px-2.5 py-1.5 rounded-lg bg-[#22222A] hover:bg-[#2C2C36] text-xs font-mono-tech font-bold text-[#FFFFFF] flex items-center gap-1 cursor-pointer"
+                      >
+                        <SkipBack className="w-3.5 h-3.5" />
+                        <span className="hidden xs:inline">PREV</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={handleTogglePause}
+                        aria-label={isPlayerPaused ? '再生再開' : '一時停止'}
+                        className="px-3 py-1.5 rounded-lg bg-[#E50914] hover:bg-[#F40612] text-xs font-jp font-black text-[#FFFFFF] flex items-center gap-1 cursor-pointer shadow"
+                      >
+                        {isPlayerPaused ? (
+                          <>
+                            <Play className="w-3.5 h-3.5 fill-current" />
+                            <span>再生</span>
+                          </>
+                        ) : (
+                          <>
+                            <Pause className="w-3.5 h-3.5 fill-current" />
+                            <span>一時停止</span>
+                          </>
                         )}
-                        alt=""
-                        className="w-full h-full object-cover"
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={handleNextTrack}
+                        className="px-3 py-1.5 rounded-lg bg-[#FFFFFF] hover:bg-[#E5E5EA] text-xs font-mono-tech font-extrabold text-[#0A0A0A] flex items-center gap-1 cursor-pointer shadow"
+                      >
+                        <span>NEXT</span>
+                        <SkipForward className="w-3.5 h-3.5" />
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => setIsLoopAlbum((v) => !v)}
+                        title="アルバム連続ループ再生"
+                        className={`p-2 rounded-lg border cursor-pointer transition-colors ${
+                          isLoopAlbum
+                            ? 'bg-[#E50914]/20 text-[#FF6B6B] border-[#E50914]/50'
+                            : 'bg-[#22222A] text-[#8E8E93] border-transparent'
+                        }`}
+                      >
+                        <Repeat className="w-3.5 h-3.5" />
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => setIsCrateDiggerOpen((v) => !v)}
+                        className="px-2.5 py-1.5 rounded-lg bg-[#22222A] hover:bg-[#2C2C36] text-[#FFFFFF] text-xs font-jp font-bold flex items-center gap-1 cursor-pointer"
+                      >
+                        <Plus className="w-3.5 h-3.5" />
+                        <span>曲追加</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={handleStopTurntable}
+                        className="p-2 rounded-lg bg-[#262630] text-[#8E8E93] hover:text-[#FFFFFF] cursor-pointer"
+                        title="針を上げて停止"
+                      >
+                        <Square className="w-3.5 h-3.5 fill-current" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Interactive Progress Scrub Bar */}
+                  {videoDuration > 0 && (
+                    <div className="flex items-center gap-2 pt-0.5">
+                      <span className="text-[10px] font-mono-tech text-[#8E8E93] w-9">
+                        {formatTimestamp(currentSeconds)}
+                      </span>
+                      <input
+                        type="range"
+                        min={0}
+                        max={videoDuration}
+                        value={Math.min(currentSeconds, videoDuration)}
+                        onChange={(e) =>
+                          handleSeekTrack(Number(e.target.value))
+                        }
+                        aria-label="トラック再生位置シークバー"
+                        className="flex-1 h-1.5 bg-[#2A2A34] rounded-lg appearance-none cursor-pointer accent-[#E50914]"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-[#0A0A0A] border border-white/60" />
-                      </div>
+                      <span className="text-[10px] font-mono-tech text-[#8E8E93] w-9 text-right">
+                        {formatTimestamp(videoDuration)}
+                      </span>
                     </div>
-
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className="px-2 py-0.5 rounded bg-[#E50914] text-[#FFFFFF] font-mono-tech text-[10px] font-extrabold">
-                          {formatVinylTrackNumber(playingTrackIndex || 0)} (
-                          {String((playingTrackIndex || 0) + 1).padStart(
-                            2,
-                            '0'
-                          )}{' '}
-                          / {String(resolvedTracks.length).padStart(2, '0')})
-                        </span>
-                        <span className="font-jp font-black text-xs sm:text-sm text-[#FFFFFF] truncate">
-                          {activePlayingItem.battle.mcA} vs{' '}
-                          {activePlayingItem.battle.mcB}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-2 mt-0.5 text-[11px] font-mono-tech text-[#8E8E93]">
-                        <span>
-                          {formatTimestamp(currentSeconds)}
-                          {videoDuration > 0
-                            ? ` / ${formatTimestamp(videoDuration)}`
-                            : ''}
-                        </span>
-                        <span>•</span>
-                        <span className="font-jp truncate">
-                          {activePlayingItem.track.note ||
-                            activePlayingItem.battle.stageOrEvent}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Right: Transport Controls (PREV / NEXT / LOOP / ADD / STOP) */}
-                  <div className="flex items-center justify-between sm:justify-end gap-1.5 shrink-0">
-                    <button
-                      type="button"
-                      onClick={handlePrevTrack}
-                      className="px-2.5 py-1.5 rounded-lg bg-[#22222A] hover:bg-[#2C2C36] text-xs font-mono-tech font-bold text-[#FFFFFF] flex items-center gap-1 cursor-pointer"
-                    >
-                      <SkipBack className="w-3.5 h-3.5" />
-                      <span>PREV</span>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={handleNextTrack}
-                      className="px-3 py-1.5 rounded-lg bg-[#FFFFFF] hover:bg-[#E5E5EA] text-xs font-mono-tech font-extrabold text-[#0A0A0A] flex items-center gap-1 cursor-pointer shadow"
-                    >
-                      <span>NEXT</span>
-                      <SkipForward className="w-3.5 h-3.5" />
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => setIsLoopAlbum((v) => !v)}
-                      title="アルバム連続ループ再生"
-                      className={`p-2 rounded-lg border cursor-pointer transition-colors ${
-                        isLoopAlbum
-                          ? 'bg-[#E50914]/20 text-[#FF6B6B] border-[#E50914]/50'
-                          : 'bg-[#22222A] text-[#8E8E93] border-transparent'
-                      }`}
-                    >
-                      <Repeat className="w-3.5 h-3.5" />
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => setIsCrateDiggerOpen((v) => !v)}
-                      className="px-2.5 py-1.5 rounded-lg bg-[#22222A] hover:bg-[#2C2C36] text-[#FFFFFF] text-xs font-jp font-bold flex items-center gap-1 cursor-pointer"
-                    >
-                      <Plus className="w-3.5 h-3.5" />
-                      <span>曲追加</span>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={handleStopTurntable}
-                      className="p-2 rounded-lg bg-[#262630] text-[#8E8E93] hover:text-[#FFFFFF] cursor-pointer"
-                      title="針を上げて停止"
-                    >
-                      <Square className="w-3.5 h-3.5 fill-current" />
-                    </button>
-                  </div>
+                  )}
                 </div>
               </div>
             )}
@@ -1797,6 +1967,83 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
             )}
           </div>
         </div>
+      )}
+
+      {/* 5. COMMUNITY CRATES (Discover Public Vinyl Albums Created by Other Users) */}
+      {communityAlbums.length > 0 && (
+        <section className="space-y-2.5 pt-2 border-t border-[#1F1F26]">
+          <div className="flex items-center justify-between px-0.5">
+            <div className="flex items-center gap-2">
+              <Disc3 className="w-4 h-4 text-[#E50914]" />
+              <h3 className="font-jp text-xs sm:text-sm font-black text-[#FFFFFF]">
+                みんなの公開レコード盤 // COMMUNITY CRATES
+              </h3>
+              <span className="text-[11px] font-mono-tech text-[#8E8E93]">
+                ({communityAlbums.length})
+              </span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {communityAlbums.slice(0, 8).map((cAlb) => {
+              const alreadyInShelf = albums.some((a) => a.id === cAlb.id);
+              const coverBattles = cAlb.tracks
+                .map((t) => battleMap.get(t.battleId))
+                .filter((b): b is Battle => Boolean(b))
+                .slice(0, 4);
+              const cleanTag = (cAlb.themeTag || 'BEST BOUTS').split('::')[0];
+
+              return (
+                <div
+                  key={cAlb.id}
+                  className="bg-[#121216] border border-[#24242E] rounded-xl p-3 flex items-center justify-between gap-3"
+                >
+                  <div className="flex items-center gap-3 min-w-0">
+                    <AlbumJacket
+                      title={cAlb.title}
+                      themeTag={cleanTag}
+                      trackCount={cAlb.tracks.length}
+                      coverBattles={coverBattles}
+                      jacketStyle={cAlb.jacketStyle || 'VINYL_LP'}
+                      jacketTheme={cAlb.jacketTheme || 'CRIMSON'}
+                      size="sm"
+                      showVinylPeek={false}
+                    />
+                    <div className="min-w-0">
+                      <div className="text-[9px] font-mono-tech text-[#E50914] font-bold uppercase truncate">
+                        {cleanTag} • {cAlb.tracks.length} TRACKS
+                      </div>
+                      <div className="font-jp font-black text-xs text-[#FFFFFF] truncate">
+                        {cAlb.title}
+                      </div>
+                      <p className="text-[10px] font-jp text-[#8E8E93] truncate">
+                        {cAlb.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {onImportCommunityAlbum && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        onImportCommunityAlbum(cAlb);
+                        setSelectedAlbumId(cAlb.id);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className={`px-3 py-1.5 rounded-lg text-[11px] font-jp font-black shrink-0 cursor-pointer transition-colors ${
+                        alreadyInShelf
+                          ? 'bg-[#22222A] text-[#FFFFFF] border border-[#3A3A44]'
+                          : 'bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A]'
+                      }`}
+                    >
+                      {alreadyInShelf ? 'ターンテーブルで開く' : '＋ 棚に追加して聴く'}
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </section>
       )}
     </div>
   );
