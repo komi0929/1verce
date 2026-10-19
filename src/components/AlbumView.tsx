@@ -114,6 +114,31 @@ const JACKET_THEME_OPTIONS: Array<{
   { id: 'CLASSIC', label: 'CLASSIC', dotClass: 'bg-zinc-500' },
 ];
 
+const THEME_PRESETS: string[] = [
+  'MY BEST BOUTS',
+  'LEGEND ARCHIVE',
+  'FLOW & GROOVE',
+  'HARD RHYME & SKILL',
+  'WORKOUT HYPE',
+];
+
+function getPalette(theme?: AlbumJacketTheme): {
+  border: string;
+  accent: string;
+} {
+  switch (theme) {
+    case 'GOLD':
+      return { border: '#F59E0B', accent: '#FBBF24' };
+    case 'MONO':
+      return { border: '#FFFFFF', accent: '#E5E5EA' };
+    case 'CLASSIC':
+      return { border: '#A1A1AA', accent: '#D4D4D8' };
+    case 'CRIMSON':
+    default:
+      return { border: '#E50914', accent: '#FF6B6B' };
+  }
+}
+
 /**
  * Web Audio API Analog Vinyl Needle-Drop & Surface Crackle Synthesizer
  * Inspired by MD Vinyl's tactile needle-drop ritual (zero external assets required)
@@ -477,6 +502,20 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
     } catch {
       // ignore
     }
+    if (
+      typeof navigator !== 'undefined' &&
+      typeof navigator.share === 'function'
+    ) {
+      try {
+        await navigator.share({
+          title: `${activeAlbum.title} | 1verce Vinyl`,
+          text,
+          url: 'https://1verce.vercel.app/',
+        });
+      } catch {
+        // User dismissed share sheet
+      }
+    }
   };
 
   const cleanThemeTag = (activeAlbum?.themeTag || 'BEST BOUTS').split('::')[0];
@@ -680,9 +719,14 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                 key={alb.id}
                 type="button"
                 onClick={() => {
-                  setSelectedAlbumId(alb.id);
-                  setPlayingTrackIndex(null);
-                  setIsEditingMeta(false);
+                  if (selectedAlbumId !== alb.id) {
+                    setSelectedAlbumId(alb.id);
+                    setPlayingTrackIndex(null);
+                    setIsEditingMeta(false);
+                    setIsJacketCustomizerOpen(false);
+                    setIsCrateDiggerOpen(false);
+                    setEditingTrackId(null);
+                  }
                 }}
                 className={`group relative p-3 rounded-xl border text-left flex items-center gap-3.5 shrink-0 w-[268px] sm:w-[290px] transition-all cursor-pointer ${
                   isSelected
@@ -708,7 +752,7 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                       {cleanTag}
                     </span>
                     {isThisAlbumPlaying && (
-                      <span className="px-1.5 py-0.2 rounded-full bg-[#E50914] text-[8px] font-mono-tech font-bold text-white animate-pulse">
+                      <span className="px-1.5 py-0.5 rounded-full bg-[#E50914] text-[8px] font-mono-tech font-bold text-white animate-pulse">
                         SPINNING
                       </span>
                     )}
@@ -980,6 +1024,22 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                         className="w-full bg-[#16161C] border border-[#2C2C34] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF]"
                         placeholder="アルバム解説・ライナーノーツ"
                       />
+                      <div className="flex items-center gap-1 flex-wrap">
+                        {THEME_PRESETS.map((tag) => (
+                          <button
+                            key={tag}
+                            type="button"
+                            onClick={() => setEditTheme(tag)}
+                            className={`px-2 py-0.5 rounded text-[10px] font-mono-tech cursor-pointer border ${
+                              editTheme === tag
+                                ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF] font-bold'
+                                : 'bg-[#16161C] text-[#8E8E93] border-[#2C2C34]'
+                            }`}
+                          >
+                            {tag}
+                          </button>
+                        ))}
+                      </div>
                       <div className="flex items-center justify-end gap-2">
                         <button
                           type="button"
@@ -1042,8 +1102,20 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                           <button
                             type="button"
                             onClick={() => {
-                              onDeleteAlbum(activeAlbum.id);
-                              setPlayingTrackIndex(null);
+                              if (
+                                window.confirm(
+                                  `レコード「${activeAlbum.title}」を削除しますか？`
+                                )
+                              ) {
+                                const nextAlb = albums.find(
+                                  (a) => a.id !== activeAlbum.id
+                                );
+                                onDeleteAlbum(activeAlbum.id);
+                                setPlayingTrackIndex(null);
+                                if (nextAlb) {
+                                  setSelectedAlbumId(nextAlb.id);
+                                }
+                              }
                             }}
                             className="p-1.5 rounded-lg bg-[#1A1A20] text-[#8E8E93] hover:text-[#FF4D4D] border border-[#2C2C34] cursor-pointer"
                             title="このアルバムを削除"
@@ -1107,7 +1179,7 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                 <div className="relative rounded-xl overflow-hidden border border-[#2E2E38] bg-[#070709] shadow-2xl">
                   {/* MD VINYL RECORD TURNTABLE STAGE (Shown when stageMode === 'VINYL') */}
                   {stageMode === 'VINYL' && (
-                    <div className="relative py-6 px-4 sm:py-8 sm:px-6 flex flex-col items-center justify-center min-h-[280px] sm:min-h-[340px] overflow-hidden">
+                    <div className="relative pt-6 pb-24 px-4 sm:py-8 sm:px-6 flex flex-col items-center justify-center min-h-[300px] sm:min-h-[340px] overflow-hidden">
                       {/* Ambient Blurred Jacket Background */}
                       <img
                         src={getYouTubeThumbnail(
@@ -1122,7 +1194,7 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                       {/* Turntable Platter & Spinning 12-inch Vinyl Disc + Tonearm */}
                       <div className="relative z-10 flex items-center justify-center">
                         {/* Platter Base Ring */}
-                        <div className="relative w-56 h-56 sm:w-68 sm:h-68 rounded-full bg-[#121217] border-4 border-[#262630] shadow-[0_20px_60px_rgba(0,0,0,0.9)] flex items-center justify-center">
+                        <div className="relative w-52 h-52 sm:w-68 sm:h-68 rounded-full bg-[#121217] border-4 border-[#262630] shadow-[0_20px_60px_rgba(0,0,0,0.9)] flex items-center justify-center">
                           {/* Spinning 12" Vinyl LP */}
                           <div
                             className={`w-[94%] h-[94%] rounded-full border border-white/10 flex items-center justify-center ${
@@ -1139,7 +1211,14 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                               <div className="w-[74%] h-[74%] rounded-full border border-white/10 flex items-center justify-center">
                                 <div className="w-[62%] h-[62%] rounded-full border border-white/10 flex items-center justify-center">
                                   {/* Center Record Label with Current Battle Artwork */}
-                                  <div className="w-[76%] h-[76%] rounded-full overflow-hidden relative border-2 border-[#E50914] shadow-inner">
+                                  <div
+                                    className="w-[76%] h-[76%] rounded-full overflow-hidden relative border-2 shadow-inner"
+                                    style={{
+                                      borderColor: getPalette(
+                                        activeAlbum.jacketTheme
+                                      ).border,
+                                    }}
+                                  >
                                     <img
                                       src={getYouTubeThumbnail(
                                         activePlayingItem.battle.youtubeId,
@@ -1168,14 +1247,26 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                           >
                             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-zinc-300 to-zinc-600 border border-white/40 shadow-lg mx-auto" />
                             <div className="w-1.5 h-28 bg-gradient-to-b from-zinc-300 via-zinc-400 to-zinc-600 mx-auto -mt-1 rounded-full shadow-md" />
-                            <div className="w-3.5 h-5 bg-[#E50914] rounded-xs mx-auto -mt-1 shadow" />
+                            <div
+                              className="w-3.5 h-5 rounded-xs mx-auto -mt-1 shadow"
+                              style={{
+                                backgroundColor: getPalette(
+                                  activeAlbum.jacketTheme
+                                ).border,
+                              }}
+                            />
                           </div>
                         </div>
                       </div>
 
                       {/* Editorial Track Typography in Vinyl Mode */}
                       <div className="relative z-10 mt-4 text-center space-y-1 max-w-md">
-                        <div className="text-[10px] font-mono-tech font-bold text-[#E50914] tracking-widest uppercase">
+                        <div
+                          className="text-[10px] font-mono-tech font-bold tracking-widest uppercase"
+                          style={{
+                            color: getPalette(activeAlbum.jacketTheme).accent,
+                          }}
+                        >
                           {formatVinylTrackNumber(playingTrackIndex || 0)} •{' '}
                           {activePlayingItem.battle.tournament} (
                           {activePlayingItem.battle.year})
@@ -1198,7 +1289,7 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                     className={
                       stageMode === 'VIDEO'
                         ? 'aspect-video w-full bg-[#070709]'
-                        : 'absolute bottom-3 right-3 z-20 w-32 sm:w-40 aspect-video rounded-lg overflow-hidden border border-white/30 shadow-2xl bg-[#070709]'
+                        : 'absolute bottom-2.5 right-2.5 z-20 w-28 sm:w-40 aspect-video rounded-lg overflow-hidden border border-white/30 shadow-2xl bg-[#070709]'
                     }
                   >
                     <YouTubePlayer
@@ -1571,7 +1662,7 @@ export const AlbumView: React.FC<AlbumViewProps> = ({
                               >
                                 {battle.mcA} vs {battle.mcB}
                               </span>
-                              <span className="px-1.5 py-0.2 rounded bg-[#1E1E26] border border-[#2C2C36] text-[9px] font-mono-tech font-bold text-[#AEAEB2] shrink-0">
+                              <span className="px-1.5 py-0.5 rounded bg-[#1E1E26] border border-[#2C2C36] text-[9px] font-mono-tech font-bold text-[#AEAEB2] shrink-0">
                                 {battle.tournament}
                               </span>
                             </div>

@@ -152,22 +152,34 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
       if (map.has(keyB)) map.get(keyB)!.battleCount += 1;
     }
 
-    return Array.from(map.values()).filter((m) => Boolean(m.avatarUrl) && m.totalBattleCount >= 5);
+    return Array.from(map.values()).filter((m) => m.totalBattleCount >= 1);
   }, [battles, scopedBattles]);
 
   // 4. MCs participating in the currently selected tournament
   const tournamentMcs = useMemo(() => {
-    const active = allMcsCatalog.filter((m) => m.battleCount > 0);
+    const active = allMcsCatalog.filter(
+      (m) =>
+        m.battleCount > 0 &&
+        (Boolean(m.avatarUrl) ||
+          m.totalBattleCount >= 3 ||
+          Boolean(mcSearchQuery.trim()) ||
+          Boolean(selectedMcA && isSameMc(selectedMcA, m.name)))
+    );
     return [...active].sort((a, b) => {
       if (sortMode === 'NAME') {
         return a.name.localeCompare(b.name, 'ja');
+      }
+      const aHasPhoto = a.avatarUrl ? 1 : 0;
+      const bHasPhoto = b.avatarUrl ? 1 : 0;
+      if (bHasPhoto !== aHasPhoto && !mcSearchQuery.trim()) {
+        return bHasPhoto - aHasPhoto;
       }
       if (b.battleCount !== a.battleCount) {
         return b.battleCount - a.battleCount;
       }
       return b.totalBattleCount - a.totalBattleCount;
     });
-  }, [allMcsCatalog, sortMode]);
+  }, [allMcsCatalog, sortMode, mcSearchQuery, selectedMcA]);
 
   // 5. Filtered MCs by search query
   const filteredMcs = useMemo(() => {
@@ -309,7 +321,7 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
   return (
     <section
       aria-label="VS BUILDER"
-      className="border-b border-[#1F1F1F] bg-[#0A0A0A]/95 backdrop-blur-md sticky top-13 sm:top-14 z-30"
+      className="border-b border-[#1F1F1F] bg-[#0A0A0A]/95 backdrop-blur-md relative sm:sticky sm:top-14 z-30"
     >
       <div className="max-w-3xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5 space-y-2">
         {/* STEP 1: Tournament Filter Bar (Top Hierarchy: Filters MCs & Battles) */}

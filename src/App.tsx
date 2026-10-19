@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   Plus,
-  BarChart3,
   Bookmark,
   Search,
   X,
   RotateCcw,
   Disc3,
-  Database,
   Flame,
   HelpCircle,
   SkipBack,
@@ -15,36 +13,29 @@ import {
   Square,
 } from 'lucide-react';
 import {
-  ActivityItem,
   Album,
   AlbumJacketStyle,
   AlbumJacketTheme,
-  AnalyticsData,
   Battle,
   TournamentTag,
-  Verse,
   ViewMode,
 } from './types';
-import { INITIAL_ANALYTICS, INITIAL_BATTLES } from './data/initialData';
+import { INITIAL_BATTLES } from './data/initialData';
 import {
   isSameMc,
   formatTimestamp,
   matchesMcQuery,
   getYouTubeThumbnail,
-  normalizeMcName,
 } from './utils/youtube';
 import {
   DB_STORAGE_KEYS,
   DEFAULT_ALBUMS,
   fetchCloudState,
   getSupabaseConfig,
-  insertActivityToCloud,
   mergeAlbumsWithCloud,
   removeAlbumFromCloud,
-  syncAnalyticsToCloud,
   upsertAlbumToCloud,
   upsertBattleToCloud,
-  upsertStampToCloud,
 } from './lib/database';
 import { VsBuilder } from './components/VsBuilder';
 import { BattleCard } from './components/BattleCard';
@@ -52,21 +43,7 @@ import { AlbumView, ActiveAlbumPlaybackInfo } from './components/AlbumView';
 import { AlbumPickerModal } from './components/AlbumPickerModal';
 import { ShareModal } from './components/ShareModal';
 import { SubmitModal } from './components/SubmitModal';
-import { InsightsModal } from './components/InsightsModal';
-import { DatabaseModal } from './components/DatabaseModal';
 import { OnboardingBanner } from './components/OnboardingBanner';
-
-function cleanLegacyFakeVerses(battles: Battle[]): Battle[] {
-  return battles.map((b) => ({
-    ...b,
-    verses: (b.verses || []).filter(
-      (v) =>
-        !v.text.includes('魂のバース') &&
-        !v.text.includes('アンサーで返す') &&
-        Boolean(v.isUserCreated)
-    ),
-  }));
-}
 
 export const App: React.FC = () => {
   // 1. Persistent Battles State
@@ -76,7 +53,7 @@ export const App: React.FC = () => {
       if (raw) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed) && parsed.length >= INITIAL_BATTLES.length) {
-          return cleanLegacyFakeVerses(parsed);
+          return parsed;
         }
       }
     } catch {
@@ -103,30 +80,7 @@ export const App: React.FC = () => {
     return DEFAULT_ALBUMS;
   });
 
-  // 3. Persistent Activity Feed (Information Freshness)
-  const [activities, setActivities] = useState<ActivityItem[]>(() => {
-    try {
-      const raw = localStorage.getItem(DB_STORAGE_KEYS.ACTIVITIES);
-      return raw ? JSON.parse(raw) : [];
-    } catch {
-      return [];
-    }
-  });
-
-  // 4. Persistent Analytics State (100% Real Telemetry)
-  const [analytics, setAnalytics] = useState<AnalyticsData>(() => {
-    try {
-      const raw = localStorage.getItem(DB_STORAGE_KEYS.ANALYTICS);
-      if (raw) {
-        return JSON.parse(raw);
-      }
-    } catch {
-      // Fallback
-    }
-    return INITIAL_ANALYTICS;
-  });
-
-  // 5. Saved Battles & User Liked Stamps
+  // 3. Saved Battles
   const [savedIds, setSavedIds] = useState<string[]>(() => {
     try {
       const raw = localStorage.getItem(DB_STORAGE_KEYS.SAVED);
@@ -136,16 +90,7 @@ export const App: React.FC = () => {
     }
   });
 
-  const [userLikedVerses] = useState<Record<string, boolean>>(() => {
-    try {
-      const raw = localStorage.getItem(DB_STORAGE_KEYS.LIKED_VERSES);
-      return raw ? JSON.parse(raw) : {};
-    } catch {
-      return {};
-    }
-  });
-
-  // 6. Filter & View States
+  // 4. Filter & View States
   const [selectedMcA, setSelectedMcA] = useState<string | null>(null);
   const [selectedMcB, setSelectedMcB] = useState<string | null>(null);
   const [selectedTournament, setSelectedTournament] =
@@ -156,11 +101,10 @@ export const App: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [displayLimit, setDisplayLimit] = useState<number>(20);
 
-  // 7. Singleton Player State & Background Vinyl Turntable State
+  // 5. Singleton Player State & Background Vinyl Turntable State
   const [activeBattleId, setActiveBattleId] = useState<string | null>(null);
   const [seekSeconds, setSeekSeconds] = useState<number>(0);
   const [seekNonce, setSeekNonce] = useState<number>(0);
-  const [, setActiveVerseId] = useState<string | null>(null);
   const [activeAlbumPlayback, setActiveAlbumPlayback] =
     useState<ActiveAlbumPlaybackInfo | null>(null);
   const [deepLinkBanner, setDeepLinkBanner] = useState<{
@@ -168,16 +112,10 @@ export const App: React.FC = () => {
     seconds: number;
   } | null>(null);
 
-  // 8. Modals & Cloud Status State
+  // 6. Modals State
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
-  const [isInsightsOpen, setIsInsightsOpen] = useState(false);
-  const [isDbModalOpen, setIsDbModalOpen] = useState(false);
-  const [isCloudConnected, setIsCloudConnected] = useState<boolean>(() =>
-    Boolean(getSupabaseConfig())
-  );
   const [shareTarget, setShareTarget] = useState<{
     battle: Battle;
-    verse?: Verse;
   } | null>(null);
   const [albumPickerTarget, setAlbumPickerTarget] = useState<{
     battle: Battle;
@@ -215,69 +153,12 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     try {
-      localStorage.setItem(
-        DB_STORAGE_KEYS.ACTIVITIES,
-        JSON.stringify(activities)
-      );
-    } catch {}
-  }, [activities]);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem(
-        DB_STORAGE_KEYS.ANALYTICS,
-        JSON.stringify(analytics)
-      );
-    } catch {}
-  }, [analytics]);
-
-  useEffect(() => {
-    try {
       localStorage.setItem(DB_STORAGE_KEYS.SAVED, JSON.stringify(savedIds));
     } catch {}
   }, [savedIds]);
 
+  // Mount: Deep Link + Automatic Background Cloud Sync
   useEffect(() => {
-    try {
-      localStorage.setItem(
-        DB_STORAGE_KEYS.LIKED_VERSES,
-        JSON.stringify(userLikedVerses)
-      );
-    } catch {}
-  }, [userLikedVerses]);
-
-  // Helper to log participatory activity
-  const pushActivity = useCallback((item: Omit<ActivityItem, 'id' | 'createdAt'>) => {
-    const newAct: ActivityItem = {
-      ...item,
-      id: `act-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
-      createdAt: new Date().toISOString(),
-    };
-    setActivities((prev) => [newAct, ...prev.slice(0, 39)]);
-    insertActivityToCloud(newAct);
-  }, []);
-
-  // Mount: Real PV + Unique Visitor tracking + Deep Link + Cloud Sync
-  useEffect(() => {
-    const isNewVisitor = !localStorage.getItem(
-      DB_STORAGE_KEYS.VISITOR_INITIALIZED
-    );
-    if (isNewVisitor) {
-      localStorage.setItem(DB_STORAGE_KEYS.VISITOR_INITIALIZED, '1');
-    }
-
-    setAnalytics((prev) => {
-      const updated: AnalyticsData = {
-        ...prev,
-        totalPv: prev.totalPv + 1,
-        uniqueVisitors: isNewVisitor
-          ? prev.uniqueVisitors + 1
-          : Math.max(1, prev.uniqueVisitors),
-      };
-      syncAnalyticsToCloud(updated);
-      return updated;
-    });
-
     const params = new URLSearchParams(window.location.search);
     const battleParam = params.get('battle');
     const timeParam = params.get('t');
@@ -289,45 +170,16 @@ export const App: React.FC = () => {
         setActiveBattleId(found.id);
         setSeekSeconds(targetSec);
         setSeekNonce(Date.now());
-        const matchedVerse = found.verses.find((v) => v.seconds === targetSec);
-        setActiveVerseId(matchedVerse?.id || null);
         setDeepLinkBanner({ battleId: found.id, seconds: targetSec });
       }
     }
 
-    // Fetch latest state from Supabase Cloud if configured
     if (getSupabaseConfig()) {
       fetchCloudState(battles).then((cloud) => {
         if (!cloud) return;
-        setIsCloudConnected(true);
         setBattles(cloud.mergedBattles);
         if (cloud.cloudAlbums && cloud.cloudAlbums.length > 0) {
           setAlbums((local) => mergeAlbumsWithCloud(local, cloud.cloudAlbums));
-        }
-        if (cloud.cloudActivities && cloud.cloudActivities.length > 0) {
-          setActivities(cloud.cloudActivities);
-        }
-        if (cloud.cloudAnalytics) {
-          setAnalytics((local) => ({
-            ...local,
-            totalPv: Math.max(local.totalPv, cloud.cloudAnalytics!.totalPv),
-            uniqueVisitors: Math.max(
-              local.uniqueVisitors,
-              cloud.cloudAnalytics!.uniqueVisitors
-            ),
-            totalPlays: Math.max(
-              local.totalPlays,
-              cloud.cloudAnalytics!.totalPlays
-            ),
-            totalVersesLogged: Math.max(
-              local.totalVersesLogged,
-              cloud.cloudAnalytics!.totalVersesLogged
-            ),
-            viralShares: Math.max(
-              local.viralShares,
-              cloud.cloudAnalytics!.viralShares
-            ),
-          }));
         }
       });
     }
@@ -353,30 +205,15 @@ export const App: React.FC = () => {
       if (viewMode === 'ALBUMS') {
         setViewMode('LATEST');
       }
-      if (mc) {
-        if (selectedTournament !== 'ALL') {
-          const inCurrentTournament = battles.some(
-            (b) =>
-              b.tournament === selectedTournament &&
-              (isSameMc(b.mcA, mc) || isSameMc(b.mcB, mc))
-          );
-          if (!inCurrentTournament) {
-            setSelectedTournament('ALL');
-          }
+      if (mc && selectedTournament !== 'ALL') {
+        const inCurrentTournament = battles.some(
+          (b) =>
+            b.tournament === selectedTournament &&
+            (isSameMc(b.mcA, mc) || isSameMc(b.mcB, mc))
+        );
+        if (!inCurrentTournament) {
+          setSelectedTournament('ALL');
         }
-
-        const norm = normalizeMcName(mc);
-        setAnalytics((prev) => {
-          const next = {
-            ...prev,
-            mcSearchCounts: {
-              ...prev.mcSearchCounts,
-              [norm]: (prev.mcSearchCounts[norm] || 0) + 1,
-            },
-          };
-          syncAnalyticsToCloud(next);
-          return next;
-        });
       }
     },
     [battles, selectedTournament, viewMode]
@@ -385,40 +222,12 @@ export const App: React.FC = () => {
   const handleSelectMcB = useCallback((mc: string | null) => {
     setSelectedMcB(mc);
     setDisplayLimit(20);
-    if (mc) {
-      const norm = normalizeMcName(mc);
-      setAnalytics((prev) => {
-        const next = {
-          ...prev,
-          mcSearchCounts: {
-            ...prev.mcSearchCounts,
-            [norm]: (prev.mcSearchCounts[norm] || 0) + 1,
-          },
-        };
-        syncAnalyticsToCloud(next);
-        return next;
-      });
-    }
   }, []);
 
   const handleSelectMatchup = useCallback((mcA: string, mcB: string) => {
     setSelectedMcA(mcA);
     setSelectedMcB(mcB);
     setDisplayLimit(20);
-    const normA = normalizeMcName(mcA);
-    const normB = normalizeMcName(mcB);
-    setAnalytics((prev) => {
-      const next = {
-        ...prev,
-        mcSearchCounts: {
-          ...prev.mcSearchCounts,
-          [normA]: (prev.mcSearchCounts[normA] || 0) + 1,
-          [normB]: (prev.mcSearchCounts[normB] || 0) + 1,
-        },
-      };
-      syncAnalyticsToCloud(next);
-      return next;
-    });
   }, []);
 
   const handleSelectTournament = useCallback(
@@ -465,13 +274,12 @@ export const App: React.FC = () => {
   }, [viewMode]);
 
   const handleStartPlay = useCallback(
-    (battleId: string, seconds: number = 0, verseId?: string) => {
+    (battleId: string, seconds: number = 0) => {
+      // Stop any background vinyl album playback so two audio streams never play simultaneously
+      activeAlbumPlayback?.onStop();
       setActiveBattleId(battleId);
       setSeekSeconds(seconds);
       setSeekNonce(Date.now());
-      setActiveVerseId(verseId || null);
-
-      const targetBattle = battles.find((b) => b.id === battleId);
 
       setBattles((prev) =>
         prev.map((b) => {
@@ -479,58 +287,21 @@ export const App: React.FC = () => {
           const updated: Battle = {
             ...b,
             outboundPlays: b.outboundPlays + 1,
-            verses: verseId
-              ? b.verses.map((v) =>
-                  v.id === verseId ? { ...v, replays: v.replays + 1 } : v
-                )
-              : b.verses,
           };
           upsertBattleToCloud(updated);
           return updated;
         })
       );
-
-      if (targetBattle) {
-        const tKey = targetBattle.tournament;
-        setAnalytics((prev) => {
-          const currentT = prev.tournamentTraffic[tKey] || {
-            outboundViews: 0,
-            ctr: 0,
-            verseTriggers: 0,
-          };
-          const nextViews = currentT.outboundViews + 1;
-          const nextTriggers = verseId
-            ? currentT.verseTriggers + 1
-            : currentT.verseTriggers;
-          const ctr = nextViews > 0 ? (nextTriggers / nextViews) * 100 : 0;
-          const nextAnalytics: AnalyticsData = {
-            ...prev,
-            totalPlays: prev.totalPlays + 1,
-            tournamentTraffic: {
-              ...prev.tournamentTraffic,
-              [tKey]: {
-                outboundViews: nextViews,
-                verseTriggers: nextTriggers,
-                ctr: Math.round(ctr * 10) / 10,
-              },
-            },
-          };
-          syncAnalyticsToCloud(nextAnalytics);
-          return nextAnalytics;
-        });
-      }
     },
-    [battles]
+    [activeAlbumPlayback]
   );
 
   const handleStopPlay = useCallback((battleId: string) => {
     setActiveBattleId((prev) => (prev === battleId ? null : prev));
-    setActiveVerseId(null);
   }, []);
 
   const handleVideoEnded = useCallback((battleId: string) => {
     setActiveBattleId((prev) => (prev === battleId ? null : prev));
-    setActiveVerseId(null);
   }, []);
 
   const handleToggleSave = useCallback((battleId: string) => {
@@ -567,14 +338,9 @@ export const App: React.FC = () => {
       };
       setAlbums((prev) => [newAlbum, ...prev]);
       upsertAlbumToCloud(newAlbum);
-      pushActivity({
-        type: 'ALBUM_CREATE',
-        albumId: newId,
-        summary: `マイアルバム「${title}」を作成`,
-      });
       return newId;
     },
-    [pushActivity]
+    []
   );
 
   const handleCreateAlbumWithTrack = useCallback(
@@ -611,14 +377,8 @@ export const App: React.FC = () => {
       };
       setAlbums((prev) => [newAlbum, ...prev]);
       upsertAlbumToCloud(newAlbum);
-      pushActivity({
-        type: 'ALBUM_CREATE',
-        albumId: newId,
-        battleId,
-        summary: `マイアルバム「${title}」を作成＆1曲目を収録`,
-      });
     },
-    [pushActivity]
+    []
   );
 
   const handleUpdateAlbumMeta = useCallback(
@@ -683,18 +443,11 @@ export const App: React.FC = () => {
             ],
           };
           upsertAlbumToCloud(updated);
-          pushActivity({
-            type: 'ALBUM_ADD',
-            albumId: a.id,
-            battleId,
-            seconds: startSeconds,
-            summary: `アルバム「${a.title}」にバトルを収録`,
-          });
           return updated;
         })
       );
     },
-    [pushActivity]
+    []
   );
 
   const handleRemoveTrackFromAlbumByBattle = useCallback(
@@ -807,44 +560,30 @@ export const App: React.FC = () => {
     (newBattle: Battle, targetAlbumIds: string[]) => {
       setBattles((prev) => [newBattle, ...prev]);
       upsertBattleToCloud(newBattle);
-      for (const v of newBattle.verses) {
-        upsertStampToCloud(newBattle, v);
-      }
 
       if (targetAlbumIds.length > 0) {
         for (const albId of targetAlbumIds) {
           handleAddTrackToAlbum(
             albId,
             newBattle.id,
-            newBattle.verses[0]?.seconds || 0,
+            0,
             `${newBattle.mcA} vs ${newBattle.mcB} (${newBattle.tournament})`
           );
         }
       }
 
-      pushActivity({
-        type: 'BATTLE_ADD',
-        battleId: newBattle.id,
-        summary: `新規バトル「${newBattle.mcA} vs ${newBattle.mcB} (${newBattle.tournament})」を登録`,
-      });
-
       setSelectedMcA(null);
       setSelectedMcB(null);
       setSelectedTournament('ALL');
-      setViewMode('FRESH');
+      setSearchQuery('');
+      setShowSavedOnly(false);
+      setViewMode('LATEST');
+      activeAlbumPlayback?.onStop();
       setActiveBattleId(newBattle.id);
-      setSeekSeconds(newBattle.verses[0]?.seconds || 0);
+      setSeekSeconds(0);
       setSeekNonce(Date.now());
-      setAnalytics((prev) => {
-        const next = {
-          ...prev,
-          totalVersesLogged: prev.totalVersesLogged + newBattle.verses.length,
-        };
-        syncAnalyticsToCloud(next);
-        return next;
-      });
     },
-    [handleAddTrackToAlbum, pushActivity]
+    [handleAddTrackToAlbum, activeAlbumPlayback]
   );
 
   const handleRecordShare = useCallback((battleId: string) => {
@@ -856,18 +595,10 @@ export const App: React.FC = () => {
         return updated;
       })
     );
-    setAnalytics((prev) => {
-      const next = {
-        ...prev,
-        viralShares: prev.viralShares + 1,
-      };
-      syncAnalyticsToCloud(next);
-      return next;
-    });
   }, []);
 
-  const handleJumpToBattleAndVerse = useCallback(
-    (battleId: string, seconds: number = 0, verseId: string = '') => {
+  const handleJumpToBattle = useCallback(
+    (battleId: string, seconds: number = 0) => {
       setSelectedMcA(null);
       setSelectedMcB(null);
       setSelectedTournament('ALL');
@@ -875,7 +606,7 @@ export const App: React.FC = () => {
       setShowSavedOnly(false);
       setViewMode('LATEST');
       setDeepLinkBanner({ battleId, seconds });
-      handleStartPlay(battleId, seconds, verseId || undefined);
+      handleStartPlay(battleId, seconds);
       setTimeout(() => {
         const el = document.getElementById(`battle-${battleId}`);
         if (el) {
@@ -919,11 +650,7 @@ export const App: React.FC = () => {
           b.tournament.toLowerCase().includes(q) ||
           b.stageOrEvent.toLowerCase().includes(q) ||
           b.title.toLowerCase().includes(q);
-        const inVerses = b.verses.some(
-          (v) =>
-            v.text.toLowerCase().includes(q) || matchesMcQuery(v.mc, q)
-        );
-        if (!inMc && !inTournament && !inVerses) return false;
+        if (!inMc && !inTournament) return false;
       }
 
       return true;
@@ -935,23 +662,19 @@ export const App: React.FC = () => {
         if (b.id === deepLinkBanner.battleId) return 1;
       }
 
-      if (viewMode === 'FRESH') {
-        const aHasActivity = a.verses.length > 0 || a.isUserSubmitted ? 1 : 0;
-        const bHasActivity = b.verses.length > 0 || b.isUserSubmitted ? 1 : 0;
-        if (bHasActivity !== aHasActivity) return bHasActivity - aHasActivity;
-
-        const timeA = new Date(a.lastActiveAt || a.createdAt).getTime();
-        const timeB = new Date(b.lastActiveAt || b.createdAt).getTime();
-        return timeB - timeA;
-      }
-
       if (viewMode === 'HALL_OF_FAME') {
+        const albCountA = albumCountByBattleId.get(a.id) || 0;
+        const albCountB = albumCountByBattleId.get(b.id) || 0;
+        const evalA = a.evaluation
+          ? a.evaluation.word + a.evaluation.flow + a.evaluation.vibe
+          : 0;
+        const evalB = b.evaluation
+          ? b.evaluation.word + b.evaluation.flow + b.evaluation.vibe
+          : 0;
         const scoreA =
-          a.outboundPlays * 2 +
-          a.verses.reduce((s, v) => s + v.likes * 3 + v.replays, 0);
+          a.outboundPlays * 3 + a.shares * 5 + albCountA * 10 + evalA;
         const scoreB =
-          b.outboundPlays * 2 +
-          b.verses.reduce((s, v) => s + v.likes * 3 + v.replays, 0);
+          b.outboundPlays * 3 + b.shares * 5 + albCountB * 10 + evalB;
         return scoreB - scoreA;
       }
 
@@ -969,6 +692,7 @@ export const App: React.FC = () => {
     searchQuery,
     viewMode,
     deepLinkBanner,
+    albumCountByBattleId,
   ]);
 
   return (
@@ -979,6 +703,7 @@ export const App: React.FC = () => {
           {/* Left: 1verce Typography Logo */}
           <div className="flex items-center gap-2">
             <button
+              type="button"
               onClick={handleResetFilters}
               className="flex items-baseline gap-1.5 text-left cursor-pointer group"
             >
@@ -995,12 +720,13 @@ export const App: React.FC = () => {
           <div className="flex items-center gap-1.5 sm:gap-2">
             {/* Search Trigger */}
             <button
+              type="button"
               onClick={() => {
                 if (viewMode === 'ALBUMS') setViewMode('LATEST');
                 setIsSearchOpen((v) => !v);
               }}
               aria-label="キーワード検索を開く"
-              title="SEARCH MCS / TOURNAMENTS"
+              title="MC名・大会名で検索"
               className={`p-2 sm:p-1.5 rounded border transition-colors cursor-pointer ${
                 isSearchOpen || searchQuery
                   ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
@@ -1012,6 +738,7 @@ export const App: React.FC = () => {
 
             {/* Desktop Only Primary Actions (On mobile, accessible via Bottom Nav) */}
             <button
+              type="button"
               onClick={() => setIsSubmitOpen(true)}
               aria-label="お気に入りのYouTubeバトルを登録"
               className="hidden sm:flex px-3 py-1.5 rounded bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp text-xs font-black tracking-tight items-center gap-1 transition-colors cursor-pointer"
@@ -1021,6 +748,7 @@ export const App: React.FC = () => {
             </button>
 
             <button
+              type="button"
               onClick={() =>
                 setViewMode((prev) => (prev === 'ALBUMS' ? 'LATEST' : 'ALBUMS'))
               }
@@ -1042,37 +770,12 @@ export const App: React.FC = () => {
               </span>
             </button>
 
-            {/* Cloud DB Connection Status Indicator */}
-            <button
-              onClick={() => setIsDbModalOpen(true)}
-              aria-label="データベース・クラウド設定"
-              title="DATABASE & SUPABASE CLOUD SYNC"
-              className="px-2 py-1.5 rounded bg-[#121212] hover:bg-[#1A1A1C] text-[#FFFFFF] border border-[#262628] font-mono-tech text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
-            >
-              <span
-                className={`w-2 h-2 rounded-full ${
-                  isCloudConnected ? 'bg-emerald-400' : 'bg-amber-400'
-                }`}
-              />
-              <Database className="w-3.5 h-3.5 text-[#8E8E93]" />
-              <span className="hidden md:inline">DB</span>
-            </button>
-
-            {/* Desktop Insights */}
-            <button
-              onClick={() => setIsInsightsOpen(true)}
-              aria-label="アナリティクスインサイトを開く"
-              className="hidden sm:flex px-2 py-1.5 rounded bg-[#121212] hover:bg-[#1A1A1C] text-[#FFFFFF] border border-[#262628] font-mono-tech text-xs font-bold tracking-tight items-center gap-1 transition-colors cursor-pointer"
-            >
-              <BarChart3 className="w-3.5 h-3.5" />
-              <span className="hidden md:inline">INSIGHTS</span>
-            </button>
-
             {/* Help / Guide */}
             <button
+              type="button"
               onClick={() => handleToggleOnboarding(!isOnboardingOpen)}
               aria-label="使い方ガイドを表示"
-              title="1VERCEの使い方ガイド"
+              title="1verceの使い方ガイド"
               className={`p-2 sm:px-2 sm:py-1.5 rounded border font-jp text-xs font-bold tracking-tight flex items-center gap-1 transition-colors cursor-pointer ${
                 isOnboardingOpen
                   ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
@@ -1085,6 +788,7 @@ export const App: React.FC = () => {
 
             {/* Saved Bookmarks */}
             <button
+              type="button"
               onClick={() => {
                 if (viewMode === 'ALBUMS') setViewMode('LATEST');
                 setShowSavedOnly((prev) => !prev);
@@ -1095,7 +799,7 @@ export const App: React.FC = () => {
                   : '保存したバトルのみ表示'
               }
               className={`p-2 sm:px-2 sm:py-1.5 rounded border font-mono-tech text-xs font-bold tracking-tight flex items-center gap-1 transition-colors cursor-pointer ${
-                showSavedOnly
+                showSavedOnly && viewMode !== 'ALBUMS'
                   ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
                   : 'bg-[#121212] text-[#8E8E93] border-[#262628] hover:text-[#FFFFFF]'
               }`}
@@ -1124,6 +828,7 @@ export const App: React.FC = () => {
               />
               {searchQuery && (
                 <button
+                  type="button"
                   onClick={() => setSearchQuery('')}
                   aria-label="検索キーワードを消去"
                   className="p-1 text-[#8E8E93] hover:text-[#FFFFFF] cursor-pointer"
@@ -1155,7 +860,7 @@ export const App: React.FC = () => {
       <main
         className={`flex-1 max-w-3xl w-full mx-auto px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4 ${
           activeAlbumPlayback && viewMode !== 'ALBUMS'
-            ? 'pb-36 sm:pb-24'
+            ? 'pb-40 sm:pb-24'
             : 'pb-24 sm:pb-8'
         }`}
       >
@@ -1163,7 +868,7 @@ export const App: React.FC = () => {
         <OnboardingBanner
           isOpen={isOnboardingOpen}
           onClose={() => handleToggleOnboarding(false)}
-          hasStampedOrLiked={Boolean(
+          hasExploredBattle={Boolean(
             activeBattleId || selectedMcA || selectedTournament !== 'ALL'
           )}
           hasUsedAlbum={albums.some(
@@ -1188,18 +893,19 @@ export const App: React.FC = () => {
 
         {/* Deep Link Active Notification Banner */}
         {deepLinkBanner && viewMode !== 'ALBUMS' && (
-          <div className="bg-[#1A1A1A] border border-[#E50914] rounded px-3 py-2 flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2 text-xs font-mono-tech">
+          <div className="bg-[#1A1A1A] border border-[#E50914] rounded-lg px-3 py-2 flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 text-xs font-jp">
               <span className="w-2 h-2 rounded-full bg-[#E50914] animate-live-dot" />
               <span className="font-bold text-[#FFFFFF]">
-                SELECTED MATCH SEEK: [{formatTimestamp(deepLinkBanner.seconds)}]
+                指定バトルへ直行再生中 ({formatTimestamp(deepLinkBanner.seconds)}〜)
               </span>
             </div>
             <button
+              type="button"
               onClick={() => setDeepLinkBanner(null)}
-              className="text-[11px] font-mono-tech text-[#8E8E93] hover:text-[#FFFFFF] cursor-pointer"
+              className="text-[11px] font-jp font-bold text-[#8E8E93] hover:text-[#FFFFFF] cursor-pointer"
             >
-              DISMISS
+              閉じる
             </button>
           </div>
         )}
@@ -1218,6 +924,7 @@ export const App: React.FC = () => {
                 return (
                   <button
                     key={tab.id}
+                    type="button"
                     onClick={() => {
                       setShowSavedOnly(false);
                       setViewMode(tab.id as ViewMode);
@@ -1234,6 +941,7 @@ export const App: React.FC = () => {
               })}
 
               <button
+                type="button"
                 onClick={() => setShowSavedOnly((prev) => !prev)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap flex items-center gap-1 ${
                   showSavedOnly
@@ -1256,13 +964,13 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* 4. Album Vinyl Studio (Kept mounted while activeAlbumPlayback is active so music continues seamlessly across tabs!) */}
+        {/* 4. Album Vinyl Studio (Kept mounted with non-zero dimensions while activeAlbumPlayback is active so iOS Safari never throttles background audio!) */}
         {(viewMode === 'ALBUMS' || activeAlbumPlayback !== null) && (
           <div
             className={
               viewMode === 'ALBUMS'
                 ? 'block'
-                : 'sr-only h-0 overflow-hidden pointer-events-none'
+                : 'fixed -left-[9999px] top-0 w-80 h-60 opacity-0 pointer-events-none overflow-hidden'
             }
           >
             <AlbumView
@@ -1288,17 +996,21 @@ export const App: React.FC = () => {
           (filteredBattles.length === 0 ? (
             <div className="bg-[#121212] border border-[#222224] rounded-xl p-10 text-center space-y-3">
               <div className="font-jp text-sm font-bold text-[#8E8E93]">
-                条件に一致するバトルが見つかりませんでした
+                {showSavedOnly
+                  ? '保存済みのバトルがまだありません'
+                  : '条件に一致するバトルが見つかりませんでした'}
               </div>
               <div className="flex items-center justify-center gap-2">
                 <button
+                  type="button"
                   onClick={handleResetFilters}
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#FFFFFF] text-[#0A0A0A] font-jp text-xs font-black cursor-pointer"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
-                  <span>フィルターをリセット</span>
+                  <span>すべてのバトルを表示</span>
                 </button>
                 <button
+                  type="button"
                   onClick={() => setIsSubmitOpen(true)}
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#1C1C20] text-[#FFFFFF] border border-[#2C2C2E] font-jp text-xs font-bold cursor-pointer"
                 >
@@ -1355,7 +1067,7 @@ export const App: React.FC = () => {
 
       {/* Floating Mini Vinyl Turntable Bar (Visible on Battle View while an Album is spinning!) */}
       {viewMode !== 'ALBUMS' && activeAlbumPlayback && (
-        <div className="fixed bottom-15 sm:bottom-4 left-2 right-2 sm:left-auto sm:right-6 sm:w-96 z-40 bg-[#121216]/95 backdrop-blur-xl border border-[#2C2C34] rounded-2xl p-2.5 shadow-2xl flex items-center gap-3">
+        <div className="fixed bottom-[calc(3.75rem+env(safe-area-inset-bottom))] sm:bottom-4 left-2 right-2 sm:left-auto sm:right-6 sm:w-96 z-40 bg-[#121216]/95 backdrop-blur-xl border border-[#2C2C34] rounded-2xl p-2.5 shadow-2xl flex items-center gap-3">
           <button
             type="button"
             onClick={() => setViewMode('ALBUMS')}
@@ -1418,24 +1130,48 @@ export const App: React.FC = () => {
         </div>
       )}
 
-      {/* Minimal Footer */}
+      {/* Clean Public Footer */}
       <footer className="border-t border-[#1A1A1C] py-6 mt-10 mb-16 sm:mb-0 bg-[#0A0A0A]">
-        <div className="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] font-mono-tech text-[#48484A]">
+        <div className="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-jp text-[#6C6C70]">
           <div className="flex items-center gap-2">
-            <span className="text-[#FFFFFF] font-bold">1verce</span> //
-            PARTICIPATORY MC BATTLE ARCHIVE & VINYL TURNTABLE
+            <span className="text-[#FFFFFF] font-display font-bold">1verce</span>
+            <span>// MCバトル検索・名盤レコード連続再生アーカイブ</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4 text-xs">
             <button
-              onClick={() => setIsDbModalOpen(true)}
-              className="hover:text-[#FFFFFF] cursor-pointer flex items-center gap-1"
+              type="button"
+              onClick={() => {
+                setViewMode('LATEST');
+                setShowSavedOnly(false);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="hover:text-[#FFFFFF] cursor-pointer"
             >
-              <Flame className="w-3 h-3 text-[#E50914]" />
-              <span>
-                {isCloudConnected
-                  ? 'CLOUD DB CONNECTED'
-                  : 'LOCAL DB + SUPABASE READY'}
-              </span>
+              バトル一覧
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setViewMode('ALBUMS');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="hover:text-[#FFFFFF] cursor-pointer"
+            >
+              レコード棚
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsSubmitOpen(true)}
+              className="hover:text-[#FFFFFF] cursor-pointer"
+            >
+              YouTube登録
+            </button>
+            <button
+              type="button"
+              onClick={() => handleToggleOnboarding(true)}
+              className="hover:text-[#FFFFFF] cursor-pointer"
+            >
+              使い方ガイド
             </button>
           </div>
         </div>
@@ -1449,12 +1185,14 @@ export const App: React.FC = () => {
         <div className="grid grid-cols-4 h-14 items-center">
           {/* 1. All Battles */}
           <button
+            type="button"
             onClick={() => {
               setViewMode('LATEST');
+              setShowSavedOnly(false);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors ${
-              viewMode !== 'ALBUMS'
+              viewMode !== 'ALBUMS' && !showSavedOnly
                 ? 'text-[#FFFFFF]'
                 : 'text-[#6C6C70] hover:text-[#AEAEB2]'
             }`}
@@ -1465,6 +1203,7 @@ export const App: React.FC = () => {
 
           {/* 2. My Albums (Vinyl Shelf) */}
           <button
+            type="button"
             onClick={() => {
               setViewMode('ALBUMS');
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1480,9 +1219,9 @@ export const App: React.FC = () => {
                 activeAlbumPlayback ? 'animate-spin-slow text-[#E50914]' : ''
               }`}
             />
-            <span className="text-[10px] font-jp font-bold">アルバム</span>
+            <span className="text-[10px] font-jp font-bold">レコード棚</span>
             {albums.length > 0 && (
-              <span className="absolute top-1.5 right-6 w-4 h-4 bg-[#E50914] text-white rounded-full text-[9px] font-mono-tech font-bold flex items-center justify-center">
+              <span className="absolute top-1.5 right-5 w-4 h-4 bg-[#E50914] text-white rounded-full text-[9px] font-mono-tech font-bold flex items-center justify-center">
                 {albums.length}
               </span>
             )}
@@ -1490,6 +1229,7 @@ export const App: React.FC = () => {
 
           {/* 3. Register Battle (Central Highlight Button) */}
           <button
+            type="button"
             onClick={() => setIsSubmitOpen(true)}
             className="flex flex-col items-center justify-center -mt-2 cursor-pointer group"
           >
@@ -1501,20 +1241,31 @@ export const App: React.FC = () => {
             </span>
           </button>
 
-          {/* 4. Cloud DB & Sync */}
+          {/* 4. Saved Battles (Bookmarks) */}
           <button
-            onClick={() => setIsDbModalOpen(true)}
-            className="flex flex-col items-center justify-center gap-1 h-full text-[#6C6C70] hover:text-[#FFFFFF] cursor-pointer transition-colors"
+            type="button"
+            onClick={() => {
+              if (viewMode === 'ALBUMS') {
+                setViewMode('LATEST');
+                setShowSavedOnly(true);
+              } else {
+                setShowSavedOnly((prev) => !prev);
+              }
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className={`flex flex-col items-center justify-center gap-1 h-full cursor-pointer transition-colors relative ${
+              viewMode !== 'ALBUMS' && showSavedOnly
+                ? 'text-[#FFFFFF]'
+                : 'text-[#6C6C70] hover:text-[#AEAEB2]'
+            }`}
           >
-            <div className="relative">
-              <Database className="w-4 h-4" />
-              <span
-                className={`absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full ${
-                  isCloudConnected ? 'bg-emerald-400' : 'bg-amber-400'
-                }`}
-              />
-            </div>
-            <span className="text-[10px] font-mono-tech font-bold">クラウド</span>
+            <Bookmark className="w-4 h-4" />
+            <span className="text-[10px] font-jp font-bold">保存済</span>
+            {savedIds.length > 0 && (
+              <span className="absolute top-1.5 right-5 w-4 h-4 bg-[#2C2C34] text-white rounded-full text-[9px] font-mono-tech font-bold flex items-center justify-center">
+                {savedIds.length}
+              </span>
+            )}
           </button>
         </div>
       </nav>
@@ -1526,9 +1277,7 @@ export const App: React.FC = () => {
           albums={albums}
           onClose={() => setIsSubmitOpen(false)}
           onAddBattle={handleAddBattle}
-          onJumpToExistingBattle={(battleId) =>
-            handleJumpToBattleAndVerse(battleId, 0)
-          }
+          onJumpToExistingBattle={(battleId) => handleJumpToBattle(battleId, 0)}
           onOpenAlbumPickerForExisting={(battle) =>
             setAlbumPickerTarget({ battle, startSeconds: 0 })
           }
@@ -1559,35 +1308,8 @@ export const App: React.FC = () => {
           onRecordShare={handleRecordShare}
         />
       )}
-
-      {isInsightsOpen && (
-        <InsightsModal
-          analytics={analytics}
-          battles={battles}
-          onClose={() => setIsInsightsOpen(false)}
-          onJumpToVerse={handleJumpToBattleAndVerse}
-        />
-      )}
-
-      {isDbModalOpen && (
-        <DatabaseModal
-          battles={battles}
-          albums={albums}
-          activities={activities}
-          analytics={analytics}
-          onClose={() => setIsDbModalOpen(false)}
-          onCloudStatusChange={setIsCloudConnected}
-          onRestoreBackup={(data) => {
-            if (data.battles) setBattles(data.battles);
-            if (data.albums) setAlbums(data.albums);
-            if (data.activities) setActivities(data.activities);
-            if (data.analytics) setAnalytics(data.analytics);
-          }}
-        />
-      )}
     </div>
   );
 };
 
 export default App;
-

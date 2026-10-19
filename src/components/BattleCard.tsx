@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Play,
   Share2,
@@ -56,6 +56,17 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
   const [videoDuration, setVideoDuration] = useState<number>(0);
   const [isPlayerPaused, setIsPlayerPaused] = useState<boolean>(false);
 
+  useEffect(() => {
+    setThumbQuality('maxres');
+    setThumbFailed(false);
+  }, [battle.youtubeId]);
+
+  useEffect(() => {
+    if (isPlaying) {
+      setCurrentSeconds(seekSeconds || 0);
+    }
+  }, [isPlaying, seekSeconds, seekNonce]);
+
   const handlePlayerTimeUpdate = (
     curSec: number,
     durSec: number,
@@ -68,10 +79,12 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
     setIsPlayerPaused(paused);
   };
 
+  const activeTimeForLink = isPlaying ? currentSeconds : seekSeconds || 0;
+
   return (
     <article
       id={`battle-${battle.id}`}
-      className={`bg-[#121212] border transition-colors rounded-md overflow-hidden ${
+      className={`bg-[#121212] border transition-colors rounded-xl overflow-hidden ${
         isPlaying
           ? 'border-[#FFFFFF]/60 ring-1 ring-[#FFFFFF]/20 shadow-2xl'
           : 'border-[#222224] hover:border-[#363638]'
@@ -112,7 +125,7 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
                     setThumbFailed(true);
                   }
                 }}
-                className="w-full h-full object-cover contrast-105 group-hover:scale-102 transition-transform duration-300"
+                className="w-full h-full object-cover contrast-105 group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
             ) : (
@@ -145,7 +158,7 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
                 </span>
                 {battle.isUserSubmitted && (
                   <span className="px-2 py-0.5 rounded bg-[#E50914]/90 text-[#FFFFFF] font-mono-tech text-[10px] font-bold tracking-wider uppercase">
-                    USER ADDED
+                    NEW ARCHIVE
                   </span>
                 )}
               </div>
@@ -210,12 +223,14 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
         </div>
       )}
 
-      {/* 4. Action & Curate Bar (+ ALBUM / SAVED / SHARE / OPEN ON YOUTUBE) */}
+      {/* Action & Curate Bar (+ ALBUM / SAVED / SHARE / OPEN ON YOUTUBE) */}
       <div className="px-3 sm:px-4 py-2.5 bg-[#0E0E10] border-t border-[#1F1F21] flex items-center justify-between gap-2 flex-wrap">
         <button
           type="button"
-          onClick={() => onOpenAlbumPicker(battle, 0)}
-          className={`px-3 py-1 rounded text-xs font-jp font-bold border flex items-center gap-1.5 transition-colors cursor-pointer ${
+          onClick={() =>
+            onOpenAlbumPicker(battle, isPlaying ? currentSeconds : 0)
+          }
+          className={`px-3 py-1 rounded-lg text-xs font-jp font-bold border flex items-center gap-1.5 transition-colors cursor-pointer ${
             albumCountForBattle > 0
               ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
               : 'bg-[#161618] text-[#FFFFFF] border-[#2C2C2E] hover:border-[#FFFFFF]'
@@ -224,8 +239,10 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
           <Disc3 className="w-3.5 h-3.5" />
           <span>
             {albumCountForBattle > 0
-              ? `マイアルバム収録済 (${albumCountForBattle})`
-              : '+ マイアルバムに追加'}
+              ? `レコード収録済 (${albumCountForBattle})`
+              : isPlaying && currentSeconds > 0
+              ? `+ レコードへ収録 [${formatTimestamp(currentSeconds)}〜]`
+              : '+ レコードへ収録'}
           </span>
         </button>
 
@@ -234,9 +251,9 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
             type="button"
             onClick={() => onToggleSave(battle.id)}
             aria-label={isSaved ? '保存を解除' : 'お気に入りに保存'}
-            className={`px-2.5 py-1 rounded text-xs font-mono-tech border flex items-center gap-1 transition-colors cursor-pointer ${
+            className={`px-2.5 py-1 rounded-lg text-xs font-jp font-bold border flex items-center gap-1 transition-colors cursor-pointer ${
               isSaved
-                ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF] font-bold'
+                ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF]'
                 : 'bg-[#161618] text-[#8E8E93] border-[#262628] hover:text-[#FFFFFF]'
             }`}
           >
@@ -245,28 +262,28 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
             ) : (
               <Bookmark className="w-3.5 h-3.5" />
             )}
-            <span className="hidden xs:inline">SAVED</span>
+            <span>{isSaved ? '保存済' : '保存'}</span>
           </button>
 
           <button
             type="button"
             onClick={() => onOpenShare(battle)}
             aria-label="バトルをシェア"
-            className="px-3 py-1 rounded text-xs font-mono-tech font-bold bg-[#1A1A1C] hover:bg-[#FFFFFF] text-[#FFFFFF] hover:text-[#0A0A0A] border border-[#2C2C2E] transition-colors flex items-center gap-1.5 cursor-pointer"
+            className="px-2.5 py-1 rounded-lg text-xs font-jp font-bold bg-[#1A1A1C] hover:bg-[#FFFFFF] text-[#FFFFFF] hover:text-[#0A0A0A] border border-[#2C2C2E] transition-colors flex items-center gap-1 cursor-pointer"
           >
             <Share2 className="w-3.5 h-3.5" />
-            <span>SHARE</span>
+            <span>共有</span>
           </button>
 
           <a
-            href={`https://www.youtube.com/watch?v=${battle.youtubeId}&t=${Math.floor(
-              seekSeconds || 0
-            )}s`}
+            href={`https://www.youtube.com/watch?v=${
+              battle.youtubeId
+            }&t=${Math.floor(activeTimeForLink)}s`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTubeで動画を開く"
-            title="OPEN ON YOUTUBE"
-            className="p-1.5 rounded bg-[#161618] border border-[#262628] text-[#8E8E93] hover:text-[#FFFFFF] transition-colors"
+            title="YouTubeで開く"
+            className="p-1.5 rounded-lg bg-[#161618] border border-[#262628] text-[#8E8E93] hover:text-[#FFFFFF] transition-colors"
           >
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>

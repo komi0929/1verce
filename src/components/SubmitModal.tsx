@@ -48,7 +48,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
   const [tournament, setTournament] =
     useState<Exclude<TournamentTag, 'ALL'>>('戦極');
   const [stageOrEvent, setStageOrEvent] = useState('');
-  const [year, setYear] = useState('2024');
+  const [year, setYear] = useState('2025');
 
   // Simultaneous Album selection
   const [selectedAlbumIds, setSelectedAlbumIds] = useState<string[]>([]);
@@ -132,7 +132,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
       mcB: cleanMcB,
       tournament,
       stageOrEvent: stageOrEvent.trim() || `${tournament} OFFICIAL`,
-      year: year.trim() || '2024',
+      year: year.trim() || '2025',
       verses: [],
       evaluation: { word: 0, flow: 0, vibe: 0 },
       outboundPlays: 1,
@@ -152,7 +152,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="w-full max-w-xl bg-[#121212] border border-[#2C2C2E] rounded-md overflow-hidden shadow-2xl my-auto max-h-[92vh] flex flex-col"
+        className="w-full max-w-xl bg-[#121212] border border-[#2C2C2E] rounded-xl overflow-hidden shadow-2xl my-auto max-h-[92vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
@@ -194,7 +194,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                 value={urlInput}
                 onChange={(e) => setUrlInput(e.target.value)}
                 placeholder="https://www.youtube.com/watch?v=... または youtu.be/..."
-                className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded pl-9 pr-3 py-2 text-xs font-mono-tech text-[#FFFFFF] outline-none"
+                className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded-lg pl-9 pr-3 py-2 text-xs font-mono-tech text-[#FFFFFF] outline-none"
                 required
                 autoFocus
               />
@@ -209,7 +209,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
 
           {/* Duplicate Check Alert */}
           {existingBattle && (
-            <div className="bg-[#1A1A1E] border border-amber-500/50 rounded p-3 space-y-2.5 animate-fadeIn">
+            <div className="bg-[#1A1A1E] border border-amber-500/50 rounded-lg p-3 space-y-2.5 animate-fadeIn">
               <div className="flex items-center gap-2 text-amber-300 text-xs font-jp font-bold">
                 <AlertCircle className="w-4 h-4 shrink-0" />
                 <span>このYouTubeバトルは既にアーカイブに登録されています！</span>
@@ -250,7 +250,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                   className="flex-1 py-1.5 rounded bg-[#242429] text-[#FFFFFF] border border-[#3A3A3E] font-jp text-xs font-bold flex items-center justify-center gap-1 cursor-pointer"
                 >
                   <Disc3 className="w-3.5 h-3.5" />
-                  <span>マイアルバムへ追加</span>
+                  <span>レコードへ収録</span>
                 </button>
               </div>
             </div>
@@ -258,7 +258,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
 
           {/* Thumbnail Preview & Auto-Parse Status */}
           {youtubeId && !existingBattle && (
-            <div className="bg-[#0A0A0A] border border-[#222224] rounded p-3 flex items-center gap-3">
+            <div className="bg-[#0A0A0A] border border-[#222224] rounded-lg p-3 flex items-center gap-3">
               <img
                 src={getYouTubeThumbnail(youtubeId, 'hq')}
                 alt="Preview"
@@ -273,9 +273,13 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                       : 'YouTube動画を認識しました'}
                   </span>
                 </div>
-                <p className="text-xs font-jp text-[#FFFFFF] line-clamp-2">
-                  {title || '動画タイトルを入力または確認してください'}
-                </p>
+                <input
+                  type="text"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  placeholder="動画タイトル（空欄の場合は対戦カードから自動生成）"
+                  className="w-full bg-[#141418] border border-[#2C2C32] focus:border-[#FFFFFF] rounded px-2 py-1 text-xs font-jp text-[#FFFFFF] outline-none"
+                />
               </div>
             </div>
           )}
@@ -294,7 +298,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                     value={mcA}
                     onChange={(e) => setMcA(e.target.value)}
                     placeholder="例: 呂布カルマ"
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded px-3 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
+                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded-lg px-3 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
                     required
                   />
                 </div>
@@ -308,7 +312,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                     value={mcB}
                     onChange={(e) => setMcB(e.target.value)}
                     placeholder="例: FORK"
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded px-3 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
+                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded-lg px-3 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
                     required
                   />
                 </div>
@@ -326,7 +330,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                         e.target.value as Exclude<TournamentTag, 'ALL'>
                       )
                     }
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
+                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded-lg px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
                   >
                     {TOURNAMENTS.filter(
                       (t): t is Exclude<TournamentTag, 'ALL'> => t !== 'ALL'
@@ -347,7 +351,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                     value={stageOrEvent}
                     onChange={(e) => setStageOrEvent(e.target.value)}
                     placeholder="例: 戦極21章 決勝"
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
+                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded-lg px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
                   />
                 </div>
 
@@ -359,8 +363,8 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                     type="text"
                     value={year}
                     onChange={(e) => setYear(e.target.value)}
-                    placeholder="2024"
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded px-2.5 py-1.5 text-xs font-mono-tech text-[#FFFFFF] outline-none"
+                    placeholder="2025"
+                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded-lg px-2.5 py-1.5 text-xs font-mono-tech text-[#FFFFFF] outline-none"
                   />
                 </div>
               </div>

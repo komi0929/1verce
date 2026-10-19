@@ -18,7 +18,9 @@ interface YouTubePlayerProps {
 function buildEmbedUrl(youtubeId: string, startSeconds: number): string {
   const start = Math.max(0, Math.floor(startSeconds || 0));
   const origin =
-    typeof window !== 'undefined' ? window.location.origin : 'https://1verce.vercel.app';
+    typeof window !== 'undefined'
+      ? window.location.origin
+      : 'https://1verce.vercel.app';
   const params = new URLSearchParams({
     autoplay: '1',
     start: String(start),
@@ -28,7 +30,9 @@ function buildEmbedUrl(youtubeId: string, startSeconds: number): string {
     enablejsapi: '1',
     origin,
   });
-  return `https://www.youtube.com/embed/${encodeURIComponent(youtubeId)}?${params.toString()}`;
+  return `https://www.youtube.com/embed/${encodeURIComponent(
+    youtubeId
+  )}?${params.toString()}`;
 }
 
 export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
@@ -49,6 +53,7 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   const activeVideoIdRef = useRef<string>(youtubeId);
   const hasPlayedCurrentRef = useRef<boolean>(false);
   const endedFiredForCurrentRef = useRef<boolean>(false);
+  const lastLoadTimeRef = useRef<number>(Date.now());
 
   const onTimeUpdateRef = useRef(onTimeUpdate);
   const onEndedRef = useRef(onEnded);
@@ -117,35 +122,33 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
           const state =
             typeof info.playerState === 'number' ? info.playerState : null;
 
-          if (cur !== null && cur > 0.5) {
+          if (state === 1 || state === 3 || (cur !== null && cur > 0.5)) {
             hasPlayedCurrentRef.current = true;
           }
 
           if (cur !== null) {
-            onTimeUpdateRef.current(
-              cur,
-              dur || 0,
-              state === 2
-            );
+            onTimeUpdateRef.current(cur, dur || 0, state === 2);
           }
 
           if (
             state === 0 &&
             hasPlayedCurrentRef.current &&
-            !endedFiredForCurrentRef.current
+            !endedFiredForCurrentRef.current &&
+            Date.now() - lastLoadTimeRef.current > 1500
           ) {
             endedFiredForCurrentRef.current = true;
             onEndedRef.current?.();
           }
         } else if (data.event === 'onStateChange') {
           const state = data.info;
-          if (state === 1) {
+          if (state === 1 || state === 3) {
             hasPlayedCurrentRef.current = true;
           }
           if (
             state === 0 &&
             hasPlayedCurrentRef.current &&
-            !endedFiredForCurrentRef.current
+            !endedFiredForCurrentRef.current &&
+            Date.now() - lastLoadTimeRef.current > 1500
           ) {
             endedFiredForCurrentRef.current = true;
             onEndedRef.current?.();
@@ -172,6 +175,7 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   // Handle video changes (youtubeId) or seek changes (seekNonce / startSeconds)
   useEffect(() => {
     const targetStart = Math.max(0, Math.floor(startSeconds || 0));
+    lastLoadTimeRef.current = Date.now();
 
     if (activeVideoIdRef.current !== youtubeId) {
       activeVideoIdRef.current = youtubeId;
@@ -183,12 +187,11 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
         sendCommand('loadVideoById', [youtubeId, targetStart]);
         sendCommand('playVideo', []);
 
-        // Fallback safety: if iframeSrc hasn't updated and bridge didn't start playing, also sync src if needed
         const fallbackTimer = window.setTimeout(() => {
           if (!hasPlayedCurrentRef.current) {
             setIframeSrc(buildEmbedUrl(youtubeId, targetStart));
           }
-        }, 700);
+        }, 1800);
         return () => window.clearTimeout(fallbackTimer);
       } else {
         isBridgeReadyRef.current = false;
@@ -198,7 +201,7 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
       return;
     }
 
-    // Same youtubeId, user triggered a seek
+    // Same youtubeId, user triggered a seek or re-selected track
     if (seekNonce > 0) {
       endedFiredForCurrentRef.current = false;
       if (isBridgeReadyRef.current && iframeRef.current?.contentWindow) {
