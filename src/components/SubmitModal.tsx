@@ -19,6 +19,7 @@ import {
   normalizeMcName,
   parseBattleTitle,
 } from '../utils/youtube';
+import { inferVideoFormat } from '../lib/battleFormat';
 
 interface SubmitModalProps {
   battles: Battle[];
@@ -124,10 +125,12 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
     const battleId = `btl-user-${Date.now()}`;
     const nowIso = new Date().toISOString();
 
+    const finalTitle = title.trim() || `${cleanMcA} vs ${cleanMcB} (${tournament})`;
     const newBattle: Battle = {
       id: battleId,
       youtubeId,
-      title: title.trim() || `${cleanMcA} vs ${cleanMcB} (${tournament})`,
+      title: finalTitle,
+      format: inferVideoFormat(finalTitle, urlInput),
       mcA: cleanMcA,
       mcB: cleanMcB,
       tournament,

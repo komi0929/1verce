@@ -634,7 +634,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 407
   },
   {
     "id": "btl-02",
@@ -655,7 +657,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T09:30:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1725
   },
   {
     "id": "btl-03",
@@ -676,7 +680,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-14T22:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 439
   },
   {
     "id": "btl-04",
@@ -697,7 +703,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-14T20:15:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 803
   },
   {
     "id": "btl-05",
@@ -718,7 +726,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-14T18:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-06",
@@ -739,7 +749,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-14T15:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 215
   },
   {
     "id": "btl-07",
@@ -760,7 +772,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-14T12:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 332
   },
   {
     "id": "btl-08",
@@ -781,7 +795,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-13T21:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 764
   },
   {
     "id": "btl-09",
@@ -802,7 +818,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-13T18:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 333
   },
   {
     "id": "btl-10",
@@ -823,7 +841,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-13T14:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 192
   },
   {
     "id": "btl-11",
@@ -844,7 +864,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-12T20:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-12",
@@ -865,7 +887,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-12T15:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 885
   },
   {
     "id": "btl-13",
@@ -886,7 +910,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-12T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 252
   },
   {
     "id": "btl-14",
@@ -907,7 +933,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-11T19:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 834
   },
   {
     "id": "btl-15",
@@ -928,7 +956,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-11T14:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 252
   },
   {
     "id": "btl-16",
@@ -949,7 +979,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-10T21:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 285
   },
   {
     "id": "btl-17",
@@ -970,7 +1002,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-10T18:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1173
   },
   {
     "id": "btl-18",
@@ -991,7 +1025,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-10T15:30:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 466
   },
   {
     "id": "btl-19",
@@ -1012,7 +1048,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-10T12:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 225
   },
   {
     "id": "btl-20",
@@ -1033,7 +1071,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-09T20:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 416
   },
   {
     "id": "btl-21",
@@ -1054,7 +1094,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-09T18:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 473
   },
   {
     "id": "btl-22",
@@ -1075,7 +1117,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-09T15:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 489
   },
   {
     "id": "btl-23",
@@ -1096,7 +1140,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-09T12:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 751
   },
   {
     "id": "btl-24",
@@ -1117,7 +1163,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-08T21:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 802
   },
   {
     "id": "btl-25",
@@ -1138,7 +1186,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-08T18:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 667
   },
   {
     "id": "btl-26",
@@ -1159,7 +1209,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-08T15:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 257
   },
   {
     "id": "btl-27",
@@ -1180,7 +1232,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-08T12:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 688
   },
   {
     "id": "btl-28",
@@ -1201,7 +1255,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-07T21:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 873
   },
   {
     "id": "btl-29",
@@ -1222,7 +1278,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-07T18:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 180
   },
   {
     "id": "btl-30",
@@ -1243,7 +1301,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-07T15:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 147
   },
   {
     "id": "btl-31",
@@ -1264,7 +1324,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-07T12:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 501
   },
   {
     "id": "btl-32",
@@ -1285,7 +1347,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-06T20:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-33",
@@ -1306,7 +1370,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-06T17:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 337
   },
   {
     "id": "btl-34",
@@ -1327,7 +1393,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-06T14:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 308
   },
   {
     "id": "btl-35",
@@ -1348,7 +1416,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-06T11:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 363
   },
   {
     "id": "btl-36",
@@ -1369,7 +1439,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-05T20:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 125
   },
   {
     "id": "btl-37",
@@ -1390,7 +1462,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-05T17:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 603
   },
   {
     "id": "btl-38",
@@ -1411,7 +1485,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-05T14:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 350
   },
   {
     "id": "btl-39",
@@ -1432,7 +1508,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-05T11:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 550
   },
   {
     "id": "btl-40",
@@ -1453,7 +1531,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-04T22:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 313
   },
   {
     "id": "btl-41",
@@ -1474,7 +1554,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-04T19:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 379
   },
   {
     "id": "btl-42",
@@ -1495,7 +1577,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-04T16:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 258
   },
   {
     "id": "btl-43",
@@ -1516,7 +1600,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-04T13:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 740
   },
   {
     "id": "btl-44",
@@ -1537,7 +1623,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-04T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 231
   },
   {
     "id": "btl-45",
@@ -1558,7 +1646,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-03T20:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 365
   },
   {
     "id": "btl-46",
@@ -1579,7 +1669,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 196
   },
   {
     "id": "btl-47",
@@ -1600,7 +1692,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 629
   },
   {
     "id": "btl-48",
@@ -1621,7 +1715,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 437
   },
   {
     "id": "btl-49",
@@ -1642,7 +1738,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 276
   },
   {
     "id": "btl-50",
@@ -1663,7 +1761,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 296
   },
   {
     "id": "btl-51",
@@ -1684,7 +1784,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 259
   },
   {
     "id": "btl-52",
@@ -1705,7 +1807,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 399
   },
   {
     "id": "btl-53",
@@ -1726,7 +1830,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 409
   },
   {
     "id": "btl-54",
@@ -1747,7 +1853,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 534
   },
   {
     "id": "btl-55",
@@ -1768,7 +1876,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 333
   },
   {
     "id": "btl-56",
@@ -1789,7 +1899,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 950
   },
   {
     "id": "btl-57",
@@ -1810,7 +1922,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 725
   },
   {
     "id": "btl-58",
@@ -1831,7 +1945,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 181
   },
   {
     "id": "btl-59",
@@ -1852,7 +1968,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 326,
+    "duplicateOf": "btl-661"
   },
   {
     "id": "btl-60",
@@ -1873,7 +1992,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 316
   },
   {
     "id": "btl-61",
@@ -1894,7 +2015,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 238
   },
   {
     "id": "btl-62",
@@ -1915,7 +2038,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 507
   },
   {
     "id": "btl-63",
@@ -1936,7 +2061,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 697
   },
   {
     "id": "btl-64",
@@ -1957,7 +2084,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 221
   },
   {
     "id": "btl-65",
@@ -1978,7 +2107,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 557
   },
   {
     "id": "btl-66",
@@ -1999,7 +2130,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 960
   },
   {
     "id": "btl-67",
@@ -2020,7 +2153,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 1026
   },
   {
     "id": "btl-68",
@@ -2041,7 +2176,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 363
   },
   {
     "id": "btl-69",
@@ -2062,7 +2199,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-70",
@@ -2083,7 +2222,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 52
   },
   {
     "id": "btl-71",
@@ -2104,7 +2245,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 423
   },
   {
     "id": "btl-72",
@@ -2125,7 +2268,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 436
   },
   {
     "id": "btl-73",
@@ -2146,7 +2291,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 98
   },
   {
     "id": "btl-74",
@@ -2167,7 +2314,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 125
   },
   {
     "id": "btl-75",
@@ -2188,7 +2337,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 132
   },
   {
     "id": "btl-76",
@@ -2209,7 +2360,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 19
   },
   {
     "id": "btl-77",
@@ -2230,7 +2383,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 86
   },
   {
     "id": "btl-78",
@@ -2251,7 +2406,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 361
   },
   {
     "id": "btl-79",
@@ -2272,7 +2429,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 188
   },
   {
     "id": "btl-80",
@@ -2293,7 +2452,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T12:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 319
   },
   {
     "id": "btl-81",
@@ -2314,7 +2475,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 390
   },
   {
     "id": "btl-82",
@@ -2335,7 +2498,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 373
   },
   {
     "id": "btl-83",
@@ -2356,7 +2521,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 249
   },
   {
     "id": "btl-84",
@@ -2377,7 +2544,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 262
   },
   {
     "id": "btl-85",
@@ -2398,7 +2567,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 318
   },
   {
     "id": "btl-86",
@@ -2419,7 +2590,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 588
   },
   {
     "id": "btl-87",
@@ -2440,7 +2613,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 414
   },
   {
     "id": "btl-88",
@@ -2461,7 +2636,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 572
   },
   {
     "id": "btl-89",
@@ -2482,7 +2659,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 1248
   },
   {
     "id": "btl-90",
@@ -2503,7 +2682,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 956
   },
   {
     "id": "btl-91",
@@ -2524,7 +2705,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 516
   },
   {
     "id": "btl-92",
@@ -2545,7 +2728,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 498
   },
   {
     "id": "btl-93",
@@ -2566,7 +2751,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-94",
@@ -2587,7 +2774,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 46
   },
   {
     "id": "btl-95",
@@ -2608,7 +2797,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 310
   },
   {
     "id": "btl-96",
@@ -2629,7 +2820,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 213
   },
   {
     "id": "btl-97",
@@ -2650,7 +2843,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 223
   },
   {
     "id": "btl-98",
@@ -2671,7 +2866,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 204
   },
   {
     "id": "btl-99",
@@ -2692,7 +2889,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 210
   },
   {
     "id": "btl-100",
@@ -2713,7 +2912,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 246
   },
   {
     "id": "btl-101",
@@ -2734,7 +2935,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 314
   },
   {
     "id": "btl-102",
@@ -2755,7 +2958,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 305
   },
   {
     "id": "btl-103",
@@ -2776,7 +2981,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 349
   },
   {
     "id": "btl-104",
@@ -2797,7 +3004,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 719,
+    "duplicateOf": "btl-189"
   },
   {
     "id": "btl-105",
@@ -2818,7 +3028,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-106",
@@ -2839,7 +3051,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 49
   },
   {
     "id": "btl-107",
@@ -2860,7 +3074,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 423
   },
   {
     "id": "btl-108",
@@ -2881,7 +3097,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 51
   },
   {
     "id": "btl-109",
@@ -2902,7 +3120,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 91
   },
   {
     "id": "btl-110",
@@ -2923,7 +3143,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T13:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 634
   },
   {
     "id": "btl-111",
@@ -2944,7 +3166,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 284
   },
   {
     "id": "btl-112",
@@ -2965,7 +3189,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 540
   },
   {
     "id": "btl-113",
@@ -2986,7 +3212,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-114",
@@ -3007,7 +3235,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 968
   },
   {
     "id": "btl-115",
@@ -3028,7 +3258,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 761
   },
   {
     "id": "btl-116",
@@ -3049,7 +3281,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 325
   },
   {
     "id": "btl-117",
@@ -3070,7 +3304,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 337
   },
   {
     "id": "btl-118",
@@ -3091,7 +3327,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 623
   },
   {
     "id": "btl-119",
@@ -3112,7 +3350,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 284
   },
   {
     "id": "btl-120",
@@ -3133,7 +3373,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 663
   },
   {
     "id": "btl-121",
@@ -3154,7 +3396,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-122",
@@ -3175,7 +3419,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 420
   },
   {
     "id": "btl-123",
@@ -3196,7 +3442,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 419
   },
   {
     "id": "btl-124",
@@ -3217,7 +3465,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 280
   },
   {
     "id": "btl-125",
@@ -3238,7 +3488,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 187
   },
   {
     "id": "btl-126",
@@ -3259,7 +3511,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 631
   },
   {
     "id": "btl-127",
@@ -3280,7 +3534,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 276
   },
   {
     "id": "btl-128",
@@ -3301,7 +3557,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "SHORT",
+    "durationSec": 24
   },
   {
     "id": "btl-129",
@@ -3322,7 +3580,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 195
   },
   {
     "id": "btl-130",
@@ -3343,7 +3603,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 271
   },
   {
     "id": "btl-131",
@@ -3364,7 +3626,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 234
   },
   {
     "id": "btl-132",
@@ -3385,7 +3649,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 268
   },
   {
     "id": "btl-133",
@@ -3406,7 +3672,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 258
   },
   {
     "id": "btl-134",
@@ -3427,7 +3695,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 222
   },
   {
     "id": "btl-135",
@@ -3448,7 +3718,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 329
   },
   {
     "id": "btl-136",
@@ -3469,7 +3741,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 329
   },
   {
     "id": "btl-137",
@@ -3490,7 +3764,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 516
   },
   {
     "id": "btl-138",
@@ -3511,7 +3787,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 789
   },
   {
     "id": "btl-139",
@@ -3532,7 +3810,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T14:00:00Z",
     "mcAFocal": "22% 35%",
-    "mcBFocal": "78% 35%"
+    "mcBFocal": "78% 35%",
+    "format": "FULL",
+    "durationSec": 205
   },
   {
     "id": "btl-140",
@@ -3553,7 +3833,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 46
   },
   {
     "id": "btl-141",
@@ -3574,7 +3856,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 58
   },
   {
     "id": "btl-142",
@@ -3595,7 +3879,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 203
   },
   {
     "id": "btl-143",
@@ -3616,7 +3902,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 273
   },
   {
     "id": "btl-144",
@@ -3637,7 +3925,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 370
   },
   {
     "id": "btl-145",
@@ -3658,7 +3948,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 55
   },
   {
     "id": "btl-146",
@@ -3679,7 +3971,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 56
   },
   {
     "id": "btl-147",
@@ -3700,7 +3994,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 59
   },
   {
     "id": "btl-148",
@@ -3721,7 +4017,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 37
   },
   {
     "id": "btl-149",
@@ -3742,7 +4040,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 27
   },
   {
     "id": "btl-150",
@@ -3763,7 +4063,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 391
   },
   {
     "id": "btl-151",
@@ -3784,7 +4086,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 274
   },
   {
     "id": "btl-152",
@@ -3805,7 +4109,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 282
   },
   {
     "id": "btl-153",
@@ -3826,7 +4132,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 400
   },
   {
     "id": "btl-154",
@@ -3847,7 +4155,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 397
   },
   {
     "id": "btl-155",
@@ -3868,7 +4178,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 241
   },
   {
     "id": "btl-156",
@@ -3889,7 +4201,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-157",
@@ -3910,7 +4224,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 33
   },
   {
     "id": "btl-158",
@@ -3931,7 +4247,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 21
   },
   {
     "id": "btl-159",
@@ -3952,7 +4270,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 294
   },
   {
     "id": "btl-160",
@@ -3973,7 +4293,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 242
   },
   {
     "id": "btl-161",
@@ -3994,7 +4316,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 286
   },
   {
     "id": "btl-162",
@@ -4015,7 +4339,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 232
   },
   {
     "id": "btl-163",
@@ -4036,7 +4362,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 302
   },
   {
     "id": "btl-164",
@@ -4057,7 +4385,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 373
   },
   {
     "id": "btl-165",
@@ -4078,7 +4408,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 983
   },
   {
     "id": "btl-166",
@@ -4099,7 +4431,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 504
   },
   {
     "id": "btl-167",
@@ -4120,7 +4454,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 418
   },
   {
     "id": "btl-168",
@@ -4141,7 +4477,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 631
   },
   {
     "id": "btl-169",
@@ -4162,7 +4500,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 348
   },
   {
     "id": "btl-170",
@@ -4183,7 +4523,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 255
   },
   {
     "id": "btl-171",
@@ -4204,7 +4546,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 415
   },
   {
     "id": "btl-172",
@@ -4225,7 +4569,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 277
   },
   {
     "id": "btl-173",
@@ -4246,7 +4592,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 351
   },
   {
     "id": "btl-174",
@@ -4267,7 +4615,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 480
   },
   {
     "id": "btl-175",
@@ -4288,7 +4638,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 337
   },
   {
     "id": "btl-176",
@@ -4309,7 +4661,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 306
   },
   {
     "id": "btl-177",
@@ -4330,7 +4684,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 133
   },
   {
     "id": "btl-178",
@@ -4351,7 +4707,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 33
   },
   {
     "id": "btl-179",
@@ -4372,7 +4730,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 135
   },
   {
     "id": "btl-180",
@@ -4393,7 +4753,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 129
   },
   {
     "id": "btl-181",
@@ -4414,7 +4776,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 186
   },
   {
     "id": "btl-182",
@@ -4435,7 +4799,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-183",
@@ -4456,7 +4822,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-184",
@@ -4477,7 +4845,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-185",
@@ -4498,7 +4868,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-186",
@@ -4519,7 +4891,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 235
   },
   {
     "id": "btl-187",
@@ -4540,7 +4914,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 131
   },
   {
     "id": "btl-188",
@@ -4561,7 +4937,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-189",
@@ -4582,7 +4960,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1049
   },
   {
     "id": "btl-190",
@@ -4603,7 +4983,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 682
   },
   {
     "id": "btl-191",
@@ -4624,7 +5006,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 19
   },
   {
     "id": "btl-192",
@@ -4645,7 +5029,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 49
   },
   {
     "id": "btl-193",
@@ -4666,7 +5052,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-194",
@@ -4687,7 +5075,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-195",
@@ -4708,7 +5098,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-196",
@@ -4729,7 +5121,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 471
   },
   {
     "id": "btl-197",
@@ -4750,7 +5144,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 441,
+    "duplicateOf": "btl-115"
   },
   {
     "id": "btl-198",
@@ -4771,7 +5168,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 322
   },
   {
     "id": "btl-199",
@@ -4792,7 +5191,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 280
   },
   {
     "id": "btl-200",
@@ -4813,7 +5214,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 326
   },
   {
     "id": "btl-201",
@@ -4834,7 +5237,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-202",
@@ -4855,7 +5260,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 718
   },
   {
     "id": "btl-203",
@@ -4876,7 +5283,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-204",
@@ -4897,7 +5306,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-205",
@@ -4918,7 +5329,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 56
   },
   {
     "id": "btl-206",
@@ -4939,7 +5352,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-207",
@@ -4960,7 +5375,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-208",
@@ -4981,7 +5398,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-209",
@@ -5002,7 +5421,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-210",
@@ -5023,7 +5444,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-211",
@@ -5044,7 +5467,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 22
   },
   {
     "id": "btl-212",
@@ -5065,7 +5490,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-213",
@@ -5086,7 +5513,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-214",
@@ -5107,7 +5536,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 723
   },
   {
     "id": "btl-215",
@@ -5128,7 +5559,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 455
   },
   {
     "id": "btl-216",
@@ -5149,7 +5582,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 381
   },
   {
     "id": "btl-217",
@@ -5170,7 +5605,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 247
   },
   {
     "id": "btl-218",
@@ -5191,7 +5628,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 590
   },
   {
     "id": "btl-219",
@@ -5212,7 +5651,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-220",
@@ -5233,7 +5674,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 30
   },
   {
     "id": "btl-221",
@@ -5254,7 +5697,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-222",
@@ -5275,7 +5720,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 52
   },
   {
     "id": "btl-223",
@@ -5296,7 +5743,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-224",
@@ -5317,7 +5766,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 298
   },
   {
     "id": "btl-225",
@@ -5338,7 +5789,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 407
   },
   {
     "id": "btl-226",
@@ -5359,7 +5812,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 413
   },
   {
     "id": "btl-227",
@@ -5380,7 +5835,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 301,
+    "duplicateOf": "btl-226"
   },
   {
     "id": "btl-228",
@@ -5401,7 +5859,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 186
   },
   {
     "id": "btl-229",
@@ -5422,7 +5882,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 234
   },
   {
     "id": "btl-230",
@@ -5443,7 +5905,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 46
   },
   {
     "id": "btl-231",
@@ -5464,7 +5928,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 287
   },
   {
     "id": "btl-232",
@@ -5485,7 +5951,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 162
   },
   {
     "id": "btl-233",
@@ -5506,7 +5974,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 19
   },
   {
     "id": "btl-234",
@@ -5527,7 +5997,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 23
   },
   {
     "id": "btl-235",
@@ -5548,7 +6020,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 55
   },
   {
     "id": "btl-236",
@@ -5569,7 +6043,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-237",
@@ -5590,7 +6066,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 98
   },
   {
     "id": "btl-238",
@@ -5611,7 +6089,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 485
   },
   {
     "id": "btl-239",
@@ -5632,7 +6112,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 23
   },
   {
     "id": "btl-240",
@@ -5653,7 +6135,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 150
   },
   {
     "id": "btl-241",
@@ -5674,7 +6158,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 22
   },
   {
     "id": "btl-242",
@@ -5695,7 +6181,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 27
   },
   {
     "id": "btl-243",
@@ -5716,7 +6204,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-244",
@@ -5737,7 +6227,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-245",
@@ -5758,7 +6250,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-246",
@@ -5779,7 +6273,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-247",
@@ -5800,7 +6296,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 354
   },
   {
     "id": "btl-248",
@@ -5821,7 +6319,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 382
   },
   {
     "id": "btl-249",
@@ -5842,7 +6342,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 395
   },
   {
     "id": "btl-250",
@@ -5863,7 +6365,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1020
   },
   {
     "id": "btl-251",
@@ -5884,7 +6388,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 733
   },
   {
     "id": "btl-252",
@@ -5905,7 +6411,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 529
   },
   {
     "id": "btl-253",
@@ -5926,7 +6434,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 29
   },
   {
     "id": "btl-254",
@@ -5947,7 +6457,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 257
   },
   {
     "id": "btl-255",
@@ -5968,7 +6480,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-256",
@@ -5989,7 +6503,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-257",
@@ -6010,7 +6526,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 32
   },
   {
     "id": "btl-258",
@@ -6031,7 +6549,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 20
   },
   {
     "id": "btl-259",
@@ -6052,7 +6572,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 22
   },
   {
     "id": "btl-260",
@@ -6073,7 +6595,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 453
   },
   {
     "id": "btl-261",
@@ -6094,7 +6618,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 544
   },
   {
     "id": "btl-262",
@@ -6115,7 +6641,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 302
   },
   {
     "id": "btl-263",
@@ -6136,7 +6664,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 217
   },
   {
     "id": "btl-264",
@@ -6157,7 +6687,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 368,
+    "duplicateOf": "btl-260"
   },
   {
     "id": "btl-265",
@@ -6178,7 +6711,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 48
   },
   {
     "id": "btl-266",
@@ -6199,7 +6734,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 207
   },
   {
     "id": "btl-267",
@@ -6220,7 +6757,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 46
   },
   {
     "id": "btl-268",
@@ -6241,7 +6780,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-269",
@@ -6262,7 +6803,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-270",
@@ -6283,7 +6826,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-271",
@@ -6304,7 +6849,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-272",
@@ -6325,7 +6872,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 329
   },
   {
     "id": "btl-273",
@@ -6346,7 +6895,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 265
   },
   {
     "id": "btl-274",
@@ -6367,7 +6918,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 223
   },
   {
     "id": "btl-275",
@@ -6388,7 +6941,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 349
   },
   {
     "id": "btl-276",
@@ -6409,7 +6964,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 679
   },
   {
     "id": "btl-277",
@@ -6430,7 +6987,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 371
   },
   {
     "id": "btl-278",
@@ -6451,7 +7010,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 97
   },
   {
     "id": "btl-279",
@@ -6472,7 +7033,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 614
   },
   {
     "id": "btl-280",
@@ -6493,7 +7056,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 625
   },
   {
     "id": "btl-281",
@@ -6514,7 +7079,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 960
   },
   {
     "id": "btl-282",
@@ -6535,7 +7102,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 110
   },
   {
     "id": "btl-283",
@@ -6556,7 +7125,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-284",
@@ -6577,7 +7148,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-285",
@@ -6598,7 +7171,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 51
   },
   {
     "id": "btl-286",
@@ -6619,7 +7194,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 18
   },
   {
     "id": "btl-287",
@@ -6640,7 +7217,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-288",
@@ -6661,7 +7240,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 388
   },
   {
     "id": "btl-289",
@@ -6682,7 +7263,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 207
   },
   {
     "id": "btl-290",
@@ -6703,7 +7286,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 760
   },
   {
     "id": "btl-291",
@@ -6724,7 +7309,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 342
   },
   {
     "id": "btl-292",
@@ -6745,7 +7332,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 300
   },
   {
     "id": "btl-293",
@@ -6766,7 +7355,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 30
   },
   {
     "id": "btl-294",
@@ -6787,7 +7378,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 503
   },
   {
     "id": "btl-295",
@@ -6808,7 +7401,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 31
   },
   {
     "id": "btl-296",
@@ -6829,7 +7424,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-297",
@@ -6850,7 +7447,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 47
   },
   {
     "id": "btl-298",
@@ -6871,7 +7470,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-299",
@@ -6892,7 +7493,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-300",
@@ -6913,7 +7516,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 30
   },
   {
     "id": "btl-301",
@@ -6934,7 +7539,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 28
   },
   {
     "id": "btl-302",
@@ -6955,7 +7562,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 557
   },
   {
     "id": "btl-303",
@@ -6976,7 +7585,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1124
   },
   {
     "id": "btl-304",
@@ -6997,7 +7608,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 875
   },
   {
     "id": "btl-305",
@@ -7018,7 +7631,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 435
   },
   {
     "id": "btl-306",
@@ -7039,7 +7654,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 202
   },
   {
     "id": "btl-307",
@@ -7060,7 +7677,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 361
   },
   {
     "id": "btl-308",
@@ -7081,7 +7700,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-309",
@@ -7102,7 +7723,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 21
   },
   {
     "id": "btl-310",
@@ -7123,7 +7746,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-311",
@@ -7144,7 +7769,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-312",
@@ -7165,7 +7792,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 52
   },
   {
     "id": "btl-313",
@@ -7186,7 +7815,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 823
   },
   {
     "id": "btl-314",
@@ -7207,7 +7838,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 121
   },
   {
     "id": "btl-315",
@@ -7228,7 +7861,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1075
   },
   {
     "id": "btl-316",
@@ -7249,7 +7884,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-317",
@@ -7270,7 +7907,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-318",
@@ -7291,7 +7930,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 22
   },
   {
     "id": "btl-319",
@@ -7312,7 +7953,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-320",
@@ -7333,7 +7976,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 26
   },
   {
     "id": "btl-321",
@@ -7354,7 +7999,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 56
   },
   {
     "id": "btl-322",
@@ -7375,7 +8022,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 174
   },
   {
     "id": "btl-323",
@@ -7396,7 +8045,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 170
   },
   {
     "id": "btl-324",
@@ -7417,7 +8068,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-325",
@@ -7438,7 +8091,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-326",
@@ -7459,7 +8114,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 113
   },
   {
     "id": "btl-327",
@@ -7480,7 +8137,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 168
   },
   {
     "id": "btl-328",
@@ -7501,7 +8160,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 284
   },
   {
     "id": "btl-329",
@@ -7522,7 +8183,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 485,
+    "duplicateOf": "btl-238"
   },
   {
     "id": "btl-330",
@@ -7543,7 +8207,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 275
   },
   {
     "id": "btl-331",
@@ -7564,7 +8230,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 274
   },
   {
     "id": "btl-332",
@@ -7585,7 +8253,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 248
   },
   {
     "id": "btl-333",
@@ -7606,7 +8276,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 86
   },
   {
     "id": "btl-334",
@@ -7627,7 +8299,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 287
   },
   {
     "id": "btl-335",
@@ -7648,7 +8322,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-336",
@@ -7669,7 +8345,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 54
   },
   {
     "id": "btl-337",
@@ -7690,7 +8368,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 51
   },
   {
     "id": "btl-338",
@@ -7711,7 +8391,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 332
   },
   {
     "id": "btl-339",
@@ -7732,7 +8414,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 269
   },
   {
     "id": "btl-340",
@@ -7753,7 +8437,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 581
   },
   {
     "id": "btl-341",
@@ -7774,7 +8460,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 86
   },
   {
     "id": "btl-342",
@@ -7795,7 +8483,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 22
   },
   {
     "id": "btl-343",
@@ -7816,7 +8506,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-344",
@@ -7837,7 +8529,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 55
   },
   {
     "id": "btl-345",
@@ -7858,7 +8552,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-346",
@@ -7879,7 +8575,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-347",
@@ -7900,7 +8598,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 486
   },
   {
     "id": "btl-348",
@@ -7921,7 +8621,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1341
   },
   {
     "id": "btl-349",
@@ -7942,7 +8644,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 24
   },
   {
     "id": "btl-350",
@@ -7963,7 +8667,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 50
   },
   {
     "id": "btl-351",
@@ -7984,7 +8690,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 28
   },
   {
     "id": "btl-352",
@@ -8005,7 +8713,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 25
   },
   {
     "id": "btl-353",
@@ -8026,7 +8736,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 55
   },
   {
     "id": "btl-354",
@@ -8047,7 +8759,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 418
   },
   {
     "id": "btl-355",
@@ -8068,7 +8782,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 655
   },
   {
     "id": "btl-356",
@@ -8089,7 +8805,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 161
   },
   {
     "id": "btl-357",
@@ -8110,7 +8828,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 967
   },
   {
     "id": "btl-358",
@@ -8131,7 +8851,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 29
   },
   {
     "id": "btl-359",
@@ -8152,7 +8874,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 240
   },
   {
     "id": "btl-360",
@@ -8173,7 +8897,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 166
   },
   {
     "id": "btl-361",
@@ -8194,7 +8920,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1341,
+    "duplicateOf": "btl-348"
   },
   {
     "id": "btl-362",
@@ -8215,7 +8944,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 294
   },
   {
     "id": "btl-363",
@@ -8236,7 +8967,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 19
   },
   {
     "id": "btl-364",
@@ -8257,7 +8990,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 171
   },
   {
     "id": "btl-365",
@@ -8278,7 +9013,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 213
   },
   {
     "id": "btl-366",
@@ -8299,7 +9036,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 173
   },
   {
     "id": "btl-367",
@@ -8320,7 +9059,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 48
   },
   {
     "id": "btl-368",
@@ -8341,7 +9082,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 52
   },
   {
     "id": "btl-369",
@@ -8362,7 +9105,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 192
   },
   {
     "id": "btl-370",
@@ -8383,7 +9128,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 327
   },
   {
     "id": "btl-371",
@@ -8404,7 +9151,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 317
   },
   {
     "id": "btl-372",
@@ -8425,7 +9174,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 301
   },
   {
     "id": "btl-373",
@@ -8446,7 +9197,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 145
   },
   {
     "id": "btl-374",
@@ -8467,7 +9220,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 120
   },
   {
     "id": "btl-375",
@@ -8488,7 +9243,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 820
   },
   {
     "id": "btl-376",
@@ -8509,7 +9266,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 106
   },
   {
     "id": "btl-377",
@@ -8530,7 +9289,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 126
   },
   {
     "id": "btl-378",
@@ -8551,7 +9312,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 18
   },
   {
     "id": "btl-379",
@@ -8572,7 +9335,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 19
   },
   {
     "id": "btl-380",
@@ -8593,7 +9358,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 18
   },
   {
     "id": "btl-381",
@@ -8614,7 +9381,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-382",
@@ -8635,7 +9404,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 604
   },
   {
     "id": "btl-383",
@@ -8656,7 +9427,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 261
   },
   {
     "id": "btl-384",
@@ -8677,7 +9450,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 862
   },
   {
     "id": "btl-385",
@@ -8698,7 +9473,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 173
   },
   {
     "id": "btl-386",
@@ -8719,7 +9496,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-387",
@@ -8740,7 +9519,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-388",
@@ -8761,7 +9542,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-389",
@@ -8782,7 +9565,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 360
   },
   {
     "id": "btl-390",
@@ -8803,7 +9588,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-391",
@@ -8824,7 +9611,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 51
   },
   {
     "id": "btl-392",
@@ -8845,7 +9634,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 37
   },
   {
     "id": "btl-393",
@@ -8866,7 +9657,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-394",
@@ -8887,7 +9680,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-395",
@@ -8908,7 +9703,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 37
   },
   {
     "id": "btl-396",
@@ -8929,7 +9726,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 20
   },
   {
     "id": "btl-397",
@@ -8950,7 +9749,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-398",
@@ -8971,7 +9772,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 261
   },
   {
     "id": "btl-399",
@@ -8992,7 +9795,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 278
   },
   {
     "id": "btl-400",
@@ -9013,7 +9818,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 171
   },
   {
     "id": "btl-401",
@@ -9034,7 +9841,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 10
   },
   {
     "id": "btl-402",
@@ -9055,7 +9864,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 645
   },
   {
     "id": "btl-403",
@@ -9076,7 +9887,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 221
   },
   {
     "id": "btl-404",
@@ -9097,7 +9910,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 58
   },
   {
     "id": "btl-405",
@@ -9118,7 +9933,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-406",
@@ -9139,7 +9956,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-407",
@@ -9160,7 +9979,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-408",
@@ -9181,7 +10002,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 296
   },
   {
     "id": "btl-409",
@@ -9202,7 +10025,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 260
   },
   {
     "id": "btl-410",
@@ -9223,7 +10048,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 148
   },
   {
     "id": "btl-411",
@@ -9244,7 +10071,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 770
   },
   {
     "id": "btl-412",
@@ -9265,7 +10094,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 223
   },
   {
     "id": "btl-413",
@@ -9286,7 +10117,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 606
   },
   {
     "id": "btl-414",
@@ -9307,7 +10140,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-415",
@@ -9328,7 +10163,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-416",
@@ -9349,7 +10186,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 175
   },
   {
     "id": "btl-417",
@@ -9370,7 +10209,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 167
   },
   {
     "id": "btl-418",
@@ -9391,7 +10232,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 631
   },
   {
     "id": "btl-419",
@@ -9412,7 +10255,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 22
   },
   {
     "id": "btl-420",
@@ -9433,7 +10278,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 18
   },
   {
     "id": "btl-421",
@@ -9454,7 +10301,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 59
   },
   {
     "id": "btl-422",
@@ -9475,7 +10324,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-423",
@@ -9496,7 +10347,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 410
   },
   {
     "id": "btl-424",
@@ -9517,7 +10370,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 86
   },
   {
     "id": "btl-425",
@@ -9538,7 +10393,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 245
   },
   {
     "id": "btl-426",
@@ -9559,7 +10416,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 23
   },
   {
     "id": "btl-427",
@@ -9580,7 +10439,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 173
   },
   {
     "id": "btl-428",
@@ -9601,7 +10462,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-429",
@@ -9622,7 +10485,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 788
   },
   {
     "id": "btl-430",
@@ -9643,7 +10508,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 148
   },
   {
     "id": "btl-431",
@@ -9664,7 +10531,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-432",
@@ -9685,7 +10554,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 705
   },
   {
     "id": "btl-433",
@@ -9706,7 +10577,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-434",
@@ -9727,7 +10600,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-435",
@@ -9748,7 +10623,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-436",
@@ -9769,7 +10646,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-437",
@@ -9790,7 +10669,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-438",
@@ -9811,7 +10692,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 50
   },
   {
     "id": "btl-439",
@@ -9832,7 +10715,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 921
   },
   {
     "id": "btl-440",
@@ -9853,7 +10738,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 569
   },
   {
     "id": "btl-441",
@@ -9874,7 +10761,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 220
   },
   {
     "id": "btl-442",
@@ -9895,7 +10784,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 104
   },
   {
     "id": "btl-443",
@@ -9916,7 +10807,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 20
   },
   {
     "id": "btl-444",
@@ -9937,7 +10830,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-445",
@@ -9958,7 +10853,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 364
   },
   {
     "id": "btl-446",
@@ -9979,7 +10876,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 712
   },
   {
     "id": "btl-447",
@@ -10000,7 +10899,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 363,
+    "duplicateOf": "btl-112"
   },
   {
     "id": "btl-448",
@@ -10021,7 +10923,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 603
   },
   {
     "id": "btl-449",
@@ -10042,7 +10946,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 357
   },
   {
     "id": "btl-450",
@@ -10063,7 +10969,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-451",
@@ -10084,7 +10992,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 461
   },
   {
     "id": "btl-452",
@@ -10105,7 +11015,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-453",
@@ -10126,7 +11038,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 156
   },
   {
     "id": "btl-454",
@@ -10147,7 +11061,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 58
   },
   {
     "id": "btl-455",
@@ -10168,7 +11084,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 58
   },
   {
     "id": "btl-456",
@@ -10189,7 +11107,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-457",
@@ -10210,7 +11130,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-458",
@@ -10231,7 +11153,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 58
   },
   {
     "id": "btl-459",
@@ -10252,7 +11176,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-460",
@@ -10273,7 +11199,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-461",
@@ -10294,7 +11222,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 103
   },
   {
     "id": "btl-462",
@@ -10315,7 +11245,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-463",
@@ -10336,7 +11268,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 124
   },
   {
     "id": "btl-464",
@@ -10357,7 +11291,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 576
   },
   {
     "id": "btl-465",
@@ -10378,7 +11314,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 350
   },
   {
     "id": "btl-466",
@@ -10399,7 +11337,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-467",
@@ -10420,7 +11360,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 59
   },
   {
     "id": "btl-468",
@@ -10441,7 +11383,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 51
   },
   {
     "id": "btl-469",
@@ -10462,7 +11406,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-470",
@@ -10483,7 +11429,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 711
   },
   {
     "id": "btl-471",
@@ -10504,7 +11452,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 296
   },
   {
     "id": "btl-472",
@@ -10525,7 +11475,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 608
   },
   {
     "id": "btl-473",
@@ -10546,7 +11498,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 392
   },
   {
     "id": "btl-474",
@@ -10567,7 +11521,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 829
   },
   {
     "id": "btl-475",
@@ -10588,7 +11544,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1615
   },
   {
     "id": "btl-476",
@@ -10609,7 +11567,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 668
   },
   {
     "id": "btl-477",
@@ -10630,7 +11590,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 26
   },
   {
     "id": "btl-478",
@@ -10651,7 +11613,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 339
   },
   {
     "id": "btl-479",
@@ -10672,7 +11636,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 221
   },
   {
     "id": "btl-480",
@@ -10693,7 +11659,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 218
   },
   {
     "id": "btl-481",
@@ -10714,7 +11682,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 596
   },
   {
     "id": "btl-482",
@@ -10735,7 +11705,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 23
   },
   {
     "id": "btl-483",
@@ -10756,7 +11728,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 340
   },
   {
     "id": "btl-484",
@@ -10777,7 +11751,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 587
   },
   {
     "id": "btl-485",
@@ -10798,7 +11774,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 934
   },
   {
     "id": "btl-486",
@@ -10819,7 +11797,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 562
   },
   {
     "id": "btl-487",
@@ -10840,7 +11820,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 353
   },
   {
     "id": "btl-488",
@@ -10861,7 +11843,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 319
   },
   {
     "id": "btl-489",
@@ -10882,7 +11866,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 220
   },
   {
     "id": "btl-490",
@@ -10903,7 +11889,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 639
   },
   {
     "id": "btl-491",
@@ -10924,7 +11912,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 183
   },
   {
     "id": "btl-492",
@@ -10945,7 +11935,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 209
   },
   {
     "id": "btl-493",
@@ -10966,7 +11958,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 486
   },
   {
     "id": "btl-494",
@@ -10987,7 +11981,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 322
   },
   {
     "id": "btl-495",
@@ -11008,7 +12004,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 291
   },
   {
     "id": "btl-496",
@@ -11029,7 +12027,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-497",
@@ -11050,7 +12050,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 558
   },
   {
     "id": "btl-498",
@@ -11071,7 +12073,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 652
   },
   {
     "id": "btl-499",
@@ -11092,7 +12096,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 596,
+    "duplicateOf": "btl-481"
   },
   {
     "id": "btl-500",
@@ -11113,7 +12120,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 242
   },
   {
     "id": "btl-501",
@@ -11134,7 +12143,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 20
   },
   {
     "id": "btl-502",
@@ -11155,7 +12166,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 46
   },
   {
     "id": "btl-503",
@@ -11176,7 +12189,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-504",
@@ -11197,7 +12212,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 741
   },
   {
     "id": "btl-505",
@@ -11218,7 +12235,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 573
   },
   {
     "id": "btl-506",
@@ -11239,7 +12258,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-507",
@@ -11260,7 +12281,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 23
   },
   {
     "id": "btl-508",
@@ -11281,7 +12304,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 29
   },
   {
     "id": "btl-509",
@@ -11302,7 +12327,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-510",
@@ -11323,7 +12350,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-511",
@@ -11344,7 +12373,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-512",
@@ -11365,7 +12396,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-513",
@@ -11386,7 +12419,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-514",
@@ -11407,7 +12442,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 258,
+    "duplicateOf": "btl-505"
   },
   {
     "id": "btl-515",
@@ -11428,7 +12466,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 315
   },
   {
     "id": "btl-516",
@@ -11449,7 +12489,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 765
   },
   {
     "id": "btl-517",
@@ -11470,7 +12512,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 160
   },
   {
     "id": "btl-518",
@@ -11491,7 +12535,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 325
   },
   {
     "id": "btl-519",
@@ -11512,7 +12558,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 275
   },
   {
     "id": "btl-520",
@@ -11533,7 +12581,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 121
   },
   {
     "id": "btl-521",
@@ -11554,7 +12604,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 48
   },
   {
     "id": "btl-522",
@@ -11575,7 +12627,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-523",
@@ -11596,7 +12650,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-524",
@@ -11617,7 +12673,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-525",
@@ -11638,7 +12696,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-526",
@@ -11659,7 +12719,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 59
   },
   {
     "id": "btl-527",
@@ -11680,7 +12742,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 58
   },
   {
     "id": "btl-528",
@@ -11701,7 +12765,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 55
   },
   {
     "id": "btl-529",
@@ -11722,7 +12788,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 52
   },
   {
     "id": "btl-530",
@@ -11743,7 +12811,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-531",
@@ -11764,7 +12834,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 282
   },
   {
     "id": "btl-532",
@@ -11785,7 +12857,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 139
   },
   {
     "id": "btl-533",
@@ -11806,7 +12880,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 547
   },
   {
     "id": "btl-534",
@@ -11827,7 +12903,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 155
   },
   {
     "id": "btl-535",
@@ -11848,7 +12926,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 176
   },
   {
     "id": "btl-536",
@@ -11869,7 +12949,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 352
   },
   {
     "id": "btl-537",
@@ -11890,7 +12972,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 372
   },
   {
     "id": "btl-538",
@@ -11911,7 +12995,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-539",
@@ -11932,7 +13018,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 49
   },
   {
     "id": "btl-540",
@@ -11953,7 +13041,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 47
   },
   {
     "id": "btl-541",
@@ -11974,7 +13064,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 37
   },
   {
     "id": "btl-542",
@@ -11995,7 +13087,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 46
   },
   {
     "id": "btl-543",
@@ -12016,7 +13110,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 47
   },
   {
     "id": "btl-544",
@@ -12037,7 +13133,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 49
   },
   {
     "id": "btl-545",
@@ -12058,7 +13156,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-546",
@@ -12079,7 +13179,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-547",
@@ -12100,7 +13202,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 47
   },
   {
     "id": "btl-548",
@@ -12121,7 +13225,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 58
   },
   {
     "id": "btl-549",
@@ -12142,7 +13248,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 601
   },
   {
     "id": "btl-550",
@@ -12163,7 +13271,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 170
   },
   {
     "id": "btl-551",
@@ -12184,7 +13294,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 149
   },
   {
     "id": "btl-552",
@@ -12205,7 +13317,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 318
   },
   {
     "id": "btl-553",
@@ -12226,7 +13340,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 818
   },
   {
     "id": "btl-554",
@@ -12247,7 +13363,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 463
   },
   {
     "id": "btl-555",
@@ -12268,7 +13386,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 849
   },
   {
     "id": "btl-556",
@@ -12289,7 +13409,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 102
   },
   {
     "id": "btl-557",
@@ -12310,7 +13432,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 104
   },
   {
     "id": "btl-558",
@@ -12331,7 +13455,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 174,
+    "duplicateOf": "btl-564"
   },
   {
     "id": "btl-559",
@@ -12352,7 +13479,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 709
   },
   {
     "id": "btl-560",
@@ -12373,7 +13502,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 105
   },
   {
     "id": "btl-561",
@@ -12394,7 +13525,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-562",
@@ -12415,7 +13548,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 59
   },
   {
     "id": "btl-563",
@@ -12436,7 +13571,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 59
   },
   {
     "id": "btl-564",
@@ -12457,7 +13594,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 221
   },
   {
     "id": "btl-565",
@@ -12478,7 +13617,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 209
   },
   {
     "id": "btl-566",
@@ -12499,7 +13640,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 168
   },
   {
     "id": "btl-567",
@@ -12520,7 +13663,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-568",
@@ -12541,7 +13686,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 139
   },
   {
     "id": "btl-569",
@@ -12562,7 +13709,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 263
   },
   {
     "id": "btl-570",
@@ -12583,7 +13732,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 59
   },
   {
     "id": "btl-571",
@@ -12604,7 +13755,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-572",
@@ -12625,7 +13778,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-573",
@@ -12646,7 +13801,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 11
   },
   {
     "id": "btl-574",
@@ -12667,7 +13824,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 230
   },
   {
     "id": "btl-575",
@@ -12688,7 +13847,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 64
   },
   {
     "id": "btl-576",
@@ -12709,7 +13870,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 208
   },
   {
     "id": "btl-577",
@@ -12730,7 +13893,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-578",
@@ -12751,7 +13916,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 54
   },
   {
     "id": "btl-579",
@@ -12772,7 +13939,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 452
   },
   {
     "id": "btl-580",
@@ -12793,7 +13962,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 725,
+    "duplicateOf": "btl-57"
   },
   {
     "id": "btl-581",
@@ -12814,7 +13986,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-582",
@@ -12835,7 +14009,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-583",
@@ -12856,7 +14032,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-584",
@@ -12877,7 +14055,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 37
   },
   {
     "id": "btl-585",
@@ -12898,7 +14078,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-586",
@@ -12919,7 +14101,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-587",
@@ -12940,7 +14124,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-588",
@@ -12961,7 +14147,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-589",
@@ -12982,7 +14170,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 359
   },
   {
     "id": "btl-590",
@@ -13003,7 +14193,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 388
   },
   {
     "id": "btl-591",
@@ -13024,7 +14216,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 445
   },
   {
     "id": "btl-592",
@@ -13045,7 +14239,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 369
   },
   {
     "id": "btl-593",
@@ -13066,7 +14262,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 573
   },
   {
     "id": "btl-594",
@@ -13087,7 +14285,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 744
   },
   {
     "id": "btl-595",
@@ -13108,7 +14308,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 603
   },
   {
     "id": "btl-596",
@@ -13129,7 +14331,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 522
   },
   {
     "id": "btl-597",
@@ -13150,7 +14354,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 286
   },
   {
     "id": "btl-598",
@@ -13171,7 +14377,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 390
   },
   {
     "id": "btl-599",
@@ -13192,7 +14400,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 151
   },
   {
     "id": "btl-600",
@@ -13213,7 +14423,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 50
   },
   {
     "id": "btl-601",
@@ -13234,7 +14446,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 247
   },
   {
     "id": "btl-602",
@@ -13255,7 +14469,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-603",
@@ -13276,7 +14492,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-604",
@@ -13297,7 +14515,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 490
   },
   {
     "id": "btl-605",
@@ -13318,7 +14538,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 267
   },
   {
     "id": "btl-606",
@@ -13339,7 +14561,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 805
   },
   {
     "id": "btl-607",
@@ -13360,7 +14584,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 182
   },
   {
     "id": "btl-608",
@@ -13381,7 +14607,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 34
   },
   {
     "id": "btl-609",
@@ -13402,7 +14630,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 301
   },
   {
     "id": "btl-610",
@@ -13423,7 +14653,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 55
   },
   {
     "id": "btl-611",
@@ -13444,7 +14676,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 325
   },
   {
     "id": "btl-612",
@@ -13465,7 +14699,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 184
   },
   {
     "id": "btl-613",
@@ -13486,7 +14722,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 667,
+    "duplicateOf": "btl-25"
   },
   {
     "id": "btl-614",
@@ -13507,7 +14746,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-615",
@@ -13528,7 +14769,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 20
   },
   {
     "id": "btl-616",
@@ -13549,7 +14792,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-617",
@@ -13570,7 +14815,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-618",
@@ -13591,7 +14838,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-619",
@@ -13612,7 +14861,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-620",
@@ -13633,7 +14884,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 51
   },
   {
     "id": "btl-621",
@@ -13654,7 +14907,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 397
   },
   {
     "id": "btl-622",
@@ -13675,7 +14930,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 335
   },
   {
     "id": "btl-623",
@@ -13696,7 +14953,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 302
   },
   {
     "id": "btl-624",
@@ -13717,7 +14976,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 297
   },
   {
     "id": "btl-625",
@@ -13738,7 +14999,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 279
   },
   {
     "id": "btl-626",
@@ -13759,7 +15022,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 254
   },
   {
     "id": "btl-627",
@@ -13780,7 +15045,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-628",
@@ -13801,7 +15068,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 25
   },
   {
     "id": "btl-629",
@@ -13822,7 +15091,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-630",
@@ -13843,7 +15114,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 20
   },
   {
     "id": "btl-631",
@@ -13864,7 +15137,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 21
   },
   {
     "id": "btl-632",
@@ -13885,7 +15160,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 74
   },
   {
     "id": "btl-633",
@@ -13906,7 +15183,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-634",
@@ -13927,7 +15206,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 764
   },
   {
     "id": "btl-635",
@@ -13948,7 +15229,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 751
   },
   {
     "id": "btl-636",
@@ -13969,7 +15252,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 364
   },
   {
     "id": "btl-637",
@@ -13990,7 +15275,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 560
   },
   {
     "id": "btl-638",
@@ -14011,7 +15298,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 243
   },
   {
     "id": "btl-639",
@@ -14032,7 +15321,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 243
   },
   {
     "id": "btl-640",
@@ -14053,7 +15344,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 521
   },
   {
     "id": "btl-641",
@@ -14074,7 +15367,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 588
   },
   {
     "id": "btl-642",
@@ -14095,7 +15390,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 56
   },
   {
     "id": "btl-643",
@@ -14116,7 +15413,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 209
   },
   {
     "id": "btl-644",
@@ -14137,7 +15436,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 21
   },
   {
     "id": "btl-645",
@@ -14158,7 +15459,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 456,
+    "duplicateOf": "btl-647"
   },
   {
     "id": "btl-646",
@@ -14179,7 +15483,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 213
   },
   {
     "id": "btl-647",
@@ -14200,7 +15506,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1182
   },
   {
     "id": "btl-648",
@@ -14221,7 +15529,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 481
   },
   {
     "id": "btl-649",
@@ -14242,7 +15552,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 874
   },
   {
     "id": "btl-650",
@@ -14263,7 +15575,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-651",
@@ -14284,7 +15598,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 382
   },
   {
     "id": "btl-652",
@@ -14305,7 +15621,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-653",
@@ -14326,7 +15644,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-654",
@@ -14347,7 +15667,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-655",
@@ -14368,7 +15690,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-656",
@@ -14389,7 +15713,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 21
   },
   {
     "id": "btl-657",
@@ -14410,7 +15736,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-658",
@@ -14431,7 +15759,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 658
   },
   {
     "id": "btl-659",
@@ -14452,7 +15782,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 651
   },
   {
     "id": "btl-660",
@@ -14473,7 +15805,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 374
   },
   {
     "id": "btl-661",
@@ -14494,7 +15828,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 542
   },
   {
     "id": "btl-662",
@@ -14515,7 +15851,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 481
   },
   {
     "id": "btl-663",
@@ -14536,7 +15874,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 258
   },
   {
     "id": "btl-664",
@@ -14557,7 +15897,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-665",
@@ -14578,7 +15920,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 59
   },
   {
     "id": "btl-666",
@@ -14599,7 +15943,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 33
   },
   {
     "id": "btl-667",
@@ -14620,7 +15966,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-668",
@@ -14641,7 +15989,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 34
   },
   {
     "id": "btl-669",
@@ -14662,7 +16012,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 282
   },
   {
     "id": "btl-670",
@@ -14683,7 +16035,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 343
   },
   {
     "id": "btl-671",
@@ -14704,7 +16058,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 233
   },
   {
     "id": "btl-672",
@@ -14725,7 +16081,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-673",
@@ -14746,7 +16104,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-674",
@@ -14767,7 +16127,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 697
   },
   {
     "id": "btl-675",
@@ -14788,7 +16150,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-676",
@@ -14809,7 +16173,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 54
   },
   {
     "id": "btl-677",
@@ -14830,7 +16196,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-678",
@@ -14851,7 +16219,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-679",
@@ -14872,7 +16242,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 54
   },
   {
     "id": "btl-680",
@@ -14893,7 +16265,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-681",
@@ -14914,7 +16288,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 717
   },
   {
     "id": "btl-682",
@@ -14935,7 +16311,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 496
   },
   {
     "id": "btl-683",
@@ -14956,7 +16334,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 869
   },
   {
     "id": "btl-684",
@@ -14977,7 +16357,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 633
   },
   {
     "id": "btl-685",
@@ -14998,7 +16380,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 524
   },
   {
     "id": "btl-686",
@@ -15019,7 +16403,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-687",
@@ -15040,7 +16426,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-688",
@@ -15061,7 +16449,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-689",
@@ -15082,7 +16472,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-690",
@@ -15103,7 +16495,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 19
   },
   {
     "id": "btl-691",
@@ -15124,7 +16518,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 187
   },
   {
     "id": "btl-692",
@@ -15145,7 +16541,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1309
   },
   {
     "id": "btl-693",
@@ -15166,7 +16564,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 182
   },
   {
     "id": "btl-694",
@@ -15187,7 +16587,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 684
   },
   {
     "id": "btl-695",
@@ -15208,7 +16610,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 269
   },
   {
     "id": "btl-696",
@@ -15229,7 +16633,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-697",
@@ -15250,7 +16656,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-698",
@@ -15271,7 +16679,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-699",
@@ -15292,7 +16702,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-700",
@@ -15313,7 +16725,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 37
   },
   {
     "id": "btl-701",
@@ -15334,7 +16748,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 31
   },
   {
     "id": "btl-702",
@@ -15355,7 +16771,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 214
   },
   {
     "id": "btl-703",
@@ -15376,7 +16794,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 379
   },
   {
     "id": "btl-704",
@@ -15397,7 +16817,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 325
   },
   {
     "id": "btl-705",
@@ -15418,7 +16840,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 397
   },
   {
     "id": "btl-706",
@@ -15439,7 +16863,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-707",
@@ -15460,7 +16886,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 21
   },
   {
     "id": "btl-708",
@@ -15481,7 +16909,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 26
   },
   {
     "id": "btl-709",
@@ -15502,7 +16932,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 35
   },
   {
     "id": "btl-710",
@@ -15523,7 +16955,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 328
   },
   {
     "id": "btl-711",
@@ -15544,7 +16978,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 217
   },
   {
     "id": "btl-712",
@@ -15565,7 +17001,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 50
   },
   {
     "id": "btl-713",
@@ -15586,7 +17024,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-714",
@@ -15607,7 +17047,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 453
   },
   {
     "id": "btl-715",
@@ -15628,7 +17070,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 213
   },
   {
     "id": "btl-716",
@@ -15649,7 +17093,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 500
   },
   {
     "id": "btl-717",
@@ -15670,7 +17116,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 962
   },
   {
     "id": "btl-718",
@@ -15691,7 +17139,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-719",
@@ -15712,7 +17162,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-720",
@@ -15733,7 +17185,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-721",
@@ -15754,7 +17208,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 296
   },
   {
     "id": "btl-722",
@@ -15775,7 +17231,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-723",
@@ -15796,7 +17254,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-724",
@@ -15817,7 +17277,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 57
   },
   {
     "id": "btl-725",
@@ -15838,7 +17300,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 37
   },
   {
     "id": "btl-726",
@@ -15859,7 +17323,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-727",
@@ -15880,7 +17346,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-728",
@@ -15901,7 +17369,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-729",
@@ -15922,7 +17392,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 50
   },
   {
     "id": "btl-730",
@@ -15943,7 +17415,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 51
   },
   {
     "id": "btl-731",
@@ -15964,7 +17438,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-732",
@@ -15985,7 +17461,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 224
   },
   {
     "id": "btl-733",
@@ -16006,7 +17484,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 315
   },
   {
     "id": "btl-734",
@@ -16027,7 +17507,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 425
   },
   {
     "id": "btl-735",
@@ -16048,7 +17530,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 392
   },
   {
     "id": "btl-736",
@@ -16069,7 +17553,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 314
   },
   {
     "id": "btl-737",
@@ -16090,7 +17576,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 462
   },
   {
     "id": "btl-738",
@@ -16111,7 +17599,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 239
   },
   {
     "id": "btl-739",
@@ -16132,7 +17622,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 207
   },
   {
     "id": "btl-740",
@@ -16153,7 +17645,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 55
   },
   {
     "id": "btl-741",
@@ -16174,7 +17668,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 699
   },
   {
     "id": "btl-742",
@@ -16195,7 +17691,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 666
   },
   {
     "id": "btl-743",
@@ -16216,7 +17714,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 34
   },
   {
     "id": "btl-744",
@@ -16237,7 +17737,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-745",
@@ -16258,7 +17760,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-746",
@@ -16279,7 +17783,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-747",
@@ -16300,7 +17806,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 23
   },
   {
     "id": "btl-748",
@@ -16321,7 +17829,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-749",
@@ -16342,7 +17852,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-750",
@@ -16363,7 +17875,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 81
   },
   {
     "id": "btl-751",
@@ -16384,7 +17898,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 238
   },
   {
     "id": "btl-752",
@@ -16405,7 +17921,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 49
   },
   {
     "id": "btl-753",
@@ -16426,7 +17944,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 42
   },
   {
     "id": "btl-754",
@@ -16447,7 +17967,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-755",
@@ -16468,7 +17990,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-756",
@@ -16489,7 +18013,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 30
   },
   {
     "id": "btl-757",
@@ -16510,7 +18036,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 430
   },
   {
     "id": "btl-758",
@@ -16531,7 +18059,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 272
   },
   {
     "id": "btl-759",
@@ -16552,7 +18082,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-760",
@@ -16573,7 +18105,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-761",
@@ -16594,7 +18128,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 31
   },
   {
     "id": "btl-762",
@@ -16615,7 +18151,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 60
   },
   {
     "id": "btl-763",
@@ -16636,7 +18174,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 636
   },
   {
     "id": "btl-764",
@@ -16657,7 +18197,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 745
   },
   {
     "id": "btl-765",
@@ -16678,7 +18220,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 509
   },
   {
     "id": "btl-766",
@@ -16699,7 +18243,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 217
   },
   {
     "id": "btl-767",
@@ -16720,7 +18266,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 337
   },
   {
     "id": "btl-768",
@@ -16741,7 +18289,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 550
   },
   {
     "id": "btl-769",
@@ -16762,7 +18312,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 32
   },
   {
     "id": "btl-770",
@@ -16783,7 +18335,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 31
   },
   {
     "id": "btl-771",
@@ -16804,7 +18358,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 31
   },
   {
     "id": "btl-772",
@@ -16825,7 +18381,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 48
   },
   {
     "id": "btl-773",
@@ -16846,7 +18404,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 36
   },
   {
     "id": "btl-774",
@@ -16867,7 +18427,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 48
   },
   {
     "id": "btl-775",
@@ -16888,7 +18450,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 267
   },
   {
     "id": "btl-776",
@@ -16909,7 +18473,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 272
   },
   {
     "id": "btl-777",
@@ -16930,7 +18496,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 539
   },
   {
     "id": "btl-778",
@@ -16951,7 +18519,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 501
   },
   {
     "id": "btl-779",
@@ -16972,7 +18542,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 358
   },
   {
     "id": "btl-780",
@@ -16993,7 +18565,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 211
   },
   {
     "id": "btl-781",
@@ -17014,7 +18588,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 214
   },
   {
     "id": "btl-782",
@@ -17035,7 +18611,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 135
   },
   {
     "id": "btl-783",
@@ -17056,7 +18634,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 130
   },
   {
     "id": "btl-784",
@@ -17077,7 +18657,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 121
   },
   {
     "id": "btl-785",
@@ -17098,7 +18680,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 44
   },
   {
     "id": "btl-786",
@@ -17119,7 +18703,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 196
   },
   {
     "id": "btl-787",
@@ -17140,7 +18726,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 137
   },
   {
     "id": "btl-788",
@@ -17161,7 +18749,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-789",
@@ -17182,7 +18772,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-790",
@@ -17203,7 +18795,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-791",
@@ -17224,7 +18818,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 203
   },
   {
     "id": "btl-792",
@@ -17245,7 +18841,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 670
   },
   {
     "id": "btl-793",
@@ -17266,7 +18864,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 112
   },
   {
     "id": "btl-794",
@@ -17287,7 +18887,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 183,
+    "duplicateOf": "btl-792"
   },
   {
     "id": "btl-795",
@@ -17308,7 +18911,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 140
   },
   {
     "id": "btl-796",
@@ -17329,7 +18934,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 138
   },
   {
     "id": "btl-797",
@@ -17350,7 +18957,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 198
   },
   {
     "id": "btl-798",
@@ -17371,7 +18980,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 689
   },
   {
     "id": "btl-799",
@@ -17392,7 +19003,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 31
   },
   {
     "id": "btl-800",
@@ -17413,7 +19026,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 655
   },
   {
     "id": "btl-801",
@@ -17434,7 +19049,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 281
   },
   {
     "id": "btl-802",
@@ -17455,7 +19072,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 285
   },
   {
     "id": "btl-803",
@@ -17476,7 +19095,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 181
   },
   {
     "id": "btl-804",
@@ -17497,7 +19118,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-805",
@@ -17518,7 +19141,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 400
   },
   {
     "id": "btl-806",
@@ -17539,7 +19164,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 47
   },
   {
     "id": "btl-807",
@@ -17560,7 +19187,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 28
   },
   {
     "id": "btl-808",
@@ -17581,7 +19210,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 31
   },
   {
     "id": "btl-809",
@@ -17602,7 +19233,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 310
   },
   {
     "id": "btl-810",
@@ -17623,7 +19256,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 46
   },
   {
     "id": "btl-811",
@@ -17644,7 +19279,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 389
   },
   {
     "id": "btl-812",
@@ -17665,7 +19302,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 45
   },
   {
     "id": "btl-813",
@@ -17686,7 +19325,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 30
   },
   {
     "id": "btl-814",
@@ -17707,7 +19348,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 23
   },
   {
     "id": "btl-815",
@@ -17728,7 +19371,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-816",
@@ -17749,7 +19394,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 43
   },
   {
     "id": "btl-817",
@@ -17770,7 +19417,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 357
   },
   {
     "id": "btl-818",
@@ -17791,7 +19440,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 371
   },
   {
     "id": "btl-819",
@@ -17812,7 +19463,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 351
   },
   {
     "id": "btl-820",
@@ -17833,7 +19486,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 517
   },
   {
     "id": "btl-821",
@@ -17854,7 +19509,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 37
   },
   {
     "id": "btl-822",
@@ -17875,7 +19532,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 257
   },
   {
     "id": "btl-823",
@@ -17896,7 +19555,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 258
   },
   {
     "id": "btl-824",
@@ -17917,7 +19578,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 421
   },
   {
     "id": "btl-825",
@@ -17938,7 +19601,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 272
   },
   {
     "id": "btl-826",
@@ -17959,7 +19624,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 49
   },
   {
     "id": "btl-827",
@@ -17980,7 +19647,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 181
   },
   {
     "id": "btl-828",
@@ -18001,7 +19670,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 56
   },
   {
     "id": "btl-829",
@@ -18022,7 +19693,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 53
   },
   {
     "id": "btl-830",
@@ -18043,7 +19716,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 49
   },
   {
     "id": "btl-831",
@@ -18064,7 +19739,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 455
   },
   {
     "id": "btl-832",
@@ -18085,7 +19762,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 990
   },
   {
     "id": "btl-833",
@@ -18106,7 +19785,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1142
   },
   {
     "id": "btl-834",
@@ -18127,7 +19808,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 1828
   },
   {
     "id": "btl-835",
@@ -18148,7 +19831,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "CLIP",
+    "durationSec": 729
   },
   {
     "id": "btl-836",
@@ -18169,7 +19854,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 249,
+    "duplicateOf": "btl-837"
   },
   {
     "id": "btl-837",
@@ -18190,7 +19878,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 545
   },
   {
     "id": "btl-838",
@@ -18211,7 +19901,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 198
   },
   {
     "id": "btl-839",
@@ -18232,7 +19924,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 260
   },
   {
     "id": "btl-840",
@@ -18253,7 +19947,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 127
   },
   {
     "id": "btl-841",
@@ -18274,7 +19970,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-842",
@@ -18295,7 +19993,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 39
   },
   {
     "id": "btl-843",
@@ -18316,7 +20016,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 33
   },
   {
     "id": "btl-844",
@@ -18337,7 +20039,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 16
   },
   {
     "id": "btl-845",
@@ -18358,7 +20062,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 941
   },
   {
     "id": "btl-846",
@@ -18379,7 +20085,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 299
   },
   {
     "id": "btl-847",
@@ -18400,7 +20108,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 418
   },
   {
     "id": "btl-848",
@@ -18421,7 +20131,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 379
   },
   {
     "id": "btl-849",
@@ -18442,7 +20154,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1070
   },
   {
     "id": "btl-850",
@@ -18463,7 +20177,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 1666
   },
   {
     "id": "btl-851",
@@ -18484,7 +20200,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 634
   },
   {
     "id": "btl-852",
@@ -18505,7 +20223,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 470
   },
   {
     "id": "btl-853",
@@ -18526,7 +20246,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 221
   },
   {
     "id": "btl-854",
@@ -18547,7 +20269,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-855",
@@ -18568,7 +20292,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 38
   },
   {
     "id": "btl-856",
@@ -18589,7 +20315,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 40
   },
   {
     "id": "btl-857",
@@ -18610,7 +20338,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 41
   },
   {
     "id": "btl-858",
@@ -18631,7 +20361,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "SHORT",
+    "durationSec": 51
   },
   {
     "id": "btl-859",
@@ -18652,7 +20384,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 346
   },
   {
     "id": "btl-860",
@@ -18673,7 +20407,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "shares": 0,
     "createdAt": "2026-10-15T10:00:00Z",
     "mcAFocal": "20% 35%",
-    "mcBFocal": "80% 35%"
+    "mcBFocal": "80% 35%",
+    "format": "FULL",
+    "durationSec": 234
   }
 ];
 

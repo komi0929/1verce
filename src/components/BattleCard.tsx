@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { Battle } from '../types';
 import { formatTimestamp, getYouTubeThumbnail } from '../utils/youtube';
+import { formatDuration, getBattleFormat, getDurationSec } from '../lib/battleFormat';
 import { YouTubePlayer } from './YouTubePlayer';
 
 interface BattleCardProps {
@@ -89,6 +90,8 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
   };
 
   const activeTimeForLink = isPlaying ? currentSeconds : seekSeconds || 0;
+  const format = getBattleFormat(battle);
+  const durationLabel = formatDuration(getDurationSec(battle));
 
   return (
     <article
@@ -172,7 +175,22 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
                     NEW ARCHIVE
                   </span>
                 )}
+                {format === 'SHORT' && (
+                  <span className="px-2 py-0.5 rounded bg-[#FFFFFF] text-[#0A0A0A] font-jp text-[10px] font-black">
+                    ショート
+                  </span>
+                )}
+                {format === 'CLIP' && (
+                  <span className="px-2 py-0.5 rounded bg-[#FFFFFF] text-[#0A0A0A] font-jp text-[10px] font-black">
+                    切り抜き・関連
+                  </span>
+                )}
               </div>
+              {durationLabel && (
+                <span className="shrink-0 px-1.5 py-0.5 rounded bg-[#0A0A0A]/85 font-mono-tech text-[10px] font-bold text-[#FFFFFF] backdrop-blur-sm">
+                  {durationLabel}
+                </span>
+              )}
             </div>
 
             {/* Bottom Matchup Typography Overlay */}

@@ -50,7 +50,15 @@ export interface Battle {
   isUserSubmitted?: boolean;
   mcAFocal?: string; // CSS object-position for MC A crop from thumbnail
   mcBFocal?: string; // CSS object-position for MC B crop from thumbnail
+  /** FULL = 試合本編 / SHORT = YouTubeショート / CLIP = 字幕版・解説・リアクション等の関連動画 */
+  format?: VideoFormat;
+  /** 動画の長さ（秒） */
+  durationSec?: number;
+  /** 同じ試合の別アップロードの場合、正本となるバトルID（試合数カウント・一覧から除外） */
+  duplicateOf?: string;
 }
+
+export type VideoFormat = 'FULL' | 'SHORT' | 'CLIP';
 
 export interface AlbumTrack {
   id: string;

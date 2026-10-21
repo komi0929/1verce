@@ -23,6 +23,7 @@ import {
   ViewMode,
 } from './types';
 import { INITIAL_BATTLES } from './data/initialData';
+import { isClipVideo, isCountableMatch } from './lib/battleFormat';
 import {
   isSameMc,
   formatTimestamp,
@@ -104,6 +105,8 @@ export const App: React.FC = () => {
     useState<TournamentTag>('ALL');
   const [viewMode, setViewMode] = useState<ViewMode>('LATEST');
   const [showSavedOnly, setShowSavedOnly] = useState(false);
+  // フル試合のみ（デフォルト） / ショート・切り抜き
+  const [videoMode, setVideoMode] = useState<'MATCH' | 'CLIPS'>('MATCH');
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [displayLimit, setDisplayLimit] = useState<number>(20);
@@ -179,6 +182,7 @@ export const App: React.FC = () => {
       const targetSec = timeParam ? Math.max(0, parseInt(timeParam, 10) || 0) : 0;
       const found = battles.find((b) => b.id === battleParam);
       if (found) {
+        setVideoMode(isClipVideo(found) ? 'CLIPS' : 'MATCH');
         setActiveBattleId(found.id);
         setSeekSeconds(targetSec);
         setSeekNonce(Date.now());
@@ -255,7 +259,11 @@ export const App: React.FC = () => {
         setViewMode('LATEST');
       }
       if (t !== 'ALL' && selectedMcA) {
-        const tournamentBattles = battles.filter((b) => b.tournament === t);
+        const tournamentBattles = battles.filter(
+          (b) =>
+            b.tournament === t &&
+            (videoMode === 'MATCH' ? isCountableMatch(b) : isClipVideo(b))
+        );
         const hasMcA = tournamentBattles.some(
           (b) => isSameMc(b.mcA, selectedMcA) || isSameMc(b.mcB, selectedMcA)
         );
@@ -274,7 +282,7 @@ export const App: React.FC = () => {
         }
       }
     },
-    [battles, selectedMcA, selectedMcB, viewMode]
+    [battles, selectedMcA, selectedMcB, viewMode, videoMode]
   );
 
   const handleResetFilters = useCallback(() => {
@@ -608,6 +616,7 @@ export const App: React.FC = () => {
       setSearchQuery('');
       setShowSavedOnly(false);
       setViewMode('LATEST');
+      setVideoMode(isClipVideo(newBattle) ? 'CLIPS' : 'MATCH');
       activeAlbumPlayback?.onStop();
       setActiveBattleId(newBattle.id);
       setSeekSeconds(0);
@@ -635,6 +644,8 @@ export const App: React.FC = () => {
       setSearchQuery('');
       setShowSavedOnly(false);
       setViewMode('LATEST');
+      const target = battles.find((b) => b.id === battleId);
+      if (target) setVideoMode(isClipVideo(target) ? 'CLIPS' : 'MATCH');
       setDeepLinkBanner({ battleId, seconds });
       handleStartPlay(battleId, seconds);
       setTimeout(() => {
@@ -644,14 +655,76 @@ export const App: React.FC = () => {
         }
       }, 80);
     },
-    [handleStartPlay]
+    [handleStartPlay, battles]
+  );
+
+  // Video-format scope: フル試合（重複アップロード除外）のみ / ショート・切り抜きのみ
+  const scopedBattles = useMemo(
+    () =>
+      battles.filter((b) =>
+        videoMode === 'MATCH' ? isCountableMatch(b) : isClipVideo(b)
+      ),
+    [battles, videoMode]
+  );
+
+  const formatCounts = useMemo(() => {
+    let matches = 0;
+    let clips = 0;
+    for (const b of battles) {
+      if (isCountableMatch(b)) matches += 1;
+      else if (isClipVideo(b)) clips += 1;
+    }
+    return { matches, clips };
+  }, [battles]);
+
+  const handleChangeVideoMode = useCallback(
+    (mode: 'MATCH' | 'CLIPS') => {
+      if (mode === videoMode) return;
+      setVideoMode(mode);
+      setDisplayLimit(20);
+      setDeepLinkBanner(null);
+      if (selectedMcA) {
+        const inScope = (b: Battle) =>
+          mode === 'MATCH' ? isCountableMatch(b) : isClipVideo(b);
+        const hasMcA = battles.some(
+          (b) =>
+            inScope(b) &&
+            (isSameMc(b.mcA, selectedMcA) || isSameMc(b.mcB, selectedMcA))
+        );
+        if (!hasMcA) {
+          setSelectedMcA(null);
+          setSelectedMcB(null);
+        } else if (selectedMcB) {
+          const hasPair = battles.some(
+            (b) =>
+              inScope(b) &&
+              ((isSameMc(b.mcA, selectedMcA) && isSameMc(b.mcB, selectedMcB)) ||
+                (isSameMc(b.mcA, selectedMcB) && isSameMc(b.mcB, selectedMcA)))
+          );
+          if (!hasPair) setSelectedMcB(null);
+        }
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+    [videoMode, selectedMcA, selectedMcB, battles]
   );
 
   // Bidirectional VS Filtering + Tournament + Incremental Search + Sort
   const filteredBattles = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
 
-    const list = battles.filter((b) => {
+    // 保存済みは形式に関わらず全て表示。直リンク対象は現在のモードに関わらず必ず表示。
+    const source = showSavedOnly
+      ? battles
+      : deepLinkBanner &&
+          !scopedBattles.some((b) => b.id === deepLinkBanner.battleId)
+        ? [
+            ...scopedBattles,
+            ...battles.filter((b) => b.id === deepLinkBanner.battleId),
+          ]
+        : scopedBattles;
+
+    const list = source.filter((b) => {
       if (showSavedOnly && !savedIds.includes(b.id)) {
         return false;
       }
@@ -714,6 +787,7 @@ export const App: React.FC = () => {
     });
   }, [
     battles,
+    scopedBattles,
     showSavedOnly,
     savedIds,
     selectedTournament,
@@ -874,7 +948,7 @@ export const App: React.FC = () => {
       {/* 2. Interactive "VS BUILDER" — ONLY visible when exploring battles (Hidden on ALBUMS tab so Vinyl Studio has 100% screen focus) */}
       {viewMode !== 'ALBUMS' && (
         <VsBuilder
-          battles={battles}
+          battles={scopedBattles}
           selectedMcA={selectedMcA}
           selectedMcB={selectedMcB}
           selectedTournament={selectedTournament}
@@ -940,13 +1014,55 @@ export const App: React.FC = () => {
           </div>
         )}
 
+        {/* 3a. Video Format Segmented Control — 試合（フル動画のみ） / ショート・切り抜き */}
+        {viewMode !== 'ALBUMS' && !showSavedOnly && (
+          <div
+            role="tablist"
+            aria-label="動画の種類"
+            className="grid grid-cols-2 gap-1 p-1 rounded-xl bg-[#121212] border border-[#222224]"
+          >
+            {(
+              [
+                { id: 'MATCH', label: 'フル試合', count: formatCounts.matches, unit: '試合' },
+                { id: 'CLIPS', label: 'ショート・切り抜き', count: formatCounts.clips, unit: '本' },
+              ] as const
+            ).map((seg) => {
+              const active = videoMode === seg.id;
+              return (
+                <button
+                  key={seg.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => handleChangeVideoMode(seg.id)}
+                  className={`flex items-center justify-center gap-1.5 py-2 rounded-lg font-jp text-xs transition-all cursor-pointer ${
+                    active
+                      ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
+                      : 'text-[#8E8E93] hover:text-[#FFFFFF] font-bold'
+                  }`}
+                >
+                  <span>{seg.label}</span>
+                  <span
+                    className={`font-mono-tech text-[10px] ${
+                      active ? 'text-[#0A0A0A]/60' : 'text-[#5A5A5E]'
+                    }`}
+                  >
+                    {seg.count}
+                    {seg.unit}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        )}
+
         {/* 3. Battle Sort Bar — Only shown on Battle View */}
         {viewMode !== 'ALBUMS' && (
           <div className="flex items-center justify-between gap-2 border-b border-[#1F1F21] pb-2">
             <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 flex-1 min-w-0">
               {(
                 [
-                  { id: 'LATEST', label: '全バトル (新着)' },
+                  { id: 'LATEST', label: '新着順' },
                   { id: 'HALL_OF_FAME', label: '人気再生順' },
                 ] as const
               ).map((tab) => {
@@ -984,12 +1100,13 @@ export const App: React.FC = () => {
               </button>
             </div>
 
-            <div className="text-[11px] sm:text-xs font-mono-tech text-[#8E8E93] shrink-0 pl-1">
-              <span className="text-[#FFFFFF] font-bold">
+            <div className="text-[11px] sm:text-xs font-jp text-[#8E8E93] shrink-0 pl-1">
+              <span className="text-[#FFFFFF] font-bold font-mono-tech">
                 {filteredBattles.length}
-              </span>{' '}
-              <span className="hidden sm:inline">MATCHES</span>
-              <span className="sm:hidden">件</span>
+              </span>
+              <span className="ml-0.5">
+                {showSavedOnly ? '件' : videoMode === 'MATCH' ? '試合' : '本'}
+              </span>
             </div>
           </div>
         )}
