@@ -102,8 +102,14 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
           : 'border-[#222224] hover:border-[#363638]'
       }`}
     >
-      {/* 1. Visual Area (16:9) */}
-      <div className="relative aspect-video w-full bg-[#0A0A0A] overflow-hidden">
+      {/* 1. Visual Area (16:9 for Full Match / 9:14 reel for Shorts) */}
+      <div
+        className={`relative w-full bg-[#0A0A0A] overflow-hidden ${
+          format === 'SHORT'
+            ? 'aspect-[9/13] max-h-[520px] max-w-[360px] mx-auto rounded-lg my-1'
+            : 'aspect-video'
+        }`}
+      >
         {isPlaying ? (
           <YouTubePlayer
             youtubeId={battle.youtubeId}
@@ -181,6 +187,11 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
                 <span className="px-2 py-0.5 rounded bg-[#1A1A1A]/80 border border-[#2C2C2E] font-jp text-[10px] text-[#8E8E93]">
                   {battle.stageOrEvent}
                 </span>
+                {battle.year && (
+                  <span className="px-1.5 py-0.5 rounded bg-[#1A1A1A]/80 border border-[#2C2C2E] font-mono-tech text-[10px] text-[#8E8E93]">
+                    {battle.year}年
+                  </span>
+                )}
                 {battle.isUserSubmitted && (
                   <span className="px-2 py-0.5 rounded bg-[#E50914]/90 text-[#FFFFFF] font-mono-tech text-[10px] font-bold tracking-wider uppercase">
                     NEW ARCHIVE

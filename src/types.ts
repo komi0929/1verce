@@ -5,8 +5,11 @@ export type TournamentTag =
   | 'UMB'
   | 'KOK'
   | 'ADRENALINE'
-  | 'FSL'
-  | '高校生RAP選手権';
+  | '口喧嘩祭'
+  | 'SPOTLIGHT'
+  | 'BATTLE SUMMIT'
+  | '高校生RAP選手権'
+  | 'FSL';
 
 export type StampTag = 'PUNCHLINE';
 
@@ -125,5 +128,7 @@ export type ViewMode =
   | 'LATEST'
   | 'FRESH'
   | 'HALL_OF_FAME'
+  | 'YEAR_DESC'
+  | 'YEAR_ASC'
   | 'ALBUMS'
   | 'ARCHIVE';

@@ -62,19 +62,13 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
 
   // 2. Tournament counts (both total and for currently selected MC(s))
   const tournamentStats = useMemo(() => {
-    const stats: Record<
+    const stats = {} as Record<
       TournamentTag,
       { total: number; mcMatches: number }
-    > = {
-      ALL: { total: battles.length, mcMatches: 0 },
-      戦極: { total: 0, mcMatches: 0 },
-      凱旋: { total: 0, mcMatches: 0 },
-      UMB: { total: 0, mcMatches: 0 },
-      KOK: { total: 0, mcMatches: 0 },
-      ADRENALINE: { total: 0, mcMatches: 0 },
-      FSL: { total: 0, mcMatches: 0 },
-      高校生RAP選手権: { total: 0, mcMatches: 0 },
-    };
+    >;
+    for (const t of TOURNAMENTS) {
+      stats[t] = { total: t === 'ALL' ? battles.length : 0, mcMatches: 0 };
+    }
 
     for (const b of battles) {
       if (stats[b.tournament]) {

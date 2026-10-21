@@ -7,8 +7,11 @@ export const TOURNAMENTS: TournamentTag[] = [
   "UMB",
   "KOK",
   "ADRENALINE",
-  "FSL",
-  "高校生RAP選手権"
+  "口喧嘩祭",
+  "SPOTLIGHT",
+  "BATTLE SUMMIT",
+  "高校生RAP選手権",
+  "FSL"
 ];
 
 export const MC_PROFILES: MCProfile[] = [
@@ -621,8 +624,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "FORK（TEAM エンタダ） vs 呂布カルマ（TEAM 口喧嘩祭）｜MC BATTLE MATSURI -大抗争045-【大将戦】",
     "mcA": "FORK",
     "mcB": "呂布カルマ",
-    "tournament": "KOK",
-    "stageOrEvent": "大抗争045 大将戦",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "大将戦",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -645,7 +648,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "晋平太",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE 2019 FINAL",
+    "stageOrEvent": "決勝戦",
     "year": "2019",
     "verses": [],
     "evaluation": {
@@ -668,7 +671,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第21章 FINAL",
+    "stageOrEvent": "第21章 決勝戦",
     "year": "2020",
     "verses": [],
     "evaluation": {
@@ -691,7 +694,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "呂布カルマ",
     "tournament": "凱旋",
-    "stageOrEvent": "東西選抜冬ノ陣2020 FINAL",
+    "stageOrEvent": "決勝戦",
     "year": "2020",
     "verses": [],
     "evaluation": {
@@ -737,7 +740,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "Special アリーナノ陣2021",
+    "stageOrEvent": "アリーナノ陣",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -760,7 +763,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "第24章 日本武道館 BEST4",
+    "stageOrEvent": "第24章 日本武道館 準決勝",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -783,7 +786,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "R-指定",
     "tournament": "UMB",
-    "stageOrEvent": "UMB2014 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2014",
     "verses": [],
     "evaluation": {
@@ -806,7 +809,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "THE CHOICE IS YOURS BEST4",
+    "stageOrEvent": "CHOICE IS YOURS 準決勝",
     "year": "2020",
     "verses": [],
     "evaluation": {
@@ -829,7 +832,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "MU-TON",
     "tournament": "凱旋",
-    "stageOrEvent": "Special アリーナノ陣2021",
+    "stageOrEvent": "アリーナノ陣",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -852,7 +855,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "FORK",
     "tournament": "KOK",
-    "stageOrEvent": "KOK GRAND CHAMPIONSHIP FINAL",
+    "stageOrEvent": "決勝戦",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -875,7 +878,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "晋平太",
     "tournament": "UMB",
-    "stageOrEvent": "UMB2010 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2010",
     "verses": [],
     "evaluation": {
@@ -921,8 +924,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "GIL",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第17章 FINAL",
-    "year": "2018",
+    "stageOrEvent": "第17章 決勝戦",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -944,7 +947,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "ふぁんく",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第28章 大阪関西公演",
+    "stageOrEvent": "第28章 大阪関西公演",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -990,7 +993,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "呂布カルマ",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "真 ADRENALINE 決勝",
+    "stageOrEvent": "決勝戦",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -1013,7 +1016,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "FORK",
     "tournament": "KOK",
-    "stageOrEvent": "KOK vs 真 ADRENALINE 決勝",
+    "stageOrEvent": "決勝戦",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -1059,7 +1062,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "だーひー",
     "tournament": "KOK",
-    "stageOrEvent": "KOK 2023 GRAND CHAMPIONSHIP FINAL",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -1082,7 +1085,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "MOL53",
     "tournament": "KOK",
-    "stageOrEvent": "KOK 2023 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -1105,7 +1108,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "がーどまん",
     "tournament": "凱旋",
-    "stageOrEvent": "THE GIANT KILLING 決勝",
+    "stageOrEvent": "豊洲PIT 決勝戦",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -1128,7 +1131,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "句潤",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "真 ADRENALINE 1回戦",
+    "stageOrEvent": "1回戦",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -1151,7 +1154,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "早雲",
     "tournament": "UMB",
-    "stageOrEvent": "UMB2020 GRAND CHAMPIONSHIP 決勝",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2020",
     "verses": [],
     "evaluation": {
@@ -1174,7 +1177,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "早雲",
     "mcB": "Authority",
     "tournament": "UMB",
-    "stageOrEvent": "UMB2019 GRAND CHAMPIONSHIP 決勝",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2019",
     "verses": [],
     "evaluation": {
@@ -1197,7 +1200,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "MU-TON",
     "tournament": "UMB",
-    "stageOrEvent": "UMB2018 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2018",
     "verses": [],
     "evaluation": {
@@ -1220,7 +1223,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GOTIT",
     "mcB": "R-指定",
     "tournament": "UMB",
-    "stageOrEvent": "UMB2014 GRAND CHAMPIONSHIP 決勝",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2014",
     "verses": [],
     "evaluation": {
@@ -1243,7 +1246,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "ふぁんく",
     "tournament": "UMB",
-    "stageOrEvent": "UMB2017 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2017",
     "verses": [],
     "evaluation": {
@@ -1266,7 +1269,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第24章 日本武道館",
+    "stageOrEvent": "第24章 日本武道館",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -1289,7 +1292,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "韻マン",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第22章",
+    "stageOrEvent": "第22章",
     "year": "2020",
     "verses": [],
     "evaluation": {
@@ -1312,7 +1315,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Novel Core",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第24章 日本武道館 BEST16",
+    "stageOrEvent": "第24章 日本武道館 BEST16",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -1335,8 +1338,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第37章",
-    "year": "2024",
+    "stageOrEvent": "第37章",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -1358,7 +1361,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第28章 大阪関西公演",
+    "stageOrEvent": "第28章 大阪関西公演",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -1381,7 +1384,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第19章",
+    "stageOrEvent": "第19章",
     "year": "2019",
     "verses": [],
     "evaluation": {
@@ -1404,7 +1407,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "崇勲",
     "tournament": "KOK",
-    "stageOrEvent": "KOK 2016 GRAND CHAMPIONSHIP 決勝",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2016",
     "verses": [],
     "evaluation": {
@@ -1427,7 +1430,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "T-Pablow",
     "mcB": "DK",
     "tournament": "高校生RAP選手権",
-    "stageOrEvent": "第4回高校生RAP選手権 決勝",
+    "stageOrEvent": "決勝戦",
     "year": "2013",
     "verses": [],
     "evaluation": {
@@ -1450,7 +1453,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "Fuma no KTR",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "真 ADRENALINE 1回戦",
+    "stageOrEvent": "1回戦",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -1473,7 +1476,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "MCニガリ",
     "tournament": "KOK",
-    "stageOrEvent": "KOK 2023 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -1496,7 +1499,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Sitissy luvit",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第36章 東北公演 決勝",
+    "stageOrEvent": "第36章 決勝戦",
     "year": "2025",
     "verses": [],
     "evaluation": {
@@ -1518,8 +1521,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "JUMBO MAATCH vs S-kaine 凱旋MCbattle Special アリーナノ陣",
     "mcA": "S-kaine",
     "mcB": "JUMBO MAATCH",
-    "tournament": "凱旋",
-    "stageOrEvent": "Special アリーナノ陣",
+    "tournament": "UMB",
+    "stageOrEvent": "アリーナノ陣",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -1542,7 +1545,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "KT-CHAN",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第42章 BEST4",
+    "stageOrEvent": "第42章 準決勝",
     "year": "2026",
     "verses": [],
     "evaluation": {
@@ -1564,7 +1567,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "S-kaine vs 呂布カルマ / 口喧嘩祭 vs 戦極MC BATTLE",
     "mcA": "S-kaine",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
+    "tournament": "口喧嘩祭",
     "stageOrEvent": "口喧嘩祭 vs 戦極",
     "year": "2021",
     "verses": [],
@@ -1588,7 +1591,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "GIL",
     "tournament": "UMB",
-    "stageOrEvent": "UMB2014 準決勝",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2014",
     "verses": [],
     "evaluation": {
@@ -1611,7 +1614,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極第27章 仙台東北公演",
+    "stageOrEvent": "第27章 仙台東北公演",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -1634,7 +1637,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Sitissy luvit",
     "mcB": "L.B.R.L",
     "tournament": "KOK",
-    "stageOrEvent": "KOK 2025 GRAND CHAMPIONSHIP FINAL",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2025",
     "verses": [],
     "evaluation": {
@@ -1680,7 +1683,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "第31章 大北海道 決勝戦",
+    "stageOrEvent": "第31章 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -1702,9 +1705,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "DOTAMA vs S-kaine【決勝戦】 |凱旋MCbattle KING OF KINGS 2026への陣 at 渋谷WOMB",
     "mcA": "DOTAMA",
     "mcB": "S-kaine",
-    "tournament": "凱旋",
-    "stageOrEvent": "KOKへの陣 決勝戦",
-    "year": "2024",
+    "tournament": "KOK",
+    "stageOrEvent": "決勝戦",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -1772,7 +1775,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "龍鬼",
     "mcB": "MOL53",
     "tournament": "凱旋",
-    "stageOrEvent": "Special 2023",
+    "stageOrEvent": "ガーデンシアター",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -1795,8 +1798,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "裂固",
     "tournament": "KOK",
-    "stageOrEvent": "2022 FINAL 決勝戦",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -1818,8 +1821,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "FORK",
     "tournament": "KOK",
-    "stageOrEvent": "2021 FINAL 決勝戦",
-    "year": "2022",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -1841,7 +1844,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GOCCI",
     "mcB": "BES",
     "tournament": "UMB",
-    "stageOrEvent": "2007 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2007",
     "verses": [],
     "evaluation": {
@@ -1864,7 +1867,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "NONKEY",
     "tournament": "UMB",
-    "stageOrEvent": "2009 GRAND CHAMPIONSHIP 決勝戦",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2009",
     "verses": [],
     "evaluation": {
@@ -1887,7 +1890,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "CIMA",
     "tournament": "UMB",
-    "stageOrEvent": "THE CHOICE IS YOURS Vol.1 決勝戦",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2017",
     "verses": [],
     "evaluation": {
@@ -1910,7 +1913,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "晋平太",
     "tournament": "UMB",
-    "stageOrEvent": "THE CHOICE IS YOURS Vol.2 決勝戦",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2018",
     "verses": [],
     "evaluation": {
@@ -1933,7 +1936,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "DOTAMA",
     "tournament": "UMB",
-    "stageOrEvent": "2011 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
     "year": "2011",
     "verses": [],
     "evaluation": {
@@ -1956,7 +1959,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "Authority",
     "tournament": "UMB",
-    "stageOrEvent": "2018 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2018",
     "verses": [],
     "evaluation": {
@@ -1980,7 +1983,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "Authority",
     "tournament": "UMB",
-    "stageOrEvent": "2019 GRAND CHAMPIONSHIP BEST8",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2019",
     "verses": [],
     "evaluation": {
@@ -2002,8 +2005,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "T-TANGG vs 輪入道 《決勝戦》/ 真ADRENALINE -ROAD TO KOK- 2024.01.05",
     "mcA": "T-TANGG",
     "mcB": "輪入道",
-    "tournament": "ADRENALINE",
-    "stageOrEvent": "ROAD TO KOK 決勝戦",
+    "tournament": "KOK",
+    "stageOrEvent": "決勝戦",
     "year": "2024",
     "verses": [],
     "evaluation": {
@@ -2026,8 +2029,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "DOTAMA",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "渋谷レゲエ祭 vs 真ADRENALINE 決勝戦",
-    "year": "2022",
+    "stageOrEvent": "決勝戦",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -2049,7 +2052,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SIMON JAP",
     "mcB": "呂布カルマ",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "杯真の陣 決勝戦",
+    "stageOrEvent": "決勝戦",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -2071,9 +2074,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "Authority vs MOL53 / KING OF KINGS vs ADRENALINE 2026.07.11",
     "mcA": "Authority",
     "mcB": "MOL53",
-    "tournament": "ADRENALINE",
+    "tournament": "KOK",
     "stageOrEvent": "KOK vs ADRENALINE",
-    "year": "2021",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -2094,8 +2097,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【決勝戦】晋平太 vs CHICO CARLITO / KING OF KINGS vs 真ADRENALINE 2023.07.14",
     "mcA": "晋平太",
     "mcB": "CHICO CARLITO",
-    "tournament": "ADRENALINE",
-    "stageOrEvent": "KOK vs 真ADRENALINE 決勝戦",
+    "tournament": "KOK",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -2140,8 +2143,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【決勝戦】ID vs 晋平太 / KING OF KINGS vs 真 ADRENALINE #4",
     "mcA": "ID",
     "mcB": "晋平太",
-    "tournament": "ADRENALINE",
-    "stageOrEvent": "KOK vs 真ADRENALINE #4 決勝戦",
+    "tournament": "KOK",
+    "stageOrEvent": "決勝戦",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -2302,7 +2305,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "Lick-G",
     "tournament": "高校生RAP選手権",
-    "stageOrEvent": "第9回 決勝戦",
+    "stageOrEvent": "決勝戦",
     "year": "2016",
     "verses": [],
     "evaluation": {
@@ -2325,7 +2328,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MCニガリ",
     "mcB": "Rude-α",
     "tournament": "高校生RAP選手権",
-    "stageOrEvent": "第6回 決勝戦",
+    "stageOrEvent": "決勝戦",
     "year": "2014",
     "verses": [],
     "evaluation": {
@@ -2417,7 +2420,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "KBD",
     "tournament": "戦極",
-    "stageOrEvent": "第6章 黄金期 決勝戦",
+    "stageOrEvent": "第6章 決勝戦",
     "year": "2013",
     "verses": [],
     "evaluation": {
@@ -2509,7 +2512,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Sitissy luvit",
     "mcB": "ミステリオ",
     "tournament": "戦極",
-    "stageOrEvent": "第40章 Still Fresh MCs",
+    "stageOrEvent": "第40章",
     "year": "2025",
     "verses": [],
     "evaluation": {
@@ -2601,7 +2604,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "S-kaine",
     "tournament": "戦極",
-    "stageOrEvent": "第37章 OSAKA 決勝戦",
+    "stageOrEvent": "第37章 決勝戦",
     "year": "2025",
     "verses": [],
     "evaluation": {
@@ -2624,7 +2627,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "大阪戦極トライアスロン 決勝戦",
+    "stageOrEvent": "決勝戦",
     "year": "2021",
     "verses": [],
     "evaluation": {
@@ -2647,7 +2650,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "第21.5章 Battle League SP 決勝",
+    "stageOrEvent": "第21.5章 決勝戦",
     "year": "2020",
     "verses": [],
     "evaluation": {
@@ -2740,7 +2743,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "KOK",
     "stageOrEvent": "2020 GRAND CHAMPIONSHIP",
-    "year": "2021",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -2762,7 +2765,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Bonbero",
     "tournament": "凱旋",
-    "stageOrEvent": "さいたまスーパーアリーナノ陣",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -2854,7 +2857,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "Rude-α",
     "tournament": "凱旋",
-    "stageOrEvent": "アリーナノ陣 at ぴあアリーナMM",
+    "stageOrEvent": "アリーナノ陣",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -2900,7 +2903,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "¥ellow Bucks",
     "tournament": "凱旋",
-    "stageOrEvent": "さいたまスーパーアリーナノ陣",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -2923,7 +2926,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "RAY",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "さいたまスーパーアリーナノ陣",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -2946,7 +2949,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Spada",
     "mcB": "Bonbero",
     "tournament": "凱旋",
-    "stageOrEvent": "さいたまスーパーアリーナノ陣",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -2969,7 +2972,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "MOL53",
     "tournament": "UMB",
-    "stageOrEvent": "2012 GRAND CHAMPIONSHIP 決勝戦",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2012",
     "verses": [],
     "evaluation": {
@@ -2992,7 +2995,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "R-指定",
     "tournament": "UMB",
-    "stageOrEvent": "2013 GRAND CHAMPIONSHIP 決勝戦",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2013",
     "verses": [],
     "evaluation": {
@@ -3016,7 +3019,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "呂布カルマ",
     "tournament": "凱旋",
-    "stageOrEvent": "東西選抜秋ノ陣2019 決勝戦",
+    "stageOrEvent": "決勝戦",
     "year": "2019",
     "verses": [],
     "evaluation": {
@@ -3038,8 +3041,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "Authority vs MOL53 BATTLE SUMMIT 決勝戦",
     "mcA": "Authority",
     "mcB": "MOL53",
-    "tournament": "ADRENALINE",
-    "stageOrEvent": "BATTLE SUMMIT 決勝戦",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "決勝戦",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -3131,7 +3134,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "長瀬",
     "mcB": "KT-CHAN",
     "tournament": "高校生RAP選手権",
-    "stageOrEvent": "第17回 1回戦",
+    "stageOrEvent": "1回戦",
     "year": "2022",
     "verses": [],
     "evaluation": {
@@ -3154,8 +3157,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SIMON JAP",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "KOK",
-    "stageOrEvent": "2020 GRAND CHAMPIONSHIP",
-    "year": "2021",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -3246,7 +3249,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "だーひー",
     "tournament": "戦極",
-    "stageOrEvent": "第20章 BESTBOUT",
+    "stageOrEvent": "第20章",
     "year": "2019",
     "verses": [],
     "evaluation": {
@@ -3269,7 +3272,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "RYKEY",
     "tournament": "凱旋",
-    "stageOrEvent": "Special 2023 at 東京ガーデンシアター",
+    "stageOrEvent": "ガーデンシアター",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -3292,7 +3295,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "KEN THE 390",
     "tournament": "戦極",
-    "stageOrEvent": "第13章 全国ツアー",
+    "stageOrEvent": "第13章",
     "year": "2015",
     "verses": [],
     "evaluation": {
@@ -3315,7 +3318,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Novel Core",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "第20章 BESTBOUT",
+    "stageOrEvent": "第20章",
     "year": "2019",
     "verses": [],
     "evaluation": {
@@ -3406,7 +3409,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "般若 vs 漢 a.k.a. GAMI / BATTLE SUMMIT 2 (2024.8.14)",
     "mcA": "般若",
     "mcB": "漢 a.k.a. GAMI",
-    "tournament": "戦極",
+    "tournament": "BATTLE SUMMIT",
     "stageOrEvent": "BATTLE SUMMIT 2 代々木第一体育館",
     "year": "2024",
     "verses": [],
@@ -3429,7 +3432,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "般若 vs SKRYU / BATTLE SUMMIT 2 (2024.8.14)",
     "mcA": "般若",
     "mcB": "SKRYU",
-    "tournament": "戦極",
+    "tournament": "BATTLE SUMMIT",
     "stageOrEvent": "BATTLE SUMMIT 2 代々木第一体育館",
     "year": "2024",
     "verses": [],
@@ -3453,7 +3456,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "HIDADDY",
     "mcB": "般若",
     "tournament": "UMB",
-    "stageOrEvent": "2008 GRAND CHAMPIONSHIP",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2008",
     "verses": [],
     "evaluation": {
@@ -3499,7 +3502,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CIMA",
     "mcB": "じょう",
     "tournament": "戦極",
-    "stageOrEvent": "RhymersHIGH IV 決勝戦",
+    "stageOrEvent": "決勝戦",
     "year": "2026",
     "verses": [],
     "evaluation": {
@@ -3522,7 +3525,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "無欲",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "RhymersHIGH IV 準決勝",
+    "stageOrEvent": "準決勝",
     "year": "2026",
     "verses": [],
     "evaluation": {
@@ -3544,7 +3547,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "Zeebra vs 漢 a.k.a. GAMI / BATTLE SUMMIT",
     "mcA": "Zeebra",
     "mcB": "漢 a.k.a. GAMI",
-    "tournament": "戦極",
+    "tournament": "BATTLE SUMMIT",
     "stageOrEvent": "BATTLE SUMMIT 日本武道館",
     "year": "2022",
     "verses": [],
@@ -3568,7 +3571,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "DOPAMINE MC BATTLE 準決勝",
+    "stageOrEvent": "決勝戦",
     "year": "2026",
     "verses": [],
     "evaluation": {
@@ -3637,7 +3640,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "EIEN",
     "mcB": "CHEHON",
     "tournament": "凱旋",
-    "stageOrEvent": "THE GIANT KILLING at 豊洲PIT",
+    "stageOrEvent": "豊洲PIT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -3660,7 +3663,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "KT-CHAN",
     "mcB": "ピラフ星人",
     "tournament": "戦極",
-    "stageOrEvent": "第34章 in 横浜",
+    "stageOrEvent": "第34章",
     "year": "2024",
     "verses": [],
     "evaluation": {
@@ -3683,7 +3686,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "KT-CHAN",
     "mcB": "テトリス",
     "tournament": "戦極",
-    "stageOrEvent": "第42章 KING ONES ONLY",
+    "stageOrEvent": "第42章",
     "year": "2026",
     "verses": [],
     "evaluation": {
@@ -3775,7 +3778,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "D-Nut's",
     "tournament": "戦極",
-    "stageOrEvent": "富士急ハイランド 決勝戦",
+    "stageOrEvent": "決勝戦",
     "year": "2026",
     "verses": [],
     "evaluation": {
@@ -3797,7 +3800,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "OZworld vs Leon Fanourakis BATTLE SUMMIT 2",
     "mcA": "OZworld",
     "mcB": "Leon Fanourakis",
-    "tournament": "戦極",
+    "tournament": "BATTLE SUMMIT",
     "stageOrEvent": "BATTLE SUMMIT 2 代々木第一体育館",
     "year": "2024",
     "verses": [],
@@ -3821,7 +3824,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -3844,7 +3847,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -3867,8 +3870,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第28章 大阪関西公演",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -3890,7 +3893,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "MOL53",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -3913,7 +3916,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "DOTAMA",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -3936,7 +3939,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -3959,7 +3962,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -3982,7 +3985,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4005,8 +4008,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "MU-TON",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "アリーナノ陣",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4028,7 +4031,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4051,8 +4054,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "じょう",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4074,8 +4077,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "韻マン",
     "mcB": "じょう",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4097,7 +4100,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "TERU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4120,8 +4123,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "呂布カルマ",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4143,8 +4146,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "GIL",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4166,7 +4169,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "SKRYU",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4189,7 +4192,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CIMA",
     "mcB": "呂布カルマ",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4212,7 +4215,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "DOTAMA",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4235,7 +4238,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "ID",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4258,8 +4261,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "MAKA",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4281,7 +4284,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "晋平太",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4304,7 +4307,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "晋平太",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4327,7 +4330,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "FORK",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4350,8 +4353,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "MOL53",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4372,8 +4375,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "呂布カルマ（TEAM 口喧嘩祭） vs MOL53（TEAM KOK）｜MC BATTLE MATSURI -大抗争045-【大将戦】",
     "mcA": "呂布カルマ",
     "mcB": "MOL53",
-    "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "大将戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4395,9 +4398,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "CIMA vs 晋平太/2021.07.31口喧嘩祭SP Best Bout",
     "mcA": "CIMA",
     "mcB": "晋平太",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4418,8 +4421,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "DOTAMA vs MOL53/口喧嘩祭15周年感謝祭",
     "mcA": "DOTAMA",
     "mcB": "MOL53",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4441,8 +4444,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "楓、裂固、呂布カルマ（TEAM 口喧嘩祭）vs MOL53、Maiji、CHICO CARLITO（TEAM KOK）｜MC BATTLE MATSURI -大抗争045-",
     "mcA": "呂布カルマ",
     "mcB": "MOL53",
-    "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4464,8 +4467,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "NAIKA MC vs 呂布カルマ/口喧嘩祭 vs 戦極MCBATTLE",
     "mcA": "NAIKA MC",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4487,8 +4490,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "MU-TON vs SKRYU / 2023.1.5 口喧嘩祭 Special in.CLUB CITTA'",
     "mcA": "MU-TON",
     "mcB": "SKRYU",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4510,9 +4513,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "ミメイvs呂布カルマ/2021.07.31口喧嘩祭SP Best Bout",
     "mcA": "ミメイ",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4534,7 +4537,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "大将戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4556,8 +4559,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "MOL53 vs ID/2023.09.10 口喧嘩祭SPECIAL",
     "mcA": "MOL53",
     "mcB": "ID",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4580,7 +4583,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "晋平太",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "大将戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4603,8 +4606,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "9for",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4625,8 +4628,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "ミメイ vs 句潤/口喧嘩祭15周年感謝祭",
     "mcA": "ミメイ",
     "mcB": "句潤",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4648,8 +4651,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【全試合結果】TEAM 口喧嘩祭が優勝！呂布カルマ vs FORKの再戦が実現...【MC BATTLE MATSURI -大抗争045-】",
     "mcA": "呂布カルマ",
     "mcB": "FORK",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4671,9 +4674,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "\"NAIKA MC vs 輪入道\" / SPOTLIGHT 2017 MC BATTLE",
     "mcA": "NAIKA MC",
     "mcB": "輪入道",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4694,8 +4697,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "強すぎて気持ち悪い晋平太umb2011 晋平太vsチプルソ#mcバトル #umb #晋平太#mol53 #ラップバトル",
     "mcA": "晋平太",
     "mcB": "チプルソ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "UMB",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4717,9 +4720,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "ふぁんく vs 呂布カルマ / SPOTLIGHT 2018 MC BATTLE (2018年11月25日)",
     "mcA": "ふぁんく",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4740,9 +4743,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "ふぁんく vs NAIKA MC / SPOTLIGHT 2018 MC BATTLE (2018年11月25日)",
     "mcA": "ふぁんく",
     "mcB": "NAIKA MC",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4764,7 +4767,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "SAM",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4787,7 +4790,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "Benjazzy",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4810,7 +4813,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "GOMESS",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4833,7 +4836,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "Benjazzy",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4856,7 +4859,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "呂布カルマ",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4879,7 +4882,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "晋平太",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4902,7 +4905,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "高校生RAP選手権",
-    "stageOrEvent": "高校生RAP選手権 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4924,8 +4927,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【決勝戦】般若vs Benjazzy BATTLE SUMMITⅡ",
     "mcA": "般若",
     "mcB": "Benjazzy",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4948,7 +4951,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "R-指定",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4971,7 +4974,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -4994,8 +4997,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5017,7 +5020,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "般若",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5040,7 +5043,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "KT-CHAN",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5063,7 +5066,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5086,7 +5089,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "早雲",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5109,8 +5112,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5132,8 +5135,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "だーひー",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5156,7 +5159,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章 両国国技館",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5179,8 +5182,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5202,8 +5205,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5225,8 +5228,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "GIL",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第17章 決勝戦",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5248,8 +5251,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "ID",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5271,8 +5274,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第27章 仙台東北公演",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5294,7 +5297,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MAKA",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5317,7 +5320,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5340,7 +5343,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5363,8 +5366,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第25章",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5386,7 +5389,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5409,7 +5412,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5432,7 +5435,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "ID",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5455,7 +5458,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5477,9 +5480,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "CIMA vs 呂布000カルマ / 戦極 vs 凱旋 MCBATTLE 2021 夏ノ章",
     "mcA": "CIMA",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5501,8 +5504,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第28章",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5524,8 +5527,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章 日本武道館 BEST16",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5547,8 +5550,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5570,7 +5573,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5593,8 +5596,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第25章 決勝戦",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5616,8 +5619,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章 日本武道館 BEST16",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5639,8 +5642,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章 日本武道館",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5662,8 +5665,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第27章",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5685,7 +5688,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "晋平太",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5708,7 +5711,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "晋平太",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5731,8 +5734,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5754,7 +5757,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "晋平太",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章 両国国技館",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5777,7 +5780,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5800,8 +5803,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GIL",
     "mcB": "晋平太",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第10章",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5823,8 +5826,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "GIL",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第10章",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5847,8 +5850,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第5章",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5870,8 +5873,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "ID",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -5893,7 +5896,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5916,7 +5919,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "FORK",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5939,7 +5942,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "FORK",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5962,7 +5965,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -5985,7 +5988,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "SAM",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6008,7 +6011,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "FORK",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6031,7 +6034,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6054,8 +6057,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "鎮座DOPENESS",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2008",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6077,7 +6080,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6100,7 +6103,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "9for",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6123,7 +6126,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "FORK",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6146,8 +6149,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第16章 BEST8",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6169,7 +6172,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "NAIKA MC",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6192,7 +6195,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6215,8 +6218,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "S-kaine",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第37章",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6238,7 +6241,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6261,8 +6264,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "NAIKA MC",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6284,7 +6287,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6307,8 +6310,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "GIL",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第27章 仙台東北公演",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6330,7 +6333,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "NAIKA MC",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6353,7 +6356,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "早雲",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6376,8 +6379,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "晋平太",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6399,7 +6402,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "NAIKA MC",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6422,8 +6425,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第16章",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6445,8 +6448,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第37章",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6467,9 +6470,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【観衆のソウルに着火ファイヤー】SKRYU vs CIMA 『戦極vs凱旋 MCBATTLE 2021 夏ノ章』 #shorts",
     "mcA": "SKRYU",
     "mcB": "CIMA",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6490,8 +6493,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "呂布カルマ vs CIMA #戦極vs凱旋 #戦極 #凱旋 #呂布カルマ #CIMA #MCバトル",
     "mcA": "呂布カルマ",
     "mcB": "CIMA",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6514,8 +6517,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第16章",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6537,7 +6540,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6560,8 +6563,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CIMA",
     "mcB": "呂布カルマ",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6583,8 +6586,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第16章",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6605,9 +6608,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "CIMA vs呂布000カルマ 【準決勝】 / 戦極vs凱旋 MCBATTLE 2021 夏ノ章",
     "mcA": "CIMA",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "決勝戦",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6629,8 +6632,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CIMA",
     "mcB": "MU-TON",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6651,9 +6654,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "CIMA vs ミメイ【BEST8】 / 戦極vs凱旋 MCBATTLE 2021 夏ノ章",
     "mcA": "CIMA",
     "mcB": "ミメイ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "BEST8",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6675,8 +6678,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第16章",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6699,7 +6702,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6722,8 +6725,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "SKRYU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6745,7 +6748,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6768,7 +6771,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GIL",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6791,7 +6794,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "呂布カルマ",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6814,7 +6817,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MAKA",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -6837,8 +6840,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第26章",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6860,8 +6863,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第26章",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6883,8 +6886,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "NAIKA MC",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第22章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6906,8 +6909,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第23章",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6929,8 +6932,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第39章",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6952,8 +6955,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "晋平太",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6975,8 +6978,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6998,8 +7001,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "CHEHON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21.5章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7021,7 +7024,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7044,7 +7047,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "ID",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7067,8 +7070,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "MU-TON",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7090,7 +7093,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7113,7 +7116,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7136,8 +7139,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7159,7 +7162,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7182,7 +7185,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7205,7 +7208,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7228,7 +7231,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "CHEHON",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7251,8 +7254,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "DOTAMA",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7274,7 +7277,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GOMESS",
     "mcB": "CHEHON",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7297,8 +7300,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "FORK",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7320,7 +7323,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "CHEHON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章 両国国技館",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7343,8 +7346,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MAKA",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7366,7 +7369,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7389,7 +7392,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7412,7 +7415,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MAKA",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7435,7 +7438,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7458,7 +7461,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MAKA",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7481,8 +7484,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第22章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7504,7 +7507,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7527,7 +7530,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MAKA",
     "mcB": "鎮座DOPENESS",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7550,8 +7553,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第22章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7573,8 +7576,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MAKA",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7596,7 +7599,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7619,8 +7622,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "9for",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第41章 決勝戦",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7642,8 +7645,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "じょう",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7665,7 +7668,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7688,8 +7691,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "じょう",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7711,7 +7714,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "9for",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7734,8 +7737,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "9for",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第17章",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7757,7 +7760,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7780,7 +7783,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7803,8 +7806,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7826,8 +7829,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "じょう",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7849,8 +7852,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7871,8 +7874,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "Bonbero×Benjazzyの凄まじさを深掘り 【BATTLE SUMMIT III】",
     "mcA": "Bonbero",
     "mcB": "Benjazzy",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7895,7 +7898,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "Benjazzy",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7917,8 +7920,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "失うものが何も無いときのR指定 umb2012早雲vs R指定 #mcバトル #r指定 #umb",
     "mcA": "早雲",
     "mcB": "R-指定",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "UMB",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7941,7 +7944,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "GIL",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7963,8 +7966,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "umb2014 GIL vs R指定 延長戦 完璧なアンサー #mcバトル #r指定",
     "mcA": "GIL",
     "mcB": "R-指定",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "UMB",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -7987,7 +7990,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "GIL",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8010,7 +8013,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "R-指定",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8033,7 +8036,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "チプルソ",
     "mcB": "R-指定",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8056,7 +8059,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "GIL",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8079,7 +8082,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "DOTAMA",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8102,7 +8105,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "GIL",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8125,7 +8128,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "晋平太",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8148,7 +8151,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "GIL",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8171,7 +8174,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8195,7 +8198,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "チプルソ",
     "mcB": "R-指定",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8218,7 +8221,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "早雲",
     "mcB": "R-指定",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8241,7 +8244,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "T-Pablow",
     "mcB": "R-指定",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8264,7 +8267,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "FORK",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8287,7 +8290,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "FORK",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8310,7 +8313,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "晋平太",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8332,8 +8335,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "最強がボコられた試合解説　part6 FSD 呂布カルマvs R指定　#hiphop #mcバトル #rap #kok #凱旋mcバトル #凱旋 #umb #日本語ラップ #ショート #shorts",
     "mcA": "呂布カルマ",
     "mcB": "R-指定",
-    "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "tournament": "KOK",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8356,7 +8359,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "T-Pablow",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8379,7 +8382,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8399,11 +8402,11 @@ export const INITIAL_BATTLES: Battle[] = [
     "id": "btl-339",
     "youtubeId": "hJq1VFAeSoI",
     "title": "\"HIDADDY vs FORK\" #003 UMB classic -GRAND CHAMPIONSHIP 2006-",
-    "mcA": "ID",
+    "mcA": "HIDADDY",
     "mcB": "FORK",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
+    "year": "2006",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8422,11 +8425,11 @@ export const INITIAL_BATTLES: Battle[] = [
     "id": "btl-340",
     "youtubeId": "NDOuijreakE",
     "title": "【バトル解説】晋平太が認める伝説の試合！？HIDADDY vs FORK\" UMB classic -GRAND CHAMPIONSHIP 2006-",
-    "mcA": "ID",
+    "mcA": "HIDADDY",
     "mcB": "FORK",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
+    "year": "2006",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8448,7 +8451,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MOL53",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8471,7 +8474,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "MU-TON",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8494,7 +8497,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "FORK",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8517,7 +8520,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "SAM",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8540,7 +8543,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "FORK",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8563,7 +8566,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "FORK",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8585,9 +8588,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "Novel Core vs 呂布カルマ/口喧嘩祭vs戦極MC BATTLE(2024.11.30)",
     "mcA": "Novel Core",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8609,7 +8612,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8632,7 +8635,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "鎮座DOPENESS",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8655,7 +8658,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8678,7 +8681,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8701,7 +8704,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8724,7 +8727,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8747,8 +8750,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "SKRYU",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8770,7 +8773,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8793,7 +8796,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "MCニガリ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8816,8 +8819,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "鎮座DOPENESS",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8839,7 +8842,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "鎮座DOPENESS",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8861,9 +8864,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "MU-TON vs 鎮座DOPENESS/2020.10.31口喧嘩祭Best Bout",
     "mcA": "MU-TON",
     "mcB": "鎮座DOPENESS",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8885,7 +8888,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "鎮座DOPENESS",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8908,7 +8911,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8932,7 +8935,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "チプルソ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -8955,8 +8958,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "チプルソ",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第5章",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8978,8 +8981,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "チプルソ",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第5章",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9001,8 +9004,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "チプルソ",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第5章",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9024,8 +9027,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "チプルソ",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第1章",
+    "year": "2012",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9047,7 +9050,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "チプルソ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9070,7 +9073,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "チプルソ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9093,8 +9096,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "チプルソ",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第1章",
+    "year": "2012",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9116,7 +9119,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SIMON JAP",
     "mcB": "チプルソ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9139,8 +9142,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第13章",
+    "year": "2015",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9162,8 +9165,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "チプルソ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第5章 決勝戦",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9185,8 +9188,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "T-Pablow",
     "mcB": "じょう",
     "tournament": "高校生RAP選手権",
-    "stageOrEvent": "高校生RAP選手権 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9208,7 +9211,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "T-Pablow",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9231,7 +9234,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "T-Pablow",
     "mcB": "R-指定",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9254,7 +9257,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "T-Pablow",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9277,8 +9280,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Novel Core",
     "mcB": "百足",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9299,8 +9302,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【字幕】DOTAMA vs 百足/戦極vs凱旋MC battle LASTVISION  #shorts #mcバトル #日本語ラップ #字幕 #戦極 #凱旋 #ラップ",
     "mcA": "DOTAMA",
     "mcB": "百足",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9323,7 +9326,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9346,7 +9349,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9368,8 +9371,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【字幕】DOTAMA vs 百足/戦極vs凱旋MC battle LASTVISION  #shorts #mcバトル #日本語ラップ #字幕 #戦極 #凱旋 #ラップ",
     "mcA": "DOTAMA",
     "mcB": "百足",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9392,8 +9395,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "百足",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章 日本武道館 BEST16",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9415,7 +9418,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "Fuma no KTR",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9438,8 +9441,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "がーどまん",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9461,8 +9464,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "アリーナノ陣",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9484,7 +9487,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "Fuma no KTR",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9507,7 +9510,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9530,7 +9533,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9553,7 +9556,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "TERU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "ガーデンシアター",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9576,7 +9579,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9599,7 +9602,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9622,8 +9625,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9645,8 +9648,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "アリーナノ陣",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9668,7 +9671,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "百足",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9691,7 +9694,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9714,7 +9717,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9737,7 +9740,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "がーどまん",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9760,8 +9763,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "だーひー",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9783,7 +9786,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "Fuma no KTR",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "ガーデンシアター",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9806,7 +9809,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "TERU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "ガーデンシアター",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9829,7 +9832,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "Novel Core",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9852,7 +9855,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "S-kaine",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9875,7 +9878,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "韻マン",
     "mcB": "百足",
     "tournament": "高校生RAP選手権",
-    "stageOrEvent": "高校生RAP選手権 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9898,7 +9901,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9921,7 +9924,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9944,7 +9947,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "韻マン",
     "mcB": "じょう",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9967,7 +9970,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "じょう",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -9990,8 +9993,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10013,8 +10016,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10036,7 +10039,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "百足",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10059,8 +10062,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GOMESS",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10082,8 +10085,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "韻マン",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10105,8 +10108,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "韻マン",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章 日本武道館 BEST16",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10128,8 +10131,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "韻マン",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10151,8 +10154,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第22章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10174,8 +10177,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章 日本武道館",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10197,8 +10200,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10220,8 +10223,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10243,7 +10246,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "般若",
     "mcB": "ID",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10266,7 +10269,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "般若",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10288,8 +10291,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【UMB2024にて勃発】MCニガリvs MC漢 #kok2024",
     "mcA": "MCニガリ",
     "mcB": "漢 a.k.a. GAMI",
-    "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "tournament": "KOK",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10311,9 +10314,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "上裸でバトルする般若 vs SKRYU/ BATTLE SUMMIT2(2024.8.14) #戦極mcバトル #mcバトル #hiphop #ショート",
     "mcA": "般若",
     "mcB": "SKRYU",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10335,7 +10338,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "般若",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10358,7 +10361,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "般若",
     "mcB": "R-指定",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10380,8 +10383,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【BATTLE SUMMIT直前記念】 CIMA VS 般若 -フリースタイルモンスター-",
     "mcA": "CIMA",
     "mcB": "般若",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10403,8 +10406,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【上裸対決】般若 vs SKRYU 【BATTLE SUMMIT Ⅱ】 | HIPHOP MAGAZINE -THE HOPE- #shorts",
     "mcA": "般若",
     "mcB": "SKRYU",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10426,8 +10429,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "[字幕入り] 般若 vs 漢a.k.a.GAMI BATTLE SUMMIT Ⅱ 一回戦第8試合",
     "mcA": "般若",
     "mcB": "漢 a.k.a. GAMI",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10450,7 +10453,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "般若",
     "mcB": "SKRYU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10473,7 +10476,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "般若",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10496,7 +10499,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SIMON JAP",
     "mcB": "般若",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10518,9 +10521,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "ベストバウトな般若 vs SKRYU/ BATTLE SUMMIT2(2024.8.14) #戦極mcバトル #mcバトル #hiphop #ショート #フリースタイルバトル",
     "mcA": "般若",
     "mcB": "SKRYU",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10542,8 +10545,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21.5章 決勝戦",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10564,8 +10567,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "BATTLE SUMMIT II 般若 vs 漢 a.k.a. GAMI #hiphop #ラップ #ショート #BATTLE SUMMIT II",
     "mcA": "般若",
     "mcB": "漢 a.k.a. GAMI",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10588,8 +10591,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10611,8 +10614,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10633,8 +10636,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【速報】BATTLE SUMMIT Ⅱ一回戦、般若 vs 漢a.k.a.GAMI決定【反応まとめ】 #mcバトル #hiphop #バトルサミット # #ラップバトル #Shorts",
     "mcA": "般若",
     "mcB": "漢 a.k.a. GAMI",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10657,7 +10660,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10680,8 +10683,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10703,8 +10706,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10726,8 +10729,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21.5章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10749,7 +10752,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10772,7 +10775,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10795,7 +10798,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10818,8 +10821,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "TERU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10841,8 +10844,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10864,7 +10867,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "FORK",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10887,8 +10890,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10911,7 +10914,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "MU-TON",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10934,8 +10937,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "漢 a.k.a. GAMI",
     "mcB": "句潤",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10957,7 +10960,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "MCニガリ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -10980,7 +10983,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "MCニガリ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11003,8 +11006,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "MCニガリ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第19章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11026,7 +11029,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "MCニガリ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11049,7 +11052,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "MCニガリ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11072,7 +11075,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "MCニガリ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11095,7 +11098,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "NAIKA MC",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11118,7 +11121,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "MOL53",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11140,8 +11143,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "高校生RAP選手権にかけた想いとは？裂固×呂布カルマ【続きは本編へ】",
     "mcA": "裂固",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "高校生RAP選手権",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11164,7 +11167,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "9for",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11187,7 +11190,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "韻マン",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11210,7 +11213,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11233,7 +11236,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11256,7 +11259,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11279,8 +11282,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第32章 決勝戦",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11302,8 +11305,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第35章 準決勝",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11325,7 +11328,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11348,8 +11351,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11371,7 +11374,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11394,7 +11397,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11417,7 +11420,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11440,7 +11443,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章 両国国技館",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11463,8 +11466,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11486,7 +11489,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11509,8 +11512,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第32章",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11532,7 +11535,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11555,8 +11558,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "がーどまん",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11578,7 +11581,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "SAM",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11601,7 +11604,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "SAM",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11623,9 +11626,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "FORK vs 裂固 / SPOTLIGHT 2022 関東編 (2022年7月1日)",
     "mcA": "FORK",
     "mcB": "裂固",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11647,8 +11650,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "SAM",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11670,7 +11673,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11692,8 +11695,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "DOTAMA VS ふぁんく #hiphop #mcバトル #umb",
     "mcA": "DOTAMA",
     "mcB": "ふぁんく",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "UMB",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11716,7 +11719,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "CIMA",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11739,7 +11742,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "MU-TON",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11762,7 +11765,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "早雲",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11785,7 +11788,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GIL",
     "mcB": "ふぁんく",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11808,7 +11811,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11831,7 +11834,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "だーひー",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -11854,8 +11857,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GOMESS",
     "mcB": "ふぁんく",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第6章",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11877,8 +11880,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "ふぁんく",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11900,8 +11903,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "ふぁんく",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11923,8 +11926,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "ふぁんく",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11946,8 +11949,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11968,9 +11971,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "MU-TON vs ふぁんく | 戦極vs凱旋 MCBATTLE 2022 冬ノ章(2022.02.12)",
     "mcA": "MU-TON",
     "mcB": "ふぁんく",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11992,8 +11995,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Sitissy luvit",
     "mcB": "ふぁんく",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第35章",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12015,8 +12018,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "ミメイ",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12038,8 +12041,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "がーどまん",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12061,8 +12064,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "ミメイ",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12084,7 +12087,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12108,8 +12111,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "ふぁんく",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12130,8 +12133,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "CHICO CARLITO VS 早雲　#hiphop #mcバトル #umb",
     "mcA": "CHICO CARLITO",
     "mcB": "早雲",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "UMB",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12153,8 +12156,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "新旧UMB王者対決!!!   CHICO CARLITO vs Authority #KOK #ADRENALINE #UMB #Authority #CHICOCARLITO #MCバトル",
     "mcA": "CHICO CARLITO",
     "mcB": "Authority",
-    "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "tournament": "KOK",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12177,7 +12180,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Authority",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12200,7 +12203,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "早雲",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12223,7 +12226,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "CHICO CARLITO",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12246,7 +12249,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12269,7 +12272,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12292,7 +12295,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12315,7 +12318,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12338,7 +12341,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12361,7 +12364,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12384,7 +12387,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "MU-TON",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12407,7 +12410,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12430,7 +12433,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "CHICO CARLITO",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12454,7 +12457,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ID",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12477,7 +12480,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "句潤",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12500,7 +12503,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12523,7 +12526,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Authority",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12546,7 +12549,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12569,7 +12572,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ID",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12592,7 +12595,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12615,7 +12618,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12638,8 +12641,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Novel Core",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章 日本武道館",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12661,7 +12664,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Novel Core",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12684,7 +12687,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12707,7 +12710,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12729,8 +12732,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【神回確定】ヒグマも冬眠から覚める⁉️CHICO CARLITOの島人魂🔥 Authority vs CHICO CARLITO #凱旋 #戦極 #ラップバトル #切り抜きチェック12",
     "mcA": "Authority",
     "mcB": "CHICO CARLITO",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12752,8 +12755,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【神回確定】Authority、CHICO CARLITO,五反田ひみつの思い出⁉️ Authority vs CHICO CARLITO #凱旋 #戦極 #ラップバトル #切り抜きチェック12",
     "mcA": "Authority",
     "mcB": "CHICO CARLITO",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12776,7 +12779,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章 両国国技館",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12798,8 +12801,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【神回確定】自分の顔をDisるBonbero‼️ Bonbero vs CHICO CARLITO #凱旋 #戦極 #ラップバトル #切り抜きチェック12",
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12822,7 +12825,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章 両国国技館",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12845,8 +12848,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CIMA",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第13章",
+    "year": "2015",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12868,7 +12871,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第31章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12891,7 +12894,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Authority",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12914,8 +12917,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "崇勲",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第14章",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12937,7 +12940,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "句潤",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12960,7 +12963,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -12983,7 +12986,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "T-Pablow",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13006,7 +13009,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13029,7 +13032,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13052,7 +13055,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ID",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13075,7 +13078,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13098,7 +13101,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13121,7 +13124,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13144,7 +13147,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13167,7 +13170,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ID",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13190,7 +13193,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13213,7 +13216,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13236,7 +13239,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ID",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13259,7 +13262,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ID",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13282,7 +13285,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13304,8 +13307,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "CHICO CARLITO vs 呂布カルマ / SPOTLIGHT 2023 東京編 (2023年6月9日)",
     "mcA": "CHICO CARLITO",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13328,8 +13331,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "CHICO CARLITO",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13351,7 +13354,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "ID",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13374,7 +13377,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "崇勲",
     "mcB": "NAIKA MC",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13397,7 +13400,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13420,7 +13423,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13443,8 +13446,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "崇勲",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13467,7 +13470,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "Sitissy luvit",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13490,7 +13493,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13513,7 +13516,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13536,8 +13539,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第15章",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13558,8 +13561,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【モンスター対決】DOTAMAvs崇勲/先行後攻を間違えたDOTAMAに対して崇勲は・・・ #戦極 #凱旋",
     "mcA": "DOTAMA",
     "mcB": "崇勲",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13582,8 +13585,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "崇勲",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13605,8 +13608,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第15章",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13628,7 +13631,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13651,7 +13654,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "崇勲",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13674,7 +13677,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13697,8 +13700,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "KT-CHAN",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第34章",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13720,7 +13723,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "崇勲",
     "mcB": "CHICO CARLITO",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13743,7 +13746,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13766,7 +13769,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "Sitissy luvit",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13789,7 +13792,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13812,8 +13815,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13835,7 +13838,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "崇勲",
     "mcB": "9for",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13858,8 +13861,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "崇勲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13881,7 +13884,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "晋平太",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13904,7 +13907,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "晋平太",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13927,7 +13930,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "じょう",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST16",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13950,7 +13953,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "晋平太",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13974,7 +13977,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "句潤",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -13997,7 +14000,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MOL53",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14020,7 +14023,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14043,7 +14046,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14066,8 +14069,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第19章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14089,7 +14092,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14112,7 +14115,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MOL53",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14135,7 +14138,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "句潤",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14157,8 +14160,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "\"句潤 vs MOL53\"  FULL HD ULTIMATE MC BATTLE2017 THE CHOICE IS YOURS 3/27(MON)",
     "mcA": "句潤",
     "mcB": "MOL53",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "UMB",
+    "stageOrEvent": "CHOICE IS YOURS",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14181,7 +14184,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14204,7 +14207,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "句潤",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14227,7 +14230,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "句潤",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14250,7 +14253,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "呂布カルマ",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14273,7 +14276,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "早雲",
     "mcB": "句潤",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14296,7 +14299,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "句潤",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14319,7 +14322,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MU-TON",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS BEST16",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14342,8 +14345,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MU-TON",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
-    "year": "2023",
+    "stageOrEvent": "BEST8",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14365,7 +14368,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "句潤",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14388,7 +14391,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MOL53",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14411,7 +14414,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MU-TON",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14434,8 +14437,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MU-TON",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14457,7 +14460,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14480,7 +14483,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14503,8 +14506,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "CIMA",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14526,8 +14529,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "句潤",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14548,9 +14551,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "Novel Core vs 句潤【延長込みノーカット】/口喧嘩祭vs戦極MC BATTLE(2024.11.30)",
     "mcA": "Novel Core",
     "mcB": "句潤",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14572,8 +14575,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "MU-TON",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14595,7 +14598,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "句潤",
     "mcB": "ID",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14617,8 +14620,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "句潤  vsがーどまん/口喧嘩祭 vs 戦極MCBATTLE",
     "mcA": "句潤",
     "mcB": "がーどまん",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14641,7 +14644,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14664,8 +14667,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "NAIKA MC",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第17章",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14687,8 +14690,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "句潤",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第19章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14710,7 +14713,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "早雲",
     "mcB": "Authority",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14734,7 +14737,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14757,7 +14760,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14780,7 +14783,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14803,7 +14806,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "早雲",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14825,8 +14828,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "CIMA vs 早雲 凱旋MC BATTLE SPECIALアリーナノ陣ショート#mcバトル #バース集 #戦極#凱旋#アドレナリン#hiphop #日本語ラップ",
     "mcA": "CIMA",
     "mcB": "早雲",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "ADRENALINE",
+    "stageOrEvent": "アリーナノ陣",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14849,7 +14852,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "早雲",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14872,7 +14875,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "CIMA",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14895,7 +14898,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "早雲",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14918,7 +14921,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ふぁんく",
     "mcB": "早雲",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14941,7 +14944,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "早雲",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14964,7 +14967,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MAKA",
     "mcB": "早雲",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -14987,7 +14990,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "早雲",
     "mcB": "ID",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15010,8 +15013,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第37章",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15033,8 +15036,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "早雲",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第37章",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15056,7 +15059,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15079,7 +15082,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15102,7 +15105,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15125,7 +15128,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15148,7 +15151,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15171,8 +15174,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第22章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15194,8 +15197,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15217,8 +15220,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "鎮座DOPENESS",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第22章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15240,7 +15243,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "SAM",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15263,8 +15266,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "早雲",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15286,8 +15289,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CIMA",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15309,8 +15312,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "早雲",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15332,7 +15335,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15355,7 +15358,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15378,7 +15381,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15401,8 +15404,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第37章",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15424,7 +15427,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "輪入道",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15447,8 +15450,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15471,8 +15474,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第32章",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15494,8 +15497,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15516,9 +15519,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "MAKAvs輪入道/戦極×凱旋 MC BATTLE 2024FINAL (2024.12.28)",
     "mcA": "MAKA",
     "mcB": "輪入道",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "決勝戦",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15540,7 +15543,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "輪入道",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15563,7 +15566,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15586,7 +15589,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "MOL53",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15609,7 +15612,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15632,7 +15635,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "Authority",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15655,7 +15658,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15678,8 +15681,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "輪入道",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15700,8 +15703,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "鎮座DOPENESS VS 輪入道　#hiphop # #mcバトル #umb",
     "mcA": "鎮座DOPENESS",
     "mcB": "輪入道",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "UMB",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15724,7 +15727,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15747,7 +15750,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "輪入道",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15770,7 +15773,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "GIL",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "CHOICE IS YOURS 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15793,7 +15796,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "SKRYU",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15816,7 +15819,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "Authority",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15839,8 +15842,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "S-kaine",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15862,8 +15865,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "輪入道",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "アリーナノ陣",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15885,7 +15888,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "ID",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15908,7 +15911,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "S-kaine",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15931,8 +15934,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "輪入道",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15954,7 +15957,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -15977,7 +15980,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "呂布カルマ",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16000,8 +16003,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "ID",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2025",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16023,7 +16026,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "呂布カルマ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "豊洲PIT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16046,8 +16049,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "CIMA",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16069,7 +16072,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "句潤",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16092,7 +16095,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "輪入道",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16115,7 +16118,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "MU-TON",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16138,7 +16141,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "句潤",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16161,7 +16164,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16184,7 +16187,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "句潤",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16207,7 +16210,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "ID",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16230,7 +16233,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "Sitissy luvit",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16253,7 +16256,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "輪入道",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16276,8 +16279,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "輪入道",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16299,7 +16302,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "R-指定",
     "mcB": "輪入道",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16322,7 +16325,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "句潤",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16345,7 +16348,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "句潤",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16368,7 +16371,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "SIMON JAP",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16391,7 +16394,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "SKRYU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16414,7 +16417,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16437,7 +16440,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16460,7 +16463,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16483,7 +16486,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "SKRYU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16506,8 +16509,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16529,8 +16532,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16552,8 +16555,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "SKRYU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16575,8 +16578,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "がーどまん",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第23章",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16598,7 +16601,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "GOMESS",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16621,7 +16624,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16644,7 +16647,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16667,7 +16670,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "じょう",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16690,7 +16693,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GOMESS",
     "mcB": "SKRYU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16713,7 +16716,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "呂布カルマ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16736,7 +16739,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "SKRYU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16759,7 +16762,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "SKRYU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16782,7 +16785,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "SKRYU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16805,7 +16808,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "SKRYU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16828,7 +16831,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "SKRYU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16851,7 +16854,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "SKRYU",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16874,7 +16877,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "SKRYU",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16897,7 +16900,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16920,7 +16923,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "SKRYU",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16943,7 +16946,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SKRYU",
     "mcB": "だーひー",
     "tournament": "UMB",
-    "stageOrEvent": "UMB MATCH",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16966,7 +16969,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "SKRYU",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -16988,8 +16991,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "S-kaine vs 呂布カルマ / 口喧嘩祭 vs 戦極MCBATTLE",
     "mcA": "S-kaine",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17012,7 +17015,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MOL53",
     "mcB": "S-kaine",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17035,8 +17038,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第41章",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -17058,8 +17061,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "S-kaine",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -17081,7 +17084,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17104,7 +17107,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "梵頭",
     "mcB": "がーどまん",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17127,7 +17130,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "S-kaine",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17150,7 +17153,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "Authority",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17173,7 +17176,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "Sitissy luvit",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17196,7 +17199,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GIL",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "豊洲PIT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17219,8 +17222,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "Authority",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -17242,7 +17245,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17264,8 +17267,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "S-kaine vs MU-TON/凱旋MC Battle  西日本ZEPP TOUR ＠横浜 決勝戦#ショート#字幕#mcバトル #日本語ラップ#戦極",
     "mcA": "S-kaine",
     "mcB": "MU-TON",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17288,7 +17291,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Sitissy luvit",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17311,7 +17314,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GIL",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17334,7 +17337,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "Authority",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17357,7 +17360,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "輪入道",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17380,7 +17383,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17403,7 +17406,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17426,7 +17429,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17449,7 +17452,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "Sitissy luvit",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17472,7 +17475,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "9for",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "豊洲PIT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17495,8 +17498,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -17518,7 +17521,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "MU-TON",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17541,8 +17544,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -17564,7 +17567,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "S-kaine",
     "mcB": "SIMON JAP",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17587,8 +17590,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -17610,7 +17613,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "S-kaine",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17632,8 +17635,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【神回確定】どうしてもCHICO CARLITOと友達になりたいBonbero⁉️ Bonbero vs CHICO CARLITO#凱旋　#戦極　#ラップバトル #切り抜きチェック12",
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17656,7 +17659,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "さいたまスーパーアリーナ",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17679,7 +17682,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "CHICO CARLITO",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17702,7 +17705,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17725,7 +17728,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "Benjazzy",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17748,7 +17751,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Benjazzy",
     "mcB": "般若",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17771,7 +17774,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Benjazzy",
     "mcB": "般若",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17794,7 +17797,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Bonbero",
     "mcB": "Benjazzy",
     "tournament": "FSL",
-    "stageOrEvent": "FSL MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17817,7 +17820,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Benjazzy",
     "mcB": "般若",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17840,7 +17843,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "Authority",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17863,7 +17866,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Benjazzy",
     "mcB": "般若",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17886,8 +17889,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Novel Core",
     "mcB": "梵頭",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "1回戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -17908,8 +17911,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "バチバチ…進撃のパンチライン！/ Benjazzy vs 般若/ BATTLE SUMMIT Ⅱ  #shorts #ショート",
     "mcA": "Benjazzy",
     "mcB": "般若",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17932,7 +17935,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Benjazzy",
     "mcB": "Bonbero",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17955,7 +17958,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Benjazzy",
     "mcB": "Bonbero",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "2回戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -17978,7 +17981,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Benjazzy",
     "mcB": "般若",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18001,7 +18004,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18024,7 +18027,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "MAKA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18047,7 +18050,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "Fuma no KTR",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章 両国国技館",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18070,7 +18073,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "MU-TON",
     "mcB": "Fuma no KTR",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18090,10 +18093,10 @@ export const INITIAL_BATTLES: Battle[] = [
     "id": "btl-760",
     "youtubeId": "yca-FzijdI8",
     "title": "KTR vs TERU 神フロー対決",
-    "mcA": "KT-CHAN",
+    "mcA": "Fuma no KTR",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18116,8 +18119,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "CHEHON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21.5章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18139,7 +18142,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "Fuma no KTR",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第29章 両国国技館",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18162,8 +18165,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18185,7 +18188,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "じょう",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18208,8 +18211,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "CHEHON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第21.5章",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18231,8 +18234,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18254,8 +18257,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "百足",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18277,8 +18280,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18300,7 +18303,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "TERU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18323,7 +18326,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "TERU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18346,7 +18349,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "TERU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18369,7 +18372,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "TERU",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18392,7 +18395,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "ID",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18415,7 +18418,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18438,7 +18441,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "Fuma no KTR",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18461,7 +18464,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18484,7 +18487,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "だーひー",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18507,8 +18510,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "9for",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18529,8 +18532,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "DOTAMA vs Fuma no KTR｜ 戦極vs凱旋MCBATTLE LAST VISION  【全試合ABEMAで配信中】",
     "mcA": "DOTAMA",
     "mcB": "Fuma no KTR",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18553,7 +18556,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "Fuma no KTR",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18576,7 +18579,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Fuma no KTR",
     "mcB": "SIMON JAP",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18598,8 +18601,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "9for vs じょう / SPOTLIGHT2019 MC BATTLE",
     "mcA": "9for",
     "mcB": "じょう",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18621,8 +18624,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "じょう vs Authority /SPOTLIGHT2019 MC BATTLE",
     "mcA": "じょう",
     "mcB": "Authority",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18644,9 +18647,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "\"じょう vs CIMA\" / SPOTLIGHT 2017 MC BATTLE",
     "mcA": "じょう",
     "mcB": "CIMA",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18668,7 +18671,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "じょう",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18690,8 +18693,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "じょう vs 呂布カルマ / SPOTLIGHT2018 MC BATTLE",
     "mcA": "じょう",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18713,9 +18716,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "晋平太 vs 裂固 / SPOTLIGHT 2019 MC BATTLE (2019年12月1日)",
     "mcA": "晋平太",
     "mcB": "裂固",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18737,7 +18740,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "晋平太",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18760,7 +18763,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "晋平太",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18783,7 +18786,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "晋平太",
     "mcB": "じょう",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -18806,8 +18809,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "CIMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18828,9 +18831,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "CIMA vs AUTHORITY / SPOTLIGHT 2019 MC BATTLE",
     "mcA": "CIMA",
     "mcB": "Authority",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18851,9 +18854,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "ふぁんく vs MCニガリ a.k.a 赤い稲妻 / SPOTLIGHT 2019 MC BATTLE",
     "mcA": "ふぁんく",
     "mcB": "MCニガリ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18874,9 +18877,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "AUTHORITY vs CIMA / SPOTLIGHT 2019 MC BATTLE 決勝3本目 (2019年12月1日)",
     "mcA": "Authority",
     "mcB": "CIMA",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18898,9 +18901,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "呂布カルマ vs がーどまん / SPOTLIGHT 2019 MC BATTLE (2019年12月1日)",
     "mcA": "呂布カルマ",
     "mcB": "がーどまん",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18921,9 +18924,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【MCバトルビート】SPOTLIGHT 2015 呂布カルマ vs じょう スナフキン vs SILENT KILLER JOINT",
     "mcA": "呂布カルマ",
     "mcB": "じょう",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "SPOTLIGHT",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2015",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18945,8 +18948,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "GOMESS",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18968,8 +18971,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18991,8 +18994,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19014,8 +19017,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "MU-TON",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第18章",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19037,8 +19040,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ID",
     "mcB": "じょう",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第19章 両国国技館",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19060,8 +19063,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "SAM",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第16章",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19083,8 +19086,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第15章",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19106,7 +19109,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "じょう",
     "mcB": "裂固",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19128,9 +19131,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "TERU vs MU-TON【BEST8】 / 戦極vs凱旋 MCBATTLE 2021 夏ノ章",
     "mcA": "TERU",
     "mcB": "MU-TON",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "BEST8",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19152,7 +19155,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "MOL53",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19175,8 +19178,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "呂布カルマ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19198,7 +19201,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19221,7 +19224,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "がーどまん",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19244,8 +19247,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第33章 決勝戦",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19267,8 +19270,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "MOL53",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第41章",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19290,7 +19293,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19313,8 +19316,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第41章",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19336,7 +19339,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "裂固",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19359,8 +19362,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第27章",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19382,8 +19385,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHEHON",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第23章",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19405,8 +19408,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第41章",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19428,8 +19431,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第33章",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19451,8 +19454,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "TERU",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第41章",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19474,8 +19477,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "SAM",
     "mcB": "TERU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第33章",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19497,7 +19500,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "KT-CHAN",
     "mcB": "DOTAMA",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19520,8 +19523,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "KT-CHAN",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第27章 仙台東北公演",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19543,7 +19546,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "KT-CHAN",
     "tournament": "ADRENALINE",
-    "stageOrEvent": "ADRENALINE MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19566,8 +19569,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第33章",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19589,8 +19592,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "KT-CHAN",
     "mcB": "梵頭",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第28章 大阪関西公演",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19612,7 +19615,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Novel Core",
     "mcB": "百足",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19635,8 +19638,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Novel Core",
     "mcB": "9for",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第20章",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19658,7 +19661,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "Novel Core",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19680,8 +19683,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【神回確定】百足のスキルにニヤつくNovel Core⁉️ Novel Core vs 百足 #凱旋 #戦極 #ラップバトル #切り抜きチェック12",
     "mcA": "Novel Core",
     "mcB": "百足",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19704,8 +19707,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Novel Core",
     "mcB": "百足",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19726,9 +19729,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "Novel Core vs CIMA/口喧嘩祭vs戦極MC BATTLE(2024.11.30)",
     "mcA": "Novel Core",
     "mcB": "CIMA",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19750,8 +19753,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "Novel Core",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19773,8 +19776,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Novel Core",
     "mcB": "Authority",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19795,8 +19798,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【バトル解説】Novel Core vs 句潤【延長込みノーカット】/口喧嘩祭vs戦極MC BATTLEは2人のスキルフルなラップが見れるベストバウトだった",
     "mcA": "Novel Core",
     "mcB": "句潤",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "口喧嘩祭",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -19819,8 +19822,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CHICO CARLITO",
     "mcB": "Novel Core",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第24章 日本武道館",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19842,8 +19845,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GIL",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第9章",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19866,8 +19869,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "GIL",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第9章",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19889,8 +19892,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第10章",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19912,8 +19915,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "SIMON JAP",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第34章",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19935,8 +19938,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "呂布カルマ",
     "mcB": "SIMON JAP",
     "tournament": "KOK",
-    "stageOrEvent": "KOK MATCH",
-    "year": "2023",
+    "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19957,9 +19960,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "がーどまん vs 呂布000カルマ 戦極vs凱旋 MCBATTLE 2021 夏ノ章#ショート#字幕#mcバトル #日本語ラップ#戦極",
     "mcA": "がーどまん",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -19980,8 +19983,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "【がーどまんの1000万の使い道は？】がーどまんvsMU-TON BATTLE SUMMIT記者会見#ショート#mcバトル#BATTLESUMMIT",
     "mcA": "がーどまん",
     "mcB": "MU-TON",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "tournament": "BATTLE SUMMIT",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20004,7 +20007,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "ミメイ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20027,7 +20030,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "ミメイ",
     "mcB": "がーどまん",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20050,7 +20053,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "呂布カルマ",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "決勝戦",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20073,8 +20076,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "第42章",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -20095,9 +20098,9 @@ export const INITIAL_BATTLES: Battle[] = [
     "title": "がーどまん vs 呂布000カルマ【BEST8】 / 戦極vs凱旋 MCBATTLE 2021 夏ノ章",
     "mcA": "がーどまん",
     "mcB": "呂布カルマ",
-    "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "tournament": "凱旋",
+    "stageOrEvent": "BEST8",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -20119,7 +20122,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "GOMESS",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "第30章",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20142,8 +20145,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "S-kaine",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -20165,8 +20168,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "だーひー",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "決勝戦",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -20188,7 +20191,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "SKRYU",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20211,8 +20214,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "CIMA",
     "mcB": "がーどまん",
     "tournament": "戦極",
-    "stageOrEvent": "戦極 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -20234,7 +20237,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "輪入道",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "アリーナノ陣",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20257,7 +20260,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "DOTAMA",
     "mcB": "がーどまん",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20280,7 +20283,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "9for",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20303,7 +20306,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20326,7 +20329,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "ミメイ",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20349,7 +20352,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "Authority",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "OFFICIAL BOUT",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20372,7 +20375,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "Authority",
     "mcB": "がーどまん",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
+    "stageOrEvent": "ガーデンシアター",
     "year": "2023",
     "verses": [],
     "evaluation": {
@@ -20395,8 +20398,8 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcA": "がーどまん",
     "mcB": "9for",
     "tournament": "凱旋",
-    "stageOrEvent": "凱旋 MATCH",
-    "year": "2023",
+    "stageOrEvent": "OFFICIAL BOUT",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -20425,6 +20428,9 @@ export const INITIAL_ANALYTICS: AnalyticsData = {
     "UMB": { outboundViews: 0, ctr: 0, verseTriggers: 0 },
     "KOK": { outboundViews: 0, ctr: 0, verseTriggers: 0 },
     "ADRENALINE": { outboundViews: 0, ctr: 0, verseTriggers: 0 },
+    "口喧嘩祭": { outboundViews: 0, ctr: 0, verseTriggers: 0 },
+    "SPOTLIGHT": { outboundViews: 0, ctr: 0, verseTriggers: 0 },
+    "BATTLE SUMMIT": { outboundViews: 0, ctr: 0, verseTriggers: 0 },
     "FSL": { outboundViews: 0, ctr: 0, verseTriggers: 0 },
     "高校生RAP選手権": { outboundViews: 0, ctr: 0, verseTriggers: 0 }
   },

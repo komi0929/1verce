@@ -95,15 +95,37 @@ ALTER TABLE public.albums ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.activity_logs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.site_analytics ENABLE ROW LEVEL SECURITY;
 
--- Battles Policies
+-- Battles Policies (読み取り・新規投稿のみ許可。改ざんUPDATEやDELETEは遮断)
 DROP POLICY IF EXISTS "Allow public read battles" ON public.battles;
 CREATE POLICY "Allow public read battles" ON public.battles FOR SELECT USING (true);
 
 DROP POLICY IF EXISTS "Allow public insert battles" ON public.battles;
 CREATE POLICY "Allow public insert battles" ON public.battles FOR INSERT WITH CHECK (true);
 
+-- 外部からのバトル改ざん（UPDATE）および削除（DELETE）は禁止（管理者のみ）
 DROP POLICY IF EXISTS "Allow public update battles" ON public.battles;
-CREATE POLICY "Allow public update battles" ON public.battles FOR UPDATE USING (true);
+DROP POLICY IF EXISTS "Allow public delete battles" ON public.battles;
+
+-- 安全な再生数・シェア数インクリメント用RPC関数（SECURITY DEFINER）
+CREATE OR REPLACE FUNCTION increment_battle_play(target_battle_id TEXT)
+RETURNS void AS $$
+BEGIN
+  UPDATE public.battles
+  SET outbound_plays = outbound_plays + 1,
+      last_active_at = NOW()
+  WHERE id = target_battle_id;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+CREATE OR REPLACE FUNCTION increment_battle_share(target_battle_id TEXT)
+RETURNS void AS $$
+BEGIN
+  UPDATE public.battles
+  SET shares = shares + 1,
+      last_active_at = NOW()
+  WHERE id = target_battle_id;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
 
 -- Stamps Policies
 DROP POLICY IF EXISTS "Allow public read stamps" ON public.stamps;
@@ -118,7 +140,7 @@ CREATE POLICY "Allow public update stamps" ON public.stamps FOR UPDATE USING (tr
 DROP POLICY IF EXISTS "Allow public delete stamps" ON public.stamps;
 CREATE POLICY "Allow public delete stamps" ON public.stamps FOR DELETE USING (true);
 
--- Albums Policies
+-- Albums Policies (全削除は禁止。SELECT/INSERT/UPDATEのみ許可)
 DROP POLICY IF EXISTS "Allow public read albums" ON public.albums;
 CREATE POLICY "Allow public read albums" ON public.albums FOR SELECT USING (true);
 
@@ -129,7 +151,6 @@ DROP POLICY IF EXISTS "Allow public update albums" ON public.albums;
 CREATE POLICY "Allow public update albums" ON public.albums FOR UPDATE USING (true);
 
 DROP POLICY IF EXISTS "Allow public delete albums" ON public.albums;
-CREATE POLICY "Allow public delete albums" ON public.albums FOR DELETE USING (true);
 
 -- Activity Logs Policies
 DROP POLICY IF EXISTS "Allow public read activity_logs" ON public.activity_logs;

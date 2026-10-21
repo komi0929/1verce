@@ -40,6 +40,8 @@ import {
   removeAlbumFromCloud,
   upsertAlbumToCloud,
   upsertBattleToCloud,
+  recordBattlePlayToCloud,
+  recordBattleShareToCloud,
 } from './lib/database';
 import { VsBuilder } from './components/VsBuilder';
 import { BattleCard } from './components/BattleCard';
@@ -57,7 +59,22 @@ export const App: React.FC = () => {
       if (raw) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed) && parsed.length >= INITIAL_BATTLES.length) {
-          return parsed;
+          const presetMap = new Map(INITIAL_BATTLES.map((b) => [b.id, b]));
+          return parsed.map((b: Battle) => {
+            const p = presetMap.get(b.id);
+            if (p) {
+              return {
+                ...b,
+                tournament: p.tournament,
+                year: p.year,
+                stageOrEvent: p.stageOrEvent,
+                format: p.format,
+                durationSec: p.durationSec,
+                duplicateOf: p.duplicateOf,
+              };
+            }
+            return b;
+          });
         }
       }
     } catch {
@@ -313,7 +330,7 @@ export const App: React.FC = () => {
             ...b,
             outboundPlays: b.outboundPlays + 1,
           };
-          upsertBattleToCloud(updated);
+          recordBattlePlayToCloud(battleId);
           return updated;
         })
       );
@@ -630,7 +647,7 @@ export const App: React.FC = () => {
       prev.map((b) => {
         if (b.id !== battleId) return b;
         const updated = { ...b, shares: b.shares + 1 };
-        upsertBattleToCloud(updated);
+        recordBattleShareToCloud(battleId);
         return updated;
       })
     );
@@ -779,6 +796,24 @@ export const App: React.FC = () => {
         const scoreB =
           b.outboundPlays * 3 + b.shares * 5 + albCountB * 10 + evalB;
         return scoreB - scoreA;
+      }
+
+      if (viewMode === 'YEAR_DESC') {
+        const yA = parseInt(a.year, 10) || 2024;
+        const yB = parseInt(b.year, 10) || 2024;
+        if (yB !== yA) return yB - yA;
+        return (
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        );
+      }
+
+      if (viewMode === 'YEAR_ASC') {
+        const yA = parseInt(a.year, 10) || 2024;
+        const yB = parseInt(b.year, 10) || 2024;
+        if (yA !== yB) return yA - yB;
+        return (
+          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+        );
       }
 
       return (
@@ -1063,7 +1098,9 @@ export const App: React.FC = () => {
               {(
                 [
                   { id: 'LATEST', label: '新着順' },
-                  { id: 'HALL_OF_FAME', label: '人気再生順' },
+                  { id: 'HALL_OF_FAME', label: '人気順' },
+                  { id: 'YEAR_DESC', label: '年代順 (最新)' },
+                  { id: 'YEAR_ASC', label: '年代順 (クラシック)' },
                 ] as const
               ).map((tab) => {
                 const active = viewMode === tab.id && !showSavedOnly;

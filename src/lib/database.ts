@@ -501,3 +501,59 @@ export async function removeAlbumFromCloud(
     // Non-blocking
   }
 }
+
+export async function recordBattlePlayToCloud(battleId: string): Promise<void> {
+  const client = getSupabaseClient();
+  if (!client) return;
+  try {
+    const { error } = await client.rpc('increment_battle_play', {
+      target_battle_id: battleId,
+    });
+    if (error) {
+      const { data } = await client
+        .from('battles')
+        .select('outbound_plays')
+        .eq('id', battleId)
+        .single();
+      if (data) {
+        await client
+          .from('battles')
+          .update({
+            outbound_plays: (Number(data.outbound_plays) || 0) + 1,
+            last_active_at: new Date().toISOString(),
+          })
+          .eq('id', battleId);
+      }
+    }
+  } catch {
+    // Non-blocking
+  }
+}
+
+export async function recordBattleShareToCloud(battleId: string): Promise<void> {
+  const client = getSupabaseClient();
+  if (!client) return;
+  try {
+    const { error } = await client.rpc('increment_battle_share', {
+      target_battle_id: battleId,
+    });
+    if (error) {
+      const { data } = await client
+        .from('battles')
+        .select('shares')
+        .eq('id', battleId)
+        .single();
+      if (data) {
+        await client
+          .from('battles')
+          .update({
+            shares: (Number(data.shares) || 0) + 1,
+            last_active_at: new Date().toISOString(),
+          })
+          .eq('id', battleId);
+      }
+    }
+  } catch {
+    // Non-blocking
+  }
+}
