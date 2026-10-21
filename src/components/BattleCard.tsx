@@ -23,6 +23,7 @@ interface BattleCardProps {
   albumCountForBattle: number;
   onStartPlay: (battleId: string, seconds?: number) => void;
   onStopPlay: (battleId: string) => void;
+  onProgress?: (seconds: number) => void;
   onVideoEnded?: (battleId: string) => void;
   onToggleSave: (battleId: string) => void;
   onOpenShare: (battle: Battle, currentSeconds?: number) => void;
@@ -42,6 +43,7 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
   albumCountForBattle,
   onStartPlay,
   onStopPlay,
+  onProgress,
   onVideoEnded,
   onToggleSave,
   onOpenShare,
@@ -75,11 +77,15 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
     durSec: number,
     paused: boolean
   ) => {
-    setCurrentSeconds(Math.floor(curSec));
+    const secInt = Math.floor(curSec);
+    setCurrentSeconds(secInt);
     if (durSec > 0) {
       setVideoDuration(Math.floor(durSec));
     }
     setIsPlayerPaused(paused);
+    if (secInt >= 5 && secInt % 3 === 0) {
+      onProgress?.(secInt);
+    }
   };
 
   const handleTogglePause = () => {

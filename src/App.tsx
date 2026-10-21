@@ -50,6 +50,10 @@ import { AlbumPickerModal } from './components/AlbumPickerModal';
 import { ShareModal } from './components/ShareModal';
 import { SubmitModal } from './components/SubmitModal';
 import { OnboardingBanner } from './components/OnboardingBanner';
+import { PullToRefresh } from './components/PullToRefresh';
+import { RecentSearches } from './components/RecentSearches';
+import { ResumePlaybackBanner } from './components/ResumePlaybackBanner';
+import { triggerHaptic } from './utils/haptics';
 
 export const App: React.FC = () => {
   // 1. Persistent Battles State
@@ -139,7 +143,33 @@ export const App: React.FC = () => {
     seconds: number;
   } | null>(null);
 
-  // 6. Modals State
+  // 6. User Experience States (Search History & Resume Playback)
+  const [recentSearches, setRecentSearches] = useState<string[]>(() => {
+    try {
+      const raw = localStorage.getItem('1verce_recent_searches_v1');
+      return raw ? JSON.parse(raw) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  const [resumePlaybackTarget, setResumePlaybackTarget] = useState<{
+    battleId: string;
+    seconds: number;
+  } | null>(() => {
+    try {
+      const raw = localStorage.getItem('1verce_last_playback_v1');
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed?.battleId && typeof parsed?.seconds === 'number' && parsed.seconds >= 5) {
+          return parsed;
+        }
+      }
+    } catch {}
+    return null;
+  });
+
+  // 7. Modals State
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
   const [shareTarget, setShareTarget] = useState<{
     battle: Battle;
@@ -158,6 +188,93 @@ export const App: React.FC = () => {
       return false;
     }
   });
+
+  const recordSearchQuery = useCallback((query: string) => {
+    const trimmed = query.trim();
+    if (!trimmed || trimmed.length < 2) return;
+    setRecentSearches((prev) => {
+      const filtered = prev.filter(
+        (item) => item.toLowerCase() !== trimmed.toLowerCase()
+      );
+      const updated = [trimmed, ...filtered].slice(0, 8);
+      try {
+        localStorage.setItem(
+          '1verce_recent_searches_v1',
+          JSON.stringify(updated)
+        );
+      } catch {}
+      return updated;
+    });
+  }, []);
+
+  const handleClearRecentSearches = useCallback(() => {
+    triggerHaptic('light');
+    setRecentSearches([]);
+    try {
+      localStorage.removeItem('1verce_recent_searches_v1');
+    } catch {}
+  }, []);
+
+  const handleRemoveRecentSearch = useCallback((targetQuery: string) => {
+    triggerHaptic('light');
+    setRecentSearches((prev) => {
+      const updated = prev.filter((item) => item !== targetQuery);
+      try {
+        localStorage.setItem(
+          '1verce_recent_searches_v1',
+          JSON.stringify(updated)
+        );
+      } catch {}
+      return updated;
+    });
+  }, []);
+
+  const handleSelectRecentSearch = useCallback((query: string) => {
+    triggerHaptic('light');
+    if (viewMode === 'ALBUMS') setViewMode('LATEST');
+    setSearchQuery(query);
+    setIsSearchOpen(true);
+  }, [viewMode]);
+
+  const handleSavePlaybackProgress = useCallback(
+    (battleId: string, seconds: number) => {
+      if (seconds < 5) return;
+      try {
+        const payload = { battleId, seconds: Math.floor(seconds) };
+        localStorage.setItem(
+          '1verce_last_playback_v1',
+          JSON.stringify(payload)
+        );
+      } catch {}
+    },
+    []
+  );
+
+  const handleDismissResumeBanner = useCallback(() => {
+    triggerHaptic('light');
+    setResumePlaybackTarget(null);
+    try {
+      localStorage.removeItem('1verce_last_playback_v1');
+    } catch {}
+  }, []);
+
+  const handlePullRefresh = useCallback(async () => {
+    if (!getSupabaseConfig()) return;
+    try {
+      const cloud = await fetchCloudState(battles);
+      if (!cloud) return;
+      setBattles(cloud.mergedBattles);
+      if (cloud.cloudAlbums && cloud.cloudAlbums.length > 0) {
+        setAlbums((local) => mergeAlbumsWithCloud(local, cloud.cloudAlbums));
+      }
+      if (cloud.communityAlbums) {
+        setCommunityAlbums(cloud.communityAlbums);
+      }
+      triggerHaptic('success');
+    } catch {
+      triggerHaptic('warning');
+    }
+  }, [battles]);
 
   const handleToggleOnboarding = useCallback((open: boolean) => {
     setIsOnboardingOpen(open);
@@ -243,6 +360,7 @@ export const App: React.FC = () => {
   // Handlers
   const handleSelectMcA = useCallback(
     (mc: string | null) => {
+      triggerHaptic('light');
       setSelectedMcA(mc);
       setSelectedMcB(null);
       setDisplayLimit(20);
@@ -264,11 +382,13 @@ export const App: React.FC = () => {
   );
 
   const handleSelectMcB = useCallback((mc: string | null) => {
+    triggerHaptic('light');
     setSelectedMcB(mc);
     setDisplayLimit(20);
   }, []);
 
   const handleSelectMatchup = useCallback((mcA: string, mcB: string) => {
+    triggerHaptic('medium');
     setSelectedMcA(mcA);
     setSelectedMcB(mcB);
     setDisplayLimit(20);
@@ -276,6 +396,7 @@ export const App: React.FC = () => {
 
   const handleSelectTournament = useCallback(
     (t: TournamentTag) => {
+      triggerHaptic('light');
       setSelectedTournament(t);
       setDisplayLimit(20);
       if (viewMode === 'ALBUMS') {
@@ -348,11 +469,8 @@ export const App: React.FC = () => {
     setActiveBattleId((prev) => (prev === battleId ? null : prev));
   }, []);
 
-  const handleVideoEnded = useCallback((battleId: string) => {
-    setActiveBattleId((prev) => (prev === battleId ? null : prev));
-  }, []);
-
   const handleToggleSave = useCallback((battleId: string) => {
+    triggerHaptic('light');
     setSavedIds((prev) =>
       prev.includes(battleId)
         ? prev.filter((id) => id !== battleId)
@@ -703,6 +821,7 @@ export const App: React.FC = () => {
   const handleChangeVideoMode = useCallback(
     (mode: 'MATCH' | 'CLIPS') => {
       if (mode === videoMode) return;
+      triggerHaptic('light');
       setVideoMode(mode);
       setDisplayLimit(20);
       setDeepLinkBanner(null);
@@ -840,6 +959,28 @@ export const App: React.FC = () => {
     albumCountByBattleId,
   ]);
 
+  const handleVideoEnded = useCallback(
+    (battleId: string) => {
+      // If user is watching short clips, auto-advance to next clip for an endless discovery flow
+      if (videoMode === 'CLIPS') {
+        const curIndex = filteredBattles.findIndex((b) => b.id === battleId);
+        if (curIndex !== -1 && curIndex + 1 < filteredBattles.length) {
+          const nextClip = filteredBattles[curIndex + 1];
+          triggerHaptic('success');
+          handleStartPlay(nextClip.id, 0);
+          setTimeout(() => {
+            document
+              .getElementById(`battle-${nextClip.id}`)
+              ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 80);
+          return;
+        }
+      }
+      setActiveBattleId((prev) => (prev === battleId ? null : prev));
+    },
+    [videoMode, filteredBattles, handleStartPlay]
+  );
+
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-[#FFFFFF] flex flex-col">
       {/* 1. Top Header (Clean Mobile-first & Desktop) */}
@@ -967,6 +1108,11 @@ export const App: React.FC = () => {
                   if (viewMode === 'ALBUMS') setViewMode('LATEST');
                   setSearchQuery(e.target.value);
                 }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && searchQuery.trim()) {
+                    recordSearchQuery(searchQuery);
+                  }
+                }}
                 placeholder="MC名・大会名でバトルを高速検索..."
                 className="flex-1 bg-transparent text-xs sm:text-sm font-jp text-[#FFFFFF] placeholder:text-[#48484A] outline-none"
                 autoFocus
@@ -982,6 +1128,12 @@ export const App: React.FC = () => {
                 </button>
               )}
             </div>
+            <RecentSearches
+              searches={recentSearches}
+              onSelect={handleSelectRecentSearch}
+              onClear={handleClearRecentSearches}
+              onRemove={handleRemoveRecentSearch}
+            />
           </div>
         )}
       </header>
@@ -1009,7 +1161,9 @@ export const App: React.FC = () => {
             : 'pb-24 sm:pb-8'
         }`}
       >
-        {/* Interactive Onboarding Guide (Only when explicitly toggled by user) */}
+        <PullToRefresh onRefresh={handlePullRefresh}>
+          <div className="space-y-3 sm:space-y-4">
+            {/* Interactive Onboarding Guide (Only when explicitly toggled by user) */}
         <OnboardingBanner
           isOpen={isOnboardingOpen}
           onClose={() => handleToggleOnboarding(false)}
@@ -1054,6 +1208,37 @@ export const App: React.FC = () => {
             </button>
           </div>
         )}
+
+        {/* Resume Playback Banner (Revisit continue watching) */}
+        {resumePlaybackTarget &&
+          !activeBattleId &&
+          viewMode !== 'ALBUMS' &&
+          (() => {
+            const resumeBattle = battles.find(
+              (b) => b.id === resumePlaybackTarget.battleId
+            );
+            if (!resumeBattle) return null;
+            return (
+              <ResumePlaybackBanner
+                battle={resumeBattle}
+                seconds={resumePlaybackTarget.seconds}
+                onResume={(battleId, sec) => {
+                  triggerHaptic('medium');
+                  handleStartPlay(battleId, sec);
+                  setResumePlaybackTarget(null);
+                  try {
+                    localStorage.removeItem('1verce_last_playback_v1');
+                  } catch {}
+                  setTimeout(() => {
+                    document
+                      .getElementById(`battle-${battleId}`)
+                      ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }, 80);
+                }}
+                onDismiss={handleDismissResumeBanner}
+              />
+            );
+          })()}
 
         {/* 3a. Video Format Segmented Control — 試合（フル動画のみ） / ショート・切り抜き */}
         {viewMode !== 'ALBUMS' && !showSavedOnly && (
@@ -1227,6 +1412,7 @@ export const App: React.FC = () => {
                   albumCountForBattle={albumCountByBattleId.get(battle.id) || 0}
                   onStartPlay={handleStartPlay}
                   onStopPlay={handleStopPlay}
+                  onProgress={(sec) => handleSavePlaybackProgress(battle.id, sec)}
                   onVideoEnded={handleVideoEnded}
                   onToggleSave={handleToggleSave}
                   onOpenShare={(b, curSec) =>
@@ -1258,6 +1444,8 @@ export const App: React.FC = () => {
               )}
             </div>
           ))}
+          </div>
+        </PullToRefresh>
       </main>
 
       {/* Floating Mini Vinyl Turntable Bar (Visible on Battle View while an Album is spinning!) */}
