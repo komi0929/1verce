@@ -37,6 +37,7 @@ interface EnrichedMc {
   focalPosition: string;
   battleCount: number; // Count within selectedTournament
   totalBattleCount: number; // Count across ALL tournaments
+  isNew?: boolean;
 }
 
 export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
@@ -67,10 +68,11 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
       { total: number; mcMatches: number }
     >;
     for (const t of TOURNAMENTS) {
-      stats[t] = { total: t === 'ALL' ? battles.length : 0, mcMatches: 0 };
+      stats[t] = { total: 0, mcMatches: 0 };
     }
 
     for (const b of battles) {
+      stats.ALL.total += 1;
       if (stats[b.tournament]) {
         stats[b.tournament].total += 1;
       }
@@ -96,9 +98,17 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
   // 3. Build complete MC catalog with both scoped (tournament) count and global count
   const allMcsCatalog = useMemo(() => {
     const map = new Map<string, EnrichedMc>();
+    const profileKeySet = new Set<string>();
+    const metaByKey = new Map<
+      string,
+      { earliestMs: number; allAuto: boolean }
+    >();
+    const thirtyDaysAgoMs = Date.now() - 30 * 24 * 60 * 60 * 1000;
 
     for (const p of MC_PROFILES) {
-      map.set(normalizeMcName(p.name).toLowerCase(), {
+      const key = normalizeMcName(p.name).toLowerCase();
+      profileKeySet.add(key);
+      map.set(key, {
         name: p.name,
         enName: p.enName,
         styleTag: p.styleTag,
@@ -107,11 +117,14 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
         focalPosition: p.focalPosition,
         battleCount: 0,
         totalBattleCount: 0,
+        isNew: false,
       });
     }
 
     // Count global battles first
     for (const b of battles) {
+      const bTimeMs = new Date(b.publishedAt || b.createdAt).getTime();
+      const isAuto = b.source === 'auto';
       const pairs: Array<[string, string | undefined, string]> = [
         [b.mcA, b.mcAFocal, '22% 30%'],
         [b.mcB, b.mcBFocal, '78% 30%'],
@@ -120,10 +133,24 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
       for (const [rawMc, focal, defaultFocal] of pairs) {
         const normName = normalizeMcName(rawMc);
         const key = normName.toLowerCase();
+        const prevMeta = metaByKey.get(key);
+        if (prevMeta) {
+          if (!isNaN(bTimeMs) && bTimeMs < prevMeta.earliestMs) {
+            prevMeta.earliestMs = bTimeMs;
+          }
+          if (!isAuto) prevMeta.allAuto = false;
+        } else {
+          metaByKey.set(key, {
+            earliestMs: isNaN(bTimeMs) ? 0 : bTimeMs,
+            allAuto: isAuto,
+          });
+        }
+
         if (map.has(key)) {
           map.get(key)!.totalBattleCount += 1;
         } else {
           const found = MC_PROFILES.find((p) => isSameMc(p.name, rawMc));
+          if (found) profileKeySet.add(key);
           map.set(key, {
             name: found?.name || normName,
             enName: found?.enName || normName.toUpperCase(),
@@ -133,6 +160,7 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
             focalPosition: found?.focalPosition || focal || defaultFocal,
             battleCount: 0,
             totalBattleCount: 1,
+            isNew: false,
           });
         }
       }
@@ -146,19 +174,25 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
       if (map.has(keyB)) map.get(keyB)!.battleCount += 1;
     }
 
+    for (const [key, mc] of map.entries()) {
+      if (!profileKeySet.has(key) && mc.totalBattleCount >= 1) {
+        const meta = metaByKey.get(key);
+        if (
+          meta &&
+          (meta.allAuto ||
+            (meta.earliestMs > 0 && meta.earliestMs >= thirtyDaysAgoMs))
+        ) {
+          mc.isNew = true;
+        }
+      }
+    }
+
     return Array.from(map.values()).filter((m) => m.totalBattleCount >= 1);
   }, [battles, scopedBattles]);
 
   // 4. MCs participating in the currently selected tournament
   const tournamentMcs = useMemo(() => {
-    const active = allMcsCatalog.filter(
-      (m) =>
-        m.battleCount > 0 &&
-        (Boolean(m.avatarUrl) ||
-          m.totalBattleCount >= 3 ||
-          Boolean(mcSearchQuery.trim()) ||
-          Boolean(selectedMcA && isSameMc(selectedMcA, m.name)))
-    );
+    const active = allMcsCatalog.filter((m) => m.battleCount > 0);
     return [...active].sort((a, b) => {
       if (sortMode === 'NAME') {
         return a.name.localeCompare(b.name, 'ja');
@@ -173,7 +207,7 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
       }
       return b.totalBattleCount - a.totalBattleCount;
     });
-  }, [allMcsCatalog, sortMode, mcSearchQuery, selectedMcA]);
+  }, [allMcsCatalog, sortMode, mcSearchQuery]);
 
   // 5. Filtered MCs by search query
   const filteredMcs = useMemo(() => {
@@ -607,14 +641,21 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
                           isOpponent={isSelectedB}
                         />
                         <div className="min-w-0 flex-1">
-                          <div
-                            className={`text-xs font-jp truncate ${
-                              isSelectedA
-                                ? 'font-black text-[#0A0A0A]'
-                                : 'font-bold text-[#FFFFFF]'
-                            }`}
-                          >
-                            {mc.name}
+                          <div className="flex items-center gap-1 min-w-0">
+                            <span
+                              className={`text-xs font-jp truncate ${
+                                isSelectedA
+                                  ? 'font-black text-[#0A0A0A]'
+                                  : 'font-bold text-[#FFFFFF]'
+                              }`}
+                            >
+                              {mc.name}
+                            </span>
+                            {mc.isNew && (
+                              <span className="shrink-0 px-1 py-0.2 rounded bg-[#E50914] text-[#FFFFFF] text-[8px] font-mono-tech font-bold leading-none">
+                                NEW
+                              </span>
+                            )}
                           </div>
                           <div
                             className={`text-[10px] font-mono-tech truncate ${
@@ -683,6 +724,11 @@ export const VsBuilderComponent: React.FC<VsBuilderProps> = ({
                         size="md"
                         selected={isSelected}
                       />
+                      {mc.isNew && (
+                        <span className="absolute -top-1 -left-1 px-1 py-0.5 rounded bg-[#E50914] text-[#FFFFFF] text-[8px] font-mono-tech font-bold leading-none shadow">
+                          NEW
+                        </span>
+                      )}
                       <span
                         className={`absolute -bottom-0.5 -right-0.5 px-1 min-w-[18px] h-[16px] rounded text-[10px] font-mono-tech font-bold flex items-center justify-center border ${
                           isSelected

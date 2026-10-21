@@ -58,10 +58,12 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
   const [isPlayerPaused, setIsPlayerPaused] = useState<boolean>(false);
   const [togglePlayNonce, setTogglePlayNonce] = useState<number>(0);
   const [desiredPaused, setDesiredPaused] = useState<boolean>(false);
+  const [playerError, setPlayerError] = useState<number | null>(null);
 
   useEffect(() => {
     setThumbQuality('hq');
     setThumbFailed(false);
+    setPlayerError(null);
   }, [battle.youtubeId]);
 
   useEffect(() => {
@@ -69,6 +71,7 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
       setCurrentSeconds(seekSeconds || 0);
       setIsPlayerPaused(false);
       setDesiredPaused(false);
+      setPlayerError(null);
     }
   }, [isPlaying, seekSeconds, seekNonce]);
 
@@ -98,6 +101,10 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
   const activeTimeForLink = isPlaying ? currentSeconds : seekSeconds || 0;
   const format = getBattleFormat(battle);
   const durationLabel = formatDuration(getDurationSec(battle));
+  const isNewAuto =
+    battle.source === 'auto' &&
+    Date.now() - new Date(battle.publishedAt || battle.createdAt).getTime() <=
+      14 * 24 * 60 * 60 * 1000;
 
   return (
     <article
@@ -117,16 +124,35 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
         }`}
       >
         {isPlaying ? (
-          <YouTubePlayer
-            youtubeId={battle.youtubeId}
-            startSeconds={seekSeconds}
-            seekNonce={seekNonce}
-            togglePlayNonce={togglePlayNonce}
-            desiredPaused={desiredPaused}
-            title={battle.title}
-            onTimeUpdate={handlePlayerTimeUpdate}
-            onEnded={() => onVideoEnded?.(battle.id)}
-          />
+          <>
+            <YouTubePlayer
+              youtubeId={battle.youtubeId}
+              startSeconds={seekSeconds}
+              seekNonce={seekNonce}
+              togglePlayNonce={togglePlayNonce}
+              desiredPaused={desiredPaused}
+              title={battle.title}
+              onTimeUpdate={handlePlayerTimeUpdate}
+              onEnded={() => onVideoEnded?.(battle.id)}
+              onPlayerError={(code) => setPlayerError(code)}
+            />
+            {playerError !== null && (
+              <div className="absolute inset-0 z-20 bg-[#0A0A0A]/95 flex flex-col items-center justify-center p-4 text-center gap-3">
+                <p className="text-xs sm:text-sm font-jp font-bold text-[#FFFFFF]">
+                  この動画は削除されたか、埋め込み再生が許可されていません
+                </p>
+                <a
+                  href={`https://www.youtube.com/watch?v=${battle.youtubeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-[#E50914] hover:bg-[#F40612] text-[#FFFFFF] font-jp text-xs font-black flex items-center gap-1.5 transition-colors"
+                >
+                  <span>YouTubeで直接開く</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              </div>
+            )}
+          </>
         ) : (
           <div
             onClick={() => onStartPlay(battle.id, 0)}
@@ -198,7 +224,12 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
                     {battle.year}年
                   </span>
                 )}
-                {battle.isUserSubmitted && (
+                {isNewAuto && (
+                  <span className="px-2 py-0.5 rounded bg-[#E50914] text-[#FFFFFF] font-mono-tech text-[10px] font-bold tracking-wider uppercase shadow">
+                    NEW
+                  </span>
+                )}
+                {battle.isUserSubmitted && !isNewAuto && (
                   <span className="px-2 py-0.5 rounded bg-[#E50914]/90 text-[#FFFFFF] font-mono-tech text-[10px] font-bold tracking-wider uppercase">
                     NEW ARCHIVE
                   </span>

@@ -180,7 +180,15 @@ const MC_ALIAS_MAP: Record<string, string> = {
 };
 
 export function normalizeMcName(raw: string): string {
-  const cleaned = raw
+  const cleaned = (raw || '')
+    // 全角英数・半角カナ等の表記ゆれを吸収（￥→¥、ＦＯＲＫ→FORK、（）→() など）
+    .normalize('NFKC')
+    // 各種ダッシュ記号をASCIIハイフンへ統一（長音記号「ー」は対象外）
+    .replace(/[‐‑‒–—―−]/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim()
+    // ハッシュタグ表記（#呂布カルマ）を除去
+    .replace(/^#+\s*/, '')
     .replace(/（.*?）|\(.*?\)/g, '')
     .replace(/^["'「『【]+|["'」』】]+$/g, '')
     .replace(/^MC\s+/i, '')
@@ -299,34 +307,38 @@ export interface ParsedBattleMeta {
   title: string;
   mcA: string;
   mcB: string;
-  tournament: Exclude<TournamentTag, 'ALL'>;
+  /** 判定できない場合は null（勝手に「戦極」等へ寄せない） */
+  tournament: Exclude<TournamentTag, 'ALL'> | null;
   stageOrEvent: string;
   year: string;
+}
+
+/** タイトル（＋チャンネル名）から大会を判定。判定不能なら null */
+export function detectTournament(
+  text: string
+): Exclude<TournamentTag, 'ALL'> | null {
+  // 判定順に注意: 口喧嘩祭（MC BATTLE MATSURI）は KOK チャンネルからも配信されるため KOK より先に判定
+  if (/凱旋/.test(text)) return '凱旋';
+  if (/口喧嘩祭|MC\s*BATTLE\s*MATSURI|MATSURI/i.test(text)) return '口喧嘩祭';
+  if (/BATTLE\s*SUMMIT|バトルサミット/i.test(text)) return 'BATTLE SUMMIT';
+  if (/SPOTLIGHT|スポットライト/i.test(text)) return 'SPOTLIGHT';
+  if (/(?<![A-Za-z])UMB(?![A-Za-z])|ULTIMATE\s*MC\s*BATTLE|CHOICE\s*IS\s*YOURS/i.test(text)) return 'UMB';
+  if (/KING\s*OF\s*KINGS|(?<![A-Za-z])KOK(?![A-Za-z])|大抗争|9SARI/i.test(text)) return 'KOK';
+  if (/ADRENALINE|アドレナリン/i.test(text)) return 'ADRENALINE';
+  if (/(?<![A-Za-z])FSL(?![A-Za-z])|FREE\s*STYLE\s*LEAGUE/i.test(text)) return 'FSL';
+  if (/高校生\s*(?:RAP|ラップ)\s*選手権|高ラ/i.test(text)) return '高校生RAP選手権';
+  if (/戦極/.test(text)) return '戦極';
+  return null;
 }
 
 export function parseBattleTitle(
   rawTitle: string,
   authorName: string = ''
 ): ParsedBattleMeta {
-  const combined = `${rawTitle} ${authorName}`;
-
-  // Detect Tournament
-  let tournament: Exclude<TournamentTag, 'ALL'> = '戦極';
-  if (/凱旋/.test(combined)) {
-    tournament = '凱旋';
-  } else if (/UMB|ULTIMATE\s*MC\s*BATTLE|CHOICE\s*IS\s*YOURS/i.test(combined)) {
-    tournament = 'UMB';
-  } else if (/KING\s*OF\s*KINGS|KOK|大抗争|9SARI/i.test(combined)) {
-    tournament = 'KOK';
-  } else if (/ADRENALINE|アドレナリン/i.test(combined)) {
-    tournament = 'ADRENALINE';
-  } else if (/FSL|FREE\s*STYLE\s*LEAGUE/i.test(combined)) {
-    tournament = 'FSL';
-  } else if (/高校生\s*(?:RAP|ラップ)\s*選手権|高ラ/i.test(combined)) {
-    tournament = '高校生RAP選手権';
-  } else if (/戦極/.test(combined)) {
-    tournament = '戦極';
-  }
+  // タイトルを優先し、タイトルで判定できない時だけチャンネル名を参照する
+  const tournament =
+    detectTournament(rawTitle.normalize('NFKC')) ??
+    detectTournament(authorName.normalize('NFKC'));
 
   // Extract bracketed tournament / stage info
   const bracketMatches = [...rawTitle.matchAll(/【([^】]+)】|\[([^\]]+)\]/g)]
@@ -357,13 +369,17 @@ export function parseBattleTitle(
     mcB = normalizeMcName(rawMcB || vsMatch[2]);
   }
 
-  // Extract year if present
-  const yearMatch = rawTitle.match(/\b(20[0-2]\d)\b/);
-  const year = yearMatch ? yearMatch[1] : '2024';
+  // Extract year if present（無ければ現在の年。固定値にしない）
+  const currentYear = new Date().getFullYear();
+  const yearMatch = rawTitle.match(/(?:^|\D)(20\d{2})(?!\d)/);
+  const year =
+    yearMatch && Number(yearMatch[1]) <= currentYear + 1
+      ? yearMatch[1]
+      : String(currentYear);
 
   const stageOrEvent =
     bracketMatches.find((b) => !/解説|字幕|ショート|最強/.test(b)) ||
-    `${tournament} OFFICIAL ARCHIVE`;
+    (tournament ? `${tournament} OFFICIAL ARCHIVE` : '');
 
   return {
     title: rawTitle,
@@ -403,4 +419,79 @@ export async function fetchYouTubeOEmbed(
     }
   }
   return null;
+}
+
+export type YouTubeVideoCheck =
+  | {
+      status: 'ok';
+      meta: { title: string; author_name: string; thumbnail_url: string };
+    }
+  /** 非公開・削除済み・存在しないID（oEmbed 400/401/403/404） */
+  | { status: 'unavailable'; httpStatus: number }
+  /** ネットワークエラー等で判定できない */
+  | { status: 'unknown' };
+
+/**
+ * 動画の公開状態を oEmbed で確認する。
+ * noembed.com はエラー時も HTTP 200 + `{ error: "400 Bad Request" }` を返すため、
+ * ブラウザコンソールに不要な 404 ネットワークエラーを出さずに公開可否を判定できる。
+ * 失敗時のみ YouTube 公式 oEmbed にフォールバック。
+ */
+export async function checkYouTubeVideo(
+  youtubeId: string
+): Promise<YouTubeVideoCheck> {
+  const watchUrl = `https://www.youtube.com/watch?v=${youtubeId}`;
+  const isUnavailableCode = (code: number) =>
+    code === 400 || code === 401 || code === 403 || code === 404;
+
+  try {
+    const res = await fetch(
+      `https://noembed.com/embed?url=${encodeURIComponent(watchUrl)}`
+    );
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.title) {
+        return {
+          status: 'ok',
+          meta: {
+            title: data.title,
+            author_name: data.author_name || '',
+            thumbnail_url:
+              data.thumbnail_url || getYouTubeThumbnail(youtubeId, 'hq'),
+          },
+        };
+      }
+      const code = parseInt(String(data?.error || ''), 10);
+      if (isUnavailableCode(code) || data?.error) {
+        return { status: 'unavailable', httpStatus: code || 404 };
+      }
+    }
+  } catch {
+    // noembed エラー時は公式 oEmbed へフォールバック
+  }
+
+  try {
+    const res = await fetch(
+      `https://www.youtube.com/oembed?url=${encodeURIComponent(watchUrl)}&format=json`
+    );
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.title) {
+        return {
+          status: 'ok',
+          meta: {
+            title: data.title,
+            author_name: data.author_name || '',
+            thumbnail_url:
+              data.thumbnail_url || getYouTubeThumbnail(youtubeId, 'hq'),
+          },
+        };
+      }
+    } else if (isUnavailableCode(res.status)) {
+      return { status: 'unavailable', httpStatus: res.status };
+    }
+  } catch {
+    // 判定不能
+  }
+  return { status: 'unknown' };
 }

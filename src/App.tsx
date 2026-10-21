@@ -13,6 +13,8 @@ import {
   Square,
   Play,
   Pause,
+  Sparkles,
+  CheckCircle2,
 } from 'lucide-react';
 import {
   Album,
@@ -23,6 +25,7 @@ import {
   ViewMode,
 } from './types';
 import { INITIAL_BATTLES } from './data/initialData';
+import ingestMeta from './data/ingestMeta.json';
 import { isClipVideo, isCountableMatch } from './lib/battleFormat';
 import {
   isSameMc,
@@ -34,14 +37,17 @@ import {
   DB_STORAGE_KEYS,
   DEFAULT_ALBUMS,
   fetchCloudState,
+  getLocalBattleRequests,
   getOrCreateDeviceId,
   getSupabaseConfig,
   mergeAlbumsWithCloud,
   removeAlbumFromCloud,
   upsertAlbumToCloud,
-  upsertBattleToCloud,
+  recordAlbumPlayToCloud,
   recordBattlePlayToCloud,
   recordBattleShareToCloud,
+  retryPendingBattleRequests,
+  shouldCountPlay,
 } from './lib/database';
 import { VsBuilder } from './components/VsBuilder';
 import { BattleCard } from './components/BattleCard';
@@ -55,30 +61,63 @@ import { RecentSearches } from './components/RecentSearches';
 import { ResumePlaybackBanner } from './components/ResumePlaybackBanner';
 import { triggerHaptic } from './utils/haptics';
 
+function mergeBattlesCatalog(
+  canonical: Battle[],
+  ...overlays: Battle[][]
+): Battle[] {
+  const byId = new Map<string, Battle>();
+  const ytToId = new Map<string, string>();
+  const canonicalIds = new Set<string>();
+
+  for (const b of canonical) {
+    byId.set(b.id, { ...b });
+    ytToId.set(b.youtubeId, b.id);
+    canonicalIds.add(b.id);
+  }
+
+  for (const list of overlays) {
+    for (const item of list) {
+      if (!item || typeof item !== 'object' || !item.youtubeId) continue;
+      const targetId = byId.has(item.id)
+        ? item.id
+        : ytToId.get(item.youtubeId);
+
+      if (targetId && byId.has(targetId)) {
+        const existing = byId.get(targetId)!;
+        byId.set(targetId, {
+          ...existing,
+          outboundPlays: Math.max(
+            existing.outboundPlays || 0,
+            Number(item.outboundPlays) || 0
+          ),
+          shares: Math.max(existing.shares || 0, Number(item.shares) || 0),
+          lastActiveAt: item.lastActiveAt || existing.lastActiveAt,
+        });
+      } else if (
+        item.id &&
+        !canonicalIds.has(item.id) &&
+        (item.isUserSubmitted || item.source === 'auto')
+      ) {
+        byId.set(item.id, item);
+        ytToId.set(item.youtubeId, item.id);
+      }
+    }
+  }
+
+  return Array.from(byId.values());
+}
+
 export const App: React.FC = () => {
-  // 1. Persistent Battles State
+  // 1. Persistent Battles State (Always anchored on INITIAL_BATTLES so newly added presets/autoBattles never disappear!)
   const [battles, setBattles] = useState<Battle[]>(() => {
     try {
-      const raw = localStorage.getItem(DB_STORAGE_KEYS.BATTLES);
+      const raw =
+        localStorage.getItem(DB_STORAGE_KEYS.BATTLES) ||
+        localStorage.getItem(DB_STORAGE_KEYS.BATTLES_LEGACY);
       if (raw) {
         const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length >= INITIAL_BATTLES.length) {
-          const presetMap = new Map(INITIAL_BATTLES.map((b) => [b.id, b]));
-          return parsed.map((b: Battle) => {
-            const p = presetMap.get(b.id);
-            if (p) {
-              return {
-                ...b,
-                tournament: p.tournament,
-                year: p.year,
-                stageOrEvent: p.stageOrEvent,
-                format: p.format,
-                durationSec: p.durationSec,
-                duplicateOf: p.duplicateOf,
-              };
-            }
-            return b;
-          });
+        if (Array.isArray(parsed)) {
+          return mergeBattlesCatalog(INITIAL_BATTLES, parsed);
         }
       }
     } catch {
@@ -171,6 +210,7 @@ export const App: React.FC = () => {
 
   // 7. Modals State
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
+  const [requestToast, setRequestToast] = useState<string | null>(null);
   const [shareTarget, setShareTarget] = useState<{
     battle: Battle;
     seconds?: number;
@@ -261,9 +301,12 @@ export const App: React.FC = () => {
   const handlePullRefresh = useCallback(async () => {
     if (!getSupabaseConfig()) return;
     try {
-      const cloud = await fetchCloudState(battles);
+      retryPendingBattleRequests();
+      const cloud = await fetchCloudState(INITIAL_BATTLES);
       if (!cloud) return;
-      setBattles(cloud.mergedBattles);
+      setBattles((prev) =>
+        mergeBattlesCatalog(INITIAL_BATTLES, prev, cloud.mergedBattles)
+      );
       if (cloud.cloudAlbums && cloud.cloudAlbums.length > 0) {
         setAlbums((local) => mergeAlbumsWithCloud(local, cloud.cloudAlbums));
       }
@@ -274,7 +317,7 @@ export const App: React.FC = () => {
     } catch {
       triggerHaptic('warning');
     }
-  }, [battles]);
+  }, []);
 
   const handleToggleOnboarding = useCallback((open: boolean) => {
     setIsOnboardingOpen(open);
@@ -331,9 +374,12 @@ export const App: React.FC = () => {
     }
 
     if (getSupabaseConfig()) {
-      fetchCloudState(battles).then((cloud) => {
+      retryPendingBattleRequests();
+      fetchCloudState(INITIAL_BATTLES).then((cloud) => {
         if (!cloud) return;
-        setBattles(cloud.mergedBattles);
+        setBattles((prev) =>
+          mergeBattlesCatalog(INITIAL_BATTLES, prev, cloud.mergedBattles)
+        );
         if (cloud.cloudAlbums && cloud.cloudAlbums.length > 0) {
           setAlbums((local) =>
             mergeAlbumsWithCloud(local, cloud.cloudAlbums, albumParam)
@@ -446,23 +492,23 @@ export const App: React.FC = () => {
     (battleId: string, seconds: number = 0) => {
       // Stop any background vinyl album playback so two audio streams never play simultaneously
       activeAlbumPlayback?.onStop();
+      const isAlreadyPlayingThis = activeBattleId === battleId;
       setActiveBattleId(battleId);
       setSeekSeconds(seconds);
       setSeekNonce(Date.now());
 
-      setBattles((prev) =>
-        prev.map((b) => {
-          if (b.id !== battleId) return b;
-          const updated: Battle = {
-            ...b,
-            outboundPlays: b.outboundPlays + 1,
-          };
-          recordBattlePlayToCloud(battleId);
-          return updated;
-        })
-      );
+      if (!isAlreadyPlayingThis && shouldCountPlay(`btl:${battleId}`)) {
+        setBattles((prev) =>
+          prev.map((b) =>
+            b.id === battleId
+              ? { ...b, outboundPlays: b.outboundPlays + 1 }
+              : b
+          )
+        );
+        recordBattlePlayToCloud(battleId);
+      }
     },
-    [activeAlbumPlayback]
+    [activeAlbumPlayback, activeBattleId]
   );
 
   const handleStopPlay = useCallback((battleId: string) => {
@@ -716,65 +762,53 @@ export const App: React.FC = () => {
 
   const handleRecordAlbumPlay = useCallback(
     (albumId: string, battleId: string) => {
-      setAlbums((prev) =>
-        prev.map((a) => {
-          if (a.id !== albumId) return a;
-          const updated = { ...a, playCount: a.playCount + 1 };
-          upsertAlbumToCloud(updated);
-          return updated;
-        })
-      );
-      setBattles((prev) =>
-        prev.map((b) =>
-          b.id === battleId
-            ? { ...b, outboundPlays: b.outboundPlays + 1 }
-            : b
-        )
-      );
+      if (shouldCountPlay(`alb:${albumId}`)) {
+        setAlbums((prev) =>
+          prev.map((a) =>
+            a.id === albumId ? { ...a, playCount: a.playCount + 1 } : a
+          )
+        );
+        recordAlbumPlayToCloud(albumId);
+      }
+      if (shouldCountPlay(`btl:${battleId}`)) {
+        setBattles((prev) =>
+          prev.map((b) =>
+            b.id === battleId
+              ? { ...b, outboundPlays: b.outboundPlays + 1 }
+              : b
+          )
+        );
+        recordBattlePlayToCloud(battleId);
+      }
     },
     []
   );
 
-  const handleAddBattle = useCallback(
-    (newBattle: Battle, targetAlbumIds: string[]) => {
-      setBattles((prev) => [newBattle, ...prev]);
-      upsertBattleToCloud(newBattle);
-
-      if (targetAlbumIds.length > 0) {
-        for (const albId of targetAlbumIds) {
-          handleAddTrackToAlbum(
-            albId,
-            newBattle.id,
-            0,
-            `${newBattle.mcA} vs ${newBattle.mcB} (${newBattle.tournament})`
-          );
-        }
-      }
-
-      setSelectedMcA(null);
-      setSelectedMcB(null);
-      setSelectedTournament('ALL');
-      setSearchQuery('');
-      setShowSavedOnly(false);
-      setViewMode('LATEST');
-      setVideoMode(isClipVideo(newBattle) ? 'CLIPS' : 'MATCH');
-      activeAlbumPlayback?.onStop();
-      setActiveBattleId(newBattle.id);
-      setSeekSeconds(0);
-      setSeekNonce(Date.now());
+  const handleRequestSubmitted = useCallback(
+    (info: {
+      youtubeId: string;
+      title?: string;
+      queuedLocally: boolean;
+      alreadyRequested: boolean;
+    }) => {
+      const msg = info.alreadyRequested
+        ? 'この動画はすでにリクエスト済みです。次回月曜のAI自動更新をお待ちください！'
+        : 'バトルのリクエストを受け付けました！次回月曜のAI自動更新で検証・追加されます。';
+      setRequestToast(msg);
+      setTimeout(() => {
+        setRequestToast((cur) => (cur === msg ? null : cur));
+      }, 6000);
     },
-    [handleAddTrackToAlbum, activeAlbumPlayback]
+    []
   );
 
   const handleRecordShare = useCallback((battleId: string) => {
     setBattles((prev) =>
-      prev.map((b) => {
-        if (b.id !== battleId) return b;
-        const updated = { ...b, shares: b.shares + 1 };
-        recordBattleShareToCloud(battleId);
-        return updated;
-      })
+      prev.map((b) =>
+        b.id === battleId ? { ...b, shares: b.shares + 1 } : b
+      )
     );
+    recordBattleShareToCloud(battleId);
   }, []);
 
   const handleJumpToBattle = useCallback(
@@ -928,7 +962,8 @@ export const App: React.FC = () => {
         const yB = parseInt(b.year, 10) || 2024;
         if (yB !== yA) return yB - yA;
         return (
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+          new Date(b.publishedAt || b.createdAt).getTime() -
+          new Date(a.publishedAt || a.createdAt).getTime()
         );
       }
 
@@ -937,12 +972,14 @@ export const App: React.FC = () => {
         const yB = parseInt(b.year, 10) || 2024;
         if (yA !== yB) return yA - yB;
         return (
-          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+          new Date(a.publishedAt || a.createdAt).getTime() -
+          new Date(b.publishedAt || b.createdAt).getTime()
         );
       }
 
       return (
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        new Date(b.publishedAt || b.createdAt).getTime() -
+        new Date(a.publishedAt || a.createdAt).getTime()
       );
     });
   }, [
@@ -958,6 +995,38 @@ export const App: React.FC = () => {
     deepLinkBanner,
     albumCountByBattleId,
   ]);
+
+  // Weekly Auto-Ingested / Newly Published Battles Rail (for default LATEST + MATCH view)
+  const weeklyAutoBattles = useMemo(() => {
+    const fourteenDaysAgo = Date.now() - 14 * 24 * 60 * 60 * 1000;
+    return battles
+      .filter((b) => {
+        if (!isCountableMatch(b)) return false;
+        if (b.source === 'auto') return true;
+        if (b.publishedAt) {
+          const ts = new Date(b.publishedAt).getTime();
+          if (!isNaN(ts) && ts >= fourteenDaysAgo) return true;
+        }
+        return false;
+      })
+      .sort(
+        (a, b) =>
+          new Date(b.publishedAt || b.createdAt).getTime() -
+          new Date(a.publishedAt || a.createdAt).getTime()
+      )
+      .slice(0, 10);
+  }, [battles]);
+
+  const formattedLastRunDate = useMemo(() => {
+    const raw = (ingestMeta as { lastRunAt?: string | null })?.lastRunAt;
+    if (!raw) return null;
+    const d = new Date(raw);
+    if (isNaN(d.getTime())) return null;
+    return `${d.getFullYear()}/${String(d.getMonth() + 1).padStart(
+      2,
+      '0'
+    )}/${String(d.getDate()).padStart(2, '0')}`;
+  }, []);
 
   const handleVideoEnded = useCallback(
     (battleId: string) => {
@@ -1026,11 +1095,11 @@ export const App: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsSubmitOpen(true)}
-              aria-label="お気に入りのYouTubeバトルを登録"
+              aria-label="バトルをリクエスト"
               className="hidden sm:flex px-3 py-1.5 rounded bg-[#FFFFFF] hover:bg-[#E5E5EA] text-[#0A0A0A] font-jp text-xs font-black tracking-tight items-center gap-1 transition-colors cursor-pointer"
             >
               <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
-              <span>バトル登録</span>
+              <span>バトルをリクエスト</span>
             </button>
 
             <button
@@ -1173,7 +1242,10 @@ export const App: React.FC = () => {
           hasUsedAlbum={albums.some(
             (a) => !a.isPreset || a.playCount > 0 || a.tracks.length > 4
           )}
-          hasAddedBattle={battles.some((b) => Boolean(b.isUserSubmitted))}
+          hasAddedBattle={
+            getLocalBattleRequests().length > 0 ||
+            battles.some((b) => Boolean(b.isUserSubmitted))
+          }
           onNavigateToBattle={() => {
             setViewMode('LATEST');
             const target = filteredBattles[0] || battles[0];
@@ -1189,6 +1261,26 @@ export const App: React.FC = () => {
           onNavigateToAlbums={() => setViewMode('ALBUMS')}
           onOpenSubmitBattle={() => setIsSubmitOpen(true)}
         />
+
+        {/* Request Submitted Confirmation Toast */}
+        {requestToast && (
+          <div
+            role="status"
+            className="bg-emerald-950/60 border border-emerald-500/50 rounded-lg px-3 py-2.5 flex items-center justify-between gap-2 text-xs font-jp text-emerald-200 animate-fadeIn"
+          >
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="font-bold">{requestToast}</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setRequestToast(null)}
+              className="text-[11px] font-bold text-emerald-300 hover:text-white shrink-0 cursor-pointer"
+            >
+              閉じる
+            </button>
+          </div>
+        )}
 
         {/* Deep Link Active Notification Banner */}
         {deepLinkBanner && viewMode !== 'ALBUMS' && (
@@ -1284,60 +1376,139 @@ export const App: React.FC = () => {
 
         {/* 3. Battle Sort Bar — Only shown on Battle View */}
         {viewMode !== 'ALBUMS' && (
-          <div className="flex items-center justify-between gap-2 border-b border-[#1F1F21] pb-2">
-            <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 flex-1 min-w-0">
-              {(
-                [
-                  { id: 'LATEST', label: '新着順' },
-                  { id: 'HALL_OF_FAME', label: '人気順' },
-                  { id: 'YEAR_DESC', label: '年代順 (最新)' },
-                  { id: 'YEAR_ASC', label: '年代順 (クラシック)' },
-                ] as const
-              ).map((tab) => {
-                const active = viewMode === tab.id && !showSavedOnly;
-                return (
-                  <button
-                    key={tab.id}
-                    type="button"
-                    onClick={() => {
-                      setShowSavedOnly(false);
-                      setViewMode(tab.id as ViewMode);
-                    }}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap ${
-                      active
-                        ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
-                        : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                );
-              })}
+          <div className="space-y-2 border-b border-[#1F1F21] pb-2">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 flex-1 min-w-0">
+                {(
+                  [
+                    { id: 'LATEST', label: '新着順' },
+                    { id: 'HALL_OF_FAME', label: '人気順' },
+                    { id: 'YEAR_DESC', label: '年代順 (最新)' },
+                    { id: 'YEAR_ASC', label: '年代順 (クラシック)' },
+                  ] as const
+                ).map((tab) => {
+                  const active = viewMode === tab.id && !showSavedOnly;
+                  return (
+                    <button
+                      key={tab.id}
+                      type="button"
+                      onClick={() => {
+                        setShowSavedOnly(false);
+                        setViewMode(tab.id as ViewMode);
+                      }}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap ${
+                        active
+                          ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
+                          : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  );
+                })}
 
-              <button
-                type="button"
-                onClick={() => setShowSavedOnly((prev) => !prev)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap flex items-center gap-1 ${
-                  showSavedOnly
-                    ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
-                    : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
-                }`}
-              >
-                <Bookmark className="w-3 h-3" />
-                <span>保存済 ({savedIds.length})</span>
-              </button>
+                <button
+                  type="button"
+                  onClick={() => setShowSavedOnly((prev) => !prev)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-jp tracking-wide shrink-0 transition-all cursor-pointer whitespace-nowrap flex items-center gap-1 ${
+                    showSavedOnly
+                      ? 'bg-[#FFFFFF] text-[#0A0A0A] font-black shadow-sm'
+                      : 'bg-[#121212] text-[#8E8E93] hover:text-[#FFFFFF] border border-[#222224] font-bold'
+                  }`}
+                >
+                  <Bookmark className="w-3 h-3" />
+                  <span>保存済 ({savedIds.length})</span>
+                </button>
+              </div>
+
+              <div className="text-[11px] sm:text-xs font-jp text-[#8E8E93] shrink-0 pl-1">
+                <span className="text-[#FFFFFF] font-bold font-mono-tech">
+                  {filteredBattles.length}
+                </span>
+                <span className="ml-0.5">
+                  {showSavedOnly ? '件' : videoMode === 'MATCH' ? '試合' : '本'}
+                </span>
+              </div>
             </div>
 
-            <div className="text-[11px] sm:text-xs font-jp text-[#8E8E93] shrink-0 pl-1">
-              <span className="text-[#FFFFFF] font-bold font-mono-tech">
-                {filteredBattles.length}
-              </span>
-              <span className="ml-0.5">
-                {showSavedOnly ? '件' : videoMode === 'MATCH' ? '試合' : '本'}
-              </span>
+            {/* Freshness Status Row */}
+            <div className="flex items-center justify-between gap-2 text-[11px] font-jp text-[#8E8E93] px-0.5">
+              <div className="inline-flex items-center gap-1.5">
+                <Sparkles className="w-3 h-3 text-[#E50914] shrink-0" />
+                <span>
+                  毎週月曜 AI自動更新
+                  {formattedLastRunDate
+                    ? ` • 最終更新 ${formattedLastRunDate}`
+                    : ''}
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsSubmitOpen(true)}
+                className="text-[11px] font-jp font-bold text-[#AEAEB2] hover:text-[#FFFFFF] underline underline-offset-2 cursor-pointer"
+              >
+                未収録バトルをリクエスト
+              </button>
             </div>
           </div>
         )}
+
+        {/* 3b. Weekly Newly Added Official Battles Rail */}
+        {viewMode === 'LATEST' &&
+          videoMode === 'MATCH' &&
+          !showSavedOnly &&
+          !selectedMcA &&
+          selectedTournament === 'ALL' &&
+          !searchQuery.trim() &&
+          weeklyAutoBattles.length > 0 && (
+            <section
+              aria-label="今週の新着バトル"
+              className="bg-[#121216] border border-[#26262C] rounded-xl p-3 space-y-2"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-1.5 text-xs font-jp font-black text-[#FFFFFF]">
+                  <Sparkles className="w-3.5 h-3.5 text-[#E50914]" />
+                  <span>今週の新着バトル (AI自動更新)</span>
+                </div>
+                <span className="text-[10px] font-mono-tech text-[#8E8E93]">
+                  {weeklyAutoBattles.length} BOUTS
+                </span>
+              </div>
+              <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-1">
+                {weeklyAutoBattles.map((b) => (
+                  <button
+                    key={b.id}
+                    type="button"
+                    onClick={() => handleJumpToBattle(b.id, 0)}
+                    className="group w-48 shrink-0 bg-[#0A0A0C] hover:bg-[#18181D] border border-[#242429] hover:border-[#FFFFFF]/40 rounded-lg overflow-hidden text-left transition-all cursor-pointer"
+                  >
+                    <div className="relative aspect-video bg-[#0A0A0A]">
+                      <img
+                        src={getYouTubeThumbnail(b.youtubeId, 'mq')}
+                        alt=""
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-[#E50914] text-[#FFFFFF] text-[9px] font-mono-tech font-bold">
+                        NEW
+                      </span>
+                      <span className="absolute bottom-1.5 right-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[#FFFFFF] text-[9px] font-mono-tech">
+                        {b.tournament}
+                      </span>
+                    </div>
+                    <div className="p-2">
+                      <div className="text-xs font-jp font-black text-[#FFFFFF] truncate">
+                        {b.mcA} vs {b.mcB}
+                      </div>
+                      <div className="text-[10px] font-jp text-[#8E8E93] truncate">
+                        {b.title}
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
 
         {/* 4. Album Vinyl Studio (Kept mounted with non-zero dimensions while activeAlbumPlayback is active so iOS Safari never throttles background audio!) */}
         {(viewMode === 'ALBUMS' || activeAlbumPlayback !== null) && (
@@ -1393,7 +1564,7 @@ export const App: React.FC = () => {
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#1C1C20] text-[#FFFFFF] border border-[#2C2C2E] font-jp text-xs font-bold cursor-pointer"
                 >
                   <Plus className="w-3.5 h-3.5" />
-                  <span>YouTubeを登録する</span>
+                  <span>バトルをリクエスト</span>
                 </button>
               </div>
             </div>
@@ -1568,7 +1739,7 @@ export const App: React.FC = () => {
               onClick={() => setIsSubmitOpen(true)}
               className="hover:text-[#FFFFFF] cursor-pointer"
             >
-              YouTube登録
+              バトルをリクエスト
             </button>
             <button
               type="button"
@@ -1633,7 +1804,7 @@ export const App: React.FC = () => {
             )}
           </button>
 
-          {/* 3. Register Battle (Central Highlight Button) */}
+          {/* 3. Request Battle (Central Highlight Button) */}
           <button
             type="button"
             onClick={() => setIsSubmitOpen(true)}
@@ -1643,7 +1814,7 @@ export const App: React.FC = () => {
               <Plus className="w-5 h-5 stroke-[3]" />
             </div>
             <span className="text-[9px] font-jp font-black text-[#FFFFFF] mt-0.5">
-              YouTube登録
+              リクエスト
             </span>
           </button>
 
@@ -1680,9 +1851,8 @@ export const App: React.FC = () => {
       {isSubmitOpen && (
         <SubmitModal
           battles={battles}
-          albums={albums}
           onClose={() => setIsSubmitOpen(false)}
-          onAddBattle={handleAddBattle}
+          onRequestSubmitted={handleRequestSubmitted}
           onJumpToExistingBattle={(battleId) => handleJumpToBattle(battleId, 0)}
           onOpenAlbumPickerForExisting={(battle) =>
             setAlbumPickerTarget({ battle, startSeconds: 0 })

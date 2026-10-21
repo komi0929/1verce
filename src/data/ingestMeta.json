@@ -1,0 +1,15 @@
+{
+  "lastRunAt": "2026-10-21T06:13:38.826Z",
+  "lastAddedCount": 60,
+  "totalAutoBattles": 60,
+  "skipped": {
+    "already-exists": 15,
+    "older-than-cutoff": 132,
+    "non-battle-keyword": 44,
+    "multi-mc-rule": 5,
+    "invalid-mc-names": 10,
+    "too-short": 9,
+    "no-vs-in-title": 1,
+    "exceeded-max-limit": 1
+  }
+}

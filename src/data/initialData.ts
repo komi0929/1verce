@@ -1,4 +1,5 @@
 import { Battle, MCProfile, TournamentTag, AnalyticsData } from '../types';
+import autoBattles from './autoBattles.json';
 
 export const TOURNAMENTS: TournamentTag[] = [
   "ALL",
@@ -617,7 +618,7 @@ export const MC_PROFILES: MCProfile[] = [
   }
 ];
 
-export const INITIAL_BATTLES: Battle[] = [
+const PRESET_BATTLES: Battle[] = [
   {
     "id": "btl-01",
     "youtubeId": "pxCrRJSKjTU",
@@ -20414,6 +20415,15 @@ export const INITIAL_BATTLES: Battle[] = [
     "format": "FULL",
     "durationSec": 234
   }
+];
+
+/**
+ * 正本バトルカタログ = 手動キュレーション（PRESET_BATTLES） + 週次自動取り込み（autoBattles.json）
+ * autoBattles.json は scripts/ingest（GitHub Actions 週次実行）が自動更新する。手で編集しないこと。
+ */
+export const INITIAL_BATTLES: Battle[] = [
+  ...PRESET_BATTLES.map((b) => ({ ...b, source: b.source ?? ('preset' as const) })),
+  ...(autoBattles as unknown as Battle[]).map((b) => ({ ...b, source: 'auto' as const })),
 ];
 
 export const INITIAL_ANALYTICS: AnalyticsData = {

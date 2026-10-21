@@ -59,6 +59,10 @@ export interface Battle {
   durationSec?: number;
   /** 同じ試合の別アップロードの場合、正本となるバトルID（試合数カウント・一覧から除外） */
   duplicateOf?: string;
+  /** データの出所: preset = 手動キュレーション / auto = 週次自動取り込み / user = ユーザー投稿（端末ローカル） */
+  source?: 'preset' | 'auto' | 'user';
+  /** YouTube上の公開日時（ISO8601）。週次自動取り込み分は必ず付与 */
+  publishedAt?: string;
 }
 
 export type VideoFormat = 'FULL' | 'SHORT' | 'CLIP';

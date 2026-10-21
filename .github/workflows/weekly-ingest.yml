@@ -1,0 +1,70 @@
+name: Weekly Battle Ingestion
+
+on:
+  schedule:
+    # 毎週月曜 06:00 JST (= 日曜 21:00 UTC)
+    - cron: '0 21 * * 0'
+  workflow_dispatch:
+    inputs:
+      since_days:
+        description: '過去何日分の新着動画を取り込むか'
+        required: false
+        default: '14'
+      max:
+        description: '1回の最大追加件数'
+        required: false
+        default: '60'
+      dry_run:
+        description: 'ファイル書き込みを行わないドライラン (true / false)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run weekly ingestion
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: |
+          SINCE="${{ inputs.since_days || '14' }}"
+          MAX="${{ inputs.max || '60' }}"
+          DRY="${{ inputs.dry_run == 'true' && '--dry-run' || '' }}"
+          npm run ingest -- --since-days="${SINCE}" --max="${MAX}" ${DRY}
+
+      - name: Type check & build verification
+        run: npm run build
+
+      - name: Commit & push if updated
+        if: ${{ inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/autoBattles.json src/data/ingestMeta.json
+          if git diff --cached --quiet; then
+            echo "No new battles to commit."
+          else
+            ADDED=$(node -e "const m=require('./src/data/ingestMeta.json'); console.log(m.lastAddedCount||0);")
+            git commit -m "chore(ingest): add ${ADDED} new battles [skip ci]"
+            git push
+          fi

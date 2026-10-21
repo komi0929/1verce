@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "ingest": "tsx scripts/ingest/run.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
@@ -20,6 +21,7 @@
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",
     "tailwindcss": "^4.1.0",
+    "tsx": "^4.23.15",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   }

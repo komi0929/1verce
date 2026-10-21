@@ -15,6 +15,7 @@ interface YouTubePlayerProps {
     isPaused: boolean
   ) => void;
   onEnded?: () => void;
+  onPlayerError?: (code: number) => void;
 }
 
 function buildEmbedUrl(youtubeId: string, startSeconds: number): string {
@@ -46,6 +47,7 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   title,
   onTimeUpdate,
   onEnded,
+  onPlayerError,
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [iframeSrc, setIframeSrc] = useState<string>(() =>
@@ -63,8 +65,10 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
 
   const onTimeUpdateRef = useRef(onTimeUpdate);
   const onEndedRef = useRef(onEnded);
+  const onPlayerErrorRef = useRef(onPlayerError);
   onTimeUpdateRef.current = onTimeUpdate;
   onEndedRef.current = onEnded;
+  onPlayerErrorRef.current = onPlayerError;
 
   const sendCommand = (func: string, args: unknown[] = []) => {
     const win = iframeRef.current?.contentWindow;
@@ -96,6 +100,7 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
         '*'
       );
       sendCommand('addEventListener', ['onStateChange']);
+      sendCommand('addEventListener', ['onError']);
     } catch {
       // ignore
     }
@@ -173,6 +178,9 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
             endedFiredForCurrentRef.current = true;
             onEndedRef.current?.();
           }
+        } else if (data.event === 'onError') {
+          const code = typeof data.info === 'number' ? data.info : 150;
+          onPlayerErrorRef.current?.(code);
         }
       } catch {
         // ignore non-JSON messages

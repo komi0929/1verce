@@ -58,7 +58,7 @@ export const OnboardingBanner: React.FC<OnboardingBannerProps> = ({
             <p className="text-xs sm:text-sm text-gray-400 mt-1">
               歴代の名勝負を大会×MCで瞬時にディグり、お気に入りの試合を収録してターンテーブルで連続再生できる
               <strong className="text-[#FFB703]">「VINYL ALBUMS」</strong>と
-              <strong className="text-white">「YouTube登録」</strong>
+              <strong className="text-white">「毎週月曜AI自動更新＆リクエスト」</strong>
               を搭載しています。
             </p>
           </div>
@@ -173,7 +173,7 @@ export const OnboardingBanner: React.FC<OnboardingBannerProps> = ({
             </button>
           </div>
 
-          {/* Step 3: Add YouTube Battle */}
+          {/* Step 3: Weekly AI Auto-Updates & Battle Request */}
           <div
             className={`p-4 rounded-xl border transition-all flex flex-col justify-between ${
               hasAddedBattle
@@ -185,7 +185,7 @@ export const OnboardingBanner: React.FC<OnboardingBannerProps> = ({
               <div className="flex items-center justify-between gap-2 mb-2">
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider text-sky-400">
                   <Video className="w-4 h-4" />
-                  STEP 03 • ADD YOUTUBE
+                  STEP 03 • WEEKLY AI & REQUEST
                 </span>
                 {hasAddedBattle ? (
                   <span className="inline-flex items-center gap-1 text-[10px] font-black text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded-full">
@@ -193,15 +193,15 @@ export const OnboardingBanner: React.FC<OnboardingBannerProps> = ({
                   </span>
                 ) : (
                   <span className="text-[10px] font-bold text-gray-500 bg-white/5 px-2 py-0.5 rounded-full">
-                    タイトル自動取得
+                    毎週月曜AI自動追加
                   </span>
                 )}
               </div>
               <h3 className="text-sm font-black text-white mb-1.5">
-                お気に入りのYouTubeバトルURLを即座に追加
+                毎週月曜に最新バトルを自動追加＆リクエスト
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed mb-3">
-                まだ載っていない最新バトルや名勝負があれば、YouTubeのURLを貼るだけ。MC名・大会名を自動解析して即座に追加できます。
+                主要大会の公式YouTubeから最新1on1バトルを毎週月曜にAIが自動収集。未収録の過去の名勝負はURLを貼ってリクエストできます。
               </p>
             </div>
             <button
@@ -211,7 +211,7 @@ export const OnboardingBanner: React.FC<OnboardingBannerProps> = ({
               }}
               className="w-full py-2 px-3 rounded-lg bg-white/10 hover:bg-white text-white hover:text-black border border-white/15 text-xs font-black transition-all flex items-center justify-center gap-1.5 cursor-pointer"
             >
-              <span>＋ バトル動画URLを登録する</span>
+              <span>＋ バトルをリクエストする</span>
               <ChevronRight className="w-3.5 h-3.5" />
             </button>
           </div>

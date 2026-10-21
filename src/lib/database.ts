@@ -5,15 +5,30 @@ import {
   AlbumJacketTheme,
   Battle,
   TournamentTag,
+  VideoFormat,
 } from '../types';
+import { INITIAL_BATTLES } from '../data/initialData';
 
 export const DB_STORAGE_KEYS = {
-  BATTLES: '1verce_battles_v5',
+  BATTLES: '1verce_battles_v6',
+  BATTLES_LEGACY: '1verce_battles_v5',
   SAVED: '1verce_saved_v5',
   ALBUMS: '1verce_albums_v2',
   DELETED_ALBUMS: '1verce_deleted_albums_v1',
   DEVICE_ID: '1verce_device_id_v1',
+  PLAY_THROTTLE: '1verce_play_throttle_v1',
+  BATTLE_REQUESTS: '1verce_requests_v1',
 };
+
+export interface BattleRequestItem {
+  id: string;
+  youtubeId: string;
+  url: string;
+  note?: string;
+  title?: string;
+  createdAt: string;
+  status: 'sent' | 'pending';
+}
 
 export interface SupabaseConfig {
   url: string;
@@ -35,6 +50,40 @@ export function getOrCreateDeviceId(): string {
     return generated;
   } catch {
     return 'dev-local';
+  }
+}
+
+/**
+ * Throttles repeated play count increments for the same battle/album within `windowMs` (default 30 min).
+ */
+export function shouldCountPlay(
+  key: string,
+  windowMs: number = 30 * 60 * 1000
+): boolean {
+  if (!key) return false;
+  const now = Date.now();
+  try {
+    const raw = localStorage.getItem(DB_STORAGE_KEYS.PLAY_THROTTLE);
+    const map: Record<string, number> = raw ? JSON.parse(raw) : {};
+    const last = map[key];
+    if (typeof last === 'number' && now - last < windowMs) {
+      return false;
+    }
+    // Prune expired entries to keep storage small
+    const nextMap: Record<string, number> = {};
+    for (const [k, ts] of Object.entries(map)) {
+      if (typeof ts === 'number' && now - ts < windowMs) {
+        nextMap[k] = ts;
+      }
+    }
+    nextMap[key] = now;
+    localStorage.setItem(
+      DB_STORAGE_KEYS.PLAY_THROTTLE,
+      JSON.stringify(nextMap)
+    );
+    return true;
+  } catch {
+    return true;
   }
 }
 
@@ -221,9 +270,18 @@ function parseCloudAlbumRow(row: Record<string, unknown>): Album {
   const rawTag = String(row.theme_tag || 'BEST BOUTS');
   const parts = rawTag.split('::');
   const themeTag = parts[0] || 'BEST BOUTS';
-  const jacketStyle = (parts[1] as AlbumJacketStyle) || 'VINYL_LP';
-  const jacketTheme = (parts[2] as AlbumJacketTheme) || 'CRIMSON';
-  const ownerDeviceId = parts[3] || undefined;
+  const jacketStyle =
+    (row.jacket_style as AlbumJacketStyle) ||
+    (parts[1] as AlbumJacketStyle) ||
+    'VINYL_LP';
+  const jacketTheme =
+    (row.jacket_theme as AlbumJacketTheme) ||
+    (parts[2] as AlbumJacketTheme) ||
+    'CRIMSON';
+  const ownerDeviceId =
+    (typeof row.owner_device_id === 'string' && row.owner_device_id) ||
+    parts[3] ||
+    undefined;
 
   return {
     id: String(row.id),
@@ -242,6 +300,33 @@ function parseCloudAlbumRow(row: Record<string, unknown>): Album {
   };
 }
 
+async function fetchAllCloudBattles(
+  client: SupabaseClient
+): Promise<Record<string, unknown>[] | null> {
+  const pageSize = 1000;
+  const maxPages = 10;
+  const rows: Record<string, unknown>[] = [];
+
+  for (let page = 0; page < maxPages; page++) {
+    const from = page * pageSize;
+    const to = from + pageSize - 1;
+    const { data, error } = await client
+      .from('battles')
+      .select('*')
+      .order('last_active_at', { ascending: false })
+      .range(from, to);
+
+    if (error) {
+      return page === 0 ? null : rows;
+    }
+    if (!data || data.length === 0) break;
+    rows.push(...(data as Record<string, unknown>[]));
+    if (data.length < pageSize) break;
+  }
+
+  return rows;
+}
+
 // ============================================================================
 // Cloud Sync Operations (Automatic, non-blocking, safe per-device isolation)
 // ============================================================================
@@ -255,12 +340,8 @@ export async function fetchCloudState(baseBattles: Battle[]): Promise<{
   if (!client) return null;
 
   try {
-    const [battlesRes, albumsRes] = await Promise.all([
-      client
-        .from('battles')
-        .select('*')
-        .order('last_active_at', { ascending: false })
-        .limit(2000),
+    const [cloudBattleRows, albumsRes] = await Promise.all([
+      fetchAllCloudBattles(client),
       client
         .from('albums')
         .select('*')
@@ -268,50 +349,107 @@ export async function fetchCloudState(baseBattles: Battle[]): Promise<{
         .limit(200),
     ]);
 
-    if (battlesRes.error && albumsRes.error) {
+    if (!cloudBattleRows && albumsRes.error) {
       return null;
     }
 
+    const presetIdSet = new Set(INITIAL_BATTLES.map((b) => b.id));
     const battleMap = new Map<string, Battle>();
+    const youtubeIdToBattleId = new Map<string, string>();
+
     for (const b of baseBattles) {
       battleMap.set(b.id, b);
+      youtubeIdToBattleId.set(b.youtubeId, b.id);
     }
 
-    if (battlesRes.data) {
-      for (const row of battlesRes.data) {
-        if (!row.youtube_id || !/^[a-zA-Z0-9_-]{11}$/.test(String(row.youtube_id))) {
+    if (cloudBattleRows) {
+      for (const row of cloudBattleRows) {
+        if (row.is_hidden === true) continue;
+        const ytId = String(row.youtube_id || '');
+        if (!/^[a-zA-Z0-9_-]{11}$/.test(ytId)) {
           continue;
         }
-        const existing = battleMap.get(row.id);
-        if (existing) {
-          battleMap.set(row.id, {
+        const rowId = String(row.id || '');
+        if (!rowId) continue;
+
+        const targetId = battleMap.has(rowId)
+          ? rowId
+          : youtubeIdToBattleId.get(ytId);
+
+        if (targetId && battleMap.has(targetId)) {
+          const existing = battleMap.get(targetId)!;
+          battleMap.set(targetId, {
             ...existing,
             outboundPlays: Math.max(
               existing.outboundPlays,
               Number(row.outbound_plays) || 0
             ),
             shares: Math.max(existing.shares, Number(row.shares) || 0),
-            lastActiveAt: row.last_active_at || existing.lastActiveAt,
+            lastActiveAt:
+              typeof row.last_active_at === 'string'
+                ? row.last_active_at
+                : existing.lastActiveAt,
           });
         } else {
-          battleMap.set(row.id, {
-            id: row.id,
-            youtubeId: row.youtube_id,
-            title: row.title,
-            mcA: row.mc_a,
-            mcB: row.mc_b,
+          const isUserSubmitted = Boolean(row.is_user_submitted);
+          const sourceVal =
+            row.source === 'auto' ||
+            row.source === 'user' ||
+            row.source === 'preset'
+              ? row.source
+              : isUserSubmitted
+              ? 'user'
+              : 'preset';
+
+          // Skip stale preset rows that were deleted from INITIAL_BATTLES
+          if (
+            !isUserSubmitted &&
+            sourceVal !== 'auto' &&
+            !presetIdSet.has(rowId)
+          ) {
+            continue;
+          }
+
+          battleMap.set(rowId, {
+            id: rowId,
+            youtubeId: ytId,
+            title: String(row.title || ''),
+            mcA: String(row.mc_a || 'MC A'),
+            mcB: String(row.mc_b || 'MC B'),
             tournament:
               (row.tournament as Exclude<TournamentTag, 'ALL'>) || '戦極',
-            stageOrEvent: row.stage_or_event || '',
-            year: row.year || '2025',
+            stageOrEvent: String(row.stage_or_event || ''),
+            year: String(row.year || new Date().getFullYear()),
             verses: [],
             evaluation: { word: 0, flow: 0, vibe: 0 },
             outboundPlays: Number(row.outbound_plays) || 0,
             shares: Number(row.shares) || 0,
-            createdAt: row.created_at || new Date().toISOString(),
-            lastActiveAt: row.last_active_at || row.created_at,
-            isUserSubmitted: Boolean(row.is_user_submitted),
+            createdAt: String(row.created_at || new Date().toISOString()),
+            lastActiveAt: String(
+              row.last_active_at || row.created_at || new Date().toISOString()
+            ),
+            isUserSubmitted,
+            format:
+              row.format === 'FULL' ||
+              row.format === 'SHORT' ||
+              row.format === 'CLIP'
+                ? (row.format as VideoFormat)
+                : undefined,
+            durationSec:
+              typeof row.duration_sec === 'number'
+                ? row.duration_sec
+                : undefined,
+            duplicateOf:
+              typeof row.duplicate_of === 'string' && row.duplicate_of
+                ? row.duplicate_of
+                : undefined,
+            publishedAt:
+              typeof row.published_at === 'string' && row.published_at
+                ? row.published_at
+                : undefined,
+            source: sourceVal,
           });
+          youtubeIdToBattleId.set(ytId, rowId);
         }
       }
     }
@@ -321,9 +459,10 @@ export async function fetchCloudState(baseBattles: Battle[]): Promise<{
     const communityAlbums: Album[] = [];
 
     if (albumsRes.data && albumsRes.data.length > 0) {
-      const parsedAll = albumsRes.data.map((r) =>
-        parseCloudAlbumRow(r as Record<string, unknown>)
+      const activeRows = (albumsRes.data as Record<string, unknown>[]).filter(
+        (r) => r.is_deleted !== true
       );
+      const parsedAll = activeRows.map((r) => parseCloudAlbumRow(r));
       cloudAlbums = parsedAll;
       for (const alb of parsedAll) {
         if (
@@ -437,36 +576,54 @@ export async function upsertAlbumToCloud(album: Album): Promise<void> {
 
   try {
     if (isDefaultPreset) {
-      await client
-        .from('albums')
-        .update({
-          play_count: album.playCount,
-          likes: album.likes,
-        })
-        .eq('id', album.id);
+      const { error: rpcErr } = await client.rpc('increment_album_play', {
+        target_album_id: album.id,
+      });
+      if (rpcErr) {
+        await client
+          .from('albums')
+          .update({
+            play_count: album.playCount,
+            likes: album.likes,
+          })
+          .eq('id', album.id);
+      }
       return;
     }
 
     const cleanTag = (album.themeTag || 'BEST BOUTS').split('::')[0];
-    const encodedTag = `${cleanTag}::${album.jacketStyle || 'VINYL_LP'}::${
-      album.jacketTheme || 'CRIMSON'
-    }::${myDeviceId}`;
+    const jacketStyle = album.jacketStyle || 'VINYL_LP';
+    const jacketTheme = album.jacketTheme || 'CRIMSON';
+    const encodedTag = `${cleanTag}::${jacketStyle}::${jacketTheme}::${myDeviceId}`;
 
-    await client.from('albums').upsert(
-      {
-        id: album.id,
-        title: album.title,
-        description: album.description,
-        theme_tag: encodedTag,
-        tracks: album.tracks,
-        likes: album.likes,
-        play_count: album.playCount,
-        is_preset: false,
-        created_at: album.createdAt,
-        updated_at: album.updatedAt,
-      },
-      { onConflict: 'id' }
-    );
+    const { error: rpcError } = await client.rpc('upsert_album', {
+      p_id: album.id,
+      p_owner_device_id: myDeviceId,
+      p_title: album.title,
+      p_description: album.description,
+      p_theme_tag: encodedTag,
+      p_jacket_style: jacketStyle,
+      p_jacket_theme: jacketTheme,
+      p_tracks: album.tracks,
+    });
+
+    if (rpcError) {
+      await client.from('albums').upsert(
+        {
+          id: album.id,
+          title: album.title,
+          description: album.description,
+          theme_tag: encodedTag,
+          tracks: album.tracks,
+          likes: album.likes,
+          play_count: album.playCount,
+          is_preset: false,
+          created_at: album.createdAt,
+          updated_at: album.updatedAt,
+        },
+        { onConflict: 'id' }
+      );
+    }
   } catch {
     // Non-blocking
   }
@@ -496,7 +653,25 @@ export async function removeAlbumFromCloud(
   const client = getSupabaseClient();
   if (!client) return;
   try {
-    await client.from('albums').delete().eq('id', albumId);
+    const { error: rpcError } = await client.rpc('delete_album', {
+      p_id: albumId,
+      p_owner_device_id: myDeviceId,
+    });
+    if (rpcError) {
+      await client.from('albums').delete().eq('id', albumId);
+    }
+  } catch {
+    // Non-blocking
+  }
+}
+
+export async function recordAlbumPlayToCloud(albumId: string): Promise<void> {
+  const client = getSupabaseClient();
+  if (!client) return;
+  try {
+    await client.rpc('increment_album_play', {
+      target_album_id: albumId,
+    });
   } catch {
     // Non-blocking
   }
@@ -506,25 +681,9 @@ export async function recordBattlePlayToCloud(battleId: string): Promise<void> {
   const client = getSupabaseClient();
   if (!client) return;
   try {
-    const { error } = await client.rpc('increment_battle_play', {
+    await client.rpc('increment_battle_play', {
       target_battle_id: battleId,
     });
-    if (error) {
-      const { data } = await client
-        .from('battles')
-        .select('outbound_plays')
-        .eq('id', battleId)
-        .single();
-      if (data) {
-        await client
-          .from('battles')
-          .update({
-            outbound_plays: (Number(data.outbound_plays) || 0) + 1,
-            last_active_at: new Date().toISOString(),
-          })
-          .eq('id', battleId);
-      }
-    }
   } catch {
     // Non-blocking
   }
@@ -534,26 +693,128 @@ export async function recordBattleShareToCloud(battleId: string): Promise<void> 
   const client = getSupabaseClient();
   if (!client) return;
   try {
-    const { error } = await client.rpc('increment_battle_share', {
+    await client.rpc('increment_battle_share', {
       target_battle_id: battleId,
     });
-    if (error) {
-      const { data } = await client
-        .from('battles')
-        .select('shares')
-        .eq('id', battleId)
-        .single();
-      if (data) {
-        await client
-          .from('battles')
-          .update({
-            shares: (Number(data.shares) || 0) + 1,
-            last_active_at: new Date().toISOString(),
-          })
-          .eq('id', battleId);
-      }
-    }
   } catch {
     // Non-blocking
+  }
+}
+
+// ============================================================================
+// Battle Request Queue (Weekly Auto-Ingest Candidate Submissions)
+// ============================================================================
+
+export function getLocalBattleRequests(): BattleRequestItem[] {
+  try {
+    const raw = localStorage.getItem(DB_STORAGE_KEYS.BATTLE_REQUESTS);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveLocalBattleRequests(items: BattleRequestItem[]): void {
+  try {
+    localStorage.setItem(
+      DB_STORAGE_KEYS.BATTLE_REQUESTS,
+      JSON.stringify(items.slice(0, 50))
+    );
+  } catch {}
+}
+
+export async function submitBattleRequest(input: {
+  youtubeId: string;
+  url: string;
+  note?: string;
+  title?: string;
+}): Promise<{ ok: boolean; queuedLocally: boolean; alreadyRequested: boolean }> {
+  const existing = getLocalBattleRequests();
+  const prev = existing.find((r) => r.youtubeId === input.youtubeId);
+  if (prev && prev.status === 'sent') {
+    return { ok: true, queuedLocally: false, alreadyRequested: true };
+  }
+
+  const deviceId = getOrCreateDeviceId();
+  const nowIso = new Date().toISOString();
+  const cleanNote = input.note?.trim().slice(0, 200) || undefined;
+  const item: BattleRequestItem = {
+    id: prev?.id || `req-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+    youtubeId: input.youtubeId,
+    url: input.url.trim() || `https://www.youtube.com/watch?v=${input.youtubeId}`,
+    note: cleanNote,
+    title: input.title?.trim() || undefined,
+    createdAt: prev?.createdAt || nowIso,
+    status: 'pending',
+  };
+
+  const client = getSupabaseClient();
+  let queuedLocally = true;
+  let alreadyRequested = false;
+
+  if (client) {
+    try {
+      const { error } = await client.from('battle_requests').insert({
+        youtube_id: item.youtubeId,
+        url: item.url,
+        note: cleanNote || null,
+        device_id: deviceId,
+      });
+
+      if (!error) {
+        item.status = 'sent';
+        queuedLocally = false;
+      } else if (error.code === '23505') {
+        // Unique constraint violation on youtube_id -> already requested in cloud
+        item.status = 'sent';
+        queuedLocally = false;
+        alreadyRequested = true;
+      }
+    } catch {
+      queuedLocally = true;
+    }
+  }
+
+  const nextList = [
+    item,
+    ...existing.filter((r) => r.youtubeId !== input.youtubeId),
+  ];
+  saveLocalBattleRequests(nextList);
+
+  return { ok: true, queuedLocally, alreadyRequested };
+}
+
+export async function retryPendingBattleRequests(): Promise<void> {
+  const list = getLocalBattleRequests();
+  const pending = list.filter((r) => r.status === 'pending');
+  if (pending.length === 0) return;
+
+  const client = getSupabaseClient();
+  if (!client) return;
+
+  const deviceId = getOrCreateDeviceId();
+  let changed = false;
+
+  for (const req of pending) {
+    try {
+      const { error } = await client.from('battle_requests').insert({
+        youtube_id: req.youtubeId,
+        url: req.url,
+        note: req.note || null,
+        device_id: deviceId,
+      });
+      if (!error || error.code === '23505') {
+        req.status = 'sent';
+        changed = true;
+      }
+    } catch {
+      // Keep pending
+    }
+  }
+
+  if (changed) {
+    saveLocalBattleRequests(list);
   }
 }

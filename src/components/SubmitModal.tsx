@@ -5,95 +5,106 @@ import {
   Link2,
   Loader2,
   CheckCircle2,
-  Flame,
   Disc3,
   AlertCircle,
   Play,
+  Sparkles,
+  Send,
+  Clock,
 } from 'lucide-react';
-import { Album, Battle, TournamentTag } from '../types';
-import { MC_PROFILES, TOURNAMENTS } from '../data/initialData';
+import { Battle } from '../types';
 import {
+  checkYouTubeVideo,
   extractYouTubeId,
-  fetchYouTubeOEmbed,
   getYouTubeThumbnail,
-  normalizeMcName,
   parseBattleTitle,
+  ParsedBattleMeta,
 } from '../utils/youtube';
-import { inferVideoFormat } from '../lib/battleFormat';
+import {
+  BattleRequestItem,
+  getLocalBattleRequests,
+  submitBattleRequest,
+} from '../lib/database';
+import { triggerHaptic } from '../utils/haptics';
 
 interface SubmitModalProps {
   battles: Battle[];
-  albums: Album[];
   onClose: () => void;
-  onAddBattle: (battle: Battle, targetAlbumIds: string[]) => void;
+  onRequestSubmitted?: (info: {
+    youtubeId: string;
+    title?: string;
+    queuedLocally: boolean;
+    alreadyRequested: boolean;
+  }) => void;
   onJumpToExistingBattle: (battleId: string) => void;
   onOpenAlbumPickerForExisting: (battle: Battle) => void;
 }
 
 export const SubmitModal: React.FC<SubmitModalProps> = ({
   battles,
-  albums,
   onClose,
-  onAddBattle,
+  onRequestSubmitted,
   onJumpToExistingBattle,
   onOpenAlbumPickerForExisting,
 }) => {
   const [urlInput, setUrlInput] = useState('');
+  const [note, setNote] = useState('');
   const [youtubeId, setYoutubeId] = useState<string | null>(null);
-  const [isLoadingMeta, setIsLoadingMeta] = useState(false);
-  const [autoParsed, setAutoParsed] = useState(false);
+  const [checkStatus, setCheckStatus] = useState<
+    'idle' | 'checking' | 'ok' | 'unavailable' | 'unknown'
+  >('idle');
+  const [videoMeta, setVideoMeta] = useState<{
+    title: string;
+    author_name: string;
+    thumbnail_url: string;
+  } | null>(null);
+  const [parsedPreview, setParsedPreview] = useState<ParsedBattleMeta | null>(
+    null
+  );
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recentRequests, setRecentRequests] = useState<BattleRequestItem[]>(
+    () => getLocalBattleRequests().slice(0, 5)
+  );
 
-  const [title, setTitle] = useState('');
-  const [mcA, setMcA] = useState('');
-  const [mcB, setMcB] = useState('');
-  const [tournament, setTournament] =
-    useState<Exclude<TournamentTag, 'ALL'>>('戦極');
-  const [stageOrEvent, setStageOrEvent] = useState('');
-  const [year, setYear] = useState('2025');
-
-  // Simultaneous Album selection
-  const [selectedAlbumIds, setSelectedAlbumIds] = useState<string[]>([]);
-
-  // Check if this YouTube ID is already registered
+  // Check if this YouTube ID is already in the archive
   const existingBattle = useMemo(() => {
     if (!youtubeId) return null;
     return battles.find((b) => b.youtubeId === youtubeId) || null;
   }, [battles, youtubeId]);
 
-  // Known MC suggestions for autocomplete
-  const knownMcNames = useMemo(() => {
-    const set = new Set<string>();
-    for (const p of MC_PROFILES) set.add(p.name);
-    for (const b of battles) {
-      set.add(b.mcA);
-      set.add(b.mcB);
-    }
-    return Array.from(set).sort();
-  }, [battles]);
+  // Check if already requested on this device
+  const existingRequest = useMemo(() => {
+    if (!youtubeId) return null;
+    return recentRequests.find((r) => r.youtubeId === youtubeId) || null;
+  }, [recentRequests, youtubeId]);
 
   useEffect(() => {
     const id = extractYouTubeId(urlInput);
     setYoutubeId(id);
     if (!id) {
-      setAutoParsed(false);
+      setCheckStatus('idle');
+      setVideoMeta(null);
+      setParsedPreview(null);
       return;
     }
 
     let cancelled = false;
-    setIsLoadingMeta(true);
+    setCheckStatus('checking');
+    setVideoMeta(null);
+    setParsedPreview(null);
 
-    fetchYouTubeOEmbed(id).then((meta) => {
+    checkYouTubeVideo(id).then((res) => {
       if (cancelled) return;
-      setIsLoadingMeta(false);
-      if (meta) {
-        const parsed = parseBattleTitle(meta.title, meta.author_name);
-        setTitle(parsed.title);
-        setMcA(parsed.mcA === 'MC A' ? '' : parsed.mcA);
-        setMcB(parsed.mcB === 'MC B' ? '' : parsed.mcB);
-        setTournament(parsed.tournament);
-        setStageOrEvent(parsed.stageOrEvent);
-        setYear(parsed.year);
-        setAutoParsed(true);
+      if (res.status === 'ok') {
+        setCheckStatus('ok');
+        setVideoMeta(res.meta);
+        setParsedPreview(
+          parseBattleTitle(res.meta.title, res.meta.author_name)
+        );
+      } else if (res.status === 'unavailable') {
+        setCheckStatus('unavailable');
+      } else {
+        setCheckStatus('unknown');
       }
     });
 
@@ -102,17 +113,9 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
     };
   }, [urlInput]);
 
-  const toggleAlbumSelect = (albId: string) => {
-    setSelectedAlbumIds((prev) =>
-      prev.includes(albId)
-        ? prev.filter((id) => id !== albId)
-        : [...prev, albId]
-    );
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!youtubeId || !mcA.trim() || !mcB.trim()) return;
+    if (!youtubeId || isSubmitting) return;
 
     if (existingBattle) {
       onJumpToExistingBattle(existingBattle.id);
@@ -120,34 +123,39 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
       return;
     }
 
-    const cleanMcA = normalizeMcName(mcA.trim());
-    const cleanMcB = normalizeMcName(mcB.trim());
-    const battleId = `btl-user-${Date.now()}`;
-    const nowIso = new Date().toISOString();
+    if (checkStatus === 'unavailable' || checkStatus === 'checking') {
+      return;
+    }
 
-    const finalTitle = title.trim() || `${cleanMcA} vs ${cleanMcB} (${tournament})`;
-    const newBattle: Battle = {
-      id: battleId,
-      youtubeId,
-      title: finalTitle,
-      format: inferVideoFormat(finalTitle, urlInput),
-      mcA: cleanMcA,
-      mcB: cleanMcB,
-      tournament,
-      stageOrEvent: stageOrEvent.trim() || `${tournament} OFFICIAL`,
-      year: year.trim() || '2025',
-      verses: [],
-      evaluation: { word: 0, flow: 0, vibe: 0 },
-      outboundPlays: 1,
-      shares: 0,
-      createdAt: nowIso,
-      lastActiveAt: nowIso,
-      isUserSubmitted: true,
-    };
-
-    onAddBattle(newBattle, selectedAlbumIds);
-    onClose();
+    setIsSubmitting(true);
+    try {
+      const result = await submitBattleRequest({
+        youtubeId,
+        url: urlInput.trim() || `https://www.youtube.com/watch?v=${youtubeId}`,
+        note: note.trim() || undefined,
+        title: videoMeta?.title,
+      });
+      triggerHaptic('success');
+      setRecentRequests(getLocalBattleRequests().slice(0, 5));
+      onRequestSubmitted?.({
+        youtubeId,
+        title: videoMeta?.title,
+        queuedLocally: result.queuedLocally,
+        alreadyRequested: result.alreadyRequested,
+      });
+      onClose();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  const canSubmit =
+    Boolean(youtubeId) &&
+    !existingBattle &&
+    !existingRequest &&
+    checkStatus !== 'unavailable' &&
+    checkStatus !== 'checking' &&
+    !isSubmitting;
 
   return (
     <div
@@ -163,7 +171,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
           <div className="flex items-center gap-2">
             <Plus className="w-4 h-4 text-[#E50914]" />
             <span className="font-jp text-xs font-black tracking-wider text-[#FFFFFF]">
-              お気に入りのYouTubeバトルを登録 // REGISTER YOUTUBE BATTLE
+              バトルをリクエスト // REQUEST A BATTLE
             </span>
           </div>
           <button
@@ -179,16 +187,23 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
           onSubmit={handleSubmit}
           className="p-4 space-y-4 overflow-y-auto"
         >
-          <datalist id="mc-autocomplete-list">
-            {knownMcNames.map((name) => (
-              <option key={name} value={name} />
-            ))}
-          </datalist>
+          {/* Weekly AI Auto-Ingest Notice */}
+          <div className="bg-[#16161B] border border-[#2A2A32] rounded-lg p-3 space-y-1.5">
+            <div className="flex items-center gap-1.5 text-xs font-jp font-black text-[#FFFFFF]">
+              <Sparkles className="w-3.5 h-3.5 text-[#E50914] shrink-0" />
+              <span>毎週月曜にAIが公式バトルを自動追加しています</span>
+            </div>
+            <p className="text-[11px] font-jp text-[#AEAEB2] leading-relaxed">
+              公式チャンネル（戦極・凱旋・UMB・KOK・ADRENALINE・口喧嘩祭・SPOTLIGHT・FSL・ABEMA）の最新1on1バトルは
+              <strong className="text-[#FFFFFF]">毎週月曜にAIが自動追加</strong>
+              します。未収録の過去バトルや他大会のベストバウトはURLを貼ってリクエストしてください（次回更新で自動検証・追加されます）。
+            </p>
+          </div>
 
           {/* 1. YouTube URL Input */}
           <div className="space-y-1.5">
             <label className="block text-xs font-jp font-bold text-[#FFFFFF]">
-              1. YouTubeのURL（または動画ID）を貼り付け *
+              YouTubeのURL（または11文字の動画ID）を貼り付け *
             </label>
             <div className="relative">
               <Link2 className="w-4 h-4 text-[#8E8E93] absolute left-3 top-1/2 -translate-y-1/2" />
@@ -197,25 +212,22 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                 value={urlInput}
                 onChange={(e) => setUrlInput(e.target.value)}
                 placeholder="https://www.youtube.com/watch?v=... または youtu.be/..."
-                className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded-lg pl-9 pr-3 py-2 text-xs font-mono-tech text-[#FFFFFF] outline-none"
+                className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded-lg pl-9 pr-9 py-2.5 text-xs font-mono-tech text-[#FFFFFF] outline-none"
                 required
                 autoFocus
               />
-              {isLoadingMeta && (
+              {checkStatus === 'checking' && (
                 <Loader2 className="w-4 h-4 text-[#FFFFFF] animate-spin absolute right-3 top-1/2 -translate-y-1/2" />
               )}
             </div>
-            <p className="text-[11px] font-jp text-[#8E8E93]">
-              URLを貼るだけで、動画タイトルからMC名・大会名を自動解析します。
-            </p>
           </div>
 
-          {/* Duplicate Check Alert */}
+          {/* Duplicate Check Alert (Already in Archive) */}
           {existingBattle && (
             <div className="bg-[#1A1A1E] border border-amber-500/50 rounded-lg p-3 space-y-2.5 animate-fadeIn">
               <div className="flex items-center gap-2 text-amber-300 text-xs font-jp font-bold">
                 <AlertCircle className="w-4 h-4 shrink-0" />
-                <span>このYouTubeバトルは既にアーカイブに登録されています！</span>
+                <span>既にアーカイブに収録されています！</span>
               </div>
               <div className="flex items-center gap-3 bg-[#0A0A0A] rounded p-2 border border-[#262628]">
                 <img
@@ -242,7 +254,7 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
                   className="flex-1 py-1.5 rounded bg-[#FFFFFF] text-[#0A0A0A] font-jp text-xs font-black flex items-center justify-center gap-1 cursor-pointer"
                 >
                   <Play className="w-3.5 h-3.5 fill-current" />
-                  <span>このバトルを今すぐ開く</span>
+                  <span>今すぐ再生</span>
                 </button>
                 <button
                   type="button"
@@ -259,159 +271,144 @@ export const SubmitModal: React.FC<SubmitModalProps> = ({
             </div>
           )}
 
-          {/* Thumbnail Preview & Auto-Parse Status */}
-          {youtubeId && !existingBattle && (
-            <div className="bg-[#0A0A0A] border border-[#222224] rounded-lg p-3 flex items-center gap-3">
-              <img
-                src={getYouTubeThumbnail(youtubeId, 'hq')}
-                alt="Preview"
-                className="w-24 h-14 object-cover rounded border border-[#2C2C2E] shrink-0"
-              />
-              <div className="min-w-0 flex-1 space-y-1">
-                <div className="flex items-center gap-1.5 text-[11px] font-jp font-bold text-emerald-400">
-                  <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                  <span>
-                    {autoParsed
-                      ? 'YouTube公式メタデータから自動入力しました'
-                      : 'YouTube動画を認識しました'}
-                  </span>
-                </div>
-                <input
-                  type="text"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  placeholder="動画タイトル（空欄の場合は対戦カードから自動生成）"
-                  className="w-full bg-[#141418] border border-[#2C2C32] focus:border-[#FFFFFF] rounded px-2 py-1 text-xs font-jp text-[#FFFFFF] outline-none"
-                />
-              </div>
+          {/* Already Requested on this Device */}
+          {!existingBattle && existingRequest && (
+            <div className="bg-emerald-950/30 border border-emerald-500/40 rounded-lg p-3 flex items-center gap-2 text-emerald-300 text-xs font-jp font-bold">
+              <CheckCircle2 className="w-4 h-4 shrink-0" />
+              <span>このバトルはリクエスト済みです（次回更新で検証されます）</span>
             </div>
           )}
 
-          {/* 2. Matchup & Tournament Details */}
-          {!existingBattle && (
-            <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-[11px] font-jp text-[#8E8E93] mb-1">
-                    MC A (先行 / 左側) *
-                  </label>
-                  <input
-                    type="text"
-                    list="mc-autocomplete-list"
-                    value={mcA}
-                    onChange={(e) => setMcA(e.target.value)}
-                    placeholder="例: 呂布カルマ"
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded-lg px-3 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-[11px] font-jp text-[#8E8E93] mb-1">
-                    MC B (後攻 / 右側) *
-                  </label>
-                  <input
-                    type="text"
-                    list="mc-autocomplete-list"
-                    value={mcB}
-                    onChange={(e) => setMcB(e.target.value)}
-                    placeholder="例: FORK"
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded-lg px-3 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
-                    required
-                  />
-                </div>
-              </div>
+          {/* Unavailable Video Alert */}
+          {youtubeId && !existingBattle && checkStatus === 'unavailable' && (
+            <div
+              role="alert"
+              className="bg-red-950/40 border border-[#E50914]/60 rounded-lg p-3 flex items-center gap-2 text-[#FF6B6B] text-xs font-jp font-bold"
+            >
+              <AlertCircle className="w-4 h-4 shrink-0 text-[#E50914]" />
+              <span>
+                この動画は非公開または削除されているためリクエストできません
+              </span>
+            </div>
+          )}
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                <div>
-                  <label className="block text-[11px] font-jp text-[#8E8E93] mb-1">
-                    大会カテゴリ
-                  </label>
-                  <select
-                    value={tournament}
-                    onChange={(e) =>
-                      setTournament(
-                        e.target.value as Exclude<TournamentTag, 'ALL'>
-                      )
+          {/* Valid Video Preview & Auto-Detected Tags */}
+          {youtubeId &&
+            !existingBattle &&
+            (checkStatus === 'ok' || checkStatus === 'unknown') && (
+              <div className="bg-[#0A0A0A] border border-[#222224] rounded-lg p-3 space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <img
+                    src={
+                      videoMeta?.thumbnail_url ||
+                      getYouTubeThumbnail(youtubeId, 'hq')
                     }
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded-lg px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
-                  >
-                    {TOURNAMENTS.filter(
-                      (t): t is Exclude<TournamentTag, 'ALL'> => t !== 'ALL'
-                    ).map((t) => (
-                      <option key={t} value={t}>
-                        {t}
-                      </option>
-                    ))}
-                  </select>
+                    alt="Preview"
+                    className="w-24 h-14 object-cover rounded border border-[#2C2C2E] shrink-0"
+                  />
+                  <div className="min-w-0 flex-1 space-y-1">
+                    <div className="flex items-center gap-1.5 text-[11px] font-jp font-bold text-emerald-400">
+                      <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                      <span>
+                        {checkStatus === 'ok'
+                          ? '公開中のYouTube動画を確認しました'
+                          : 'YouTube動画IDを認識しました'}
+                      </span>
+                    </div>
+                    {videoMeta && (
+                      <>
+                        <div className="text-xs font-jp font-bold text-[#FFFFFF] line-clamp-2">
+                          {videoMeta.title}
+                        </div>
+                        {videoMeta.author_name && (
+                          <div className="text-[10px] font-jp text-[#8E8E93] truncate">
+                            チャンネル: {videoMeta.author_name}
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-[11px] font-jp text-[#8E8E93] mb-1">
-                    大会章・ラウンド
-                  </label>
-                  <input
-                    type="text"
-                    value={stageOrEvent}
-                    onChange={(e) => setStageOrEvent(e.target.value)}
-                    placeholder="例: 戦極21章 決勝"
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded-lg px-2.5 py-1.5 text-xs font-jp text-[#FFFFFF] outline-none"
-                  />
-                </div>
-
-                <div className="col-span-2 sm:col-span-1">
-                  <label className="block text-[11px] font-jp text-[#8E8E93] mb-1">
-                    開催年
-                  </label>
-                  <input
-                    type="text"
-                    value={year}
-                    onChange={(e) => setYear(e.target.value)}
-                    placeholder="2025"
-                    className="w-full bg-[#0A0A0A] border border-[#2C2C2E] rounded-lg px-2.5 py-1.5 text-xs font-mono-tech text-[#FFFFFF] outline-none"
-                  />
-                </div>
+                {parsedPreview && (
+                  <div className="flex items-center gap-1.5 flex-wrap pt-2 border-t border-[#1C1C1E] text-[11px] font-jp">
+                    <span className="px-2 py-0.5 rounded bg-[#18181C] border border-[#2C2C32] text-[#FFFFFF] font-bold">
+                      {parsedPreview.mcA} vs {parsedPreview.mcB}
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-[#18181C] border border-[#2C2C32] text-[#AEAEB2]">
+                      大会: {parsedPreview.tournament || '自動判定保留'}
+                    </span>
+                    {parsedPreview.year && (
+                      <span className="px-2 py-0.5 rounded bg-[#18181C] border border-[#2C2C32] text-[#8E8E93] font-mono-tech">
+                        {parsedPreview.year}年
+                      </span>
+                    )}
+                  </div>
+                )}
               </div>
+            )}
 
-              {/* 3. Simultaneous Album Addition */}
-              {albums.length > 0 && (
-                <div className="bg-[#16161A] border border-[#26262A] rounded p-3 space-y-2">
-                  <div className="flex items-center gap-1.5 text-xs font-jp font-bold text-[#FFFFFF]">
-                    <Disc3 className="w-3.5 h-3.5 text-[#E50914]" />
-                    <span>同時にマイアルバムへ追加する（任意・複数選択可）</span>
+          {/* Optional Note Input */}
+          {!existingBattle && (
+            <div className="space-y-1.5">
+              <label className="block text-[11px] font-jp text-[#8E8E93]">
+                補足メモ（任意・最大200文字 / 大会名やMC名、ベストバウトの理由など）
+              </label>
+              <input
+                type="text"
+                maxLength={200}
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+                placeholder="例: 戦極15章のベストバウトです"
+                className="w-full bg-[#0A0A0A] border border-[#2C2C2E] focus:border-[#FFFFFF] rounded-lg px-3 py-2 text-xs font-jp text-[#FFFFFF] outline-none"
+              />
+            </div>
+          )}
+
+          {!existingBattle && (
+            <button
+              type="submit"
+              disabled={!canSubmit}
+              className="w-full py-2.5 rounded-lg bg-[#FFFFFF] hover:bg-[#E5E5EA] disabled:opacity-40 text-[#0A0A0A] font-jp text-xs font-black tracking-wide transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <Send className="w-3.5 h-3.5" />
+              <span>
+                {isSubmitting
+                  ? 'リクエスト送信中...'
+                  : 'このバトルをリクエストする'}
+              </span>
+            </button>
+          )}
+
+          {/* Recent Requests on This Device */}
+          {recentRequests.length > 0 && (
+            <div className="pt-3 border-t border-[#1F1F24] space-y-2">
+              <div className="flex items-center gap-1.5 text-[11px] font-jp font-bold text-[#8E8E93]">
+                <Clock className="w-3.5 h-3.5" />
+                <span>あなたのリクエスト履歴 ({recentRequests.length}件)</span>
+              </div>
+              <div className="space-y-1.5">
+                {recentRequests.map((req) => (
+                  <div
+                    key={req.id}
+                    className="flex items-center justify-between gap-2 bg-[#0A0A0A] border border-[#222226] rounded px-2.5 py-1.5 text-[11px] font-jp"
+                  >
+                    <div className="min-w-0 flex-1 truncate text-[#D1D1D6]">
+                      {req.title || req.url}
+                    </div>
+                    <span
+                      className={`shrink-0 px-1.5 py-0.5 rounded text-[10px] font-bold ${
+                        req.status === 'sent'
+                          ? 'bg-emerald-500/15 text-emerald-400'
+                          : 'bg-amber-500/15 text-amber-300'
+                      }`}
+                    >
+                      {req.status === 'sent' ? '受付済' : '送信待ち'}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-1.5 flex-wrap">
-                    {albums.map((alb) => {
-                      const active = selectedAlbumIds.includes(alb.id);
-                      return (
-                        <button
-                          key={alb.id}
-                          type="button"
-                          onClick={() => toggleAlbumSelect(alb.id)}
-                          className={`px-2.5 py-1 rounded text-xs font-jp border transition-colors cursor-pointer ${
-                            active
-                              ? 'bg-[#FFFFFF] text-[#0A0A0A] border-[#FFFFFF] font-bold'
-                              : 'bg-[#0A0A0A] text-[#8E8E93] border-[#2C2C2E] hover:text-[#FFFFFF]'
-                          }`}
-                        >
-                          {active ? '✓ ' : '+ '}
-                          {alb.title}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-
-
-
-              <button
-                type="submit"
-                disabled={!youtubeId || !mcA.trim() || !mcB.trim()}
-                className="w-full py-2.5 rounded bg-[#FFFFFF] hover:bg-[#E5E5EA] disabled:opacity-40 text-[#0A0A0A] font-jp text-xs font-black tracking-wide transition-colors cursor-pointer"
-              >
-                このバトルを1verceに登録する
-              </button>
-            </>
+                ))}
+              </div>
+            </div>
           )}
         </form>
       </div>
