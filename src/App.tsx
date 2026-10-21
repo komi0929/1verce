@@ -205,6 +205,12 @@ export const App: React.FC = () => {
         setSeekNonce(Date.now());
         setDeepLinkBanner({ battleId: found.id, seconds: targetSec });
       }
+    } else if (params.get('view') === 'albums') {
+      // PWA home-screen shortcut: レコード棚
+      setViewMode('ALBUMS');
+    } else if (params.get('view') === 'saved') {
+      // PWA home-screen shortcut: 保存済
+      setShowSavedOnly(true);
     }
 
     if (getSupabaseConfig()) {
@@ -837,7 +843,7 @@ export const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-[#FFFFFF] flex flex-col">
       {/* 1. Top Header (Clean Mobile-first & Desktop) */}
-      <header className="h-13 sm:h-14 border-b border-[#1F1F1F] bg-[#0A0A0A]/95 backdrop-blur-md sticky top-0 z-40">
+      <header className="box-content h-13 sm:h-14 pt-[env(safe-area-inset-top)] border-b border-[#1F1F1F] bg-[#0A0A0A]/95 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-3xl mx-auto h-full px-3 sm:px-4 flex items-center justify-between gap-2">
           {/* Left: 1verce Typography Logo */}
           <div className="flex items-center gap-2">

@@ -3894,7 +3894,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MOL53",
     "tournament": "凱旋",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -3917,7 +3917,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "DOTAMA",
     "tournament": "凱旋",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4032,7 +4032,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "ミメイ",
     "tournament": "凱旋",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2026",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4699,7 +4699,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "チプルソ",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2011",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4952,7 +4952,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "R-指定",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
-    "year": "2023",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -4975,7 +4975,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6081,7 +6081,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6196,7 +6196,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 準決勝",
-    "year": "2023",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6334,7 +6334,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "NAIKA MC",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
-    "year": "2023",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6357,7 +6357,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "早雲",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2015",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6403,7 +6403,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "NAIKA MC",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
-    "year": "2023",
+    "year": "2011",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -6795,7 +6795,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "KOK",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2021",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7922,7 +7922,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "R-指定",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2012",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7945,7 +7945,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "GIL",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7968,7 +7968,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "R-指定",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -7991,7 +7991,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "GIL",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8014,7 +8014,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "R-指定",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2010",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8037,7 +8037,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "R-指定",
     "tournament": "UMB",
     "stageOrEvent": "決勝戦",
-    "year": "2023",
+    "year": "2011",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8060,7 +8060,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "GIL",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8083,7 +8083,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "DOTAMA",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP",
-    "year": "2023",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8106,7 +8106,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "GIL",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8129,7 +8129,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "晋平太",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2010",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8152,7 +8152,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "GIL",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8175,7 +8175,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8199,7 +8199,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "R-指定",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2011",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8222,7 +8222,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "R-指定",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP",
-    "year": "2023",
+    "year": "2012",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8452,7 +8452,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MOL53",
     "tournament": "UMB",
     "stageOrEvent": "準決勝",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8613,7 +8613,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8659,7 +8659,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8682,7 +8682,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 準決勝",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8705,7 +8705,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8728,7 +8728,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8889,7 +8889,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "KOK",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8912,7 +8912,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -8936,7 +8936,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "チプルソ",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2011",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -9051,7 +9051,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "チプルソ",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2011",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10247,7 +10247,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "ID",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2008",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10293,7 +10293,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "漢 a.k.a. GAMI",
     "tournament": "KOK",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10961,7 +10961,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MCニガリ",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP",
-    "year": "2023",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -10984,7 +10984,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MCニガリ",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP",
-    "year": "2023",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11030,7 +11030,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MCニガリ",
     "tournament": "UMB",
     "stageOrEvent": "決勝戦",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11053,7 +11053,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MCニガリ",
     "tournament": "UMB",
     "stageOrEvent": "決勝戦",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11076,7 +11076,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MCニガリ",
     "tournament": "UMB",
     "stageOrEvent": "決勝戦",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11099,7 +11099,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "NAIKA MC",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 2回戦",
-    "year": "2023",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11122,7 +11122,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MOL53",
     "tournament": "KOK",
     "stageOrEvent": "決勝戦",
-    "year": "2023",
+    "year": "2022",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11674,7 +11674,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11720,7 +11720,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "CIMA",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS BEST8",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11743,7 +11743,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MU-TON",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 1回戦",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11766,7 +11766,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "早雲",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11789,7 +11789,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "ふぁんく",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 2回戦",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11812,7 +11812,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -11835,7 +11835,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "だーひー",
     "tournament": "UMB",
     "stageOrEvent": "準決勝",
-    "year": "2023",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12088,7 +12088,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12204,7 +12204,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "早雲",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
-    "year": "2023",
+    "year": "2015",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12227,7 +12227,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "CHICO CARLITO",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 決勝戦",
-    "year": "2023",
+    "year": "2015",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12434,7 +12434,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "CHICO CARLITO",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP",
-    "year": "2023",
+    "year": "2015",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -12481,7 +12481,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "句潤",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2015",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13885,7 +13885,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "晋平太",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13931,7 +13931,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "じょう",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST16",
-    "year": "2023",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13954,7 +13954,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "晋平太",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -13978,7 +13978,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "句潤",
     "tournament": "UMB",
     "stageOrEvent": "決勝戦",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14001,7 +14001,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MOL53",
     "tournament": "UMB",
     "stageOrEvent": "準決勝",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14116,7 +14116,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MOL53",
     "tournament": "UMB",
     "stageOrEvent": "準決勝",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14162,7 +14162,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MOL53",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14185,7 +14185,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 準決勝",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14208,7 +14208,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "句潤",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2016",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14231,7 +14231,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "句潤",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
-    "year": "2023",
+    "year": "2013",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14254,7 +14254,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 1回戦",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14277,7 +14277,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "句潤",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 1回戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14323,7 +14323,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MU-TON",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS BEST16",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14369,7 +14369,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "句潤",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14392,7 +14392,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MOL53",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2011",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14714,7 +14714,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "Authority",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP",
-    "year": "2023",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14899,7 +14899,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "早雲",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14922,7 +14922,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "早雲",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS BEST8",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14945,7 +14945,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "早雲",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 2回戦",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14968,7 +14968,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "早雲",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
-    "year": "2023",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -14991,7 +14991,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "ID",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
-    "year": "2023",
+    "year": "2012",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15544,7 +15544,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "輪入道",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS",
-    "year": "2023",
+    "year": "2017",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15567,7 +15567,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15590,7 +15590,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "MOL53",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 1回戦",
-    "year": "2023",
+    "year": "2012",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15613,7 +15613,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15636,7 +15636,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "Authority",
     "tournament": "UMB",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15659,7 +15659,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "鎮座DOPENESS",
     "tournament": "UMB",
     "stageOrEvent": "CHOICE IS YOURS 決勝戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15751,7 +15751,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "輪入道",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15797,7 +15797,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "SKRYU",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP BEST8",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15820,7 +15820,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "Authority",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 準決勝",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -15912,7 +15912,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "S-kaine",
     "tournament": "KOK",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16303,7 +16303,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "輪入道",
     "tournament": "ADRENALINE",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2014",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -16947,7 +16947,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "だーひー",
     "tournament": "UMB",
     "stageOrEvent": "GRAND CHAMPIONSHIP 2回戦",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -17131,7 +17131,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "S-kaine",
     "tournament": "KOK",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2024",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18580,7 +18580,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "SIMON JAP",
     "tournament": "凱旋",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2020",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18603,7 +18603,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "じょう",
     "tournament": "SPOTLIGHT",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18626,7 +18626,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "Authority",
     "tournament": "SPOTLIGHT",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2019",
     "verses": [],
     "evaluation": {
       "word": 0,
@@ -18695,7 +18695,7 @@ export const INITIAL_BATTLES: Battle[] = [
     "mcB": "呂布カルマ",
     "tournament": "SPOTLIGHT",
     "stageOrEvent": "OFFICIAL BOUT",
-    "year": "2023",
+    "year": "2018",
     "verses": [],
     "evaluation": {
       "word": 0,
