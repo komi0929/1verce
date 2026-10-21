@@ -47,7 +47,7 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
   onOpenShare,
   onOpenAlbumPicker,
 }) => {
-  const [thumbQuality, setThumbQuality] = useState<'maxres' | 'hq'>('maxres');
+  const [thumbQuality, setThumbQuality] = useState<'hq' | 'mq'>('hq');
   const [thumbFailed, setThumbFailed] = useState(false);
 
   // Real-time playback state synced with YouTube IFrame API
@@ -58,7 +58,7 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
   const [desiredPaused, setDesiredPaused] = useState<boolean>(false);
 
   useEffect(() => {
-    setThumbQuality('maxres');
+    setThumbQuality('hq');
     setThumbFailed(false);
   }, [battle.youtubeId]);
 
@@ -132,9 +132,20 @@ const BattleCardComponent: React.FC<BattleCardProps> = ({
               <img
                 src={getYouTubeThumbnail(battle.youtubeId, thumbQuality)}
                 alt={battle.title}
+                onLoad={(e) => {
+                  const img = e.currentTarget;
+                  // YouTube returns a 120x90 grey dummy placeholder image when no thumbnail exists
+                  if (img.naturalWidth > 0 && img.naturalWidth <= 120) {
+                    if (thumbQuality === 'hq') {
+                      setThumbQuality('mq');
+                    } else {
+                      setThumbFailed(true);
+                    }
+                  }
+                }}
                 onError={() => {
-                  if (thumbQuality === 'maxres') {
-                    setThumbQuality('hq');
+                  if (thumbQuality === 'hq') {
+                    setThumbQuality('mq');
                   } else {
                     setThumbFailed(true);
                   }

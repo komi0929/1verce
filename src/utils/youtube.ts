@@ -42,9 +42,16 @@ export function extractYouTubeId(input: string): string | null {
 
 export function getYouTubeThumbnail(
   youtubeId: string,
-  quality: 'hq' | 'maxres' = 'hq'
+  quality: 'hq' | 'mq' | 'default' | 'maxres' = 'hq'
 ): string {
-  const file = quality === 'maxres' ? 'maxresdefault.jpg' : 'hqdefault.jpg';
+  const file =
+    quality === 'maxres'
+      ? 'maxresdefault.jpg'
+      : quality === 'mq'
+        ? 'mqdefault.jpg'
+        : quality === 'default'
+          ? 'default.jpg'
+          : 'hqdefault.jpg';
   return `https://i.ytimg.com/vi/${youtubeId}/${file}`;
 }
 
