@@ -1,15 +1,15 @@
 {
-  "lastRunAt": "2026-11-02T00:06:51.819Z",
-  "lastAddedCount": 24,
-  "totalAutoBattles": 119,
+  "lastRunAt": "2026-11-09T00:24:41.409Z",
+  "lastAddedCount": 23,
+  "totalAutoBattles": 142,
   "skipped": {
-    "older-than-cutoff": 161,
-    "already-exists": 75,
+    "already-exists": 72,
+    "older-than-cutoff": 140,
+    "channel-error:@SHINADMCBATTLE": 1,
     "channel-error:@Hiphop_ABEMA": 1,
-    "multi-mc-rule": 3,
-    "invalid-mc-names": 5,
-    "non-battle-keyword": 4,
-    "no-vs-in-title": 1,
-    "too-short": 1
+    "no-vs-in-title": 2,
+    "non-battle-keyword": 3,
+    "too-short": 2,
+    "invalid-mc-names": 2
   }
 }
